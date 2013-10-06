@@ -65,7 +65,7 @@ def count():
 @task
 def commit(message="Auto-update."):
     clean()
-    subprocess.call("git add *", shell=True)
+    subprocess.call("git add .*", shell=True)
     subprocess.call("git add -u", shell=True)
     subprocess.call("git add README.md --ignore-errors", shell=True)
     subprocess.call("git add requirements.txt --ignore-errors", shell=True)
