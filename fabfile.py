@@ -64,12 +64,13 @@ def count():
 
 @task
 def commit(message="Auto-update."):
+    logging.basicConfig(level=logging.DEBUG)
     clean()
-    subprocess.call("git add .*", shell=True)
+    subprocess.call("git add *", shell=True)
     subprocess.call("git add -u", shell=True)
     subprocess.call("git add README.md --ignore-errors", shell=True)
     subprocess.call("git add requirements.txt --ignore-errors", shell=True)
-    subprocess.call("git commit -m '" + message + "'", shell=True)
+    subprocess.call("git commit -m " + message, shell=True)
     
 
 @task
@@ -92,7 +93,7 @@ def log():
 
 
 @task
-def deploy(message='', branch="master"):
+def deploy(message="Auto-update.", branch="master"):
     commit(message)
     status()
     pull(branch)
