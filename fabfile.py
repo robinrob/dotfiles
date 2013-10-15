@@ -15,8 +15,18 @@ PYTHON3 = '3.2'
 # Do not change this - used in initial installation
 PYTHON_APP = "python_app.py"
 
+
 @task
-def install():
+def new(destination=""):
+    subprocess.call("git clone -b master git@bitbucket.org:robinrob/python_app.git " + destination, shell=True)
+    install(destination)
+
+
+@task
+def install(destination=None):
+    if destination is not None:
+        os.chdir(destination)
+
     if os.path.exists(PYTHON_APP):
         cwd_name = os.getcwd().split(os.sep)[-1]
         os.rename(PYTHON_APP, cwd_name + '.py')
@@ -64,13 +74,14 @@ def count():
 
 @task
 def commit(message="Auto-update."):
-    logging.basicConfig(level=logging.DEBUG)
     clean()
     subprocess.call("git add *", shell=True)
+    subprocess.call("git add .gitignore", shell=True)
     subprocess.call("git add -u", shell=True)
     subprocess.call("git add README.md --ignore-errors", shell=True)
     subprocess.call("git add requirements.txt --ignore-errors", shell=True)
-    subprocess.call("git commit -m " + message, shell=True)
+    status()
+    subprocess.call("git commit -m '" + message + "'", shell=True)
     
 
 @task
@@ -93,9 +104,8 @@ def log():
 
 
 @task
-def deploy(message="Auto-update.", branch="master"):
+def deploy(message="Auto-update", branch="master"):
     commit(message)
-    status()
     pull(branch)
     push(branch)
     
@@ -123,7 +133,6 @@ def log():
 
 def wrap_quotes(s):
     return "'" + s + "'"
-
 
 @task
 def readme():
