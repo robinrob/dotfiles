@@ -95,7 +95,6 @@ def pull(branch="master"):    subprocess.call("git pull origin " + branch, shell
     
 @task
 def status():
-    use_python("2.7")
     subprocess.call("git status", shell=True)
     
     
