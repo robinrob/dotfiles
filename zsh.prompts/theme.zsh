@@ -1,1 +1,0 @@
-/Users/msl/dotfiles/yadr/zsh/theme.zsh
