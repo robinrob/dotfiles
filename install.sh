@@ -8,7 +8,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="zshrc yadr bashrc vimrc zshrc zsh.prompts tm_properties"    # list of files/folders to symlink in homedir
+files="zshrc yadr bashrc zshrc zsh.prompts tm_properties"    # list of files/folders to symlink in homedir
 
 ##########
 
