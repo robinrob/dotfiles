@@ -1,4 +1,9 @@
 [submodule "yadr"]
-  path = yadr
-  url = https://github.com/skwp/dotfiles.git
-  ignore = dirty
+	path = yadr
+	url = https://github.com/skwp/dotfiles.git
+	ignore = dirty
+[submodule "zsh-history-substring-search"]
+	path = zsh-history-substring-search
+	url = https://github.com/zsh-users/zsh-history-substring-search
+	ignore = dirty
+  
