@@ -2,8 +2,11 @@
 	path = yadr
 	url = https://github.com/skwp/dotfiles.git
 	ignore = dirty
-[submodule "zsh-history-substring-search"]
-	path = zsh-history-substring-search
-	url = https://github.com/zsh-users/zsh-history-substring-search
+[submodule "yadr/KeyBindings"]
+	path = KeyBindings
+	url = https://github.com/ttscoff/KeyBindings.git
 	ignore = dirty
-  
+[submodule "yadr/zsh/prezto"]
+	path = zsh/prezto
+	url = https://github.com/sorin-ionescu/prezto.git
+	ignore = dirty
