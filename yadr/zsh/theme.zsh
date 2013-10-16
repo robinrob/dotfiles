@@ -1,3 +1,1 @@
-#prompt skwp
-#prompt steeef_simplified
-prompt robin
+prompt steeef_simplified

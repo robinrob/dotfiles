@@ -41,3 +41,5 @@ defaults write com.apple.Finder AppleShowAllFiles YES
 # setopt INC_APPEND_HISTORY
 # 
 # source $HOME/dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
+
+prompt robin
