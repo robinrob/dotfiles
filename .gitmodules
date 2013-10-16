@@ -3,10 +3,10 @@
 	url = https://github.com/skwp/dotfiles.git
 	ignore = dirty
 [submodule "yadr/KeyBindings"]
-	path = KeyBindings
+	path = yadr/KeyBindings
 	url = https://github.com/ttscoff/KeyBindings.git
 	ignore = dirty
 [submodule "yadr/zsh/prezto"]
-	path = zsh/prezto
+	path = yadr/zsh/prezto
 	url = https://github.com/sorin-ionescu/prezto.git
 	ignore = dirty
