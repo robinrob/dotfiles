@@ -20,4 +20,8 @@ export EDITOR="/usr/local/bin/mate -w"
 
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
-pythonbrew use 3.2
+pythonbrew use 2.7
+
+chflags nohidden ~/Library/
+
+defaults write com.apple.Finder AppleShowAllFiles YES
