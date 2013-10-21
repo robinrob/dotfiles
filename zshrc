@@ -43,3 +43,14 @@ defaults write com.apple.Finder AppleShowAllFiles YES
 # source $HOME/dotfiles/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 prompt robin
+
+export PROG_HOME=/Users/msl/Documents/programming
+
+export SH_HOME=$PROG_HOME/sh
+
+export PYTHON_HOME=$PROG_HOME/python
+export PY_HOME=$PYTHON_HOME
+
+export PYAPP_HOME=$PY_HOME/projects/pyapp
+
+export DOTFILES_HOME=~/dotfiles
