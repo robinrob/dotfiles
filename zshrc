@@ -29,3 +29,5 @@ defaults write com.apple.Finder AppleShowAllFiles YES
 prompt robin
 
 unsetopt correct
+
+alias chrome="Google\ Chrome"
