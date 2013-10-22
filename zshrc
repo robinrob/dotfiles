@@ -44,7 +44,7 @@ defaults write com.apple.Finder AppleShowAllFiles YES
 
 prompt robin
 
-export PROG_HOME=/Users/msl/Documents/programming
+export PROG_HOME=$HOME/Documents/programming
 
 export SH_HOME=$PROG_HOME/sh
 
