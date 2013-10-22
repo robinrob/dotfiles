@@ -96,10 +96,14 @@
 [mergetool "mvimdiff"]
   cmd="mvim -c 'Gdiff' $MERGED"     # use fugitive.vim for 3-way merge
   keepbackup=false
+[mergetool "diffmerge"]
+  cmd="diffmerge --merge --result=$MERGED $LOCAL $BASE $REMOTE"
+  keepbackup=false
+  trustExitCode=true
 [merge]
   summary = true
   verbosity = 1
-  tool = mvimdiff
+  tool = diffmerge
 [apply]
   whitespace = nowarn
 [branch]
