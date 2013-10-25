@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 ############################
 # .make.sh
 # This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
@@ -25,9 +25,10 @@ echo "...done"
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $FILES; do
     echo "Moving any existing dotfiles from ~ to $OLDDIR"
-    mv ~/.$file ~/dotfiles_old/
+    mv ~/.$file $OLD_DIR/
     echo "Creating symlink to $file in home directory."
     ln -s $DIR/$file ~/.$file
 done
 
-sh ./yadr/install.sh
+cd yadr
+sh install.sh
