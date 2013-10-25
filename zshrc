@@ -53,4 +53,6 @@ export PY_HOME=$PYTHON_HOME
 
 export PYAPP_HOME=$PY_HOME/projects/pyapp
 
-export DOTFILES_HOME=~/dotfiles
+export ZSH_HOME=$PROG_HOME/zsh
+
+export DOTFILES_HOME=$ZSH_HOME/dotfiles
