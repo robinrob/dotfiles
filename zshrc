@@ -40,3 +40,5 @@ export PYAPP_HOME=$PY_HOME/projects/pyapp
 export ZSH_HOME=$PROG_HOME/zsh
 
 export DOTFILES_HOME=$ZSH_HOME/dotfiles
+
+set -o vi
