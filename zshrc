@@ -40,3 +40,21 @@ export PYAPP_HOME=$PY_HOME/projects/pyapp
 export ZSH_HOME=$PROG_HOME/zsh
 
 export DOTFILES_HOME=$ZSH_HOME/dotfiles
+
+export ZSHRC=$DOTFILES_HOME/zshrc
+
+export RUBY_HOME=$PROG_HOME/ruby
+
+export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
+
+export RUBY_LIB=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/lib/ruby/2.0.0
+
+export JAVA_HOME=$(/usr/libexec/java_home)
+
+export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
+
+export PATH=$PATH:$EC2_HOME/bin
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+set -o vi
