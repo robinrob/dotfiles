@@ -45,6 +45,8 @@ export ZSHRC=$DOTFILES_HOME/zshrc
 
 export RUBY_HOME=$PROG_HOME/ruby
 
+export RUBYAPP_HOME=$PROG_HOME/ruby/projects/ruby-app
+
 export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
 
 export RUBY_LIB=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/lib/ruby/2.0.0
