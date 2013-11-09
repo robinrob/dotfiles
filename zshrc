@@ -14,7 +14,9 @@ fi
 
 for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
-export PATH=/Library/Frameworks/Python.framework/Versions/3.4/bin:$PATH
+# Apple OS X defaults
+defaults write com.apple.Finder AppleShowAllFiles YES
+defaults write com.apple.screencapture location $HOME/Desktop/screenshots/
 
 export EDITOR="/usr/local/bin/mate -w"
 
@@ -23,8 +25,6 @@ export EDITOR="/usr/local/bin/mate -w"
 pythonbrew use 2.7
 
 chflags nohidden ~/Library/
-
-defaults write com.apple.Finder AppleShowAllFiles YES
 
 prompt robin
 
