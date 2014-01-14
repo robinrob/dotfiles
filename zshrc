@@ -62,5 +62,3 @@ export PATH=$PATH:$EC2_HOME/bin
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 set -o vi
-
-alias gam /usr/local/Library/gam/gam.py
