@@ -59,6 +59,8 @@ export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
 export PATH=$PATH:$EC2_HOME/bin
 
+set -o vi
+
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-set -o vi
+rvm use 1.9.3-p429@chef
