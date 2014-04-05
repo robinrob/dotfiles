@@ -15,8 +15,9 @@ fi
 for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
 # Apple OS X defaults
-defaults write com.apple.Finder AppleShowAllFiles YES
-defaults write com.apple.screencapture location $HOME/Desktop/screenshots/
+defaults write com.apple.Finder AppleShowAllFiles NO
+defaults write com.apple.screencapture location $HOME/temp/screenshots/
+defaults write -g ApplePersistence -bool no
 
 export EDITOR="/usr/local/bin/mate -w"
 
@@ -57,7 +58,9 @@ export JAVA_HOME=$(/usr/libexec/java_home)
 
 export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
-export PATH=$PATH:$EC2_HOME/bin
+export GAM_PATH=/usr/local/Library/gam3
+
+PATH=$PATH:$EC2_HOME/bin
 
 set -o vi
 
