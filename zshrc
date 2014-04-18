@@ -32,6 +32,8 @@ export PY_HOME=$PYTHON_HOME
 
 export PYAPP_HOME=$PY_HOME/projects/pyapp
 
+export FABFILE_HOME=$PY_HOME/projects/fabfile
+
 export ZSH_HOME=$PROG_HOME/zsh
 
 export SH_HOME=$PROG_HOME/sh
@@ -42,7 +44,9 @@ export ZSHRC=$DOTFILES_HOME/zshrc
 
 export RUBY_HOME=$PROG_HOME/ruby
 
-export RUBYAPP_HOME=$PROG_HOME/ruby/projects/ruby-app
+export RUBYAPP_HOME=$RUBY_HOME/projects/ruby-app
+
+export RAKEFILE_HOME=$RUBY_HOME/projects/rakefile
 
 export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
 
@@ -50,9 +54,16 @@ export RUBY_LIB=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/l
 
 export JAVA_HOME=$(/usr/libexec/java_home)
 
+export PERL_HOME=$PROG_HOME/perl
+
 export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
 export GAM_PATH=/usr/local/Library/gam3
+
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+alias more='less'
 
 PATH=$PATH:$EC2_HOME/bin
 
