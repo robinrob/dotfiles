@@ -7,14 +7,14 @@
 ########## Variables
 
 DIR=`pwd`                  									# dotfiles directory
-OLDDIR=/tmp/dotfiles             							# old dotfiles backup directory
+OLD_DIR=/tmp/dotfiles             							# old dotfiles backup directory
 FILES="zshrc yadr bashrc zshrc zsh.prompts tm_properties"   # list of files/folders to symlink in homedir
 
 ##########
 
 # create dotfiles_old in homedir
-echo "Creating $OLDDIR for backup of any existing dotfiles in ~"
-mkdir -p $OLDDIR
+echo "Creating $OLD_DIR for backup of any existing dotfiles in ~"
+mkdir -p $OLD_DIR
 echo "...done"
 
 # change to the dotfiles directory
@@ -24,7 +24,7 @@ echo "...done"
 
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $FILES; do
-    echo "Moving any existing dotfiles from ~ to $OLDDIR"
+    echo "Moving any existing dotfiles from ~ to $OLD_DIR"
     mv ~/.$file $OLD_DIR/
     echo "Creating symlink to $file in home directory."
     ln -s $DIR/$file ~/.$file
