@@ -96,21 +96,3 @@ export PERL_HOME=$PROG_HOME/perl
 export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
 export GAM_PATH=/usr/local/Library/gam3
-
-
-# Dev tools
-###############################################################################
-
-# Python
-########
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-
-pythonbrew use 2.7
-
-
-# Ruby
-######
-# [[ -s "$HOME/rvm get stable --auto-dotfiles" ]] && source "$HOME/.rvm/scripts/rvm" 
-# Load RVM into a shell session *as a function*
-
-rvm use ruby-2.1.1
