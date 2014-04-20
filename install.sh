@@ -14,6 +14,7 @@ FILES="zshrc yadr bashrc zshrc zsh.prompts tm_properties"   # list of files/fold
 
 # create dotfiles_old in homedir
 echo "Creating $OLD_DIR for backup of any existing dotfiles in ~"
+rm -rf $OLD_DIR
 mkdir -p $OLD_DIR
 echo "...done"
 

@@ -1,3 +1,9 @@
+# First-time stuff!
+###############################################################################
+
+rvm get 1.21.15
+
+
 # OS-Specific stuff
 ###############################################################################
 
@@ -104,4 +110,7 @@ pythonbrew use 2.7
 
 # Ruby
 ######
-rvm use 1.9.3-p429@chef
+# [[ -s "$HOME/rvm get stable --auto-dotfiles" ]] && source "$HOME/.rvm/scripts/rvm" 
+# Load RVM into a shell session *as a function*
+
+# rvm use ruby-2.1.1
