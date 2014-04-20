@@ -113,4 +113,4 @@ pythonbrew use 2.7
 # [[ -s "$HOME/rvm get stable --auto-dotfiles" ]] && source "$HOME/.rvm/scripts/rvm" 
 # Load RVM into a shell session *as a function*
 
-# rvm use ruby-2.1.1
+rvm use ruby-2.1.1
