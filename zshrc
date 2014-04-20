@@ -39,26 +39,13 @@ alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
 
-# Python
-########
-[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
-
-pythonbrew use 2.7
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-
-# Ruby
-######
-rvm use 1.9.3-p429@chef
-
-
 # Environment variables
 ###############################################################################
 
 # Path
 ######
 PATH=$PATH:$EC2_HOME/bin
+PATH=$PATH:$HOME/.rvm/bin
 
 
 # Other environment variables
@@ -103,3 +90,18 @@ export PERL_HOME=$PROG_HOME/perl
 export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
 export GAM_PATH=/usr/local/Library/gam3
+
+
+# Dev tools
+###############################################################################
+
+# Python
+########
+[[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
+
+pythonbrew use 2.7
+
+
+# Ruby
+######
+rvm use 1.9.3-p429@chef
