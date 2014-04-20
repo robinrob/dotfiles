@@ -1,26 +1,70 @@
-# Source Prezto.
+# OS-Specific stuff
+###############################################################################
+
+# OS X
+######
+defaults write com.apple.Finder AppleShowAllFiles NO
+defaults write com.apple.screencapture location $HOME/temp/screenshots/
+defaults write -g ApplePersistence -bool no
+chflags nohidden ~/Library/
+
+
+# Ubuntu
+########
+
+# ZSH setup
+###############################################################################
+
+# YADR stuff
+############
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
-
 for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
-# Apple OS X defaults
-defaults write com.apple.Finder AppleShowAllFiles NO
-defaults write com.apple.screencapture location $HOME/temp/screenshots/
-defaults write -g ApplePersistence -bool no
+prompt robin
 
-export EDITOR="/usr/local/bin/mate -w"
 
+# Command-line editing mode
+###########################
+set -o vi
+
+
+# Syntax highlighing in `less`
+##############################
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=" -R "
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+alias more='less'
+
+
+# Python
+########
 [[ -s "$HOME/.pythonbrew/etc/bashrc" ]] && source "$HOME/.pythonbrew/etc/bashrc"
 
 pythonbrew use 2.7
 
-chflags nohidden ~/Library/
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
-prompt robin
+
+# Ruby
+######
+rvm use 1.9.3-p429@chef
+
+
+# Environment variables
+###############################################################################
+
+# Path
+######
+PATH=$PATH:$EC2_HOME/bin
+
+
+# Other environment variables
+#############################
+
+export EDITOR="/usr/local/bin/mate -w"
 
 export PROG_HOME=$HOME/Documents/programming
 
@@ -59,16 +103,3 @@ export PERL_HOME=$PROG_HOME/perl
 export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
 export GAM_PATH=/usr/local/Library/gam3
-
-export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
-export LESS=" -R "
-alias less='less -m -N -g -i -J --underline-special --SILENT'
-alias more='less'
-
-PATH=$PATH:$EC2_HOME/bin
-
-set -o vi
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-rvm use 1.9.3-p429@chef
