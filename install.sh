@@ -6,7 +6,7 @@
 
 ########## Variables
 
-DIR=~/Documents/programming/zsh/dotfiles                    # dotfiles directory
+DIR=`pwd`                  									# dotfiles directory
 OLDDIR=/tmp/dotfiles             							# old dotfiles backup directory
 FILES="zshrc yadr bashrc zshrc zsh.prompts tm_properties"   # list of files/folders to symlink in homedir
 
