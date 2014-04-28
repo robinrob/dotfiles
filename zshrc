@@ -53,6 +53,13 @@ alias more='less'
 PATH=$PATH:$EC2_HOME/bin
 PATH=$PATH:$HOME/.rvm/bin
 
+# Development
+#############################
+
+# Ruby
+rvm use 1.9.3 --default
+rvm gemset use chef --create
+
 
 # Other environment variables
 #############################

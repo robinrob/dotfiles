@@ -10,3 +10,6 @@
 	path = yadr/zsh/prezto
 	url = https://github.com/sorin-ionescu/prezto.git
 	ignore = dirty
+[submodule "robins-rakefile"]
+	path = robins-rakefile
+	url = git@bitbucket.org:robinrob/rakefile.git
