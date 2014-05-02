@@ -2,6 +2,7 @@
 ###############################################################################
 
 # rvm get 1.21.15
+ln $SH_HOME/rubyapp /usr/local/bin/rubyapp
 
 
 # OS-Specific stuff
@@ -92,6 +93,8 @@ export RUBY_HOME=$PROG_HOME/ruby
 export RUBYAPP_HOME=$RUBY_HOME/projects/ruby-app
 
 export RAKEFILE_HOME=$RUBY_HOME/projects/rakefile
+
+export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME
 
 export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
 
