@@ -64,7 +64,8 @@ rvm gemset use chef --create
 # Other environment variables
 #############################
 
-export EDITOR="/usr/local/bin/mate -w"
+# export EDITOR="/usr/local/bin/mate -w"
+export EDITOR="/usr/bin/vim"
 
 export PROG_HOME=$HOME/Documents/programming
 
@@ -103,3 +104,21 @@ export PERL_HOME=$PROG_HOME/perl
 export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
 export GAM_PATH=/usr/local/Library/gam3
+
+# Aliases
+###############################################################################
+
+# Shortcuts
+alias save="cd $SH_HOME; ./save_code.sh"
+
+alias vconfig="vim ~/.ssh/config"
+
+alias vzshrc="vim ~/.zshrc"
+
+alias resource="source ~/.zshrc"
+
+alias edit=$EDITOR
+
+alias editconfig="edit ~/.ssh/config"
+
+alias editzshrc="edit ~/.zshrc"
