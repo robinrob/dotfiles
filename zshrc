@@ -2,7 +2,7 @@
 ###############################################################################
 
 # rvm get 1.21.15
-ln $SH_HOME/rubyapp /usr/local/bin/rubyapp
+# ln $SH_HOME/rubyapp /usr/local/bin/rubyapp
 
 
 # OS-Specific stuff
@@ -58,7 +58,7 @@ PATH=$PATH:$HOME/.rvm/bin
 #############################
 
 # Ruby
-rvm use 1.9.3 --default
+rvm use 1.9.3
 rvm gemset use chef --create
 
 
