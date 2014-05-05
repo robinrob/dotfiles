@@ -9,8 +9,8 @@
 
 # gem tool errors
 #################
-brew unlink libyaml && brew link libyaml
-brew unlink openssl && brew link --force openssl
+# brew unlink libyaml && brew link libyaml
+# brew unlink openssl && brew link --force openssl
 
 
 # OS-Specific stuff
