@@ -4,6 +4,14 @@
 # rvm get 1.21.15
 # ln $SH_HOME/rubyapp /usr/local/bin/rubyapp
 
+# Fixes!
+###############################################################################
+
+# gem tool errors
+#################
+brew unlink libyaml && brew link libyaml
+brew unlink openssl && brew link --force openssl
+
 
 # OS-Specific stuff
 ###############################################################################
@@ -58,7 +66,7 @@ PATH=$PATH:$HOME/.rvm/bin
 #############################
 
 # Ruby
-rvm use 1.9.3
+rvm use 1.9.3-p545
 rvm gemset use chef --create
 
 
