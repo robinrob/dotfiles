@@ -62,12 +62,18 @@ alias more='less'
 PATH=$PATH:$EC2_HOME/bin
 PATH=$PATH:$HOME/.rvm/bin
 
+
 # Development
-#############################
+###############################################################################
 
 # Ruby
+######
 rvm use 1.9.3-p545
 rvm gemset use chef --create
+
+# Python
+########
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
 
 # Other environment variables
