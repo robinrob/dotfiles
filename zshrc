@@ -2,7 +2,10 @@
 ###############################################################################
 
 # rvm get 1.21.15
+
 # ln $SH_HOME/rubyapp /usr/local/bin/rubyapp
+
+# gem install chef knife-windows knife-ec2 --no-ri --no-rdoc
 
 # Fixes!
 ###############################################################################
@@ -75,6 +78,8 @@ rvm gemset use chef --create
 ########
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
+pythonbrew use 2.7
+
 
 # Other environment variables
 #############################
@@ -122,6 +127,12 @@ export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
 export GAM_PATH=/usr/local/Library/gam3
 
+export WORK_HOME=~/Documents/programming/work
+
+export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
+
+export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
+
 # Aliases
 ###############################################################################
 
@@ -139,3 +150,9 @@ alias edit=$EDITOR
 alias editconfig="edit ~/.ssh/config"
 
 alias editzshrc="edit ~/.zshrc"
+
+alias postcode="echo 'V6B 6H4' | pbcopy"
+
+alias nocchef="cd $NOCCHEF"
+
+alias mschef="cd $MSCHEF"
