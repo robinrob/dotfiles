@@ -156,3 +156,5 @@ alias postcode="echo 'V6B 6H4' | pbcopy"
 alias nocchef="cd $NOCCHEF"
 
 alias mschef="cd $MSCHEF"
+
+alias lastc=$RUBY_HOME/projects/last/last.rb
