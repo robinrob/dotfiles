@@ -71,7 +71,7 @@ PATH=$PATH:$HOME/.rvm/bin
 
 # Ruby
 ######
-rvm use 1.9.3-p545
+vvm use 1.9.3-p545
 rvm gemset use chef --create
 
 # Python
@@ -113,6 +113,8 @@ export RUBYAPP_HOME=$RUBY_HOME/projects/ruby-app
 
 export RAKEFILE_HOME=$RUBY_HOME/projects/rakefile
 
+export GLOBAL_RAKEFILE_HOME=$RUBY_HOME/projects/global-rakefile
+
 export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME
 
 export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
@@ -137,19 +139,23 @@ export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 ###############################################################################
 
 # Shortcuts
-alias save="cd $SH_HOME; ./save_code.sh"
+alias resource="source ~/.zshrc"
+
+alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 alias vconfig="vim ~/.ssh/config"
 
+alias mconfig="mate ~/.ssh/config"
+
 alias vzshrc="vim ~/.zshrc"
 
-alias resource="source ~/.zshrc"
+alias mzshrc="mate ~/.zshrc"
 
 alias edit=$EDITOR
 
-alias editconfig="edit ~/.ssh/config"
+alias config="edit ~/.ssh/config"
 
-alias editzshrc="edit ~/.zshrc"
+alias zshrc="edit ~/.zshrc"
 
 alias postcode="echo 'V6B 6H4' | pbcopy"
 
