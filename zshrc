@@ -71,7 +71,7 @@ PATH=$PATH:$HOME/.rvm/bin
 
 # Ruby
 ######
-vvm use 1.9.3-p545
+rvm use 1.9.3-p545
 rvm gemset use chef --create
 
 # Python
