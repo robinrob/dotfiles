@@ -71,7 +71,7 @@ PATH=$PATH:$HOME/.rvm/bin
 
 # Ruby
 ######
-rvm use 1.9.3-p545
+rvm use ruby-2.0.0-p247
 rvm gemset use chef --create
 
 # Python
@@ -164,3 +164,5 @@ alias nocchef="cd $NOCCHEF"
 alias mschef="cd $MSCHEF"
 
 alias lastc=$RUBY_HOME/projects/last/last.rb
+
+alias sshfind=$SH_HOME/sshfind.sh
