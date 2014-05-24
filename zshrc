@@ -87,7 +87,7 @@ pythonbrew use 2.7
 # export EDITOR="/usr/local/bin/mate -w"
 export EDITOR="/usr/bin/vim"
 
-export PROG_HOME=$HOME/Documents/programming
+export PROG_HOME=$HOME/Programming/robin
 
 export SH_HOME=$PROG_HOME/sh
 
@@ -166,3 +166,5 @@ alias mschef="cd $MSCHEF"
 alias lastc=$RUBY_HOME/projects/last/last.rb
 
 alias sshfind=$SH_HOME/sshfind.sh
+
+alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
