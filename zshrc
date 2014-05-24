@@ -71,7 +71,7 @@ PATH=$PATH:$HOME/.rvm/bin
 
 # Ruby
 ######
-vvm use 1.9.3-p545
+rvm use ruby-2.0.0-p247
 rvm gemset use chef --create
 
 # Python
@@ -103,7 +103,7 @@ export ZSH_HOME=$PROG_HOME/zsh
 
 export SH_HOME=$PROG_HOME/sh
 
-export DOTFILES_HOME=$ZSH_HOME/dotfiles
+export DOTFILES_HOME=$PROG_HOME/dotfiles
 
 export ZSHRC=$DOTFILES_HOME/zshrc
 
@@ -115,7 +115,7 @@ export RAKEFILE_HOME=$RUBY_HOME/projects/rakefile
 
 export GLOBAL_RAKEFILE_HOME=$RUBY_HOME/projects/global-rakefile
 
-export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME
+export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME" "$PYTHON_HOME
 
 export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
 
@@ -162,3 +162,7 @@ alias postcode="echo 'V6B 6H4' | pbcopy"
 alias nocchef="cd $NOCCHEF"
 
 alias mschef="cd $MSCHEF"
+
+alias lastc=$RUBY_HOME/projects/last/last.rb
+
+alias sshfind=$SH_HOME/sshfind.sh
