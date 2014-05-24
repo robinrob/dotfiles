@@ -115,7 +115,7 @@ export RAKEFILE_HOME=$RUBY_HOME/projects/rakefile
 
 export GLOBAL_RAKEFILE_HOME=$RUBY_HOME/projects/global-rakefile
 
-export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME
+export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME" "$PYTHON_HOME
 
 export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
 
