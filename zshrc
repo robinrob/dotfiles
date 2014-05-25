@@ -21,10 +21,10 @@
 
 # OS X
 ######
-defaults write com.apple.Finder AppleShowAllFiles NO
-defaults write com.apple.screencapture location $HOME/temp/screenshots/
-defaults write -g ApplePersistence -bool no
-chflags nohidden ~/Library/
+defaults write com.apple.Finder AppleShowAllFiles NO 2> /dev/null
+defaults write com.apple.screencapture location $HOME/temp/screenshots/ 2> /dev/null
+defaults write -g ApplePersistence -bool no 2> /dev/null
+chflags nohidden ~/Library/ 2> /dev/null
 
 
 # Ubuntu
@@ -71,14 +71,14 @@ PATH=$PATH:$HOME/.rvm/bin
 
 # Ruby
 ######
-rvm use ruby-2.0.0-p247
-rvm gemset use chef --create
+rvm use ruby-2.0.0-p247 2> /dev/null
+rvm gemset use chef --create 2> /dev/null
 
 # Python
 ########
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
-pythonbrew use 2.7
+pythonbrew use 2.7 2> /dev/null
 
 
 # Other environment variables
@@ -120,8 +120,6 @@ export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME" "$PYTHON_HOME
 export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
 
 export RUBY_LIB=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/lib/ruby/2.0.0
-
-export JAVA_HOME=$(/usr/libexec/java_home)
 
 export PERL_HOME=$PROG_HOME/perl
 
