@@ -115,6 +115,8 @@ export RAKEFILE_HOME=$RUBY_HOME/projects/rakefile
 
 export GLOBAL_RAKEFILE_HOME=$RUBY_HOME/projects/global-rakefile
 
+export QUIZ_HOME=$RUBY_HOME/projects/tagalog
+
 export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME" "$PYTHON_HOME
 
 export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
@@ -166,3 +168,5 @@ alias lastc=$RUBY_HOME/projects/last/last.rb
 alias sshfind=$SH_HOME/sshfind.sh
 
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
+
+alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
