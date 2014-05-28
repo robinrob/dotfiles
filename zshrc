@@ -173,6 +173,7 @@ alias sshfind=$SH_HOME/sshfind.sh
 
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
-alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
+alias rks="rake save"
 
+alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3 &"
