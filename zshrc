@@ -157,7 +157,11 @@ alias config="edit ~/.ssh/config"
 
 alias zshrc="edit ~/.zshrc"
 
-alias postcode="echo 'V6B 6H4' | pbcopy"
+POSTCODE="V6B 6H4"
+alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
+
+OFFICE_POSTCODE="V6B 2Y5"
+alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
 
 alias nocchef="cd $NOCCHEF"
 
@@ -170,3 +174,5 @@ alias sshfind=$SH_HOME/sshfind.sh
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
+
+alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3 &"
