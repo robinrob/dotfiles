@@ -166,3 +166,5 @@ alias lastc=$RUBY_HOME/projects/last/last.rb
 alias sshfind=$SH_HOME/sshfind.sh
 
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
+
+alias rs="rake save"
