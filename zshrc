@@ -57,15 +57,6 @@ alias less='less -m -N -g -i -J --underline-special --SILENT'
 alias more='less'
 
 
-# Environment variables
-###############################################################################
-
-# Path
-######
-PATH=$PATH:$EC2_HOME/bin
-PATH=$PATH:$HOME/.rvm/bin
-
-
 # Development
 ###############################################################################
 
@@ -81,7 +72,7 @@ rvm gemset use chef --create 2> /dev/null
 pythonbrew use 2.7 2> /dev/null
 
 
-# Other environment variables
+# Environment variables
 #############################
 
 # export EDITOR="/usr/local/bin/c -w"
@@ -135,6 +126,8 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
+export LOCAL_HOME=$RUBY_HOME/projects/local
+
 # Aliases
 ###############################################################################
 
@@ -167,8 +160,6 @@ alias nocchef="cd $NOCCHEF"
 
 alias mschef="cd $MSCHEF"
 
-alias lastc=$RUBY_HOME/projects/last/last.rb
-
 alias sshfind=$SH_HOME/sshfind.sh
 
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
@@ -180,3 +171,10 @@ alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3 &"
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+
+
+# Path
+######
+PATH=$PATH:$EC2_HOME/bin
+PATH=$PATH:$HOME/.rvm/bin
+PATH=$PATH:$RUBY_HOME/projects/local/bin
