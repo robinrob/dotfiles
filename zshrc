@@ -106,7 +106,7 @@ export RAKEFILE_HOME=$RUBY_HOME/projects/rakefile
 
 export GLOBAL_RAKEFILE_HOME=$RUBY_HOME/projects/global-rakefile
 
-export QUIZ_HOME=$RUBY_HOME/projects/tagalog
+export QUIZ_HOME=$RUBY_HOME/projects/quiz
 
 export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME" "$PYTHON_HOME
 
@@ -126,7 +126,7 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
-export LOCAL_HOME=$RUBY_HOME/projects/local
+export LOCAL_HOME=$PROG_HOME/local
 
 # Aliases
 ###############################################################################
@@ -177,4 +177,4 @@ alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
 ######
 PATH=$PATH:$EC2_HOME/bin
 PATH=$PATH:$HOME/.rvm/bin
-PATH=$PATH:$RUBY_HOME/projects/local/bin
+PATH=$PATH:$LOCAL_HOME/bin
