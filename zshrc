@@ -172,7 +172,7 @@ alias rks="rake save"
 
 alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
-alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3 &"
+alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
