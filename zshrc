@@ -182,6 +182,8 @@ alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
 
 alias card=`cat $DOCUMENTS_HOME/IMPORTANT/records/card.txt | pbcopy`
 
+alias gstat='cd $PROG_HOME && gs'
+
 
 # Path
 ######
