@@ -80,6 +80,8 @@ export EDITOR="/usr/bin/vim"
 
 export PROG_HOME=$HOME/Programming/robin
 
+export DOCUMENTS_HOME="$HOME/Google Drive"
+
 export SH_HOME=$PROG_HOME/sh
 
 export PYTHON_HOME=$PROG_HOME/python
@@ -144,6 +146,8 @@ alias vzshrc="vim ~/.zshrc"
 
 alias mzshrc="mate ~/.zshrc"
 
+alias czshrc="cat ~/.zshrc"
+
 alias edit=$EDITOR
 
 alias config="edit ~/.ssh/config"
@@ -171,6 +175,8 @@ alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3 &"
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+
+alias card=`cat $DOCUMENTS_HOME/IMPORTANT/records/card.txt | pbcopy`
 
 
 # Path
