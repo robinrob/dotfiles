@@ -22,7 +22,8 @@
 # OS X
 ######
 defaults write com.apple.Finder AppleShowAllFiles NO 2> /dev/null
-defaults write com.apple.screencapture location $HOME/temp/screenshots/ 2> /dev/null
+
+defaults write com.apple.screencapture location $SCREENSHOTS_HOME 2> /dev/null
 defaults write -g ApplePersistence -bool no 2> /dev/null
 chflags nohidden ~/Library/ 2> /dev/null
 
@@ -122,13 +123,16 @@ export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
 export GAM_PATH=/usr/local/Library/gam3
 
-export WORK_HOME=~/Documents/programming/work
+export WORK_HOME=~/Programming/work
 
 export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
+export SCREENSHOTS_HOME=$HOME/temp/screenshots
+
 export LOCAL_HOME=$PROG_HOME/local
+
 
 # Aliases
 ###############################################################################
@@ -172,7 +176,7 @@ alias rks="rake save"
 
 alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
-alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3 &"
+alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
