@@ -7,10 +7,6 @@
 
 # gem install chef knife-windows knife-ec2 --no-ri --no-rdoc
 
-# ln -s $DOTFILES_HOME/Robin.xml ~/Library/Preferences/RubyMine50/keymaps/Robin.xml
-# 
-# ln -s $DOTFILES_HOME/Robin.xml ~/Library/Preferences/PyCharm30/keymaps/Robin.xml
-
 
 # Fixes!
 ###############################################################################
