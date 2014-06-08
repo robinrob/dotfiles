@@ -7,6 +7,11 @@
 
 # gem install chef knife-windows knife-ec2 --no-ri --no-rdoc
 
+# ln -s Robin.xml ~/Library/Preferences/RubyMine50/keymaps/Robin.xml
+# 
+# ln -s Robin.xml ~/Library/Preferences/PyCharm30/keymaps/Robin.xml
+
+
 # Fixes!
 ###############################################################################
 
@@ -15,21 +20,6 @@
 # brew unlink libyaml && brew link libyaml
 # brew unlink openssl && brew link --force openssl
 
-
-# OS-Specific stuff
-###############################################################################
-
-# OS X
-######
-defaults write com.apple.Finder AppleShowAllFiles NO 2> /dev/null
-
-defaults write com.apple.screencapture location $SCREENSHOTS_HOME 2> /dev/null
-defaults write -g ApplePersistence -bool no 2> /dev/null
-chflags nohidden ~/Library/ 2> /dev/null
-
-
-# Ubuntu
-########
 
 # ZSH setup
 ###############################################################################
@@ -190,3 +180,19 @@ alias gstat='cd $PROG_HOME && gs'
 PATH=$PATH:$EC2_HOME/bin
 PATH=$PATH:$HOME/.rvm/bin
 PATH=$PATH:$LOCAL_HOME/bin
+
+
+# OS-Specific stuff
+###############################################################################
+
+# OS X
+######
+defaults write com.apple.Finder AppleShowAllFiles NO 2> /dev/null
+
+defaults write com.apple.screencapture location $SCREENSHOTS_HOME 2> /dev/null
+defaults write -g ApplePersistence -bool no 2> /dev/null
+chflags nohidden ~/Library/ 2> /dev/null
+
+
+# Ubuntu
+########
