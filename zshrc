@@ -166,7 +166,7 @@ alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
-alias card=`cat $DOCUMENTS_HOME/IMPORTANT/records/card.txt | pbcopy`
+alias card="cat $DOCUMENTS_HOME/IMPORTANT/records/card.txt | pbcopy"
 
 alias gstat='cd $PROG_HOME && gs'
 
