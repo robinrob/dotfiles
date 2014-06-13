@@ -125,7 +125,6 @@ export LOCAL_HOME=$PROG_HOME/local
 # Aliases
 ###############################################################################
 
-# Shortcuts
 alias resource="source ~/.zshrc"
 
 alias rs="resource"
@@ -172,11 +171,11 @@ alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
 
 alias cards="cat '$DOCUMENTS_HOME/IMPORTANT/records/card.txt'"
 
-alias cardhsbc="cards | grep hsbc-debit | awk -F: '{print $2}' | pbcopy"
+alias cardhsbc="get_card hsbc-debit"
 
-alias cardrbc="cards | grep rbc-debit | awk -F: '{print $2}' | pbcopy"
+alias cardrbc="get_card rbc-debit"
 
-alias cardcredit="cards | grep rbc-credit | awk -F: '{print $2}' | pbcopy"
+alias cardcredit="get_card rbc-credit"
 
 alias gstat='cd $PROG_HOME && gs'
 
@@ -185,6 +184,14 @@ alias pb="pbcopy"
 alias phone="echo '+1 604-603-9325'"
 
 alias phonelong="echo '001 604 603 9325'"
+
+
+# Functions
+###############################################################################
+
+function get_card {
+	cards | grep $1 | awk -F: '{print $2}' | pbcopy
+}
 
 function reminder {
 	echo $1 | mail -s "REMINDER: $1" robin.smith@cloudreach.co.uk
