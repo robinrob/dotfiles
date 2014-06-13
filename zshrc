@@ -97,6 +97,8 @@ export GLOBAL_RAKEFILE_HOME=$RUBY_HOME/projects/global-rakefile
 
 export QUIZ_HOME=$RUBY_HOME/projects/quiz
 
+export MRROBINSMITHCOM_HOME=$RUBY_HOME/projects/mrrobinsmith.com
+
 export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME" "$PYTHON_HOME
 
 export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
