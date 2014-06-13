@@ -184,6 +184,10 @@ function reminder {
 	echo $1 | mail -s "REMINDER: $1" robin.smith@cloudreach.co.uk
 }
 
+function note {
+	cd ~/temp && mate $1
+}
+
 
 # Path
 ######
