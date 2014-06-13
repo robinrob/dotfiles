@@ -128,6 +128,8 @@ export LOCAL_HOME=$PROG_HOME/local
 # Shortcuts
 alias resource="source ~/.zshrc"
 
+alias rs="resource"
+
 alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 alias vconfig="vim ~/.ssh/config"
@@ -168,9 +170,19 @@ alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
-alias card=`cat $DOCUMENTS_HOME/IMPORTANT/records/card.txt | pbcopy`
+alias card="cat $DOCUMENTS_HOME/IMPORTANT/records/card.txt | pbcopy"
 
 alias gstat='cd $PROG_HOME && gs'
+
+alias pb="pbcopy"
+
+alias phone="echo '+1 604-603-9325'"
+
+alias phonelong="echo '001 604 603 9325'"
+
+function reminder {
+	echo $1 | mail -s "REMINDER: $1" robin.smith@cloudreach.co.uk
+}
 
 
 # Path
@@ -193,4 +205,5 @@ chflags nohidden ~/Library/ 2> /dev/null
 
 
 # Ubuntu
+#lias
 ########
