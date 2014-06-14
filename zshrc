@@ -122,6 +122,25 @@ export SCREENSHOTS_HOME=$HOME/temp/screenshots
 export LOCAL_HOME=$PROG_HOME/local
 
 
+# Functions
+###############################################################################
+
+function get_card {
+	cards | grep $1 | awk -F: '{print $2}' | pbcopy
+}
+
+function reminder {
+	echo $1 | mail -s "REMINDER: $1" robin.smith@cloudreach.co.uk
+}
+
+function note {
+	cd ~/temp && mate $1
+}
+
+function copy_print {
+	echo $1 && echo $1 | pbcopy
+}
+
 # Aliases
 ###############################################################################
 
@@ -179,25 +198,9 @@ alias gstat='cd $PROG_HOME && gs'
 
 alias pb="pbcopy"
 
-alias phone="echo '+1 604-603-9325'"
+alias phone="copy_print '+1 604-603-9325'"
 
-alias phonelong="echo '001 604 603 9325'"
-
-
-# Functions
-###############################################################################
-
-function get_card {
-	cards | grep $1 | awk -F: '{print $2}' | pbcopy
-}
-
-function reminder {
-	echo $1 | mail -s "REMINDER: $1" robin.smith@cloudreach.co.uk
-}
-
-function note {
-	cd ~/temp && mate $1
-}
+alias phonelong="copy_print '001 604 603 9325'"
 
 
 # Path
