@@ -157,8 +157,6 @@ alias nocchef="cd $NOCCHEF"
 
 alias mschef="cd $MSCHEF"
 
-alias sshfind=$SH_HOME/sshfind.sh
-
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias rks="rake save"
@@ -222,5 +220,4 @@ chflags nohidden ~/Library/ 2> /dev/null
 
 
 # Ubuntu
-#lias
 ########
