@@ -130,7 +130,15 @@ function get_card {
 }
 
 function reminder {
-	echo $1 | mail -s "REMINDER: $1" robin.smith@cloudreach.co.uk
+	echo $1 | mail -s "REMINDER: $1" $2
+}
+
+function reminderhome {
+	reminder $1 robin@mrrobinsmith.com
+}
+
+function reminderwork {
+	reminder $1 robin.smith@cloudreach.co.uk
 }
 
 function note {
