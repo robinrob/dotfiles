@@ -121,16 +121,14 @@ export SCREENSHOTS_HOME=$HOME/temp/screenshots
 
 export LOCAL_HOME=$PROG_HOME/local
 
+export TODO_HOME=$LOCAL_HOME/lib/todo.csv
+
 
 # Functions
 ###############################################################################
 
 function get_card {
 	cards | grep $1 | awk -F: '{print $2}' | pbcopy
-}
-
-function reminder {
-	echo $1 | mail -s "REMINDER: $1" $2
 }
 
 function reminderhome {
@@ -141,12 +139,24 @@ function reminderwork {
 	reminder $1 robin.smith@cloudreach.co.uk
 }
 
+function reminder {
+	echo $1 | mail -s "REMINDER: $1" $2
+}
+
 function note {
 	cd ~/temp && mate $1
 }
 
 function copy_print {
 	echo $1 && echo $1 | pbcopy
+}
+
+function docs_home {
+	if [ `hostname` == "mercury.local" ]; then
+		return DOCUMENTS_HOME="$HOME/Google Drive"
+	elif [ `hostname` == "venus.local" ]; then
+		return DOCUMENTS_HOME="$HOME/Documents"
+	fi	
 }
 
 # Aliases
@@ -209,6 +219,10 @@ alias pb="pbcopy"
 alias phone="copy_print '+1 604-603-9325'"
 
 alias phonelong="copy_print '001 604 603 9325'"
+
+# Un-Aliases
+###############################################################################
+unalias todo
 
 
 # Path
