@@ -169,6 +169,8 @@ alias zshrc="edit ~/.zshrc"
 POSTCODE="V6B 6H4"
 alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
 
+alias address="copy_print '438 Seymour Street, #1701, Vancouver, British Columbia, ${POSTCODE}'"r
+
 OFFICE_POSTCODE="V6B 2Y5"
 alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
 
@@ -179,6 +181,8 @@ alias mschef="cd $MSCHEF"
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias rks="rake save"
+
+alias fbs="fab save"
 
 alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
