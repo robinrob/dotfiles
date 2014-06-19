@@ -205,6 +205,14 @@ function rnew {
 	new $1 ruby rb
 }
 
+function cd_pull {
+	cd $1 && gpl
+}
+
+function cd_save {
+	cd $1 && rks
+}
+
 # Aliases
 ###############################################################################
 
@@ -271,6 +279,14 @@ alias phone="copy_print '+1 604-603-9325'"
 alias phonelong="copy_print '001 604 603 9325'"
 
 alias spl="mate $TEMP_FOLDER/splunk_searches.txt"
+
+alias dpl="cd_pull $DOTFILES_HOME"
+
+alias dts="cd_save $DOTFILES_HOME"
+
+alias lpl="cd_pull $LOCAL_HOME"
+
+alias lcs="cd_save $LOCAL_HOME"
 
 # Un-Aliases
 ###############################################################################
