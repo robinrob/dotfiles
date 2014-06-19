@@ -334,5 +334,5 @@ then
 	
 else
 	echo "setting to 0"
-	echo 0 >! ~/.zsh_switch
+	echo 0 >! ~/.zsh_switch > /dev/null
 fi
