@@ -328,10 +328,11 @@ fi
 
 if [[ `cat ~/.zsh_switch` -eq 0 ]]
 then
+	echo "setting to 1"
 	echo 1 >! ~/.zsh_switch
-	source ~/.zshrc 1> /dev/null
+	source ~/.zshrc
 	
-elif [[ val -eq 1 ]]
-then
+else
+	echo "setting to 0"
 	echo 0 >! ~/.zsh_switch
 fi
