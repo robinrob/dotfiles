@@ -320,6 +320,7 @@ chflags nohidden ~/Library/ 2> /dev/null
 ########
 
 
+# Logic to source .zshrc exactly twice
 if [ -n `ls ~/.zsh_switch` ]
 then
 	touch ~/.zsh_switch
@@ -328,11 +329,9 @@ fi
 
 if [[ `cat ~/.zsh_switch` -eq 0 ]]
 then
-	echo "setting to 1"
 	echo 1 >! ~/.zsh_switch
-	source ~/.zshrc
+	source ~/.zshrc > /dev/null 2>&1;
 	
 else
-	echo "setting to 0"
-	echo 0 >! ~/.zsh_switch > /dev/null
+	echo 0 >! ~/.zsh_switch
 fi
