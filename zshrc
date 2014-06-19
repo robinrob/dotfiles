@@ -210,11 +210,11 @@ function rnew {
 }
 
 function cd_pull {
-	cd $1 && gpl
+	cd $1 && git pull
 }
 
 function cd_save {
-	cd $1 && rks
+	cd $1 && rake save
 }
 
 # Aliases
@@ -321,17 +321,17 @@ chflags nohidden ~/Library/ 2> /dev/null
 
 
 # Logic to source .zshrc exactly twice
-if [ -n `ls ~/.zsh_switch` ]
-then
-	touch ~/.zsh_switch
-fi
-
-
-if [[ `cat ~/.zsh_switch` -eq 0 ]]
-then
-	echo 1 >! ~/.zsh_switch
-	source ~/.zshrc > /dev/null 2>&1;
-	
-else
-	echo 0 >! ~/.zsh_switch
-fi
+# if [ -n `ls ~/.zsh_switch` ]
+# then
+# 	touch ~/.zsh_switch
+# fi
+#
+#
+# if [[ `cat ~/.zsh_switch` -eq 0 ]]
+# then
+# 	echo 1 >! ~/.zsh_switch
+# 	source ~/.zshrc > /dev/null 2>&1;
+#
+# else
+# 	echo 0 >! ~/.zsh_switch
+# fi
