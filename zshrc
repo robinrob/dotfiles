@@ -123,6 +123,8 @@ export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
 
+export TEMP_FOLDER="~/temp"
+
 
 # Functions
 ###############################################################################
@@ -149,7 +151,7 @@ function reminder {
 }
 
 function note {
-	cd ~/temp && mate $1
+	cd ~/temp && mate "$1.txt"
 }
 
 function copy_print {
@@ -228,6 +230,8 @@ alias pb="pbcopy"
 alias phone="copy_print '+1 604-603-9325'"
 
 alias phonelong="copy_print '001 604 603 9325'"
+
+alias spl="mate $TEMP_FOLDER/splunk_searches.txt"
 
 # Un-Aliases
 ###############################################################################
