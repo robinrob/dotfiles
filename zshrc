@@ -159,11 +159,11 @@ function copy_print {
 }
 
 function docs_home {
-	if [ `hostname` == "mercury.local" ]; then
-		return DOCUMENTS_HOME="$HOME/Google Drive"
-	elif [ `hostname` == "venus.local" ]; then
-		return DOCUMENTS_HOME="$HOME/Documents"
-	fi	
+	if [[ `hostname` == "mercury.local" ]]; then
+		export DOCUMENTS_HOME="$HOME/Google Drive"
+	elif [[ `hostname` == "venus.local" ]]; then
+		export DOCUMENTS_HOME="$HOME/Documents"
+	fi
 }
 
 
