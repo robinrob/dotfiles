@@ -166,28 +166,67 @@ function docs_home {
 	fi	
 }
 
+
+function new {
+	if [ -n `ls $1`]
+	then
+		echo '#!/usr/bin/env ruby' > $1
+		chmod +x $1
+		mate $1
+	fi
+}	
+
+function new {
+	FILE="$1.$3"
+	
+	if [ -z `ls $FILE 2> /dev/null` ]
+	then
+		echo "#!/usr/bin/env $2" > $FILE
+		chmod +x $FILE
+		mate $FILE
+	else
+		echo "file: $FILE already exists!"
+	fi	
+}
+
+function pnew {
+	new $1 python py
+}
+
+function bnew {
+	new $1 bash sh
+}
+
+function snew {
+	new $1 sh sh
+}
+
+function rnew {
+	new $1 ruby rb
+}
+
 # Aliases
 ###############################################################################
 
-alias resource="source ~/.zshrc"
+alias m="mate"
 
-alias rs="resource"
+alias rs="source ~/.zshrc"
 
 alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
-alias vconfig="vim ~/.ssh/config"
+alias vconf="vim ~/.ssh/config"
 
-alias mconfig="mate ~/.ssh/config"
+alias mconf="mate ~/.ssh/config"
 
-alias vzshrc="vim ~/.zshrc"
+alias vzsh="vim ~/.zshrc"
 
-alias mzshrc="mate ~/.zshrc"
+alias mzsh="mate ~/.zshrc"
 
-alias czshrc="cat ~/.zshrc"
+alias czsh="cat ~/.zshrc"
 
 alias edit=$EDITOR
 
-alias config="edit ~/.ssh/config"
+alias conf="edit ~/.ssh/config"
 
 alias zshrc="edit ~/.zshrc"
 
