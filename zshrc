@@ -286,11 +286,11 @@ alias spl="mate $TEMP_FOLDER/splunk_searches.txt"
 
 alias dpl="cd_pull $DOTFILES_HOME"
 
-alias dts="cd_save $DOTFILES_HOME"
+alias dsv="cd_save $DOTFILES_HOME"
 
 alias lpl="cd_pull $LOCAL_HOME"
 
-alias lcs="cd_save $LOCAL_HOME"
+alias lsv="cd_save $LOCAL_HOME"
 
 # Un-Aliases
 ###############################################################################
