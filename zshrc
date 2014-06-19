@@ -201,6 +201,10 @@ function snew {
 	new $1 sh sh
 }
 
+function znew {
+	new $1 zsh zsh
+}
+
 function rnew {
 	new $1 ruby rb
 }
@@ -314,3 +318,20 @@ chflags nohidden ~/Library/ 2> /dev/null
 
 # Ubuntu
 ########
+
+
+if [ -n `ls ~/.zsh_switch` ]
+then
+	touch ~/.zsh_switch
+fi
+
+
+if [[ `cat ~/.zsh_switch` -eq 0 ]]
+then
+	echo 1 >! ~/.zsh_switch
+	source ~/.zshrc 1> /dev/null
+	
+elif [[ val -eq 1 ]]
+then
+	echo 0 >! ~/.zsh_switch
+fi
