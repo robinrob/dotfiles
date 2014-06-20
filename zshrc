@@ -292,6 +292,10 @@ alias lpl="cd_pull $LOCAL_HOME"
 
 alias lsv="cd_save $LOCAL_HOME"
 
+alias screenshots="cd $SCREENSHOTS_HOME"
+
+alias opens="cd $SCREENSHOTS_HOME && open `lastf -s Screen`"
+
 # Un-Aliases
 ###############################################################################
 unalias todo
