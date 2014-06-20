@@ -223,16 +223,7 @@ function cd_pull {
 }
 
 function cd_save {
-	cd $1
-	output=`git branch | head -1` > /dev/null
-	
-	comps=("${(s/* /)output}") # notice the quotes
-
-	branch=$comps[2]
-
-	rake save:branch=$branch
-	
-	cd - > /dev/null
+	cd $1 && rake save
 }
 
 # Aliases
