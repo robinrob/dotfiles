@@ -211,16 +211,15 @@ function rnew {
 
 function cd_pull {
 	cd $1
-	output=`git branch` > /dev/null
+	output=`git branch | head -1` > /dev/null
 	
 	comps=("${(s/* /)output}") # notice the quotes
 
 	branch=$comps[2]
-	echo $branch
 
 	git pull origin $branch
 	
-	cd -
+	cd - > /dev/null
 }
 
 function cd_save {
