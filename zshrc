@@ -296,6 +296,12 @@ alias screenshots="cd $SCREENSHOTS_HOME"
 
 alias opens="cd $SCREENSHOTS_HOME && open `lastf -s Screen`"
 
+alias lasts="cd $SCREENSHOTS_HOME && lastf -s Screen"
+
+function rns = {
+	cd $SCREENSHOTS_HOME && mv `lasts` $1
+}
+
 # Un-Aliases
 ###############################################################################
 unalias todo
