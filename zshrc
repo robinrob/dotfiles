@@ -210,7 +210,17 @@ function rnew {
 }
 
 function cd_pull {
-	cd $1 && git pull
+	cd $1
+	output=`git branch` > /dev/null
+	
+	comps=("${(s/* /)output}") # notice the quotes
+
+	branch=$comps[2]
+	echo $branch
+
+	git pull origin $branch
+	
+	cd -
 }
 
 function cd_save {
@@ -292,11 +302,19 @@ alias lpl="cd_pull $LOCAL_HOME"
 
 alias lsv="cd_save $LOCAL_HOME"
 
+alias qpl="cd_pull $QUIZ_HOME"
+
+alias qsv="cd_save $QUIZ_HOME"
+
 alias screenshots="cd $SCREENSHOTS_HOME"
 
 alias opens="cd $SCREENSHOTS_HOME && open `lastf -s Screen`"
 
 alias lasts="cd $SCREENSHOTS_HOME && lastf -s Screen"
+
+alias gpd="git pull origin develop"
+
+alias gpm="git pull origin master"
 
 function rns = {
 	cd $SCREENSHOTS_HOME && mv `lasts` $1
