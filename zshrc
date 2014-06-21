@@ -226,9 +226,13 @@ function cd_save {
 	cd $1 && rake save
 }
 
-function rns = {
-	cd $SCREENSHOTS_HOME && mv `lasts` $1
+
+function opens {
+	cd $SCREENSHOTS_HOME
+	open ""$(lastf -s Screen)""
+	cd -
 }
+
 
 # Aliases
 ###############################################################################
@@ -310,8 +314,6 @@ alias qpl="cd_pull $QUIZ_HOME"
 alias qsv="cd_save $QUIZ_HOME"
 
 alias screenshots="cd $SCREENSHOTS_HOME"
-
-alias opens='cd $SCREENSHOTS_HOME && open ""$(lastf -s Screen)"" && cd -'
 
 alias lasts="cd $SCREENSHOTS_HOME && lastf -s Screen"
 
