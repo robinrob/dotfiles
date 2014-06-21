@@ -219,7 +219,7 @@ function cd_pull {
 
 	git pull origin $branch
 	
-	cd - > /dev/null
+	cd -
 }
 
 function cd_save {
