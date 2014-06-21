@@ -158,13 +158,13 @@ function copy_print {
 	echo $1 && echo $1 | pbcopy
 }
 
-function docs_home {
-	if [[ `hostname` == "mercury.local" ]]; then
-		export DOCUMENTS_HOME="$HOME/Google Drive"
-	elif [[ `hostname` == "venus.local" ]]; then
-		export DOCUMENTS_HOME="$HOME/Documents"
-	fi
-}
+# function docs_home {
+# 	if [[ `hostname` == "mercury.local" ]]; then
+# 		export DOCUMENTS_HOME="$HOME/Google Drive"
+# 	elif [[ `hostname` == "venus.local" ]]; then
+# 		export DOCUMENTS_HOME="$HOME/Documents"
+# 	fi
+# }
 
 
 function new {
@@ -212,7 +212,7 @@ function rnew {
 function cd_pull {
 	cd $1
 	output=`git branch | head -1` > /dev/null
-	
+		
 	comps=("${(s/* /)output}") # notice the quotes
 
 	branch=$comps[2]
@@ -311,21 +311,21 @@ alias qsv="cd_save $QUIZ_HOME"
 
 alias screenshots="cd $SCREENSHOTS_HOME"
 
-alias opens="cd $SCREENSHOTS_HOME && open `lastf -s Screen`"
+alias opens='cd $SCREENSHOTS_HOME && open ""$(lastf -s Screen)"" && cd -'
 
 alias lasts="cd $SCREENSHOTS_HOME && lastf -s Screen"
 
-<<<<<<< HEAD
 alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
-=======
+
 alias gpd="git pull origin develop"
 
 alias gpm="git pull origin master"
 
+alias rnsall="cd $SCREENSHOTS_HOME && despace"
+
 function rns = {
 	cd $SCREENSHOTS_HOME && mv `lasts` $1
 }
->>>>>>> b77d9f83bfa017373d04b2ae05c2d0e52d49f427
 
 # Un-Aliases
 ###############################################################################
