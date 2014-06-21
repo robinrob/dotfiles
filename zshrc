@@ -223,14 +223,12 @@ function cd_pull {
 }
 
 function cd_save {
-	cd $1 && rake save
+	cd $1 && rake save && cd -
 }
 
 
 function opens {
-	cd $SCREENSHOTS_HOME
-	open ""$(lastf -s Screen)""
-	cd -
+	cd $SCREENSHOTS_HOME && open ""$(lastf -s Screen)"" && cd -
 }
 
 
