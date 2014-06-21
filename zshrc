@@ -217,6 +217,10 @@ function cd_save {
 	cd $1 && rake save
 }
 
+function rns = {
+	cd $SCREENSHOTS_HOME && mv `lasts` $1
+}
+
 # Aliases
 ###############################################################################
 
@@ -298,9 +302,7 @@ alias opens="cd $SCREENSHOTS_HOME && open `lastf -s Screen`"
 
 alias lasts="cd $SCREENSHOTS_HOME && lastf -s Screen"
 
-function rns = {
-	cd $SCREENSHOTS_HOME && mv `lasts` $1
-}
+alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
 
 # Un-Aliases
 ###############################################################################
