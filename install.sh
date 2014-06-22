@@ -36,4 +36,4 @@ sh install.sh
 rake update
 
 # symlink application config files
-./smylinks.sh
+./jetbrains.sh
