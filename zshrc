@@ -321,6 +321,10 @@ alias gpd="git pull origin develop"
 
 alias gpm="git pull origin master"
 
+alias conf="mate config.json"
+
+alias fp="find $PWD -name "
+
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
 
 function rns = {

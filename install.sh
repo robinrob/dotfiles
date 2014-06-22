@@ -36,11 +36,4 @@ sh install.sh
 rake update
 
 # symlink application config files
-RUBYMINE_CONFIG=~/Library/Preferences/RubyMine50/keymaps/Jetbrains-Robin.xml
-rm -f $RUBYMINE_CONFIG
-ln -s $DOTFILES_HOME/Robin.xml $RUBYMINE_CONFIG
-
-PYCHARM_CONFIG=~/Library/Preferences/PyCharm30/keymaps/Jetbrains-Robin.xml
-rm -f $PYCHARM_CONFIG
-ln -s $DOTFILES_HOME/Robin.xml $PYCHARM_CONFIG
-
+./smylinks.sh
