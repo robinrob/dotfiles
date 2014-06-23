@@ -67,7 +67,7 @@ export EDITOR="/usr/bin/vim"
 
 export PROG_HOME=$HOME/Programming/robin
 
-export DOCUMENTS_HOME="$HOME/Google Drive"
+export DOCUMENTS_HOME="$HOME/Dropbox"
 
 export SH_HOME=$PROG_HOME/sh
 
@@ -151,7 +151,15 @@ function reminder {
 }
 
 function note {
-	cd ~/temp && mate "$1.txt"
+	cd $TEMP_FOLDER && mate "$1.txt"
+}
+
+function song {
+	cd $DOCUMENTS_HOME/creative/songs && mate "$1.txt"
+}
+
+function write {
+	cd $DOCUMENTS_HOME/creative/writing && mate "$1.txt"
 }
 
 function copy_print {
@@ -260,7 +268,7 @@ alias zshrc="edit ~/.zshrc"
 POSTCODE="V6B 6H4"
 alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
 
-alias address="copy_print '438 Seymour Street, #1701, Vancouver, British Columbia, ${POSTCODE}'"r
+alias address="copy_print '438 Seymour Street, #1701, Vancouver, British Columbia, ${POSTCODE}'"
 
 OFFICE_POSTCODE="V6B 2Y5"
 alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
@@ -324,6 +332,12 @@ alias gpm="git pull origin master"
 alias conf="mate config.json"
 
 alias fp="find $PWD -name "
+
+alias gcm="git checkout master"
+
+alias gcd="git checkout develop"
+
+alias bi="bundle install"
 
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
 
