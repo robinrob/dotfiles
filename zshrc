@@ -101,7 +101,7 @@ export MRROBINSMITHCOM_HOME=$RUBY_HOME/projects/mrrobinsmith.com
 
 export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME" "$PYTHON_HOME
 
-export IMPORTANT_HOME=$HOME"/Google Drive/IMPORTANT"
+export IMPORTANT_HOME=$DOCUMENTS_HOME/IMPORTANT
 
 export RUBY_LIB=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/lib/ruby/2.0.0
 
@@ -130,7 +130,14 @@ export TEMP_HOME=~/Dropbox/temp
 ###############################################################################
 
 function get_card {
-	cat $DOCUMENTS_HOME/IMPORTANT/records/card.txt | grep $1 | awk -F: '{print $2}' | pbcopy
+	cat IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}' | pbcopy
+}
+
+function get_phone {
+	cmd="cat $IMPORTANT_HOME/records/phone.txt | grep $1"
+	val=$(eval "$cmd")
+	echo ""$val"" | awk -F: '{print $2}'
+	echo ""$val"" | awk -F: '{print $2}' | pbcopy
 }
 
 function reminder {
@@ -247,6 +254,8 @@ alias m="mate"
 
 alias rs="source ~/.zshrc"
 
+alias RS="source ~/.zshrc"
+
 alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 alias vconf="vim ~/.ssh/config"
@@ -264,6 +273,10 @@ alias edit=$EDITOR
 alias conf="edit ~/.ssh/config"
 
 alias zshrc="edit ~/.zshrc"
+
+alias phone="get_phone short"
+
+alias phonelong="get_phone long"
 
 POSTCODE="V6B 6H4"
 alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
@@ -301,10 +314,6 @@ alias gstat='cd $PROG_HOME && gs'
 
 alias pb="pbcopy"
 
-alias phone="copy_print '+1 604-603-9325'"
-
-alias phonelong="copy_print '001 604 603 9325'"
-
 alias spl="mate $TEMP_HOME/splunk_searches.txt"
 
 alias dpl="cd_pull $DOTFILES_HOME"
@@ -340,6 +349,8 @@ alias gcd="git checkout develop"
 alias bi="bundle install"
 
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
+
+alias msp="copy_print `cat $IMPORTANT_HOME/records/bc_msp.txt`"
 
 function rns = {
 	cd $SCREENSHOTS_HOME && mv `lasts` $1
