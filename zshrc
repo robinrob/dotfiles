@@ -67,7 +67,7 @@ export EDITOR="/usr/bin/vim"
 
 export PROG_HOME=$HOME/Programming/robin
 
-export DOCUMENTS_HOME="$HOME/Dropbox"
+export DOCUMENTS_HOME=$HOME/Dropbox
 
 export SH_HOME=$PROG_HOME/sh
 
@@ -123,17 +123,17 @@ export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
 
-export TEMP_FOLDER="~/temp"
+export TEMP_FOLDER=~/Dropbox/temp
 
 
 # Functions
 ###############################################################################
 
 function get_card {
-	cards | grep $1 | awk -F: '{print $2}' | pbcopy
+	cat $DOCUMENTS_HOME/IMPORTANT/records/card.txt | grep $1 | awk -F: '{print $2}' | pbcopy
 }
 
-function reminderhome {
+function reminder {
 	reminder $1 robin@mrrobinsmith.com
 }
 
@@ -288,8 +288,6 @@ alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
-
-alias cards="cat '$DOCUMENTS_HOME/IMPORTANT/records/card.txt'"
 
 alias cardhsbc="get_card hsbc-debit"
 
