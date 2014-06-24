@@ -117,13 +117,13 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
-export SCREENSHOTS_HOME=$HOME/temp/screenshots
+export SCREENSHOTS_HOME=$TEMP_HOME/screenshots
 
 export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
 
-export TEMP_FOLDER=~/Dropbox/temp
+export TEMP_HOME=~/Dropbox/temp
 
 
 # Functions
@@ -151,7 +151,7 @@ function reminder {
 }
 
 function note {
-	cd $TEMP_FOLDER && mate "$1.txt"
+	cd $TEMP_HOME && mate "$1.txt"
 }
 
 function song {
@@ -303,7 +303,7 @@ alias phone="copy_print '+1 604-603-9325'"
 
 alias phonelong="copy_print '001 604 603 9325'"
 
-alias spl="mate $TEMP_FOLDER/splunk_searches.txt"
+alias spl="mate $TEMP_HOME/splunk_searches.txt"
 
 alias dpl="cd_pull $DOTFILES_HOME"
 

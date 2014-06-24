@@ -1,33 +1,28 @@
 #!/bin/sh
-############################
-# .make.sh
-# This script creates symlinks from the home directory to any desired dotfiles in ~/dotfiles
-############################
 
-########## Variables
+source colors.sh
 
-DIR=`pwd`                  									# dotfiles directory
-OLD_DIR=/tmp/dotfiles             							# old dotfiles backup directory
-FILES="yadr bashrc zshrc zsh.prompts vimrc tm_properties"   # list of files/folders to symlink in homedir
+DIR=`pwd`                  									
+OLD_DIR=/tmp/dotfiles             							
+FILES="yadr bashrc zshrc zsh.prompts vimrc tm_properties"
 
-##########
 
-# create dotfiles_old in homedir
-echo "Creating $OLD_DIR for backup of any existing dotfiles in ~"
+# Create dotfiles_old in homedir
+green "Creating $OLD_DIR for backup of any existing dotfiles in ~"
 rm -rf $OLD_DIR
 mkdir -p $OLD_DIR
-echo "...done"
+green "...done"
 
-# change to the dotfiles directory
-echo "Changing to the $DIR directory"
+# Change to the dotfiles directory
+green "Changing to the $DIR directory"
 cd $DIR
-echo "...done"
+green "...done"
 
-# move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
+# Move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 for file in $FILES; do
-    echo "Moving any existing dotfiles from ~ to $OLD_DIR"
+    green "Moving any existing dotfiles from ~ to $OLD_DIR"
     mv ~/.$file $OLD_DIR/
-    echo "Creating symlink to $file in home directory."
+    green "Creating symlink to $file in home directory."
     ln -s $DIR/$file ~/.$file
 done
 
@@ -35,5 +30,5 @@ cd yadr
 sh install.sh
 rake update
 
-# symlink application config files
-./jetbrains.sh
+# Setup other stuff that can't be symlinked
+./setup.sh
