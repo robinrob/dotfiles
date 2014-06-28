@@ -117,13 +117,13 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
+export TEMP_HOME=~/Dropbox/temp
+
 export SCREENSHOTS_HOME=$TEMP_HOME/screenshots
 
 export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
-
-export TEMP_HOME=~/Dropbox/temp
 
 
 # Functions
@@ -135,6 +135,13 @@ function get_card {
 
 function get_phone {
 	cmd="cat $IMPORTANT_HOME/records/phone.txt | grep $1"
+	val=$(eval "$cmd")
+	echo ""$val"" | awk -F: '{print $2}'
+	echo ""$val"" | awk -F: '{print $2}' | pbcopy
+}
+
+function get_address {
+	cmd="cat $IMPORTANT_HOME/records/address.txt | grep $1"
 	val=$(eval "$cmd")
 	echo ""$val"" | awk -F: '{print $2}'
 	echo ""$val"" | awk -F: '{print $2}' | pbcopy
@@ -281,7 +288,7 @@ alias phonelong="get_phone long"
 POSTCODE="V6B 6H4"
 alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
 
-alias address="copy_print '438 Seymour Street, #1701, Vancouver, British Columbia, ${POSTCODE}'"
+alias address="get_address home"
 
 OFFICE_POSTCODE="V6B 2Y5"
 alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
