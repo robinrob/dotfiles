@@ -49,7 +49,7 @@ alias more='less'
 
 # Ruby
 ######
-rvm use ruby-2.0.0-p247 2> /dev/null
+rvm use ruby-2.0.0-p247 1> /dev/null
 rvm gemset use chef --create 2> /dev/null
 
 # Python
@@ -63,6 +63,8 @@ pythonbrew use 2.7 2> /dev/null
 #############################
 
 # export EDITOR="/usr/local/bin/c -w"
+export HOSTNAME=`hostname`
+
 export EDITOR="/usr/bin/vim"
 
 export PROG_HOME=$HOME/Programming/robin
@@ -382,7 +384,12 @@ PATH=$PATH:$LOCAL_HOME/bin
 ######
 defaults write com.apple.Finder AppleShowAllFiles NO 2> /dev/null
 
+# http://www.tekrevue.com/tip/how-to-customize-screenshot-options-in-mac-os-x/
+# killall SystemUIServer
 defaults write com.apple.screencapture location $SCREENSHOTS_HOME 2> /dev/null
+defaults write com.apple.screencapture name $HOSTNAME
+# defaults write com.apple.screencapture type png
+
 defaults write -g ApplePersistence -bool no 2> /dev/null
 chflags nohidden ~/Library/ 2> /dev/null
 
