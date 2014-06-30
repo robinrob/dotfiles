@@ -109,7 +109,7 @@ export PERL_HOME=$PROG_HOME/perl
 
 export EC2_HOME=/usr/local/lib/ec2-api-tools-1.6.11.0
 
-export GAM_PATH=/usr/local/Library/gam3
+export GAM_PATH=/usr/local/Library/gam
 
 export WORK_HOME=~/Programming/work
 
@@ -117,13 +117,13 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
-export SCREENSHOTS_HOME=$TEMP_HOME/screenshots
+export TEMP_HOME=~/Dropbox/temp
+
+export SCREENSHOTS_HOME=~/Dropbox/temp/screenshots
 
 export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
-
-export TEMP_HOME=~/Dropbox/temp
 
 
 # Functions
@@ -246,6 +246,11 @@ function opens {
 	cd $SCREENSHOTS_HOME && open ""$(lastf -s Screen)"" && cd -
 }
 
+function lasts {
+	cd $SCREENSHOTS_HOME && lastf -s Screen
+	cd -
+}
+
 
 # Aliases
 ###############################################################################
@@ -330,8 +335,6 @@ alias qsv="cd_save $QUIZ_HOME"
 
 alias screenshots="cd $SCREENSHOTS_HOME"
 
-alias lasts="cd $SCREENSHOTS_HOME && lastf -s Screen"
-
 alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
 
 alias gpd="git pull origin develop"
@@ -353,7 +356,7 @@ alias rnsall="cd $SCREENSHOTS_HOME && despace"
 alias msp="copy_print `cat $IMPORTANT_HOME/records/bc_msp.txt`"
 
 function rns = {
-	cd $SCREENSHOTS_HOME && mv `lasts` $1
+	cd $SCREENSHOTS_HOME && despace && mv `lasts` $1 && cd -
 }
 
 # Un-Aliases
