@@ -123,7 +123,9 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
-export SCREENSHOTS_HOME=$TEMP_HOME/screenshots
+export TEMP_HOME=~/Dropbox/temp
+
+export SCREENSHOTS_HOME=$TEMP_HOME/$HOSTNAME/screenshots
 
 export LOCAL_HOME=$PROG_HOME/local
 
