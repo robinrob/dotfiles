@@ -89,6 +89,10 @@ export DOTFILES_HOME=$PROG_HOME/dotfiles
 
 export ZSHRC=$DOTFILES_HOME/zshrc
 
+export C_HOME=$PROG_HOME/c
+
+export HTMLCSS_HOME=$PROG_HOME/html-css
+
 export RUBY_HOME=$PROG_HOME/ruby
 
 export RUBYAPP_HOME=$RUBY_HOME/projects/ruby-app
@@ -119,7 +123,7 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
-export TEMP_HOME=~/Dropbox/temp
+export TEMP_HOME=~/Dropbox/temp/$HOSTNAME
 
 export SCREENSHOTS_HOME=$TEMP_HOME/screenshots
 
@@ -132,14 +136,17 @@ export TODO_HOME=$LOCAL_HOME/lib/todo.csv
 ###############################################################################
 
 function get_card {
-	cat IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}' | pbcopy
+	copy_print `cat $IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}'`
 }
 
 function get_phone {
 	cmd="cat $IMPORTANT_HOME/records/phone.txt | grep $1"
 	val=$(eval "$cmd")
 	echo ""$val"" | awk -F: '{print $2}'
-	echo ""$val"" | awk -F: '{print $2}' | pbcopy
+	val2=echo ""$val"" | awk -F: '{print $2}'
+	echo $val2
+	# copy_print ""`echo ""$val"" | awk -F: '{print $2}'`""
+	# echo ""$val""
 }
 
 function get_address {
@@ -178,6 +185,10 @@ function write {
 	cd $DOCUMENTS_HOME/creative/writing && mate "$1.txt"
 }
 
+function cat_print {
+	cat $1 && cat $1 | pbcopy
+}
+
 function copy_print {
 	echo $1 && echo $1 | pbcopy
 }
@@ -200,19 +211,6 @@ function new {
 	fi
 }	
 
-function new {
-	FILE="$1.$3"
-	
-	if [ -z `ls $FILE 2> /dev/null` ]
-	then
-		echo "#!/usr/bin/env $2" > $FILE
-		chmod +x $FILE
-		mate $FILE
-	else
-		echo "file: $FILE already exists!"
-	fi	
-}
-
 function pnew {
 	new $1 python py
 }
@@ -231,6 +229,53 @@ function znew {
 
 function rnew {
 	new $1 ruby rb
+}
+
+function hcnew {
+	PROJECT=$1
+	mkdir $PROJECT
+	cd $PROJECT
+	hnew $PROJECT
+	cssnew "style"
+	mate *
+}
+
+function hcexample {
+	PROJECT=$1
+	mkdir $PROJECT
+	cd $PROJECT
+	hnew $PROJECT
+	cssnew "style"
+	mate *
+}
+
+function hnew {
+	FILE="$1.html"
+	cp $HTMLCSS_HOME/template.html $FILE
+	mate $FILE
+}
+
+function hnew {
+	FILE="$1.html"
+	cp $HTMLCSS_HOME/template.html $FILE
+	mate $FILE
+}
+
+function cssnew {
+	mate "$1.css"
+}
+
+function new {
+	FILE="$1.$3"
+	
+	if [ -z `ls $FILE 2> /dev/null` ]
+	then
+		echo "#!/usr/bin/env $2" > $FILE
+		chmod +x $FILE
+		mate $FILE
+	else
+		echo "file: $FILE already exists!"
+	fi	
 }
 
 function cd_pull {
@@ -359,11 +404,10 @@ alias bi="bundle install"
 
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
 
+alias rns="cd $SCREENSHOTS_HOME && mv `lasts` $1"
+
 alias msp="copy_print `cat $IMPORTANT_HOME/records/bc_msp.txt`"
 
-function rns = {
-	cd $SCREENSHOTS_HOME && mv `lasts` $1
-}
 
 # Un-Aliases
 ###############################################################################
