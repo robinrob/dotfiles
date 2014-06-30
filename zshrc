@@ -49,7 +49,7 @@ alias more='less'
 
 # Ruby
 ######
-rvm use ruby-2.0.0-p247 2> /dev/null
+rvm use ruby-2.0.0-p247 1> /dev/null
 rvm gemset use chef --create 2> /dev/null
 
 # Python
@@ -63,6 +63,8 @@ pythonbrew use 2.7 2> /dev/null
 #############################
 
 # export EDITOR="/usr/local/bin/c -w"
+export HOSTNAME=`hostname`
+
 export EDITOR="/usr/bin/vim"
 
 export PROG_HOME=$HOME/Programming/robin
@@ -86,6 +88,10 @@ export SH_HOME=$PROG_HOME/sh
 export DOTFILES_HOME=$PROG_HOME/dotfiles
 
 export ZSHRC=$DOTFILES_HOME/zshrc
+
+export C_HOME=$PROG_HOME/c
+
+export HTMLCSS_HOME=$PROG_HOME/html-css
 
 export RUBY_HOME=$PROG_HOME/ruby
 
@@ -117,9 +123,7 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
-export TEMP_HOME=~/Dropbox/temp
-
-export SCREENSHOTS_HOME=~/Dropbox/temp/screenshots
+export SCREENSHOTS_HOME=$TEMP_HOME/screenshots
 
 export LOCAL_HOME=$PROG_HOME/local
 
@@ -130,11 +134,21 @@ export TODO_HOME=$LOCAL_HOME/lib/todo.csv
 ###############################################################################
 
 function get_card {
-	cat IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}' | pbcopy
+	copy_print `cat $IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}'`
 }
 
 function get_phone {
 	cmd="cat $IMPORTANT_HOME/records/phone.txt | grep $1"
+	val=$(eval "$cmd")
+	echo ""$val"" | awk -F: '{print $2}'
+	val2=echo ""$val"" | awk -F: '{print $2}'
+	echo $val2
+	# copy_print ""`echo ""$val"" | awk -F: '{print $2}'`""
+	# echo ""$val""
+}
+
+function get_address {
+	cmd="cat $IMPORTANT_HOME/records/address.txt | grep $1"
 	val=$(eval "$cmd")
 	echo ""$val"" | awk -F: '{print $2}'
 	echo ""$val"" | awk -F: '{print $2}' | pbcopy
@@ -169,6 +183,10 @@ function write {
 	cd $DOCUMENTS_HOME/creative/writing && mate "$1.txt"
 }
 
+function cat_print {
+	cat $1 && cat $1 | pbcopy
+}
+
 function copy_print {
 	echo $1 && echo $1 | pbcopy
 }
@@ -189,7 +207,7 @@ function new {
 		chmod +x $1
 		mate $1
 	fi
-}	
+}
 
 function new {
 	FILE="$1.$3"
@@ -203,6 +221,7 @@ function new {
 		echo "file: $FILE already exists!"
 	fi	
 }
+	
 
 function pnew {
 	new $1 python py
@@ -222,6 +241,53 @@ function znew {
 
 function rnew {
 	new $1 ruby rb
+}
+
+function hcnew {
+	PROJECT=$1
+	mkdir $PROJECT
+	cd $PROJECT
+	hnew $PROJECT
+	cssnew "style"
+	mate *
+}
+
+function hcexample {
+	PROJECT=$1
+	mkdir $PROJECT
+	cd $PROJECT
+	hnew $PROJECT
+	cssnew "style"
+	mate *
+}
+
+function hnew {
+	FILE="$1.html"
+	cp $HTMLCSS_HOME/template.html $FILE
+	mate $FILE
+}
+
+function hnew {
+	FILE="$1.html"
+	cp $HTMLCSS_HOME/template.html $FILE
+	mate $FILE
+}
+
+function cssnew {
+	mate "$1.css"
+}
+
+function new {
+	FILE="$1.$3"
+	
+	if [ -z `ls $FILE 2> /dev/null` ]
+	then
+		echo "#!/usr/bin/env $2" > $FILE
+		chmod +x $FILE
+		mate $FILE
+	else
+		echo "file: $FILE already exists!"
+	fi	
 }
 
 function cd_pull {
@@ -286,7 +352,7 @@ alias phonelong="get_phone long"
 POSTCODE="V6B 6H4"
 alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
 
-alias address="copy_print '438 Seymour Street, #1701, Vancouver, British Columbia, ${POSTCODE}'"
+alias address="get_address home"
 
 OFFICE_POSTCODE="V6B 2Y5"
 alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
@@ -335,6 +401,8 @@ alias qsv="cd_save $QUIZ_HOME"
 
 alias screenshots="cd $SCREENSHOTS_HOME"
 
+alias lasts="cd $SCREENSHOTS_HOME && lastf -s Screen"
+
 alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
 
 alias gpd="git pull origin develop"
@@ -352,6 +420,8 @@ alias gcd="git checkout develop"
 alias bi="bundle install"
 
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
+
+alias rns="cd $SCREENSHOTS_HOME && mv `lasts` $1"
 
 alias msp="copy_print `cat $IMPORTANT_HOME/records/bc_msp.txt`"
 
@@ -378,7 +448,12 @@ PATH=$PATH:$LOCAL_HOME/bin
 ######
 defaults write com.apple.Finder AppleShowAllFiles NO 2> /dev/null
 
+# http://www.tekrevue.com/tip/how-to-customize-screenshot-options-in-mac-os-x/
+# killall SystemUIServer
 defaults write com.apple.screencapture location $SCREENSHOTS_HOME 2> /dev/null
+defaults write com.apple.screencapture name $HOSTNAME
+# defaults write com.apple.screencapture type png
+
 defaults write -g ApplePersistence -bool no 2> /dev/null
 chflags nohidden ~/Library/ 2> /dev/null
 
