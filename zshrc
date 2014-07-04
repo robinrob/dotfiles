@@ -127,6 +127,8 @@ export TEMP_HOME=~/Dropbox/temp
 
 export SCREENSHOTS_HOME=$TEMP_HOME/$HOSTNAME/screenshots
 
+export SCREENSHOT_NAME=$HOSTNAME
+
 export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
@@ -315,8 +317,7 @@ function opens {
 }
 
 function lasts {
-	cd $SCREENSHOTS_HOME && lastf -s Screen
-	cd -
+	cd $SCREENSHOTS_HOME && lastf -s $SCREENSHOT_NAME
 }
 
 
@@ -355,6 +356,8 @@ POSTCODE="V6B 6H4"
 alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
 
 alias address="get_address home"
+
+alias addresswork="get_address work"
 
 OFFICE_POSTCODE="V6B 2Y5"
 alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
