@@ -129,6 +129,8 @@ export TEMP_HOME=~/Dropbox/temp/$HOSTNAME
 
 export SCREENSHOTS_HOME=$TEMP_HOME/screenshots
 
+export SCREENSHOT_NAME=$HOSTNAME
+
 export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
@@ -317,8 +319,7 @@ function opens {
 }
 
 function lasts {
-	cd $SCREENSHOTS_HOME && lastf -s $HOSTNAME
-	# cd -
+	cd $SCREENSHOTS_HOME && lastf -s $SCREENSHOT_NAME
 }
 
 function t3389 {
