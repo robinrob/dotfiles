@@ -4,7 +4,7 @@ source colors.sh
 
 green "Installing RubyMine config ..."
 
-RUBYMINE_CONFIG=~/Library/Preferences/RubyMine50/keymaps/Robin.xml
+RUBYMINE_CONFIG=~/Library/Preferences/RubyMine60/keymaps/Robin.xml
 rm -rf $RUBYMINE_CONFIG
 cp $DOTFILES_HOME/Jetbrains-Robin.xml $RUBYMINE_CONFIG
 

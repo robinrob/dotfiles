@@ -65,6 +65,8 @@ pythonbrew use 2.7 2> /dev/null
 # export EDITOR="/usr/local/bin/c -w"
 export HOSTNAME=`hostname`
 
+export SCREENSHOT_NAME=$HOSTNAME
+
 export EDITOR="/usr/bin/vim"
 
 export PROG_HOME=$HOME/Programming/robin
@@ -123,9 +125,9 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
-export TEMP_HOME=~/Dropbox/temp
+export TEMP_HOME=~/Dropbox/temp/$HOSTNAME
 
-export SCREENSHOTS_HOME=$TEMP_HOME/$HOSTNAME/screenshots
+export SCREENSHOTS_HOME=$TEMP_HOME/screenshots
 
 export LOCAL_HOME=$PROG_HOME/local
 
@@ -311,16 +313,28 @@ function cd_save {
 
 
 function opens {
-	cd $SCREENSHOTS_HOME && open ""$(lastf -s Screen)"" && cd -
+	cd $SCREENSHOTS_HOME && open "\"$(lastf -s $SCREENSHOT_NAME)\"" && cd -
 }
 
 function lasts {
-	cd $SCREENSHOTS_HOME && lastf -s Screen
-	cd -
+	cd $SCREENSHOTS_HOME && lastf -s $HOSTNAME
+	# cd -
+}
+
+function t3389 {
+	telnet_port $1 3389
+}
+
+function t22 {
+	telnet_port $1 22
+}
+
+function telnet_port {
+	telnet $1 $2
 }
 
 
-# Aliases
+# quotes
 ###############################################################################
 
 alias m="mate"
@@ -355,6 +369,8 @@ POSTCODE="V6B 6H4"
 alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
 
 alias address="get_address home"
+
+alias addresswork="get_address work"
 
 OFFICE_POSTCODE="V6B 2Y5"
 alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
@@ -403,8 +419,6 @@ alias qsv="cd_save $QUIZ_HOME"
 
 alias screenshots="cd $SCREENSHOTS_HOME"
 
-alias lasts="cd $SCREENSHOTS_HOME && lastf -s Screen"
-
 alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
 
 alias gpd="git pull origin develop"
@@ -426,6 +440,12 @@ alias rnsall="cd $SCREENSHOTS_HOME && despace"
 alias rns="cd $SCREENSHOTS_HOME && mv `lasts` $1"
 
 alias msp="copy_print `cat $IMPORTANT_HOME/records/bc_msp.txt`"
+
+alias gl="git log"
+
+alias t3="t3389"
+
+alias t2="t22"
 
 function rns = {
 	cd $SCREENSHOTS_HOME && despace && mv `lasts` $1 && cd -
