@@ -56,24 +56,6 @@ function copy_print {
 	echo $1 && echo $1 | pbcopy
 }
 
-# function docs_home {
-# 	if [[ `hostname` == "mercury.local" ]]; then
-# 		export DOCUMENTS_HOME="$HOME/Google Drive"
-# 	elif [[ `hostname` == "venus.local" ]]; then
-# 		export DOCUMENTS_HOME="$HOME/Documents"
-# 	fi
-# }
-
-
-function new {
-	if [ -n `ls $1`]
-	then
-		echo '#!/usr/bin/env ruby' > $1
-		chmod +x $1
-		mate $1
-	fi
-}
-
 function new {
 	FILE="$1.$3"
 	
