@@ -1,8 +1,10 @@
 #!/bin/sh
+source colors.sh
 
-./symlinks.sh
-
+green "Installing YADR ..."
 ./yadr.sh
 
-# Setup other stuff that can't be symlinked
-./setup.sh
+green "Configuring files ..."
+./config.sh
+
+default "Done."
