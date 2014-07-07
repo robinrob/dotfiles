@@ -117,6 +117,10 @@ alias cdr="cd $RUBY_HOME"
 
 alias cds="cd $SCREENSHOTS_HOME"
 
+alias t="touch"
+
+alias mmutt="mate ~/.mutt/muttrc"
+
 
 # Un-Aliases
 ###############################################################################
