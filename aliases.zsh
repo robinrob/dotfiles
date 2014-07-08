@@ -121,6 +121,8 @@ alias t="touch"
 
 alias mmutt="mate ~/.mutt/muttrc"
 
+alias gl="git log"
+
 
 # Un-Aliases
 ###############################################################################
