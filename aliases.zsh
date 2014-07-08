@@ -49,7 +49,7 @@ alias rks="rake save"
 
 alias rkp="rake pull"
 
-alias fbs="fab save"
+alias fs="fab save"
 
 alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
@@ -107,7 +107,7 @@ alias msp="copy_print `cat $IMPORTANT_HOME/records/bc_msp.txt`"
 
 alias mal="mate $DOTFILES_HOME/aliases.zsh"
 
-alias men="mate $DOTFILES_HOME/variables.zsh"
+alias men="mate $DOTFILES_HOME/env_variables.zsh"
 
 alias mfn="mate $DOTFILES_HOME/functions.zsh"
 

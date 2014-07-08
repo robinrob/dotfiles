@@ -20,6 +20,8 @@ export PYAPP_HOME=$PY_HOME/projects/pyapp
 
 export FABFILE_HOME=$PY_HOME/projects/fabfile
 
+export FABFILE_BASIC_HOME=$PY_HOME/projects/fabfile-basic
+
 export ZSH_HOME=$PROG_HOME/zsh
 
 export SH_HOME=$PROG_HOME/sh
@@ -29,6 +31,10 @@ export DOTFILES_HOME=$PROG_HOME/dotfiles
 export ZSHRC=$DOTFILES_HOME/zshrc
 
 export C_HOME=$PROG_HOME/c
+
+export JAVA_HOME=$PROG_HOME/java
+
+export JS_HOME=$PROG_HOME/javascript
 
 export HTMLCSS_HOME=$PROG_HOME/html-css
 
