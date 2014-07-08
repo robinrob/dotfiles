@@ -73,6 +73,8 @@ alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="cd_save $DOTFILES_HOME"
 
+alias jsv="cd_save $JS_HOME"
+
 alias lpl="cd_pull $LOCAL_HOME"
 
 alias lsv="cd_save $LOCAL_HOME"
@@ -120,6 +122,8 @@ alias cds="cd $SCREENSHOTS_HOME"
 alias t="touch"
 
 alias mmutt="mate ~/.mutt/muttrc"
+
+alias gl="git log"
 
 
 # Un-Aliases

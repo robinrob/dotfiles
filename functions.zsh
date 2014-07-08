@@ -90,6 +90,10 @@ function rnew {
 	new $1 ruby rb
 }
 
+function jsnew {
+	new $1 node js
+}
+
 function hcnew {
 	PROJECT=$1
 	mkdir $PROJECT
@@ -129,7 +133,7 @@ function new {
 	
 	if [ -z `ls $FILE 2> /dev/null` ]
 	then
-		echo "#!/usr/bin/env $2" > $FILE
+		echo "#!/usr/bin/env $2\n" > $FILE
 		chmod +x $FILE
 		mate $FILE
 	else
