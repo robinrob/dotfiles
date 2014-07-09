@@ -160,7 +160,7 @@ function cd_save {
 
 
 function opens {
-	cd $SCREENSHOTS_HOME && open ""$(lastf -s Screen)"" && cd -
+	cds && despace -p $HOSTNAME && open `lasts`
 }
 
 function rns {
@@ -178,4 +178,8 @@ function t3389 {
 
 function t22 {
 	telnet $1 22
+}
+
+function wopen {
+	mate `which $1`
 }
