@@ -117,6 +117,10 @@ alias cdd="cd $DOTFILES_HOME"
 
 alias cdr="cd $RUBY_HOME"
 
+alias cdjs="cd $JS_HOME"
+
+alias cdj="cdjs"
+
 alias cds="cd $SCREENSHOTS_HOME"
 
 alias t="touch"
@@ -125,7 +129,15 @@ alias mmutt="mate ~/.mutt/muttrc"
 
 alias gl="git log"
 
+alias jnew="jsnew"
+
+alias t2="t22"
+
+alias t3="t3389"
+
 
 # Un-Aliases
 ###############################################################################
 unalias todo
+
+unalias gr

@@ -167,3 +167,15 @@ function rns {
 	cd $SCREENSHOTS_HOME
 	mv "`lasts $1`"
 }
+
+function gr {
+	grep -r $1 *
+}
+
+function t3389 {
+	telnet $1 3389
+}
+
+function t22 {
+	telnet $1 22
+}
