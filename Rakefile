@@ -109,8 +109,8 @@ end
 
 
 task :save do(branch="master")
-  RUBYMINE_CONFIG = "~/Library/Preferences/RubyMine50/keymaps/Robin.xml"
-  `cp #{RUBYMINE_CONFIG} $DOTFILES_HOME/Jetbrains-Robin.xml`
+  `cp $RUBYMINE_CONFIG $DOTFILES_HOME/Jetbrains-Robin.xml`
+  `cp $PYCHARM_CONFIG $DOTFILES_HOME/Jetbrains-Robin.xml`
   
   commit()
   pull(branch)

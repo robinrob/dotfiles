@@ -77,3 +77,7 @@ export SCREENSHOT_NAME=$HOSTNAME
 export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
+
+export RUBYMINE_CONFIG=~/Library/Preferences/RubyMine60/keymaps/Robin.xml
+
+export PYCHARM_CONFIG=~/Library/Preferences/PyCharm30/keymaps/Robin.xml
