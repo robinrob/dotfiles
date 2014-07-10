@@ -109,8 +109,8 @@ end
 
 
 task :save do(branch="master")
-  `cp $RUBYMINE_CONFIG $DOTFILES_HOME/Jetbrains-Robin.xml`
-  `cp $PYCHARM_CONFIG $DOTFILES_HOME/Jetbrains-Robin.xml`
+  `cp -f $RUBYMINE_CONFIG $DOTFILES_HOME/Jetbrains-Robin.xml`
+  `cp -f $PYCHARM_CONFIG $DOTFILES_HOME/Jetbrains-Robin.xml`
   
   commit()
   pull(branch)
