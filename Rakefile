@@ -62,13 +62,13 @@ end
 
 
 task :commit do
-  FileUtils.copy(ENV["RUBYMINE_CONFIG"], "#{ENV["DOTFILES_HOME"]}/Jetbrains-Robin.xml")
   commit()
 end
 
 
 def commit()
   clean()
+  FileUtils.copy(ENV["RUBYMINE_CONFIG"], "#{ENV["DOTFILES_HOME"]}/Jetbrains-Robin.xml")
   add()
   status()
   system("git commit -m 'Auto-update'")

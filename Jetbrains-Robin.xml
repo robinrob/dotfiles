@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <keymap version="1" name="Robin" parent="Mac OS X 10.5+">
+  <action id="CloseAllEditorsButActive">
+    <keyboard-shortcut first-keystroke="shift meta X" />
+  </action>
   <action id="EditSource">
     <keyboard-shortcut first-keystroke="F4" />
   </action>
