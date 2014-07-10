@@ -1,3 +1,5 @@
+require 'fileutils'
+
 RUBY = '2.0.0'
 
 
@@ -109,8 +111,8 @@ end
 
 
 task :save do(branch="master")
-  `cp -f $RUBYMINE_CONFIG $DOTFILES_HOME/Jetbrains-Robin.xml`
-  `cp -f $PYCHARM_CONFIG $DOTFILES_HOME/Jetbrains-Robin.xml`
+  FileUtils.copy(ENV["RUBYMINE_CONFIG"], "#{ENV["DOTFILES_HOME"]}/Jetbrains-Robin.xml")
+  # FileUtils.copy(ENV['PYCHARM_CONFIG'], "#{ENV[DOTFILES_HOME]}/Jetbrains-Robin.xml")
   
   commit()
   pull(branch)
