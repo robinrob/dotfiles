@@ -62,6 +62,7 @@ end
 
 
 task :commit do
+  FileUtils.copy(ENV["RUBYMINE_CONFIG"], "#{ENV["DOTFILES_HOME"]}/Jetbrains-Robin.xml")
   commit()
 end
 
@@ -110,10 +111,7 @@ def status
 end
 
 
-task :save do(branch="master")
-  FileUtils.copy(ENV["RUBYMINE_CONFIG"], "#{ENV["DOTFILES_HOME"]}/Jetbrains-Robin.xml")
-  # FileUtils.copy(ENV['PYCHARM_CONFIG'], "#{ENV[DOTFILES_HOME]}/Jetbrains-Robin.xml")
-  
+task :save do(branch="master")  
   commit()
   pull(branch)
   push(branch)
