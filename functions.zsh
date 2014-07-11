@@ -183,3 +183,12 @@ function t22 {
 function wopen {
 	mate `which $1`
 }
+
+function jlint {
+	cat $1 | jsonlint
+}
+
+function docs {
+	HOSTNAME=$1
+	return $FILES_NAME/$HOSTNAME/docs
+}

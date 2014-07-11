@@ -1,14 +1,11 @@
 # Environment variables
 #############################
 
-# export EDITOR="/usr/local/bin/c -w"
 export HOSTNAME=`hostname`
 
-export EDITOR="/usr/bin/vim"
+export EDITOR="mate"
 
 export PROG_HOME=$HOME/Programming/robin
-
-export DOCUMENTS_HOME=$HOME/Dropbox
 
 export SH_HOME=$PROG_HOME/sh
 
@@ -52,8 +49,6 @@ export MRROBINSMITHCOM_HOME=$RUBY_HOME/projects/mrrobinsmith.com
 
 export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME" "$PYTHON_HOME
 
-export IMPORTANT_HOME=$DOCUMENTS_HOME/IMPORTANT
-
 export RUBY_LIB=/System/Library/Frameworks/Ruby.framework/Versions/Current/usr/lib/ruby/2.0.0
 
 export PERL_HOME=$PROG_HOME/perl
@@ -68,12 +63,6 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
-export TEMP_HOME=~/Dropbox/temp/$HOSTNAME
-
-export SCREENSHOTS_HOME=$TEMP_HOME/screenshots
-
-export SCREENSHOT_NAME=$HOSTNAME
-
 export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
@@ -81,3 +70,19 @@ export TODO_HOME=$LOCAL_HOME/lib/todo.csv
 export RUBYMINE_CONFIG=~/Library/Preferences/RubyMine60/keymaps/Robin.xml
 
 export PYCHARM_CONFIG=~/Library/Preferences/PyCharm30/keymaps/Robin.xml
+
+export FILES_HOME=~/Dropbox/$HOSTNAME
+
+export TEMP_HOME=$FILES_HOME/temp
+
+export DOCS_HOME=$FILES_HOME/docs
+
+export IMPORTANT_HOME=~/Dropbox/mercury.local/docs/IMPORTANT
+
+export BACKGROUNDS_HOME=$FILES_HOME/backgrounds
+
+export SCREENSAVERS_HOME=$FILES_HOME/screensavers
+
+export SCREENSHOTS_HOME=$FILES_HOME/screenshots
+
+export SCREENSHOT_NAME=$HOSTNAME
