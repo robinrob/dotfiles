@@ -3,7 +3,7 @@
 
 export HOSTNAME=`hostname`
 
-export EDITOR="mate"
+export EDITOR=vim
 
 export PROG_HOME=$HOME/Programming/robin
 
