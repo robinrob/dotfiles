@@ -25,6 +25,8 @@ export SH_HOME=$PROG_HOME/sh
 
 export DOTFILES_HOME=$PROG_HOME/dotfiles
 
+export BACKUPS_HOME=$RUBY_HOME/projects/aws-backup-manager
+
 export ZSHRC=$DOTFILES_HOME/zshrc
 
 export C_HOME=$PROG_HOME/c
@@ -77,7 +79,7 @@ export TEMP_HOME=$FILES_HOME/temp
 
 export DOCS_HOME=$FILES_HOME/docs
 
-export IMPORTANT_HOME=~/Dropbox/mercury.local/docs/IMPORTANT
+export IMPORTANT_HOME=$DOCS_HOME/IMPORTANT
 
 export BACKGROUNDS_HOME=$FILES_HOME/backgrounds
 

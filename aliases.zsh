@@ -73,6 +73,8 @@ alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="cd_save $DOTFILES_HOME"
 
+alias bsv="cd_save $BACKUPS_HOME"
+
 alias jsv="cd_save $JS_HOME"
 
 alias lpl="cd_pull $LOCAL_HOME"
@@ -136,6 +138,8 @@ alias t2="t22"
 alias t3="t3389"
 
 alias jl="jsonlint"
+
+alias bcodes="cat $IMPORTANT_HOME/passwords/Backup-codes-robin.smith.txt"
 
 
 # Un-Aliases
