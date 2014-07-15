@@ -1,6 +1,8 @@
 # Functions
 ###############################################################################
 
+source $DOTFILES_HOME/'colors.sh'
+
 function get_card {
 	copy_print `cat $IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}'`
 }
@@ -61,15 +63,20 @@ function new {
 	
 	if [ -z `ls $FILE 2> /dev/null` ]
 	then
+		green "Creating and shebanging new file: ${FILE}"
 		echo "#!/usr/bin/env $2" > $FILE
 		chmod +x $FILE
-		mate $FILE
+		edit $FILE
 	else
-		echo "file: $FILE already exists!"
+		CONTENTS=`cat $FILE`
+		rm $FILE
+		green "Shebanging existing file: ${FILE}"
+		echo "#!/usr/bin/env $2" > $FILE
+		echo $CONTENTS >> $FILE
+		edit $FILE
 	fi	
 }
 	
-
 function pnew {
 	new $1 python py
 }
@@ -126,19 +133,6 @@ function hnew {
 
 function cssnew {
 	mate "$1.css"
-}
-
-function new {
-	FILE="$1.$3"
-	
-	if [ -z `ls $FILE 2> /dev/null` ]
-	then
-		echo "#!/usr/bin/env $2\n" > $FILE
-		chmod +x $FILE
-		mate $FILE
-	else
-		echo "file: $FILE already exists!"
-	fi	
 }
 
 function cd_pull {

@@ -1,3 +1,12 @@
+# Un-Aliases
+###############################################################################
+unalias todo
+
+unalias gr
+
+unalias cdb
+
+
 # Aliases
 ###############################################################################
 
@@ -117,6 +126,8 @@ alias mfn="mate $DOTFILES_HOME/functions.zsh"
 
 alias cdd="cd $DOTFILES_HOME"
 
+alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
+
 alias cdr="cd $RUBY_HOME"
 
 alias cdjs="cd $JS_HOME"
@@ -140,10 +151,3 @@ alias t3="t3389"
 alias jl="jsonlint"
 
 alias bcodes="cat $IMPORTANT_HOME/passwords/Backup-codes-robin.smith.txt"
-
-
-# Un-Aliases
-###############################################################################
-unalias todo
-
-unalias gr
