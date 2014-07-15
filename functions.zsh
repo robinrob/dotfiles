@@ -160,11 +160,11 @@ function cd_save {
 
 
 function opens {
-	cd $SCREENSHOTS_HOME && despace -p $HOSTNAME && open `lasts`
+	cd $SCREENSHOTS_HOME && despace && open `lasts`
 }
 
 function rns {
-	cd $SCREENSHOTS_HOME
+	cd $SCREENSHOTS_HOME && despace
 	mv `lasts` $1
 }
 
