@@ -82,7 +82,17 @@ alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="cd_save $DOTFILES_HOME"
 
+alias rsv="cd_save $RUBY_HOME"
+
+alias rpl="cd_pull $RUBY_HOME"
+
+alias ssv="cd_save $SSH_HOME"
+
+alias spl="cd_save $SSH_HOME"
+
 alias bsv="cd_save $BACKUPS_HOME"
+
+alias bpl="cd_pull $BACKUPS_HOME"
 
 alias jsv="cd_save $JS_HOME"
 
