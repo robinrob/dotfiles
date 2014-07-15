@@ -39,15 +39,15 @@ function reminder {
 }
 
 function note {
-	cd $TEMP_HOME && mate "$1.txt"
+	cd $TEMP_HOME && edit "$1.txt"
 }
 
 function song {
-	cd $DOCUMENTS_HOME/creative/songs && mate "$1.txt"
+	cd $DOCUMENTS_HOME/creative/songs && edit "$1.txt"
 }
 
 function write {
-	cd $DOCUMENTS_HOME/creative/writing && mate "$1.txt"
+	cd $DOCUMENTS_HOME/creative/writing && edit "$1.txt"
 }
 
 function cat_print {
@@ -107,7 +107,7 @@ function hcnew {
 	cd $PROJECT
 	hnew $PROJECT
 	cssnew "style"
-	mate *
+	edit *
 }
 
 function hcexample {
@@ -116,23 +116,23 @@ function hcexample {
 	cd $PROJECT
 	hnew $PROJECT
 	cssnew "style"
-	mate *
+	editedit *
 }
 
 function hnew {
 	FILE="$1.html"
 	cp $HTMLCSS_HOME/template.html $FILE
-	mate $FILE
+	edit $FILE
 }
 
 function hnew {
 	FILE="$1.html"
 	cp $HTMLCSS_HOME/template.html $FILE
-	mate $FILE
+	edit $FILE
 }
 
 function cssnew {
-	mate "$1.css"
+	edit "$1.css"
 }
 
 function cd_pull {
@@ -175,7 +175,7 @@ function t22 {
 }
 
 function wopen {
-	mate `which $1`
+	edit `which $1`
 }
 
 function jlint {
