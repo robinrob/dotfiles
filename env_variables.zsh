@@ -31,7 +31,7 @@ export ZSHRC=$DOTFILES_HOME/zshrc
 
 export C_HOME=$PROG_HOME/c
 
-export JAVA_HOME=$PROG_HOME/java
+# export JAVA_HOME=$PROG_HOME/java
 
 export JS_HOME=$PROG_HOME/javascript
 

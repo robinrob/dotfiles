@@ -6,6 +6,8 @@ unalias gr
 
 unalias cdb
 
+unalias gcl
+
 
 # Aliases
 ###############################################################################
@@ -76,7 +78,7 @@ alias gstat='cd $PROG_HOME && gs'
 
 alias pb="pbcopy"
 
-alias spl="mate $TEMP_HOME/splunk_searches.txt"
+alias splu="mate $TEMP_HOME/splunk_searches.txt"
 
 alias dpl="cd_pull $DOTFILES_HOME"
 
@@ -86,9 +88,9 @@ alias rsv="cd_save $RUBY_HOME"
 
 alias rpl="cd_pull $RUBY_HOME"
 
-alias ssv="cd_save $SSH_HOME"
+alias ssv="cd_save $SH_HOME"
 
-alias spl="cd_save $SSH_HOME"
+alias spl="cd_pull $SH_HOME"
 
 alias bsv="cd_save $BACKUPS_HOME"
 
@@ -161,3 +163,7 @@ alias t3="t3389"
 alias jl="jsonlint"
 
 alias bcodes="cat $IMPORTANT_HOME/passwords/Backup-codes-robin.smith.txt"
+
+alias gcl="git clone"
+
+alias cms="mate $TEMP_HOME/commands.txt"
