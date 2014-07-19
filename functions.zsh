@@ -1,6 +1,8 @@
 # Functions
 ###############################################################################
 
+source $DOTFILES_HOME/'colors.sh'
+
 function get_card {
 	copy_print `cat $IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}'`
 }
@@ -37,15 +39,15 @@ function reminder {
 }
 
 function note {
-	cd $TEMP_HOME && mate "$1.txt"
+	cd $TEMP_HOME && edit "$1.txt"
 }
 
 function song {
-	cd $DOCUMENTS_HOME/creative/songs && mate "$1.txt"
+	cd $DOCUMENTS_HOME/creative/songs && edit "$1.txt"
 }
 
 function write {
-	cd $DOCUMENTS_HOME/creative/writing && mate "$1.txt"
+	cd $DOCUMENTS_HOME/creative/writing && edit "$1.txt"
 }
 
 function cat_print {
@@ -61,15 +63,20 @@ function new {
 	
 	if [ -z `ls $FILE 2> /dev/null` ]
 	then
+		green "Creating and shebanging new file: ${FILE}"
 		echo "#!/usr/bin/env $2" > $FILE
 		chmod +x $FILE
-		mate $FILE
+		edit $FILE
 	else
-		echo "file: $FILE already exists!"
+		CONTENTS=`cat $FILE`
+		rm $FILE
+		green "Shebanging existing file: ${FILE}"
+		echo "#!/usr/bin/env $2" > $FILE
+		echo $CONTENTS >> $FILE
+		edit $FILE
 	fi	
 }
 	
-
 function pnew {
 	new $1 python py
 }
@@ -100,7 +107,7 @@ function hcnew {
 	cd $PROJECT
 	hnew $PROJECT
 	cssnew "style"
-	mate *
+	edit *
 }
 
 function hcexample {
@@ -109,36 +116,23 @@ function hcexample {
 	cd $PROJECT
 	hnew $PROJECT
 	cssnew "style"
-	mate *
+	editedit *
 }
 
 function hnew {
 	FILE="$1.html"
 	cp $HTMLCSS_HOME/template.html $FILE
-	mate $FILE
+	edit $FILE
 }
 
 function hnew {
 	FILE="$1.html"
 	cp $HTMLCSS_HOME/template.html $FILE
-	mate $FILE
+	edit $FILE
 }
 
 function cssnew {
-	mate "$1.css"
-}
-
-function new {
-	FILE="$1.$3"
-	
-	if [ -z `ls $FILE 2> /dev/null` ]
-	then
-		echo "#!/usr/bin/env $2\n" > $FILE
-		chmod +x $FILE
-		mate $FILE
-	else
-		echo "file: $FILE already exists!"
-	fi	
+	edit "$1.css"
 }
 
 function cd_pull {
@@ -160,12 +154,12 @@ function cd_save {
 
 
 function opens {
-	cds && despace -p $HOSTNAME && open `lasts`
+	cd $SCREENSHOTS_HOME && despace && open `lasts`
 }
 
 function rns {
-	cd $SCREENSHOTS_HOME
-	mv "`lasts $1`"
+	cd $SCREENSHOTS_HOME && despace
+	mv `lasts` $1
 }
 
 function gr {
@@ -181,5 +175,14 @@ function t22 {
 }
 
 function wopen {
-	mate `which $1`
+	edit `which $1`
+}
+
+function jlint {
+	cat $1 | jsonlint
+}
+
+function docs {
+	HOSTNAME=$1
+	return $FILES_NAME/$HOSTNAME/docs
 }

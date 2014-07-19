@@ -4,7 +4,9 @@ unalias todo
 
 unalias gr
 
-unalias c
+unalias cdb
+
+unalias gcl
 
 
 # Aliases
@@ -76,11 +78,23 @@ alias gstat='cd $PROG_HOME && gs'
 
 alias pb="pbcopy"
 
-alias spl="mate $TEMP_HOME/splunk_searches.txt"
+alias splu="mate $TEMP_HOME/splunk_searches.txt"
 
 alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="cd_save $DOTFILES_HOME"
+
+alias rsv="cd_save $RUBY_HOME"
+
+alias rpl="cd_pull $RUBY_HOME"
+
+alias ssv="cd_save $SH_HOME"
+
+alias spl="cd_pull $SH_HOME"
+
+alias bsv="cd_save $BACKUPS_HOME"
+
+alias bpl="cd_pull $BACKUPS_HOME"
 
 alias jsv="cd_save $JS_HOME"
 
@@ -124,6 +138,8 @@ alias mfn="mate $DOTFILES_HOME/functions.zsh"
 
 alias cdd="cd $DOTFILES_HOME"
 
+alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
+
 alias cdr="cd $RUBY_HOME"
 
 alias cdjs="cd $JS_HOME"
@@ -144,4 +160,17 @@ alias t2="t22"
 
 alias t3="t3389"
 
-alias c="cat"
+alias jl="jsonlint"
+
+alias bcodes="cat $IMPORTANT_HOME/passwords/Backup-codes-robin.smith.txt"
+
+alias gcl="git clone"
+
+alias cms="mate $TEMP_HOME/commands.txt"
+
+
+# Un-Aliases
+###############################################################################
+unalias todo
+
+unalias gr
