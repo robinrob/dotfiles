@@ -216,7 +216,7 @@ function rks {
 	if [ -f Rakefile ]
 	then
 		green "Rakefile found in ./"
-		`rake save`
+		rake save
 	else
 		red "No Rakefile!"
 	fi
