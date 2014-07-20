@@ -31,7 +31,7 @@ export ZSHRC=$DOTFILES_HOME/zshrc
 
 export C_HOME=$PROG_HOME/c
 
-# export JAVA_HOME=$PROG_HOME/java
+export JV_HOME=$PROG_HOME/java
 
 export JS_HOME=$PROG_HOME/javascript
 
@@ -75,9 +75,13 @@ export PYCHARM_CONFIG=~/Library/Preferences/PyCharm30/keymaps/Robin.xml
 
 export FILES_HOME=~/Dropbox/$HOSTNAME
 
+export RFILES_HOME=~/Dropbox/mercury.local
+
 export TEMP_HOME=$FILES_HOME/temp
 
 export DOCS_HOME=$FILES_HOME/docs
+
+export RDOCS_HOME=$RFILES_HOME/docs
 
 export IMPORTANT_HOME=$DOCS_HOME/IMPORTANT
 

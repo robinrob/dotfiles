@@ -56,8 +56,6 @@ alias mschef="cd $MSCHEF"
 
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
-alias rks="rake save"
-
 alias rkp="rake pull"
 
 alias fs="fab save"
@@ -168,8 +166,20 @@ alias gcl="git clone"
 
 alias cms="mate $TEMP_HOME/commands.txt"
 
+alias nocknife="cd $NOCCHEF && knife"
+
+alias msknife="cd $MSCHEF && knife"
+
+alias kel="knife environment list"
+
+alias knl="knife node list"
+
 alias gsi="git submodule init"
 
 alias gsu="git submodule update"
 
 alias gsa="git submodule add"
+
+alias cgm="cat .gitmodules"
+
+alias rks="rake_save"

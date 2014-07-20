@@ -1,7 +1,7 @@
 # Functions
 ###############################################################################
 
-source $DOTFILES_HOME/'colors.sh'
+source $DOTFILES_HOME/colors.sh
 
 function get_card {
 	copy_print `cat $IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}'`
@@ -39,15 +39,15 @@ function reminder {
 }
 
 function note {
-	cd $TEMP_HOME && edit "$1.txt"
+	cd $TEMP_HOME && $EDITOR "$1.txt"
 }
 
 function song {
-	cd $DOCUMENTS_HOME/creative/songs && edit "$1.txt"
+	cd $DOCUMENTS_HOME/creative/songs && $EDITOR "$1.txt"
 }
 
 function write {
-	cd $DOCUMENTS_HOME/creative/writing && edit "$1.txt"
+	cd $DOCUMENTS_HOME/creative/writing && $EDITOR "$1.txt"
 }
 
 function cat_print {
@@ -59,30 +59,38 @@ function copy_print {
 }
 
 function new {
-	FILE="$1.$3"
+	FILE="$1.$2"
 	
-	if [ -z `ls $FILE 2> /dev/null` ]
+	if ! [ -f $FILE ]
 	then
-		green "Creating and shebanging new file: ${FILE}"
-		echo "#!/usr/bin/env $2" > $FILE
-		chmod +x $FILE
-		edit $FILE
+		if [ $# -eq 3 ]
+		then	
+			green "Creating and shebanging new file: ${FILE}"
+			echo "#!/usr/bin/env $3" > $FILE
+			chmod +x $FILE
+		else
+			green "Creating new file: ${FILE}"
+			touch $FILE
+		fi
+			
 	else
-		CONTENTS=`cat $FILE`
-		rm $FILE
-		green "Shebanging existing file: ${FILE}"
-		echo "#!/usr/bin/env $2" > $FILE
-		echo $CONTENTS >> $FILE
-		edit $FILE
-	fi	
+		if [ $# -eq 2 ]
+			CONTENTS=`cat $FILE`
+			rm $FILE
+			green "Shebanging existing file: ${FILE}"
+			echo "#!/usr/bin/env $3" > $FILE
+			echo $CONTENTS >> $FILE
+	fi
+	
+	$EDITOR $FILE
 }
 	
 function pnew {
-	new $1 python py
+	new $1 py python
 }
 
 function bnew {
-	new $1 bash sh
+	new $1 sh bash
 }
 
 function snew {
@@ -94,11 +102,15 @@ function znew {
 }
 
 function rnew {
-	new $1 ruby rb
+	new $1 rb ruby
 }
 
 function jsnew {
-	new $1 node js
+	new $1 js node
+}
+
+function tnew {
+	new $1 txt
 }
 
 function hcnew {
@@ -107,7 +119,7 @@ function hcnew {
 	cd $PROJECT
 	hnew $PROJECT
 	cssnew "style"
-	edit *
+	$EDITOR *
 }
 
 function hcexample {
@@ -116,23 +128,23 @@ function hcexample {
 	cd $PROJECT
 	hnew $PROJECT
 	cssnew "style"
-	editedit *
+	$EDITOR$EDITOR *
 }
 
 function hnew {
 	FILE="$1.html"
 	cp $HTMLCSS_HOME/template.html $FILE
-	edit $FILE
+	$EDITOR $FILE
 }
 
 function hnew {
 	FILE="$1.html"
 	cp $HTMLCSS_HOME/template.html $FILE
-	edit $FILE
+	$EDITOR $FILE
 }
 
 function cssnew {
-	edit "$1.css"
+	$EDITOR "$1.css"
 }
 
 function cd_pull {
@@ -175,7 +187,7 @@ function t22 {
 }
 
 function wopen {
-	edit `which $1`
+	$EDITOR `which $1`
 }
 
 function jlint {
