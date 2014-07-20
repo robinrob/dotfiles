@@ -190,3 +190,7 @@ function docs {
 function gcr {
 	`git clone -b master git@bitbucket.org:robinrob/$1.git`
 }
+
+function mvd {
+	mv ~/Downloads/$1 $2
+}
