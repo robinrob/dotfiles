@@ -56,8 +56,6 @@ alias mschef="cd $MSCHEF"
 
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
-alias rks="rake save"
-
 alias rkp="rake pull"
 
 alias fs="fab save"

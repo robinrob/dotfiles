@@ -211,3 +211,12 @@ function alp {
 		# green $i
 	done
 }
+
+function rks {
+	if [ -f Rakefile ]
+	then
+		`rake save`
+	else
+		green "No Rakefile!"
+	fi
+}
