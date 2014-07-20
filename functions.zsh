@@ -186,3 +186,7 @@ function docs {
 	HOSTNAME=$1
 	return $FILES_NAME/$HOSTNAME/docs
 }
+
+function gcr {
+	`git clone -b master git@bitbucket.org:robinrob/$1.git`
+}

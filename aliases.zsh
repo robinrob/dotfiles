@@ -8,6 +8,8 @@ unalias cdb
 
 unalias gcl
 
+unalias gcr
+
 
 # Aliases
 ###############################################################################
@@ -175,3 +177,9 @@ alias msknife="cd $MSCHEF && knife"
 alias kel="knife environment list"
 
 alias knl="knife node list"
+
+alias gsi="git submodule init"
+
+alias gsu="git submodule update"
+
+alias gsa="git submodule add"
