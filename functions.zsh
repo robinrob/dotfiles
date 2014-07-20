@@ -39,15 +39,15 @@ function reminder {
 }
 
 function note {
-	cd $TEMP_HOME && edit "$1.txt"
+	cd $TEMP_HOME && $EDITOR "$1.txt"
 }
 
 function song {
-	cd $DOCUMENTS_HOME/creative/songs && edit "$1.txt"
+	cd $DOCUMENTS_HOME/creative/songs && $EDITOR "$1.txt"
 }
 
 function write {
-	cd $DOCUMENTS_HOME/creative/writing && edit "$1.txt"
+	cd $DOCUMENTS_HOME/creative/writing && $EDITOR "$1.txt"
 }
 
 function cat_print {
@@ -66,14 +66,14 @@ function new {
 		green "Creating and shebanging new file: ${FILE}"
 		echo "#!/usr/bin/env $2" > $FILE
 		chmod +x $FILE
-		edit $FILE
+		$EDITOR $FILE
 	else
 		CONTENTS=`cat $FILE`
 		rm $FILE
 		green "Shebanging existing file: ${FILE}"
 		echo "#!/usr/bin/env $2" > $FILE
 		echo $CONTENTS >> $FILE
-		edit $FILE
+		$EDITOR $FILE
 	fi	
 }
 	
@@ -107,7 +107,7 @@ function hcnew {
 	cd $PROJECT
 	hnew $PROJECT
 	cssnew "style"
-	edit *
+	$EDITOR *
 }
 
 function hcexample {
@@ -116,23 +116,23 @@ function hcexample {
 	cd $PROJECT
 	hnew $PROJECT
 	cssnew "style"
-	editedit *
+	$EDITOR$EDITOR *
 }
 
 function hnew {
 	FILE="$1.html"
 	cp $HTMLCSS_HOME/template.html $FILE
-	edit $FILE
+	$EDITOR $FILE
 }
 
 function hnew {
 	FILE="$1.html"
 	cp $HTMLCSS_HOME/template.html $FILE
-	edit $FILE
+	$EDITOR $FILE
 }
 
 function cssnew {
-	edit "$1.css"
+	$EDITOR "$1.css"
 }
 
 function cd_pull {
@@ -175,7 +175,7 @@ function t22 {
 }
 
 function wopen {
-	edit `which $1`
+	$EDITOR `which $1`
 }
 
 function jlint {
