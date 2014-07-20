@@ -212,7 +212,7 @@ function alp {
 	done
 }
 
-function rks {
+function rake_save {
 	if [ -f Rakefile ]
 	then
 		green "Rakefile found in ./"

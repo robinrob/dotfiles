@@ -181,3 +181,5 @@ alias gsu="git submodule update"
 alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
+
+alias rks="rake_save"
