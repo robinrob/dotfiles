@@ -183,3 +183,5 @@ alias gsi="git submodule init"
 alias gsu="git submodule update"
 
 alias gsa="git submodule add"
+
+alias gcm="cat .gitmodules"
