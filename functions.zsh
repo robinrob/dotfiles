@@ -1,7 +1,7 @@
 # Functions
 ###############################################################################
 
-source $DOTFILES_HOME/'colors.sh'
+source $DOTFILES_HOME/colors.sh
 
 function get_card {
 	copy_print `cat $IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}'`
@@ -59,30 +59,38 @@ function copy_print {
 }
 
 function new {
-	FILE="$1.$3"
+	FILE="$1.$2"
 	
-	if [ -z `ls $FILE 2> /dev/null` ]
+	if ! [ -f $FILE ]
 	then
-		green "Creating and shebanging new file: ${FILE}"
-		echo "#!/usr/bin/env $2" > $FILE
-		chmod +x $FILE
-		$EDITOR $FILE
+		if [ $# -eq 3 ]
+		then	
+			green "Creating and shebanging new file: ${FILE}"
+			echo "#!/usr/bin/env $3" > $FILE
+			chmod +x $FILE
+		else
+			green "Creating new file: ${FILE}"
+			touch $FILE
+		fi
+			
 	else
-		CONTENTS=`cat $FILE`
-		rm $FILE
-		green "Shebanging existing file: ${FILE}"
-		echo "#!/usr/bin/env $2" > $FILE
-		echo $CONTENTS >> $FILE
-		$EDITOR $FILE
-	fi	
+		if [ $# -eq 2 ]
+			CONTENTS=`cat $FILE`
+			rm $FILE
+			green "Shebanging existing file: ${FILE}"
+			echo "#!/usr/bin/env $3" > $FILE
+			echo $CONTENTS >> $FILE
+	fi
+	
+	$EDITOR $FILE
 }
 	
 function pnew {
-	new $1 python py
+	new $1 py python
 }
 
 function bnew {
-	new $1 bash sh
+	new $1 sh bash
 }
 
 function snew {
@@ -94,11 +102,15 @@ function znew {
 }
 
 function rnew {
-	new $1 ruby rb
+	new $1 rb ruby
 }
 
 function jsnew {
-	new $1 node js
+	new $1 js node
+}
+
+function tnew {
+	new $1 txt
 }
 
 function hcnew {
@@ -189,4 +201,13 @@ function docs {
 
 function gcr {
 	`git clone -b master git@bitbucket.org:robinrob/$1.git`
+}
+
+function alp {
+	for i in eval("cat $RDOCS_HOME/knowledge/useful/nato_alphabet.txt")
+	do
+		echo "robin"
+		# echo $i
+		# green $i
+	done
 }
