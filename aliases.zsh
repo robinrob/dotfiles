@@ -167,3 +167,11 @@ alias bcodes="cat $IMPORTANT_HOME/passwords/Backup-codes-robin.smith.txt"
 alias gcl="git clone"
 
 alias cms="mate $TEMP_HOME/commands.txt"
+
+alias nocknife="cd $NOCCHEF && knife"
+
+alias msknife="cd $MSCHEF && knife"
+
+alias kel="knife environment list"
+
+alias knl="knife node list"
