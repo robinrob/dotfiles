@@ -182,4 +182,4 @@ alias gsu="git submodule update"
 
 alias gsa="git submodule add"
 
-alias gcm="cat .gitmodules"
+alias cgm="cat .gitmodules"
