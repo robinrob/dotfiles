@@ -215,8 +215,9 @@ function alp {
 function rks {
 	if [ -f Rakefile ]
 	then
+		green "Rakefile found in ./"
 		`rake save`
 	else
-		green "No Rakefile!"
+		red "No Rakefile!"
 	fi
 }
