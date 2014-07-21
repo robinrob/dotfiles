@@ -205,3 +205,7 @@ alias jfind="lib_find $JV_HOME"
 alias cfind="lib_find $C_HOME"
 
 alias sfind="lib_find $SH_HOME"
+
+alias cleanhome="$SH_HOME/clean_home.sh"
+
+alias emptytrash="rm -rf ~/.Trash/*"
