@@ -67,7 +67,7 @@ function new {
 		then	
 			green "Creating and shebanging new file: ${FILE}"
 			echo "#!/usr/bin/env $3" > $FILE
-			chmod +x $FILE
+			chmod x $FILE
 		else
 			green "Creating new file: ${FILE}"
 			touch $FILE
@@ -205,4 +205,12 @@ function gcr {
 
 function mvd {
 	mv ~/Downloads/$1 $2
+}
+
+function rfind {
+	results = `cd $RUBY_HOME && find . -name *$1* && cd -`
+	
+	for result in results do
+		# green(result)
+	done
 }

@@ -8,6 +8,8 @@ unalias cdb
 
 unalias gcl
 
+unalias c
+
 
 # Aliases
 ###############################################################################
@@ -183,3 +185,9 @@ alias gsa="git submodule add"
 alias cgm="cat .gitmodules"
 
 alias rks="rake_save"
+
+alias c="cat"
+
+alias gro="git remote show origin"
+
+alias rk="rake"
