@@ -84,7 +84,11 @@ alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="cd_save $DOTFILES_HOME"
 
+alias DSV="dsv"
+
 alias rsv="cd_save $RUBY_HOME"
+
+alias RSV="rsv"
 
 alias rpl="cd_pull $RUBY_HOME"
 
