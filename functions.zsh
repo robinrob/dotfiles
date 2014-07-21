@@ -158,7 +158,7 @@ function cd_pull {
 }
 
 function cd_save {
-	`cd $1 && rake save` > /dev/null
+	`cd $1 && rake save > /dev/null`
 }
 
 
