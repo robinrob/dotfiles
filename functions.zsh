@@ -204,8 +204,12 @@ function mvd {
 	mv ~/Downloads/$1 $2
 }
 
-function rfind {
-	results=`cd $RUBY_HOME && find . -name *$1*`
+function lib_find {
+	DIR=$1
+	PATTERN=$2
+	
+	results=`cd $DIR && find . -name *$PATTERN*`
+	results=$results"\n"`cd $DIR && grep -r $PATTERN *`
 	
 	for result in $results
 	do

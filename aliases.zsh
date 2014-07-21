@@ -191,3 +191,13 @@ alias c="cat"
 alias gro="git remote show origin"
 
 alias rk="rake"
+
+alias rfind="lib_find $RUBY_HOME"
+
+alias jsfind="lib_find $JS_HOME"
+
+alias jfind="lib_find $JV_HOME"
+
+alias cfind="lib_find $C_HOME"
+
+alias shfind="lib_find $SH_HOME"
