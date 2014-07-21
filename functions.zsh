@@ -208,11 +208,17 @@ function lib_find {
 	DIR=$1
 	PATTERN=$2
 	
-	results=`cd $DIR && find . -name *$PATTERN*`
-	results=$results"\n"`cd $DIR && grep -r $PATTERN *`
+	result_find=`find $DIR -name *$PATTERN*`
+	result_grep=`grep -r $PATTERN $DIR`
+	
+	results=$result_find
+	if [ -n "$result_grep" ]
+	then
+		results=$results"\n"$result_grep
+	fi
 	
 	for result in $results
 	do
-		green $result
+		echo $result
 	done
 }
