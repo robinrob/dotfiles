@@ -148,20 +148,17 @@ function cssnew {
 }
 
 function cd_pull {
-	cd $1
-	output=`git branch | head -1` > /dev/null
+	output=`cd $1 && git branch | head -1` > /dev/null
 		
 	comps=("${(s/* /)output}") # notice the quotes
 
 	branch=$comps[2]
 
-	git pull origin $branch
-	
-	cd -
+	`cd $1 && git pull origin $branch`
 }
 
 function cd_save {
-	cd $1 && rake save && cd -
+	`cd $1 && rake save`
 }
 
 
@@ -208,9 +205,10 @@ function mvd {
 }
 
 function rfind {
-	results = `cd $RUBY_HOME && find . -name *$1* && cd -`
+	results=`cd $RUBY_HOME && find . -name *$1*`
 	
-	for result in results do
-		# green(result)
+	for result in $results
+	do
+		green $result
 	done
 }
