@@ -148,13 +148,13 @@ function cssnew {
 }
 
 function cd_pull {
-	output=`cd $1 && git branch | head -1` > /dev/null
+	output=`cd $1 && git branch | head -1 > /dev/null`
 		
 	comps=("${(s/* /)output}") # notice the quotes
 
 	branch=$comps[2]
 
-	`cd $1 && git pull origin $branch`
+	`cd $1 && git pull origin $branch > /dev/null`
 }
 
 function cd_save {
