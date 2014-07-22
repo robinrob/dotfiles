@@ -96,3 +96,5 @@ export SCREENSHOT_NAME=$HOSTNAME
 export PHONEGAP_HOME=/usr/local/Library/phonegap-2.9.0
 
 export ANDROID_HOME=/usr/local/Cellar/android-sdk
+
+export RECEIPTS_HOME=$IMPORTANT_HOME/receipts
