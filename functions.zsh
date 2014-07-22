@@ -3,8 +3,20 @@
 
 source $DOTFILES_HOME/colors.sh
 
+function cat_print {
+	cat $1 && cat $1 | pbcopy
+}
+
+function copy_print {
+	echo $1 && echo $1 | pbcopy
+}
+
 function get_card {
-	copy_print `cat $IMPORTANT_HOME/records/card.txt | grep $1 | awk -F: '{print $2}'`
+	get_record $IMPORTANT_HOME/records/card.txt $1
+}
+
+function get_record {
+	copy_print `cat $1 | grep $2 | awk -F: '{print $2}'`
 }
 
 function get_phone {
@@ -48,14 +60,6 @@ function song {
 
 function write {
 	cd $DOCUMENTS_HOME/creative/writing && $EDITOR "$1.txt"
-}
-
-function cat_print {
-	cat $1 && cat $1 | pbcopy
-}
-
-function copy_print {
-	echo $1 && echo $1 | pbcopy
 }
 
 function new {

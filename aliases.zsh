@@ -132,7 +132,9 @@ alias bi="bundle install"
 
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
 
-alias msp="copy_print `cat $IMPORTANT_HOME/records/bc_msp.txt`"
+alias msp="get_record $IMPORTANT_HOME/records/bc_msp.txt insurance"
+
+alias mspaccount="get_record $IMPORTANT_HOME/records/bc_msp.txt account"
 
 alias mal="mate $DOTFILES_HOME/aliases.zsh"
 
