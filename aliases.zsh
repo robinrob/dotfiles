@@ -213,3 +213,5 @@ alias cleanhome="$SH_HOME/clean_home.sh"
 alias emptytrash="rm -rf ~/.Trash/*"
 
 alias cgi="cat .gitignore"
+
+alias fr="find . -name"
