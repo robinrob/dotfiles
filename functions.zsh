@@ -228,5 +228,5 @@ function lib_find {
 }
 
 function al {
-	echo "alias $1=$2 >> $DOTFILES_HOME/aliases.sh"
+	echo "\nalias $1=\"$2\"" >> $DOTFILES_HOME/aliases.zsh
 }
