@@ -215,3 +215,13 @@ alias emptytrash="rm -rf ~/.Trash/*"
 alias cgi="cat .gitignore"
 
 alias fr="find . -name"
+
+alias cx="chmod +x"
+
+alias back="cd - > /dev/null"
+
+alias bk="back"
+
+alias kne="knife node edit"
+
+alias kee="knife environment edit"

@@ -226,3 +226,7 @@ function lib_find {
 		echo $result
 	done
 }
+
+function al {
+	echo "alias $1=$2 >> $DOTFILES_HOME/aliases.sh"
+}
