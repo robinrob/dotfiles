@@ -225,3 +225,9 @@ alias bk="back"
 alias kne="knife node edit"
 
 alias kee="knife environment edit"
+
+alias rki="rake install"
+
+alias fbs="fab save"
+
+alias cgc="cat ~/.gitconfig"
