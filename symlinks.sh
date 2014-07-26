@@ -4,7 +4,7 @@ source colors.sh
 
 DIR=`pwd`                  									
 OLD_DIR=/tmp/dotfiles             							
-FILES="yadr bashrc zshrc zsh.prompts vimrc tm_properties gitconfig"
+FILES="yadr bashrc zshrc zsh.prompts vimrc gvimrc tm_properties gitconfig"
 
 yellow "Creating $OLD_DIR for backup of any existing dotfiles in ~ ..."
 rm -rf $OLD_DIR
