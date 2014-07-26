@@ -230,3 +230,7 @@ function lib_find {
 function al {
 	echo "\nalias $1=\"$2\"" >> $DOTFILES_HOME/aliases.zsh
 }
+
+function fr {
+	find . -name *$1*
+}

@@ -10,6 +10,10 @@ unalias gcl
 
 unalias c
 
+unalias gb
+
+unalias gi
+
 
 # Aliases
 ###############################################################################
@@ -214,8 +218,6 @@ alias emptytrash="rm -rf ~/.Trash/*"
 
 alias cgi="cat .gitignore"
 
-alias fr="find . -name"
-
 alias cx="chmod +x"
 
 alias back="cd - > /dev/null"
@@ -231,3 +233,13 @@ alias rki="rake install"
 alias fbs="fab save"
 
 alias cgc="cat ~/.gitconfig"
+
+alias mgi="mate .gitignore"
+
+alias gb="git branch"
+
+alias gi="$EDITOR .gitignore"
+
+alias mr="mate README.md"
+
+alias er="$EDITOR README.md"
