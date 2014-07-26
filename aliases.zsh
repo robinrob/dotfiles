@@ -14,6 +14,8 @@ unalias gb
 
 unalias gi
 
+unalias e
+
 
 # Aliases
 ###############################################################################
@@ -243,3 +245,7 @@ alias gi="$EDITOR .gitignore"
 alias mr="mate README.md"
 
 alias er="$EDITOR README.md"
+
+alias e="$EDITOR"
+
+alias E="e"

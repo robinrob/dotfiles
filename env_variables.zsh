@@ -3,7 +3,7 @@
 
 export HOSTNAME=`hostname`
 
-export EDITOR=macvim
+export EDITOR=mvim
 
 export PROG_HOME=$HOME/Programming/robin
 
