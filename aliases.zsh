@@ -301,3 +301,5 @@ alias sd="du -dh *"
 alias erk="edit rakefile"
 
 alias pst="cd_status $PROG_HOME"
+
+alias psv="cd_save $PROG_HOME"
