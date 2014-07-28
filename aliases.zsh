@@ -297,7 +297,7 @@ alias sprog="du -dh $PROG_HOME"
 
 alias spr="sprog"
 
-alias sd="du -dh *"
+alias sd="du -dh"
 
 alias erk="edit rakefile"
 
