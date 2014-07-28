@@ -162,9 +162,19 @@ function cd_pull {
 }
 
 function cd_save {
-	`cd $1 && rake save > /dev/null`
+	cd_action $1 save
 }
 
+function cd_status {
+	cd_action $1
+}
+
+function cd_action {
+	# command="cd $1 && rake $2 > /dev/null"
+	# echo $command
+	# `cd $1 && rake status > /dev/null`
+	`cd $1 && rake save > /dev/null`
+}
 
 function opens {
 	cd $SCREENSHOTS_HOME && despace && open `lasts`
@@ -233,4 +243,16 @@ function al {
 
 function fr {
 	find . -name *$1*
+}
+
+function file_grep {
+	grep -A 3 $1 $2
+}
+
+function zfind {
+	file_grep $1 ~/.zshrc
+}
+
+function sshfind {
+	file_grep $1 ~/.ssh/config
 }

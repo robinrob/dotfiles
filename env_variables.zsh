@@ -102,3 +102,5 @@ export ANDROID_HOME=/usr/local/Cellar/android-sdk
 export RECEIPTS_HOME=$IMPORTANT_HOME/receipts
 
 export USEFUL_HOME=$DOCS_HOME/useful
+
+export AWS_CONFIG="~/.aws/config"

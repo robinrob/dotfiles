@@ -1,7 +1,5 @@
-# Un-Aliases
-###############################################################################
+# Un-Aliases ###############################################################################
 unalias todo
-
 unalias gr
 
 unalias cdb
@@ -30,11 +28,25 @@ alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 alias vconf="vim ~/.ssh/config"
 
-alias mconf="mate ~/.ssh/config"
+alias mssh="mate ~/.ssh/config"
+
+alias mconf="msh"
+
+alias essh="edit ~/.ssh/config"
+
+alias ess="edit ~/.ssh/config"
+
+alias econf="edit ~/.ssh/config"
 
 alias vzsh="vim ~/.zshrc"
 
 alias mzsh="mate ~/.zshrc"
+
+alias msz="mzsh"
+
+alias ezsh="edit ~/.zshrc"
+
+alias ezs="ezsh"
 
 alias czsh="cat ~/.zshrc"
 
@@ -90,9 +102,13 @@ alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="cd_save $DOTFILES_HOME"
 
+alias dst="cd_status $DOTFILES_HOME"
+
 alias DSV="dsv"
 
 alias rsv="cd_save $RUBY_HOME"
+
+alias rst="cd_status $RUBY_HOME"
 
 alias RSV="rsv"
 
@@ -108,9 +124,13 @@ alias bpl="cd_pull $BACKUPS_HOME"
 
 alias jsv="cd_save $JS_HOME"
 
+alias jst="cd_status $JS_HOME"
+
 alias lpl="cd_pull $LOCAL_HOME"
 
 alias lsv="cd_save $LOCAL_HOME"
+
+alias lst="cd_status $LOCAL_HOME"
 
 alias qpl="cd_pull $QUIZ_HOME"
 
@@ -192,6 +212,8 @@ alias gsi="git submodule init"
 
 alias gsu="git submodule update"
 
+alias gsur="git submodule update --init --recursive"
+
 alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
@@ -261,3 +283,19 @@ alias ad="address"
 alias ph="phone"
 
 alias em="copy_print robin@mrrobinsmith.com"
+
+alias eaws="$EDITOR $AWS_CONFIG"
+
+alias editor="echo $EDITOR"
+
+alias gcmr="git submodule foreach 'git checkout master'"
+
+alias gsf="git submodule foreach"
+
+alias sprog="du -dh $PROG_HOME"
+
+alias spr="sprog"
+
+alias sd="du -dh *"
+
+alias erk="edit rakefile"
