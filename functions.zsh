@@ -71,7 +71,7 @@ function new {
 		then	
 			green "Creating and shebanging new file: ${FILE}"
 			echo "#!/usr/bin/env $3" > $FILE
-			chmod x $FILE
+			chmod +x $FILE
 		else
 			green "Creating new file: ${FILE}"
 			touch $FILE
@@ -84,6 +84,7 @@ function new {
 			green "Shebanging existing file: ${FILE}"
 			echo "#!/usr/bin/env $3" > $FILE
 			echo $CONTENTS >> $FILE
+			chmod +x $FILE
 	fi
 	
 	$EDITOR $FILE
@@ -167,6 +168,10 @@ function cd_save {
 
 function cd_status {
 	cd_action $1 status
+}
+
+function cd_count_all {
+	cd_action $1 count_all
 }
 
 function cd_action {

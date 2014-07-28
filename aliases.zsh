@@ -15,6 +15,8 @@ unalias gi
 
 unalias e
 
+unalias gra
+
 
 # Aliases
 ###############################################################################
@@ -229,6 +231,10 @@ alias rk="rake"
 
 alias rfind="lib_find $RUBY_HOME"
 
+alias lfind="lib_find $LOCAL_HOME"
+
+alias dfind="lib_find $DOTFILES_HOME"
+
 alias jsfind="lib_find $JS_HOME"
 
 alias jfind="lib_find $JV_HOME"
@@ -236,6 +242,8 @@ alias jfind="lib_find $JV_HOME"
 alias cfind="lib_find $C_HOME"
 
 alias sfind="lib_find $SH_HOME"
+
+alias prfind="lib_find $PROG_HOME"
 
 alias cleanhome="$SH_HOME/clean_home.sh"
 
@@ -305,6 +313,8 @@ alias prst="cd_status $PROG_HOME"
 
 alias prsv="cd_save $PROG_HOME"
 
+alias prc="cd_count_all $PROG_HOME"
+
 alias cdpr="cd $PROG_HOME"
 
 alias pst="cd_status $PY_HOME"
@@ -316,3 +326,15 @@ alias cdp="cd $PY_HOME"
 alias rkc="rake count"
 
 alias rka="rake count_all"
+
+alias mkd="mkdir"
+
+alias bb="open https://bitbucket.org/dashboard/overview"
+
+alias bbc="open https://bitbucket.org/repo/create"
+
+alias news="open https://bbc.co.uk/news"
+
+alias gra="git remote add"
+
+alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
