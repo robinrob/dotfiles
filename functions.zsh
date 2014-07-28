@@ -259,3 +259,12 @@ function zfind {
 function sshfind {
 	file_grep $1 ~/.ssh/config
 }
+
+function rks {
+	if [ -f Rakefile ]
+	then
+		rake save
+	else
+		red "No Rakefile!"
+	fi
+}

@@ -221,8 +221,6 @@ alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
 
-alias rks="rake save"
-
 alias c="cat"
 
 alias gro="git remote show origin"
