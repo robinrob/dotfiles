@@ -299,3 +299,5 @@ alias spr="sprog"
 alias sd="du -dh *"
 
 alias erk="edit rakefile"
+
+alias pst="cd_status $PROG_HOME"
