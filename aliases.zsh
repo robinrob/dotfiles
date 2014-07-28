@@ -1,5 +1,6 @@
 # Un-Aliases ###############################################################################
 unalias todo
+
 unalias gr
 
 unalias cdb
@@ -300,6 +301,14 @@ alias sd="du -dh *"
 
 alias erk="edit rakefile"
 
-alias pst="cd_status $PROG_HOME"
+alias prst="cd_status $PROG_HOME"
 
-alias psv="cd_save $PROG_HOME"
+alias prsv="cd_save $PROG_HOME"
+
+alias cdpr="cd $PROG_HOME"
+
+alias pst="cd_status $PY_HOME"
+
+alias psv="cd_save $PY_HOME"
+
+alias cdp="cd $PY_HOME"
