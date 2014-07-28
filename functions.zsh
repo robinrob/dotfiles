@@ -175,8 +175,8 @@ function cd_count_all {
 }
 
 function cd_action {
-	command="cd $1 && rake $2"
-	eval $command
+	output=`cd $1 && rake $2`
+	green `echo $output | grep total`
 }
 
 function opens {
