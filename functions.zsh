@@ -166,14 +166,12 @@ function cd_save {
 }
 
 function cd_status {
-	cd_action $1
+	cd_action $1 status
 }
 
 function cd_action {
-	# command="cd $1 && rake $2 > /dev/null"
-	# echo $command
-	# `cd $1 && rake status > /dev/null`
-	`cd $1 && rake save > /dev/null`
+	command="cd $1 && rake $2"
+	eval $command
 }
 
 function opens {
