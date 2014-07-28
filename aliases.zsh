@@ -312,3 +312,7 @@ alias pst="cd_status $PY_HOME"
 alias psv="cd_save $PY_HOME"
 
 alias cdp="cd $PY_HOME"
+
+alias rkc="rake count"
+
+alias rka="rake count_all"
