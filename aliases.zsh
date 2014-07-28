@@ -249,3 +249,15 @@ alias er="$EDITOR README.md"
 alias e="$EDITOR"
 
 alias E="e"
+
+alias skytrain="open $USEFUL_HOME/vancouver_skytrain_map.pdf"
+
+alias sky="skytrain"
+
+alias pc="postcode"
+
+alias ad="address"
+
+alias ph="phone"
+
+alias em="copy_print robin@mrrobinsmith.com"

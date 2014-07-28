@@ -85,6 +85,8 @@ export RDOCS_HOME=$RFILES_HOME/docs
 
 export IMPORTANT_HOME=$DOCS_HOME/IMPORTANT
 
+export KNOWLEDGE_HOME=$DOCS_HOME/knowledge
+
 export BACKGROUNDS_HOME=$FILES_HOME/backgrounds
 
 export SCREENSAVERS_HOME=$FILES_HOME/screensavers
@@ -98,3 +100,5 @@ export PHONEGAP_HOME=/usr/local/Library/phonegap-2.9.0
 export ANDROID_HOME=/usr/local/Cellar/android-sdk
 
 export RECEIPTS_HOME=$IMPORTANT_HOME/receipts
+
+export USEFUL_HOME=$DOCS_HOME/useful
