@@ -17,6 +17,8 @@ unalias e
 
 unalias gra
 
+unalias gbd
+
 
 # Aliases
 ###############################################################################
@@ -33,7 +35,7 @@ alias vconf="vim ~/.ssh/config"
 
 alias mssh="mate ~/.ssh/config"
 
-alias mconf="msh"
+alias mconf="mssh"
 
 alias essh="edit ~/.ssh/config"
 
@@ -145,9 +147,13 @@ alias lasts="cd $SCREENSHOTS_HOME && lastf -s $SCREENSHOT_NAME"
 
 alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
 
-alias gpd="git pull origin develop"
+alias gpd="git push origin develop"
 
-alias gpm="git pull origin master"
+alias gpm="git push origin master"
+
+alias gpld="git push origin develop"
+
+alias gplm="git push origin master"
 
 alias conf="mate config.json"
 
@@ -279,9 +285,11 @@ alias e="$EDITOR"
 
 alias E="e"
 
-alias skytrain="open $USEFUL_HOME/vancouver_skytrain_map.pdf"
+alias skytrain="open $COMMON_DOCS_HOME/useful/vancouver_skytrain_map.pdf"
 
 alias sky="skytrain"
+
+alias tube="open $COMMON_DOCS_HOME/useful/tube_map.pdf"
 
 alias pc="postcode"
 
@@ -336,3 +344,19 @@ alias news="open https://bbc.co.uk/news"
 alias gra="git remote add"
 
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
+
+alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
+
+alias cdt="cd $TRASH_HOME"
+
+alias mobileideas="$EDITOR $MERCURY_HOME/creative/mobile/ideas.txt"
+
+alias mi="mobileideas"
+
+alias gbd="git branch develop && git checkout develop"
+
+alias gbm="git branch master && git checkout master	"
+
+alias gch="git checkout"
+
+alias plane="echo NQFLIZ"

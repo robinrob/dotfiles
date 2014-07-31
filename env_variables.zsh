@@ -73,13 +73,21 @@ export RUBYMINE_CONFIG=~/Library/Preferences/RubyMine60/keymaps/Robin.xml
 
 export PYCHARM_CONFIG=~/Library/Preferences/PyCharm30/keymaps/Robin.xml
 
-export FILES_HOME=~/Dropbox/$HOSTNAME
+export FILES_HOME=~/Dropbox
 
-export RFILES_HOME=~/Dropbox/mercury.local
+export HOSTFILES_HOME=$FILES_HOME/$HOSTNAME
 
-export TEMP_HOME=$FILES_HOME/temp
+export COMMON_HOME=$FILES_HOME/common
 
-export DOCS_HOME=$FILES_HOME/docs
+export COMMON_DOCS_HOME=$COMMON_HOME/docs
+
+export MERCURY_HOME=$FILES_HOME/mercury.local
+
+export VENUS_HOME=$FILES_HOME/venus.local
+
+export TEMP_HOME=$HOSTFILES_HOME/temp
+
+export DOCS_HOME=$HOSTFILES_HOME/docs
 
 export RDOCS_HOME=$RFILES_HOME/docs
 
@@ -87,11 +95,11 @@ export IMPORTANT_HOME=$DOCS_HOME/IMPORTANT
 
 export KNOWLEDGE_HOME=$DOCS_HOME/knowledge
 
-export BACKGROUNDS_HOME=$FILES_HOME/backgrounds
+export BACKGROUNDS_HOME=$HOSTFILES_HOME/backgrounds
 
-export SCREENSAVERS_HOME=$FILES_HOME/screensavers
+export SCREENSAVERS_HOME=$HOSTFILES_HOME/screensavers
 
-export SCREENSHOTS_HOME=$FILES_HOME/screenshots
+export SCREENSHOTS_HOME=$HOSTFILES_HOME/screenshots
 
 export SCREENSHOT_NAME=$HOSTNAME
 
@@ -99,8 +107,12 @@ export PHONEGAP_HOME=/usr/local/Library/phonegap-2.9.0
 
 export ANDROID_HOME=/usr/local/Cellar/android-sdk
 
-export RECEIPTS_HOME=$IMPORTANT_HOME/receipts
+export RECEIPTS_HOME=$VENUS_HOME/docs/IMPORTANT/receipts
 
 export USEFUL_HOME=$DOCS_HOME/useful
 
 export AWS_CONFIG="~/.aws/config"
+
+export CAMERA_HOME=$FILES_HOME/"Camera Uploads"
+
+export TRASH_HOME=~/.Trash

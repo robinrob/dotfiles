@@ -106,3 +106,5 @@ set sidescroll=1
 " ================ Syntax-Checking =======================
 
 autocmd FileType json noremap <C-L> :!jsonlint %<CR>
+
+set guifont=Menlo\ Regular:h12
