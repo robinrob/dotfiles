@@ -372,3 +372,5 @@ alias cdrc="cd $RECEIPTS_HOME"
 alias cdrp="cdrc"
 
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
+
+alias cms="edit $DOCS_HOME/commands.txt"
