@@ -261,9 +261,9 @@ alias back="cd - > /dev/null"
 
 alias bk="back"
 
-alias kne="knife node edit"
+alias kne="knife node edit --editor vim"
 
-alias kee="knife environment edit"
+alias kee="knife environment edit --editor vim"
 
 alias rki="rake install"
 
@@ -359,4 +359,16 @@ alias gbm="git branch master && git checkout master	"
 
 alias gch="git checkout"
 
-alias plane="echo NQFLIZ"
+alias plane="copy_print NQFLIZ"
+
+alias pl="plane"
+
+alias gclm="git clone -b master"
+
+alias gclb="git clone -b "
+
+alias cdrc="cd $RECEIPTS_HOME"
+
+alias cdrp="cdrc"
+
+alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
