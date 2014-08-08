@@ -1,3 +1,5 @@
+source ~/Programming/robin/dotfiles/colors.sh
+
 # First-time stuff!
 ###############################################################################
 
@@ -50,7 +52,12 @@ alias more='less'
 # Ruby
 ######
 rvm use ruby-2.0.0-p247 1> /dev/null
-rvm gemset use chef --create 2> /dev/null
+green "Using \`Ruby-2.0.0\`"
+
+if [ "$HOSTNAME" = "venus.local" ]
+then
+	rvm gemset use chef --create 2> /dev/null
+fi
 
 # Python
 ########

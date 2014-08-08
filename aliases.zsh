@@ -19,11 +19,19 @@ unalias gra
 
 unalias gbd
 
+unalias sd
+
 
 # Aliases
 ###############################################################################
 
+# Tools
+
 alias m="mate"
+
+alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+
+# Shell operations
 
 alias rs="source ~/.zshrc"
 
@@ -61,41 +69,56 @@ alias conf="edit ~/.ssh/config"
 
 alias zshrc="edit ~/.zshrc"
 
-alias phone="get_phone short"
-
-alias phonelong="get_phone long"
-
-POSTCODE="V6B 6H4"
-alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
-
-alias address="get_address home"
-
-alias addresswork="get_address work"
-
-OFFICE_POSTCODE="V6B 2Y5"
-alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
-
 alias nocchef="cd $NOCCHEF"
 
 alias mschef="cd $MSCHEF"
 
-alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
-
-alias rkp="rake pull"
-
-alias fs="fab save"
+# Shortcuts
 
 alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
 
-alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+alias mr="mate $RECORDS_PATH"
 
-alias cardhsbc="get_card hsbc-debit"
+alias erec="$EDITOR $RECORDS_PATH"
 
-alias cardrbc="get_card rbc-debit"
+alias cms="edit $DOCS_HOME/commands.txt"
 
-alias cardcredit="get_card rbc-credit"
+alias cdk="cd $KITCHENPLAN_HOME"
+
+alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
+
+alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
+
+
+# Development operations
+
+alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
+
+alias sv="save"
+
+alias rkp="rake pull"
+
+alias fs="fab save"
+
+
+# Git aliases
+
+alias gsi="git submodule init"
+
+alias gsu="git submodule update"
+
+alias gsur="git submodule update --init --recursive"
+
+alias gsa="git submodule add"
+
+alias cgm="cat .gitmodules"
+
+alias gro="git remote show origin"
+
+
+alias c="cat"
 
 alias gstat='cd $PROG_HOME && gs'
 
@@ -103,6 +126,8 @@ alias pb="pbcopy"
 
 alias splu="mate $TEMP_HOME/splunk_searches.txt"
 
+
+# Git Repos
 alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="cd_save $DOTFILES_HOME"
@@ -213,23 +238,12 @@ alias nocknife="cd $NOCCHEF && knife"
 
 alias msknife="cd $MSCHEF && knife"
 
+# Chef
 alias kel="knife environment list"
 
 alias knl="knife node list"
 
-alias gsi="git submodule init"
 
-alias gsu="git submodule update"
-
-alias gsur="git submodule update --init --recursive"
-
-alias gsa="git submodule add"
-
-alias cgm="cat .gitmodules"
-
-alias c="cat"
-
-alias gro="git remote show origin"
 
 alias rk="rake"
 
@@ -311,7 +325,7 @@ alias sprog="du -dh $PROG_HOME"
 
 alias spr="sprog"
 
-alias sd="du -dh"
+alias s="du -dh"
 
 alias erk="edit rakefile"
 
@@ -335,17 +349,9 @@ alias rka="rake count_all"
 
 alias mkd="mkdir"
 
-alias bb="open https://bitbucket.org/dashboard/overview"
-
-alias bbc="open https://bitbucket.org/repo/create"
-
-alias news="open https://bbc.co.uk/news"
-
 alias gra="git remote add"
 
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
-
-alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
 
 alias cdt="cd $TRASH_HOME"
 
@@ -371,10 +377,54 @@ alias cdrc="cd $RECEIPTS_HOME"
 
 alias cdrp="cdrc"
 
+# Web shortcuts
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
 alias cms="edit $DOCS_HOME/commands.txt"
 
-alias pbrew="pythonbrew"
+alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
 
-alias knd="knife node delete"
+alias bb="open https://bitbucket.org/dashboard/overview"
+
+alias bbc="open https://bitbucket.org/repo/create"
+
+alias news="open https://bbc.co.uk/news"
+
+alias learmount="open http://www.flightglobal.com/blogs/learmount"
+
+
+# Records
+alias cardcredit="get_card rbc-credit"
+
+alias cardhsbc="get_card hsbc-debit"
+
+alias cardrbc="get_card rbc-debit"
+
+alias ad="address"
+
+alias phonelong="get_record phone_long"
+
+alias phone="get_record phone_short"
+
+alias ph="phone"
+
+alias library="get_record $IMPORTANT_HOME/records/records.txt library"
+
+alias lib="library"
+
+alias postcode="get_record home_postcode"
+
+alias pc="postcode"
+
+alias address="get_record home_address"
+
+alias workaddress="get_record work_address"
+
+alias workpostcode="get_record work_postcode"
+
+# Information
+
+alias skytrain="open $USEFUL_HOME/vancouver_skytrain_map.pdf"
+
+alias sky="skytrain"
+
