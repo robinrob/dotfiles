@@ -13,3 +13,6 @@ crontab crontab.cron
 
 green "Installing Robin's custom keyboard layout ..."
 cp Robin.keylayout ~/Library/Keyboard\ Layouts/
+
+red "Removing folder ~/.vim"
+rm -rf ~/.vim

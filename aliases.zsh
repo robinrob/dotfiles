@@ -17,6 +17,8 @@ unalias e
 
 unalias gra
 
+unalias gbd
+
 unalias sd
 
 
@@ -35,11 +37,13 @@ alias rs="source ~/.zshrc"
 
 alias RS="source ~/.zshrc"
 
+alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
+
 alias vconf="vim ~/.ssh/config"
 
 alias mssh="mate ~/.ssh/config"
 
-alias mconf="msh"
+alias mconf="mssh"
 
 alias essh="edit ~/.ssh/config"
 
@@ -140,9 +144,13 @@ alias lasts="cd $SCREENSHOTS_HOME && lastf -s $SCREENSHOT_NAME"
 
 alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
 
-alias gpd="git pull origin develop"
+alias gpd="git push origin develop"
 
-alias gpm="git pull origin master"
+alias gpm="git push origin master"
+
+alias gpld="git push origin develop"
+
+alias gplm="git push origin master"
 
 alias conf="mate config.json"
 
@@ -250,9 +258,9 @@ alias back="cd - > /dev/null"
 
 alias bk="back"
 
-alias kne="knife node edit"
+alias kne="knife node edit --editor vim"
 
-alias kee="knife environment edit"
+alias kee="knife environment edit --editor vim"
 
 alias rki="rake install"
 
@@ -273,6 +281,18 @@ alias er="$EDITOR README.md"
 alias e="$EDITOR"
 
 alias E="e"
+
+alias skytrain="open $COMMON_DOCS_HOME/useful/vancouver_skytrain_map.pdf"
+
+alias sky="skytrain"
+
+alias tube="open $COMMON_DOCS_HOME/useful/tube_map.pdf"
+
+alias pc="postcode"
+
+alias ad="address"
+
+alias ph="phone"
 
 alias em="copy_print robin@mrrobinsmith.com"
 
@@ -321,6 +341,36 @@ alias news="open https://bbc.co.uk/news"
 alias gra="git remote add"
 
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
+
+alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
+
+alias cdt="cd $TRASH_HOME"
+
+alias mobileideas="$EDITOR $MERCURY_HOME/creative/mobile/ideas.txt"
+
+alias mi="mobileideas"
+
+alias gbd="git branch develop && git checkout develop"
+
+alias gbm="git branch master && git checkout master	"
+
+alias gch="git checkout"
+
+alias plane="copy_print NQFLIZ"
+
+alias pl="plane"
+
+alias gclm="git clone -b master"
+
+alias gclb="git clone -b "
+
+alias cdrc="cd $RECEIPTS_HOME"
+
+alias cdrp="cdrc"
+
+alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
+
+alias cms="edit $DOCS_HOME/commands.txt"
 
 alias cdk="cd $KITCHENPLAN_HOME"
 
