@@ -11,26 +11,11 @@ function copy_print {
 	echo $1 && echo $1 | pbcopy
 }
 
-function get_card {
-	get_record $IMPORTANT_HOME/records/card.txt $1
-}
-
 function get_record {
-	copy_print `cat $1 | grep $2 | awk -F: '{print $2}'`
-}
-
-function get_phone {
-	cmd="cat $IMPORTANT_HOME/records/phone.txt | grep $1"
+	cmd="grep $1 $RECORDS_HOME"
 	val=$(eval "$cmd")
 	val2=`echo ""$val"" | awk -F: '{print $2}'`
 	copy_print ""$val2""
-}
-
-function get_address {
-	cmd="cat $IMPORTANT_HOME/records/address.txt | grep $1"
-	val=$(eval "$cmd")
-	echo ""$val"" | awk -F: '{print $2}'
-	echo ""$val"" | awk -F: '{print $2}' | pbcopy
 }
 
 function reminder {

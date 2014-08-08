@@ -17,17 +17,23 @@ unalias e
 
 unalias gra
 
+unalias sd
+
 
 # Aliases
 ###############################################################################
 
+# Tools
+
 alias m="mate"
+
+alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+
+# Shell operations
 
 alias rs="source ~/.zshrc"
 
 alias RS="source ~/.zshrc"
-
-alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 alias vconf="vim ~/.ssh/config"
 
@@ -59,23 +65,20 @@ alias conf="edit ~/.ssh/config"
 
 alias zshrc="edit ~/.zshrc"
 
-alias phone="get_phone short"
-
-alias phonelong="get_phone long"
-
-POSTCODE="V6B 6H4"
-alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
-
-alias address="get_address home"
-
-alias addresswork="get_address work"
-
-OFFICE_POSTCODE="V6B 2Y5"
-alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
-
 alias nocchef="cd $NOCCHEF"
 
 alias mschef="cd $MSCHEF"
+
+# Shortcuts
+
+alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
+
+alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
+
+
+# Development operations
+
+alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
@@ -83,17 +86,9 @@ alias rkp="rake pull"
 
 alias fs="fab save"
 
-alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
-alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
+# Git aliases
 
-alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
-
-alias cardhsbc="get_card hsbc-debit"
-
-alias cardrbc="get_card rbc-debit"
-
-alias cardcredit="get_card rbc-credit"
 
 alias gstat='cd $PROG_HOME && gs'
 
@@ -279,16 +274,6 @@ alias e="$EDITOR"
 
 alias E="e"
 
-alias skytrain="open $USEFUL_HOME/vancouver_skytrain_map.pdf"
-
-alias sky="skytrain"
-
-alias pc="postcode"
-
-alias ad="address"
-
-alias ph="phone"
-
 alias em="copy_print robin@mrrobinsmith.com"
 
 alias eaws="$EDITOR $AWS_CONFIG"
@@ -303,7 +288,7 @@ alias sprog="du -dh $PROG_HOME"
 
 alias spr="sprog"
 
-alias sd="du -dh"
+alias s="du -dh"
 
 alias erk="edit rakefile"
 
@@ -336,3 +321,44 @@ alias news="open https://bbc.co.uk/news"
 alias gra="git remote add"
 
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
+
+alias cdk="cd $KITCHENPLAN_HOME"
+
+alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
+
+# Records
+alias cardcredit="get_card rbc-credit"
+
+alias cardhsbc="get_card hsbc-debit"
+
+alias cardrbc="get_card rbc-debit"
+
+alias pc="postcode"
+
+alias ad="address"
+
+alias phonelong="get_record phone_long"
+
+alias phone="get_record phone_short"
+
+alias ph="phone"
+
+alias library="get_record $IMPORTANT_HOME/records/records.txt library"
+
+alias lib="library"
+
+POSTCODE="V6B 6H4"
+alias postcode="echo $POSTCODE && echo $POSTCODE | pbcopy"
+
+alias address="get_address home"
+
+alias addresswork="get_address work"
+
+OFFICE_POSTCODE="V6B 2Y5"
+alias officepostcode="echo $OFFICE_POSTCODE && echo $OFFICE_POSTCODE | pbcopy"
+
+# Information
+
+alias skytrain="open $USEFUL_HOME/vancouver_skytrain_map.pdf"
+
+alias sky="skytrain"

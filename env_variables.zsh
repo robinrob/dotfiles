@@ -104,3 +104,7 @@ export RECEIPTS_HOME=$IMPORTANT_HOME/receipts
 export USEFUL_HOME=$DOCS_HOME/useful
 
 export AWS_CONFIG="~/.aws/config"
+
+export KITCHENPLAN_HOME=/opt/kitchenplan
+
+export RECORDS_HOME=$MERCURY_HOME/IMPORTANT/records/records.txt
