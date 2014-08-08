@@ -160,8 +160,8 @@ function cd_count_all {
 }
 
 function cd_action {
+	green "In repo: $1"
 	output=`cd $1 && rake $2`
-	green `echo $output | grep total`
 }
 
 function opens {
