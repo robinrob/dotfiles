@@ -148,7 +148,6 @@ function cd_pull {
 }
 
 function cd_save {
-	cd_action $1 status
 	cd_action $1 save
 }
 
