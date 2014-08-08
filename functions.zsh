@@ -12,7 +12,7 @@ function copy_print {
 }
 
 function get_record {
-	cmd="grep $1 $RECORDS_HOME"
+	cmd="grep $1 $RECORDS_PATH"
 	val=$(eval "$cmd")
 	val2=`echo ""$val"" | awk -F: '{print $2}'`
 	copy_print ""$val2""
