@@ -251,5 +251,6 @@ function rks {
 		rake save
 	else
 		red "No Rakefile!"
+		red "\`rake -f $RAKEFILE_HOME/Rakefile save\` to use master Rakefile"
 	fi
 }

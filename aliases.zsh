@@ -91,6 +91,26 @@ alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
 
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
+alias rk="rake"
+
+alias rfind="lib_find $RUBY_HOME"
+
+alias pfind="lib_find $PYTHON_HOME"
+
+alias lfind="lib_find $LOCAL_HOME"
+
+alias dfind="lib_find $DOTFILES_HOME"
+
+alias jsfind="lib_find $JS_HOME"
+
+alias jfind="lib_find $JV_HOME"
+
+alias cfind="lib_find $C_HOME"
+
+alias sfind="lib_find $SH_HOME"
+
+alias prfind="lib_find $PROG_HOME"
+
 
 # Development operations
 
@@ -116,7 +136,6 @@ alias gsa="git submodule add"
 alias cgm="cat .gitmodules"
 
 alias gro="git remote show origin"
-
 
 alias c="cat"
 
@@ -165,12 +184,6 @@ alias lst="cd_status $LOCAL_HOME"
 alias qpl="cd_pull $QUIZ_HOME"
 
 alias qsv="cd_save $QUIZ_HOME"
-
-alias screenshots="cd $SCREENSHOTS_HOME"
-
-alias lasts="cd $SCREENSHOTS_HOME && lastf -s $SCREENSHOT_NAME"
-
-alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
 
 alias gpd="git push origin develop"
 
@@ -245,23 +258,6 @@ alias knl="knife node list"
 
 
 
-alias rk="rake"
-
-alias rfind="lib_find $RUBY_HOME"
-
-alias lfind="lib_find $LOCAL_HOME"
-
-alias dfind="lib_find $DOTFILES_HOME"
-
-alias jsfind="lib_find $JS_HOME"
-
-alias jfind="lib_find $JV_HOME"
-
-alias cfind="lib_find $C_HOME"
-
-alias sfind="lib_find $SH_HOME"
-
-alias prfind="lib_find $PROG_HOME"
 
 alias cleanhome="$SH_HOME/clean_home.sh"
 
@@ -343,6 +339,10 @@ alias psv="cd_save $PY_HOME"
 
 alias cdp="cd $PY_HOME"
 
+alias cdp2="cd $PY_HOME/python2"
+
+alias cdp3="cd $PY_HOME/python3"
+
 alias rkc="rake count"
 
 alias rka="rake count_all"
@@ -392,7 +392,6 @@ alias news="open https://bbc.co.uk/news"
 
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
-
 # Records
 alias cardcredit="get_card rbc-credit"
 
@@ -428,3 +427,18 @@ alias skytrain="open $USEFUL_HOME/vancouver_skytrain_map.pdf"
 
 alias sky="skytrain"
 
+# Screenshots
+
+alias screenshots="cd $SCREENSHOTS_HOME"
+
+alias lasts="cd $SCREENSHOTS_HOME && lastf -s $SCREENSHOT_NAME"
+
+alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
+
+alias up2="pythonbrew use 2.7"
+
+alias up3="pythonbrew use 3.2"
+
+alias p2="~/.pythonbrew/pythons/Python-2.7/bin/python"
+
+alias p3="~/.pythonbrew/pythons/Python-3.2/bin/python3"
