@@ -40,11 +40,11 @@ function note {
 }
 
 function song {
-	cd $DOCUMENTS_HOME/creative/songs && $EDITOR "$1.txt"
+	cd $DOCS_HOME/creative/songs && $EDITOR "$1.txt"
 }
 
 function write {
-	cd $DOCUMENTS_HOME/creative/writing && $EDITOR "$1.txt"
+	cd $DOCS_HOME/creative/writing && $EDITOR "$1.txt"
 }
 
 function new {

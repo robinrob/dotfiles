@@ -452,3 +452,7 @@ alias up3="pythonbrew use 3.2"
 alias p2="~/.pythonbrew/pythons/Python-2.7/bin/python"
 
 alias p3="~/.pythonbrew/pythons/Python-3.2/bin/python3"
+
+# Synonyms
+
+alias wh="which"
