@@ -456,3 +456,7 @@ alias p3="~/.pythonbrew/pythons/Python-3.2/bin/python3"
 # Synonyms
 
 alias wh="which"
+
+# Aliases
+
+alias lsl="ls -l"
