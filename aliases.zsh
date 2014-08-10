@@ -87,6 +87,10 @@ alias cms="edit $DOCS_HOME/commands.txt"
 
 alias cdk="cd $KITCHENPLAN_HOME"
 
+alias cddl="cd ~/Downloads"
+
+alias cdmv="cd ~/Movies"
+
 alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
 
 alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
@@ -361,6 +365,8 @@ alias mi="mobileideas"
 
 alias gbd="git branch develop && git checkout develop"
 
+alias gbx="git branch -d"
+
 alias gbm="git branch master && git checkout master	"
 
 alias gch="git checkout"
@@ -393,6 +399,10 @@ alias news="open https://bbc.co.uk/news"
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
 # Records
+alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
+
+alias mrec="mate $IMPORTANT_HOME/records/record.txt"
+
 alias cardcredit="get_card rbc-credit"
 
 alias cardhsbc="get_card hsbc-debit"
