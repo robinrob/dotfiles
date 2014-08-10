@@ -141,13 +141,7 @@ alias cgm="cat .gitmodules"
 
 alias gro="git remote show origin"
 
-alias c="cat"
-
-alias gstat='cd $PROG_HOME && gs'
-
-alias pb="pbcopy"
-
-alias splu="mate $TEMP_HOME/splunk_searches.txt"
+alias grh="git reset HEAD"
 
 
 # Git Repos
@@ -382,6 +376,14 @@ alias gclb="git clone -b "
 alias cdrc="cd $RECEIPTS_HOME"
 
 alias cdrp="cdrc"
+
+alias c="cat"
+
+alias gstat='cd $PROG_HOME && gs'
+
+alias pb="pbcopy"
+
+alias splu="mate $TEMP_HOME/splunk_searches.txt"
 
 # Web shortcuts
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
