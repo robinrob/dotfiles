@@ -44,4 +44,3 @@ msl ALL=(ALL) NOPASSWD: ALL
 # Samples
 # %users  ALL=/sbin/mount /cdrom,/sbin/umount /cdrom
 # %users  localhost=/sbin/shutdown -h now
-
