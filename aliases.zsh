@@ -75,6 +75,12 @@ alias mschef="cd $MSCHEF"
 
 # Shortcuts
 
+alias residency="$ADOBE_PATH $CANADA_HOME/residency_form.pdf"
+
+alias sabihin="song sabihin_mo_na"
+
+alias sb="sabihin"
+
 alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
@@ -388,6 +394,8 @@ alias splu="mate $TEMP_HOME/splunk_searches.txt"
 # Web shortcuts
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
+alias phonegap="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
+
 alias cms="edit $DOCS_HOME/commands.txt"
 
 alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
@@ -459,6 +467,18 @@ alias p3="~/.pythonbrew/pythons/Python-3.2/bin/python3"
 
 alias wh="which"
 
+alias chrome="$CHROME_PATH"
+
+alias adobe="$ADOBE_PATH"
+
+alias chr="chrome"
+
 # Aliases
 
 alias lsl="ls -l"
+
+# ls 'full'
+alias lsf="ls $PWD/*"
+
+# ls 'absolute'
+alias lsa="lsf"

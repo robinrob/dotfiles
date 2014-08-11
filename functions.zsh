@@ -254,3 +254,7 @@ function rks {
 		red "\`rake -f $RAKEFILE_HOME/Rakefile save\` to use master Rakefile"
 	fi
 }
+
+function killp {
+	kill `ps aux | grep $1 | awk '{print $2}' | xargs` 2> /dev/null
+}
