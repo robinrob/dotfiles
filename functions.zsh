@@ -256,5 +256,15 @@ function rks {
 }
 
 function killp {
-	kill `ps aux | grep $1 | awk '{print $2}' | xargs` 2> /dev/null
+	if [ -z $1 ]
+	then
+		red "Must give name of process!"
+		
+	else
+		
+		green "Killing all $1 processes ..."
+	
+		sh -c  "PROCESSES=eval('ps aux')"
+		# ; for process in $PROCESSES; do green '"'Killing $1 process: $process ...'"'; kill $process; done"
+	fi
 }
