@@ -75,6 +75,12 @@ alias mschef="cd $MSCHEF"
 
 # Shortcuts
 
+alias residency="$ADOBE_PATH $CANADA_HOME/residency_form.pdf"
+
+alias sabihin="song sabihin_mo_na"
+
+alias sb="sabihin"
+
 alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
@@ -86,6 +92,10 @@ alias erec="$EDITOR $RECORDS_PATH"
 alias cms="edit $DOCS_HOME/commands.txt"
 
 alias cdk="cd $KITCHENPLAN_HOME"
+
+alias cddl="cd ~/Downloads"
+
+alias cdmv="cd ~/Movies"
 
 alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
 
@@ -141,13 +151,7 @@ alias cgm="cat .gitmodules"
 
 alias gro="git remote show origin"
 
-alias c="cat"
-
-alias gstat='cd $PROG_HOME && gs'
-
-alias pb="pbcopy"
-
-alias splu="mate $TEMP_HOME/splunk_searches.txt"
+alias grh="git reset HEAD"
 
 
 # Git Repos
@@ -224,6 +228,8 @@ alias cdd="cd $DOTFILES_HOME"
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd $RUBY_HOME"
+
+alias cdsh="cd $SH_HOME"
 
 alias cdjs="cd $JS_HOME"
 
@@ -365,6 +371,8 @@ alias mi="mobileideas"
 
 alias gbd="git branch develop && git checkout develop"
 
+alias gbx="git branch -d"
+
 alias gbm="git branch master && git checkout master	"
 
 alias gch="git checkout"
@@ -381,8 +389,18 @@ alias cdrc="cd $RECEIPTS_HOME"
 
 alias cdrp="cdrc"
 
+alias c="cat"
+
+alias gstat='cd $PROG_HOME && gs'
+
+alias pb="pbcopy"
+
+alias splu="mate $TEMP_HOME/splunk_searches.txt"
+
 # Web shortcuts
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
+
+alias phonegap="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
 alias cms="edit $DOCS_HOME/commands.txt"
 
@@ -397,6 +415,10 @@ alias news="open https://bbc.co.uk/news"
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
 # Records
+alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
+
+alias mrec="mate $IMPORTANT_HOME/records/record.txt"
+
 alias cardcredit="get_card rbc-credit"
 
 alias cardhsbc="get_card hsbc-debit"
@@ -446,3 +468,23 @@ alias up3="pythonbrew use 3.2"
 alias p2="~/.pythonbrew/pythons/Python-2.7/bin/python"
 
 alias p3="~/.pythonbrew/pythons/Python-3.2/bin/python3"
+
+# Synonyms
+
+alias wh="which"
+
+alias chrome="$CHROME_PATH"
+
+alias adobe="$ADOBE_PATH"
+
+alias chr="chrome"
+
+# Aliases
+
+alias lsl="ls -l"
+
+# ls 'full'
+alias lsf="ls $PWD/*"
+
+# ls 'absolute'
+alias lsa="lsf"

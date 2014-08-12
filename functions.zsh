@@ -40,11 +40,11 @@ function note {
 }
 
 function song {
-	cd $DOCUMENTS_HOME/creative/songs && $EDITOR "$1.txt"
+	cd $DOCS_HOME/creative/songs && $EDITOR "$1.txt"
 }
 
 function write {
-	cd $DOCUMENTS_HOME/creative/writing && $EDITOR "$1.txt"
+	cd $DOCS_HOME/creative/writing && $EDITOR "$1.txt"
 }
 
 function new {
@@ -252,5 +252,19 @@ function rks {
 	else
 		red "No Rakefile!"
 		red "\`rake -f $RAKEFILE_HOME/Rakefile save\` to use master Rakefile"
+	fi
+}
+
+function killp {
+	if [ -z $1 ]
+	then
+		red "Must give name of process!"
+		
+	else
+		
+		green "Killing all $1 processes ..."
+	
+		sh -c  "PROCESSES=eval('ps aux')"
+		# ; for process in $PROCESSES; do green '"'Killing $1 process: $process ...'"'; kill $process; done"
 	fi
 }
