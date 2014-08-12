@@ -111,6 +111,10 @@ alias sfind="lib_find $SH_HOME"
 
 alias prfind="lib_find $PROG_HOME"
 
+alias cdms="cd $MSCHEF"
+
+alias cdnoc="cd $NOCCHEF"
+
 
 # Development operations
 
