@@ -173,6 +173,10 @@ alias rpl="cd_pull $RUBY_HOME"
 
 alias ssv="cd_save $SH_HOME"
 
+alias ssv="cd_save $SH_HOME"
+
+alias sst="cd_status $SH_HOME"
+
 alias spl="cd_pull $SH_HOME"
 
 alias bsv="cd_save $BACKUPS_HOME"
@@ -419,11 +423,11 @@ alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
 
 alias mrec="mate $IMPORTANT_HOME/records/record.txt"
 
-alias cardcredit="get_card rbc-credit"
+alias cardcredit="get_record rbc-credit"
 
-alias cardhsbc="get_card hsbc-debit"
+alias cardhsbc="get_record hsbc-debit"
 
-alias cardrbc="get_card rbc-debit"
+alias cardrbc="get_record rbc-debit"
 
 alias ad="address"
 
@@ -488,3 +492,5 @@ alias lsf="ls $PWD/*"
 
 # ls 'absolute'
 alias lsa="lsf"
+
+alias shell="echo $SHELL"
