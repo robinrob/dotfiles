@@ -233,6 +233,8 @@ alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd $RUBY_HOME"
 
+alias cdwr="cd $WORK_RUBY_HOME"
+
 alias cdsh="cd $SH_HOME"
 
 alias cdjs="cd $JS_HOME"
