@@ -75,6 +75,8 @@ export RUBYMINE_CONFIG=~/Library/Preferences/RubyMine60/keymaps/Robin.xml
 
 export PYCHARM_CONFIG=~/Library/Preferences/PyCharm30/keymaps/Robin.xml
 
+export WEBSTORM_CONFIG=~/Library/Preferences/WebStorm8/keymaps/Robin.xml
+
 export FILES_HOME=~/Dropbox
 
 export HOSTFILES_HOME=$FILES_HOME/$HOSTNAME
