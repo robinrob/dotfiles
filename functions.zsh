@@ -40,7 +40,7 @@ function note {
 }
 
 function song {
-	cd $DOCS_HOME/creative/songs && $EDITOR "$1.txt"
+	cd $MERCURY_HOME/docs/creative/songs && $EDITOR "$1.txt"
 }
 
 function write {
@@ -160,8 +160,10 @@ function cd_count_all {
 }
 
 function cd_action {
+	cd $1
 	green "In repo: $1"
-	output=`cd $1 && rake $2`
+	rake $2
+	cd -
 }
 
 function opens {
@@ -230,7 +232,7 @@ function al {
 }
 
 function fr {
-	find . -name *$1*
+	find . -name $1
 }
 
 function file_grep {
