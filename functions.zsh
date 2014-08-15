@@ -232,7 +232,7 @@ function al {
 }
 
 function fr {
-	find . -name *$1*
+	find . -name $1
 }
 
 function file_grep {

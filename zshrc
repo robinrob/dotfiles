@@ -56,7 +56,7 @@ green "Using \`Ruby-2.0.0\`"
 
 if [ "$HOSTNAME" = "venus.local" ]
 then
-	rvm gemset use chef --create 2> /dev/null
+	rvm gemset use chef --create
 fi
 
 # Python
