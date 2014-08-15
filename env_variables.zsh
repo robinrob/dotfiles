@@ -39,6 +39,8 @@ export HTMLCSS_HOME=$PROG_HOME/html-css
 
 export RUBY_HOME=$PROG_HOME/ruby
 
+export AWK_HOME=$PROG_HOME/awk
+
 export RUBYAPP_HOME=$RUBY_HOME/projects/ruby-app
 
 export RAKEFILE_HOME=$RUBY_HOME/projects/rakefile

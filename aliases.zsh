@@ -123,6 +123,8 @@ alias sfind="lib_find $SH_HOME"
 
 alias prfind="lib_find $PROG_HOME"
 
+alias afind="lib_find $AWK_HOME"
+
 alias cdms="cd $MSCHEF"
 
 alias cdnoc="cd $NOCCHEF"
@@ -141,6 +143,22 @@ alias fs="fab save"
 alias rku="rakeup"
 
 alias rkd="rakedown"
+
+alias anew="new awk awk"
+
+alias pnew="new python py"
+
+alias bnew="new bash sh"
+
+alias snew="new sh sh"
+
+alias znew="new zsh zsh"
+
+alias rnew="new ruby rb"
+
+alias jsnew="new node js"
+
+alias tnew="new txt"
 
 
 # Git aliases
@@ -240,6 +258,8 @@ alias cdm="cd $JS_HOME/projects/mobile-app"
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd $RUBY_HOME"
+
+alias cda="cd $AWK_HOME"
 
 alias cdwr="cd $WORK_RUBY_HOME"
 

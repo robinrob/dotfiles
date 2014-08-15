@@ -48,14 +48,26 @@ function write {
 }
 
 function new {
-	FILE="$1.$2"
+	if [ $# -eq 3 ]
+	then
+		INTERPRETER=$1
+		EXTENSION=$2
+		FILENAME=$3
+		
+	elif [ $# -eq 2 ]
+	then
+		EXTENSION=$1
+		FILENAME=$2
+	fi
+	
+	FILE="$FILENAME.$EXTENSION"
 	
 	if ! [ -f $FILE ]
 	then
-		if [ $# -eq 3 ]
+		if [ -n "$INTERPRETER" ]
 		then	
 			green "Creating and shebanging new file: ${FILE}"
-			echo "#!/usr/bin/env $3" > $FILE
+			echo "#!/usr/bin/env $INTERPRETER" > $FILE
 			chmod +x $FILE
 		else
 			green "Creating new file: ${FILE}"
@@ -63,45 +75,19 @@ function new {
 		fi
 			
 	else
-		if [ $# -eq 2 ]
-			CONTENTS=`cat $FILE`
-			rm $FILE
-			green "Shebanging existing file: ${FILE}"
-			echo "#!/usr/bin/env $3" > $FILE
-			echo $CONTENTS >> $FILE
-			chmod +x $FILE
+		CONTENTS=`cat $FILE`
+		rm $FILE
+		green "Shebanging existing file: ${FILE}"
+		echo "#!/usr/bin/env $INTERPRETER" > $FILE
+		echo $CONTENTS >> $FILE
+		chmod +x $FILE
 	fi
 	
+	INTERPRETER=""
+	FILENAME=""
+	EXTENSION=""
 	$EDITOR $FILE
-}
-	
-function pnew {
-	new $1 py python
-}
-
-function bnew {
-	new $1 sh bash
-}
-
-function snew {
-	new $1 sh sh
-}
-
-function znew {
-	new $1 zsh zsh
-}
-
-function rnew {
-	new $1 rb ruby
-}
-
-function jsnew {
-	new $1 js node
-}
-
-function tnew {
-	new $1 txt
-}
+}	
 
 function hcnew {
 	PROJECT=$1
@@ -291,4 +277,8 @@ function safari {
 
 function google {
 	open "https://www.google.ca/#q=$1&safe=active"
+}
+
+function dir {
+	echo $1 | awk 'FS="/" {print}'
 }
