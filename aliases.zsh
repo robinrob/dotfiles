@@ -21,6 +21,8 @@ unalias gbd
 
 unalias sd
 
+unalias gg
+
 
 # Aliases
 ###############################################################################
@@ -233,6 +235,8 @@ alias mfn="mate $DOTFILES_HOME/functions.zsh"
 
 alias cdd="cd $DOTFILES_HOME"
 
+alias cdm="cd $JS_HOME/projects/mobile-app"
+
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd $RUBY_HOME"
@@ -412,6 +416,12 @@ alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7
 
 alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
+alias wk="wiki"
+
+alias sf="safari"
+
+alias gg="google"
+
 alias cms="edit $DOCS_HOME/commands.txt"
 
 alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
@@ -427,13 +437,17 @@ alias learmount="open http://www.flightglobal.com/blogs/learmount"
 # Records
 alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
 
-alias mrec="mate $IMPORTANT_HOME/records/record.txt"
+alias mrec="mate $RECORDS_PATH"
 
 alias cardcredit="get_record rbc-credit"
 
 alias cardhsbc="get_record hsbc-debit"
 
 alias cardrbc="get_record rbc-debit"
+
+alias docsec1="get_record doctors_secretary1"
+
+alias docsec2="get_record doctors_secretary2"
 
 alias ad="address"
 

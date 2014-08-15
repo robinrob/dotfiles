@@ -280,3 +280,15 @@ function rakedown {
 	rake sub_deinit[rake]
 	rm Rakefile
 }
+
+function wiki {
+	open "http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
+}
+
+function safari {
+	open "http://my.safaribooksonline.com/search?q=$1"
+}
+
+function google {
+	open "https://www.google.ca/#q=$1&safe=active"
+}
