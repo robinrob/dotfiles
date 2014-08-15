@@ -268,3 +268,13 @@ function killp {
 		# ; for process in $PROCESSES; do green '"'Killing $1 process: $process ...'"'; kill $process; done"
 	fi
 }
+
+function rakeup {
+	git submodule add git@bitbucket.org:robinrob/rakefile.git rake
+	ln -s rake/Rakefile ./
+}
+
+function rakedown {
+	rake sub_deinit[rake]
+	rm Rakefile
+}

@@ -132,6 +132,10 @@ alias rkp="rake pull"
 
 alias fs="fab save"
 
+alias rku="rakeup"
+
+alias rkd="rakedown"
+
 
 # Git aliases
 
@@ -396,7 +400,7 @@ alias splu="mate $TEMP_HOME/splunk_searches.txt"
 # Web shortcuts
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
-alias phonegap="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
+alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
 alias cms="edit $DOCS_HOME/commands.txt"
 
