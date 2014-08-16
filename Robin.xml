@@ -4,7 +4,7 @@
     <keyboard-shortcut first-keystroke="shift meta X" />
   </action>
   <action id="EditSource">
-    <keyboard-shortcut first-keystroke="F4" />
+    <keyboard-shortcut first-keystroke="ENTER" />
   </action>
   <action id="EditorTextEnd">
     <keyboard-shortcut first-keystroke="meta END" />

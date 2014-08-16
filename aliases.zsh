@@ -181,7 +181,7 @@ alias grh="git reset HEAD"
 # Git Repos
 alias dpl="cd_pull $DOTFILES_HOME"
 
-alias dsv="cd_save $DOTFILES_HOME"
+alias dsv="svwb; cd_save $DOTFILES_HOME"
 
 alias dst="cd_status $DOTFILES_HOME"
 

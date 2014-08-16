@@ -282,3 +282,8 @@ function google {
 function lsd {
 	ls `dirname $1`
 }
+
+function svwb {
+	green "Copying Jetbrains config from $WEBSTORM_CONFIG ..."
+	cp $WEBSTORM_CONFIG $DOTFILES_HOME/
+}
