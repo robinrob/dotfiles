@@ -534,3 +534,5 @@ alias lsf="ls $PWD/*"
 alias lsa="lsf"
 
 alias shell="echo $SHELL"
+
+alias dir="dirname"

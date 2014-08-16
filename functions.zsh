@@ -279,6 +279,6 @@ function google {
 	open "https://www.google.ca/#q=$1&safe=active"
 }
 
-function dir {
-	echo $1 | awk 'FS="/" {print}'
+function lsd {
+	ls `dirname $1`
 }
