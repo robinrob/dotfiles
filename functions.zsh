@@ -287,3 +287,7 @@ function svwb {
 	green "Copying Jetbrains config from $WEBSTORM_CONFIG ..."
 	cp $WEBSTORM_CONFIG $DOTFILES_HOME/
 }
+
+function cddir {
+	cd `dirname $1`
+}
