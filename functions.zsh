@@ -202,31 +202,44 @@ function mvd {
 	mv ~/Downloads/$1 $2
 }
 
-function lib_find {
-	DIR=$1
-	PATTERN=$2
-	CAT=$3
+function libfind {
+	while getopts :c:d:p: name
+	do
+		case $name in
+			c) CAT="$OPTARG" ;;
+			d) DIR="$OPTARG" ;;
+			p) PATTERN="$OPTARG" ;;
+			*) usage ;;                # display usage and exit
+		esac
+	done
 	
 	result_find=`find $DIR -name *$PATTERN*`
 	result_grep=`grep -r $PATTERN $DIR`
 	
-	results=$result_find
 	if [ -n "$result_grep" ]
 	then
-		results=$results"\n"$result_grep
+		for result in $result_grep
+		do
+			echo $result
+		done
 	fi
 	
-	for result in $results
+	for result in $result_find
 	do
-		# If $3 null
-		if [ -z "$3" ]
+		# If CAT not null
+		if [ -n "$CAT" ]
 		then
-			echo $result
-		# If $3 not null
-		else
+			green $result:
 			cat $result
+		# If CAT null
+		else
+			echo $result
 		fi
 	done
+}
+
+function libfind_s {
+	libfind -c cat -d $1 -p $2
 }
 
 function al {

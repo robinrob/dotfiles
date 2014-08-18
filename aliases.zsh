@@ -105,25 +105,27 @@ alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias rk="rake"
 
-alias rfind="lib_find $RUBY_HOME"
+alias rfind="libfind_s $RUBY_HOME"
 
-alias pfind="lib_find $PYTHON_HOME"
+alias pfind="libfind_s $PYTHON_HOME"
 
-alias lfind="lib_find $LOCAL_HOME"
+alias lfind="libfind_s $LOCAL_HOME"
 
-alias dfind="lib_find $DOTFILES_HOME"
+alias dfind="libfind_s $DOTFILES_HOME"
 
-alias jsfind="lib_find $JS_HOME"
+alias jsfind="libfind_s $JS_HOME/practise"
 
-alias jfind="lib_find $JV_HOME"
+alias npmfind="libfind_s $NPMLIB_HOME"
 
-alias cfind="lib_find $C_HOME"
+alias jfind="libfind_s $JV_HOME"
 
-alias sfind="lib_find $SH_HOME"
+alias cfind="libfind_s $C_HOME"
 
-alias prfind="lib_find $PROG_HOME"
+alias sfind="libfind_s -c cat -d $SH_HOME -p"
 
-alias afind="lib_find $AWK_HOME"
+alias prfind="libfind_s $PROG_HOME"
+
+alias afind="libfind_s $AWK_HOME"
 
 alias cdms="cd $MSCHEF"
 
@@ -277,13 +279,13 @@ alias cda="cd $AWK_HOME"
 
 alias cdwr="cd $WORK_RUBY_HOME"
 
-alias cdsh="cd $SH_HOME"
+alias cds="cd $SH_HOME"
 
 alias cdjs="cd $JS_HOME"
 
 alias cdj="cdjs"
 
-alias cds="cd $SCREENSHOTS_HOME"
+alias cdsc="cd $SCREENSHOTS_HOME"
 
 alias t="touch"
 

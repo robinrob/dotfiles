@@ -17,6 +17,8 @@ export PYAPP_HOME=$PY_HOME/projects/pyapp
 
 export FABFILE_HOME=$PY_HOME/projects/fabfile
 
+export NPMLIB_HOME=/usr/local/lib/node_modules
+
 export FABFILE_BASIC_HOME=$PY_HOME/projects/fabfile-basic
 
 export ZSH_HOME=$PROG_HOME/zsh
