@@ -144,6 +144,10 @@ alias rku="rakeup"
 
 alias rkd="rakedown"
 
+alias fbu="fabup"
+
+alias fbd="fabdown"
+
 alias anew="new awk awk"
 
 alias pnew="new python py"
@@ -196,6 +200,8 @@ alias rst="cd_status $RUBY_HOME"
 alias RSV="rsv"
 
 alias rpl="cd_pull $RUBY_HOME"
+
+alias fpl="fab pull"
 
 alias ssv="cd_save $SH_HOME"
 
@@ -256,6 +262,10 @@ alias mfn="mate $DOTFILES_HOME/functions.zsh"
 alias cdd="cd $DOTFILES_HOME"
 
 alias cdm="cd $JS_HOME/projects"
+
+alias cdmb="cd $JS_HOME/projects/mobile-app-cordova"
+
+alias cdg="cd $JS_HOME/projects/mobile-game-cocos"
 
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 

@@ -283,6 +283,16 @@ function rakedown {
 	rm Rakefile
 }
 
+function fabup {
+	gsa git@bitbucket.org:robinrob/fabfile.git fabfile
+	ln -s fabfile/fabfile.py ./
+}
+
+function fabdown {
+	fab sub_deinit:rake
+	rm fabfile.py
+}
+
 function wiki {
 	open "http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 }
