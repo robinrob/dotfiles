@@ -21,6 +21,8 @@ unalias gbd
 
 unalias sd
 
+unalias gg
+
 
 # Aliases
 ###############################################################################
@@ -99,23 +101,33 @@ alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias rk="rake"
 
-alias rfind="lib_find $RUBY_HOME"
+alias rfind="libfind_s $RUBY_HOME"
 
-alias pfind="lib_find $PYTHON_HOME"
+alias pfind="libfind_s $PYTHON_HOME"
 
-alias lfind="lib_find $LOCAL_HOME"
+alias lfind="libfind_s $LOCAL_HOME"
 
-alias dfind="lib_find $DOTFILES_HOME"
+alias dfind="libfind_s $DOTFILES_HOME"
 
-alias jsfind="lib_find $JS_HOME"
+alias jsfind="libfind_s $JS_HOME/practise"
 
-alias jfind="lib_find $JV_HOME"
+alias npmfind="libfind_s $NPMLIB_HOME"
 
-alias cfind="lib_find $C_HOME"
+alias jfind="libfind_s $JV_HOME"
 
-alias sfind="lib_find $SH_HOME"
+alias cfind="libfind_s $C_HOME"
 
-alias prfind="lib_find $PROG_HOME"
+alias sfind="libfind_s $SH_HOME"
+
+alias zfind="libfind_s $ZSH_HOME"
+
+alias prfind="libfind_s $PROG_HOME"
+
+alias afind="libfind_s $AWK_HOME"
+
+alias zshfind="file_grep ~/.zshrc"
+
+alias sshfind="file_grep ~/.ssh/config"
 
 # Navigation
 
@@ -133,6 +145,12 @@ alias cdmv="cd ~/Movies"
 
 alias cdaws="cd `dirname $AWS_CONFIG`"
 
+alias cdm="cd $JS_HOME/projects"
+
+alias cdmb="cd $JS_HOME/projects/mobile-app-cordova"
+
+alias cdg="cd $JS_HOME/projects/mobile-game-cocos"
+
 # Development operations
 
 alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
@@ -141,7 +159,31 @@ alias sv="save"
 
 alias rkp="rake pull"
 
-alias fs="fab save"
+alias rku="rakeup"
+
+alias rkd="rakedown"
+
+alias fbu="fabup"
+
+alias fbd="fabdown"
+
+alias anew="new awk awk"
+
+alias pnew="new python py"
+
+alias bnew="new bash sh"
+
+alias snew="new sh sh"
+
+alias znew="new zsh zsh"
+
+alias rnew="new ruby rb"
+
+alias jsnew="new node js"
+
+alias tnew="new txt"
+
+alias demo="open $MOBILEAPP_HOME/www/index.html"
 
 
 # Git aliases
@@ -156,7 +198,7 @@ alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
 
-alias gro="git remote show origin"
+alias gro="git_remote"
 
 alias grh="git reset HEAD"
 
@@ -164,7 +206,7 @@ alias grh="git reset HEAD"
 # Git Repos
 alias dpl="cd_pull $DOTFILES_HOME"
 
-alias dsv="cd_save $DOTFILES_HOME"
+alias dsv="svwb; cd_save $DOTFILES_HOME"
 
 alias dst="cd_status $DOTFILES_HOME"
 
@@ -177,6 +219,8 @@ alias rst="cd_status $RUBY_HOME"
 alias RSV="rsv"
 
 alias rpl="cd_pull $RUBY_HOME"
+
+alias fpl="fab pull"
 
 alias ssv="cd_save $SH_HOME"
 
@@ -236,23 +280,25 @@ alias mfn="mate $DOTFILES_HOME/functions.zsh"
 
 alias cdd="cd $DOTFILES_HOME"
 
-alias cdl="cd $LOCAL_HOME"
-
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd $RUBY_HOME"
 
+alias cdrk="cd $RAKEFILE_HOME"
+
+alias cdz="cd $ZSH_HOME"
+
+alias cda="cd $AWK_HOME"
+
 alias cdwr="cd $WORK_RUBY_HOME"
 
-alias cdwp="cd $WORK_PYTHON_HOME"
-
-alias cdsh="cd $SH_HOME"
+alias cds="cd $SH_HOME"
 
 alias cdjs="cd $JS_HOME"
 
 alias cdj="cdjs"
 
-alias cds="cd $SCREENSHOTS_HOME"
+alias cdsc="cd $SCREENSHOTS_HOME"
 
 alias t="touch"
 
@@ -284,9 +330,7 @@ alias kel="knife environment list"
 alias knl="knife node list"
 
 
-
-
-alias cleanhome="$SH_HOME/clean_home.sh"
+#Shortcuts
 
 alias emptytrash="rm -rf ~/.Trash/*"
 
@@ -310,13 +354,15 @@ alias cgc="cat ~/.gitconfig"
 
 alias mgi="mate .gitignore"
 
+alias mgm="mate .gitmodules"
+
 alias gb="git branch"
 
 alias gi="$EDITOR .gitignore"
 
-alias mr="mate README.md"
+alias ecmd="$EDITOR $DOCS_HOME/commands.txt"
 
-alias er="$EDITOR README.md"
+alias cleanhome="$SH_HOME/clean_home.sh"
 
 alias e="$EDITOR"
 
@@ -336,8 +382,6 @@ alias ph="phone"
 
 alias em="copy_print robin@mrrobinsmith.com"
 
-alias eaws="$EDITOR $AWS_CONFIG"
-
 alias editor="echo $EDITOR"
 
 alias gcmr="git submodule foreach 'git checkout master'"
@@ -348,7 +392,7 @@ alias sprog="du -dh $PROG_HOME"
 
 alias spr="sprog"
 
-alias s="du -dh"
+alias sd="du -dh"
 
 alias erk="edit rakefile"
 
@@ -370,9 +414,7 @@ alias cdp2="cd $PY_HOME/python2"
 
 alias cdp3="cd $PY_HOME/python3"
 
-alias rkc="rake count"
-
-alias rka="rake count_all"
+alias rkc="rake count_all"
 
 alias mkd="mkdir"
 
@@ -419,17 +461,31 @@ alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7
 
 alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
-alias cms="edit $DOCS_HOME/commands.txt"
+alias stackoverflow="http://stackoverflow.com/users/3946669/robin-smith"
 
 alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
 
-alias bb="open https://bitbucket.org/dashboard/overview"
+alias bbh="open https://bitbucket.org/dashboard/overview"
 
 alias bbc="open https://bitbucket.org/repo/create"
 
 alias news="open https://bbc.co.uk/news"
 
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
+
+alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
+
+alias safari="http://my.safaribooksonline.com/search?q=$1"
+
+alias google="open https://www.google.ca/#q=$1&safe=active"
+
+alias stk="stackoverflow"
+
+alias wk="wiki"
+
+alias sf="safari"
+
+alias gg="google"
 
 # Records
 alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
@@ -441,6 +497,10 @@ alias cardcredit="get_record rbc-credit"
 alias cardhsbc="get_record hsbc-debit"
 
 alias cardrbc="get_record rbc-debit"
+
+alias docsec1="get_record doctors_secretary1"
+
+alias docsec2="get_record doctors_secretary2"
 
 alias rssaws="get_record rss-aws"
 
@@ -502,6 +562,12 @@ alias chr="chrome"
 
 alias lsl="ls -l"
 
+alias isgit="show_git"
+
+alias isg="isgit"
+
+alias igi="isgit"
+
 # ls 'full'
 alias lsf="ls $PWD/*"
 
@@ -509,3 +575,7 @@ alias lsf="ls $PWD/*"
 alias lsa="lsf"
 
 alias shell="echo $SHELL"
+
+alias dir="dirname"
+
+alias cdcocos="cd $COCOS_HOME"

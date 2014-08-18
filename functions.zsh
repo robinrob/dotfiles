@@ -3,6 +3,14 @@
 
 source $DOTFILES_HOME/colors.sh
 
+function hidden_dir_exists() {
+	result=`find . -depth 1 -name $1`
+	if [ -n "$result" ]
+	then
+	  echo "yes"
+	fi
+}
+
 function cat_print {
 	cat $1 && cat $1 | pbcopy
 }
@@ -48,14 +56,26 @@ function write {
 }
 
 function new {
-	FILE="$1.$2"
+	if [ $# -eq 3 ]
+	then
+		INTERPRETER=$1
+		EXTENSION=$2
+		FILENAME=$3
+		
+	elif [ $# -eq 2 ]
+	then
+		EXTENSION=$1
+		FILENAME=$2
+	fi
+	
+	FILE="$FILENAME.$EXTENSION"
 	
 	if ! [ -f $FILE ]
 	then
-		if [ $# -eq 3 ]
+		if [ -n "$INTERPRETER" ]
 		then	
 			green "Creating and shebanging new file: ${FILE}"
-			echo "#!/usr/bin/env $3" > $FILE
+			echo "#!/usr/bin/env $INTERPRETER" > $FILE
 			chmod +x $FILE
 		else
 			green "Creating new file: ${FILE}"
@@ -63,45 +83,19 @@ function new {
 		fi
 			
 	else
-		if [ $# -eq 2 ]
-			CONTENTS=`cat $FILE`
-			rm $FILE
-			green "Shebanging existing file: ${FILE}"
-			echo "#!/usr/bin/env $3" > $FILE
-			echo $CONTENTS >> $FILE
-			chmod +x $FILE
+		CONTENTS=`cat $FILE`
+		rm $FILE
+		green "Shebanging existing file: ${FILE}"
+		echo "#!/usr/bin/env $INTERPRETER" > $FILE
+		echo $CONTENTS >> $FILE
+		chmod +x $FILE
 	fi
 	
+	INTERPRETER=""
+	FILENAME=""
+	EXTENSION=""
 	$EDITOR $FILE
-}
-	
-function pnew {
-	new $1 py python
-}
-
-function bnew {
-	new $1 sh bash
-}
-
-function snew {
-	new $1 sh sh
-}
-
-function znew {
-	new $1 zsh zsh
-}
-
-function rnew {
-	new $1 rb ruby
-}
-
-function jsnew {
-	new $1 js node
-}
-
-function tnew {
-	new $1 txt
-}
+}	
 
 function hcnew {
 	PROJECT=$1
@@ -208,23 +202,44 @@ function mvd {
 	mv ~/Downloads/$1 $2
 }
 
-function lib_find {
-	DIR=$1
-	PATTERN=$2
+function libfind {
+	while getopts :c:d:p: name
+	do
+		case $name in
+			c) CAT="$OPTARG" ;;
+			d) DIR="$OPTARG" ;;
+			p) PATTERN="$OPTARG" ;;
+			*) usage ;;                # display usage and exit
+		esac
+	done
 	
 	result_find=`find $DIR -name *$PATTERN*`
 	result_grep=`grep -r $PATTERN $DIR`
 	
-	results=$result_find
 	if [ -n "$result_grep" ]
 	then
-		results=$results"\n"$result_grep
+		for result in $result_grep
+		do
+			echo $result
+		done
 	fi
 	
-	for result in $results
+	for result in $result_find
 	do
-		echo $result
+		# If CAT not null
+		if [ -n "$CAT" ]
+		then
+			green $result:
+			cat $result
+		# If CAT null
+		else
+			echo $result
+		fi
 	done
+}
+
+function libfind_s {
+	libfind -c cat -d $1 -p $2
 }
 
 function al {
@@ -236,15 +251,7 @@ function fr {
 }
 
 function file_grep {
-	grep -A 3 $1 $2
-}
-
-function zfind {
-	file_grep $1 ~/.zshrc
-}
-
-function sshfind {
-	file_grep $1 ~/.ssh/config
+	grep -A 3 $2 $1
 }
 
 function rks {
@@ -269,4 +276,87 @@ function killp {
 		sh -c  "PROCESSES=eval('ps aux')"
 		# ; for process in $PROCESSES; do green '"'Killing $1 process: $process ...'"'; kill $process; done"
 	fi
+}
+
+function rakeup {
+	git submodule add git@bitbucket.org:robinrob/rakefile.git rake
+	ln -s rake/Rakefile ./
+}
+
+function rakedown {
+	rake sub_deinit[rake]
+	rm Rakefile
+}
+
+function fabup {
+	gsa git@bitbucket.org:robinrob/fabfile.git fabfile
+	ln -s fabfile/fabfile.py ./
+}
+
+function fabdown {
+	fab sub_deinit:rake
+	rm fabfile.py
+}
+
+function lsd {
+	ls `dirname $1`
+}
+
+function svwb {
+	green "Copying Jetbrains config from $WEBSTORM_CONFIG ..."
+	cp $WEBSTORM_CONFIG $DOTFILES_HOME/
+}
+
+function cddir {
+	cd `dirname $1`
+}
+
+function bb {
+	result=`ls -d .git 2> /dev/null`
+	if [ "$result" ]
+	then
+		repo=`git remote show origin | grep "Fetch URL:" | awk '{split($3,a,"/"); print a[2]}'`
+		green "Repo found: $repo"
+		url="https://bitbucket.org/robinrob/$repo"
+	else
+		url="https://bitbucket.org/robinrob"
+	fi
+	
+	green "Opening $url ..."
+	open $url
+}
+
+function cleanhome {
+	for file in `find . -name [a-zA-Z0-9]\* -depth 1 -type f`
+	do
+		green "Moving $file to $TRASH_HOME"
+		mv $file ~/.Trash
+	done
+}
+
+function is_git {
+	result=`ls -d .git 2> /dev/null`
+	if [ "$result" ]
+	then
+		echo "yes"
+	fi
+}
+
+function show_git {
+	if [ "$(is_git)" ]
+	then
+		green "Is Git"
+	else
+		red "Not Git"
+	fi
+}
+
+function git_remote {
+	if [ "$(is_git)" ]
+	then
+		remote=`git remote show origin | grep "Fetch URL:" | awk '{print $3}'`
+		green $remote
+	else
+		red "Not Git"
+	fi 
 }

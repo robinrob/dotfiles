@@ -2,13 +2,19 @@
 
 source colors.sh
 source indents.sh
+source functions.zsh
+
+function install() {
+	yellow "\t${ITEM}Installing $1 config ..."
+	cp $2 $2.backup 2> /dev/null
+	rm -f $2
+	ln Robin.xml $2
+}
 
 green "Installing Jetbrains IDE config files ..."
 
-yellow "\t${ITEM}Installing RubyMine config ..."
-rm -rf $RUBYMINE_CONFIG
-cp $DOTFILES_HOME/Jetbrains-Robin.xml $RUBYMINE_CONFIG
+install RubyMine $RUBYMINE_CONFIG
 
-yellow "\t${ITEM}Installing PyCharm config ..."
-rm -rf $PYCHARM_CONFIG
-cp $DOTFILES_HOME/Jetbrains-Robin.xml $PYCHARM_CONFIG
+install PyCharm $PYCHARM_CONFIG
+
+install WebStorm $WEBSTORM_CONFIG

@@ -3,7 +3,7 @@
 
 export HOSTNAME=`hostname`
 
-export EDITOR=mvim
+export EDITOR=mate
 
 export PROG_HOME=$HOME/Programming/robin
 
@@ -16,6 +16,8 @@ export PY_HOME=$PYTHON_HOME
 export PYAPP_HOME=$PY_HOME/projects/pyapp
 
 export FABFILE_HOME=$PY_HOME/projects/fabfile
+
+export NPMLIB_HOME=/usr/local/lib/node_modules
 
 export FABFILE_BASIC_HOME=$PY_HOME/projects/fabfile-basic
 
@@ -39,6 +41,8 @@ export HTMLCSS_HOME=$PROG_HOME/html-css
 
 export RUBY_HOME=$PROG_HOME/ruby
 
+export AWK_HOME=$PROG_HOME/awk
+
 export RUBYAPP_HOME=$RUBY_HOME/projects/ruby-app
 
 export RAKEFILE_HOME=$RUBY_HOME/projects/rakefile
@@ -48,6 +52,8 @@ export GLOBAL_RAKEFILE_HOME=$RUBY_HOME/projects/global-rakefile
 export QUIZ_HOME=$RUBY_HOME/projects/quiz
 
 export MRROBINSMITHCOM_HOME=$RUBY_HOME/projects/mrrobinsmith.com
+
+export MOBILEAPP_HOME=$JS_HOME/projects/mobile-app-cordova
 
 export REPOS=$RUBY_HOME" "$SH_HOME" "$DOTFILES_HOME" "$PYTHON_HOME
 
@@ -76,6 +82,8 @@ export TODO_HOME=$LOCAL_HOME/lib/todo.csv
 export RUBYMINE_CONFIG=~/Library/Preferences/RubyMine60/keymaps/Robin.xml
 
 export PYCHARM_CONFIG=~/Library/Preferences/PyCharm30/keymaps/Robin.xml
+
+export WEBSTORM_CONFIG=~/Library/Preferences/WebStorm8/keymaps/Robin.xml
 
 export FILES_HOME=~/Dropbox
 
@@ -130,3 +138,11 @@ export CHROME_PATH="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chro
 export CANADA_HOME=$MERCURY_HOME/docs/IMPORTANT/canada
 
 export ADOBE_PATH="/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader"
+
+export COCOS_HOME="/usr/local/Library/cocos2d-js-v3.0-rc2"
+
+export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d/
+
+export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/22.6.2/
+
+export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/bin/
