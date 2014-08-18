@@ -251,15 +251,7 @@ function fr {
 }
 
 function file_grep {
-	grep -A 3 $1 $2
-}
-
-function zfind {
-	file_grep $1 ~/.zshrc
-}
-
-function sshfind {
-	file_grep $1 ~/.ssh/config
+	grep -A 3 $2 $1
 }
 
 function rks {

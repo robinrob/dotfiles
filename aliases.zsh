@@ -121,11 +121,17 @@ alias jfind="libfind_s $JV_HOME"
 
 alias cfind="libfind_s $C_HOME"
 
-alias sfind="libfind_s -c cat -d $SH_HOME -p"
+alias sfind="libfind_s $SH_HOME"
+
+alias zfind="libfind_s $ZSH_HOME"
 
 alias prfind="libfind_s $PROG_HOME"
 
 alias afind="libfind_s $AWK_HOME"
+
+alias zshfind="file_grep ~/.zshrc"
+
+alias sshfind="file_grep ~/.ssh/config"
 
 alias cdms="cd $MSCHEF"
 
