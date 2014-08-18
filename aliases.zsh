@@ -345,9 +345,7 @@ alias gb="git branch"
 
 alias gi="$EDITOR .gitignore"
 
-alias mr="mate README.md"
-
-alias er="$EDITOR README.md"
+alias ecmd="edit $DOCS_HOME/commands.txt"
 
 alias e="$EDITOR"
 
@@ -448,13 +446,7 @@ alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7
 
 alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
-alias wk="wiki"
-
-alias sf="safari"
-
-alias gg="google"
-
-alias cms="edit $DOCS_HOME/commands.txt"
+alias stackoverflow="http://stackoverflow.com/users/3946669/robin-smith"
 
 alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
 
@@ -465,6 +457,20 @@ alias bbc="open https://bitbucket.org/repo/create"
 alias news="open https://bbc.co.uk/news"
 
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
+
+alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
+
+alias safari="http://my.safaribooksonline.com/search?q=$1"
+
+alias google="open https://www.google.ca/#q=$1&safe=active"
+
+alias stk="stackoverflow"
+
+alias wk="wiki"
+
+alias sf="safari"
+
+alias gg="google"
 
 # Records
 alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
