@@ -138,8 +138,6 @@ alias sv="save"
 
 alias rkp="rake pull"
 
-alias fs="fab save"
-
 alias rku="rakeup"
 
 alias rkd="rakedown"
@@ -179,7 +177,7 @@ alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
 
-alias gro="git remote show origin"
+alias gro="git_remote"
 
 alias grh="git reset HEAD"
 
@@ -339,6 +337,8 @@ alias cgc="cat ~/.gitconfig"
 
 alias mgi="mate .gitignore"
 
+alias mgm="mate .gitmodules"
+
 alias gb="git branch"
 
 alias gi="$EDITOR .gitignore"
@@ -377,7 +377,7 @@ alias sprog="du -dh $PROG_HOME"
 
 alias spr="sprog"
 
-alias s="du -dh"
+alias sd="du -dh"
 
 alias erk="edit rakefile"
 
@@ -538,6 +538,12 @@ alias chr="chrome"
 # Aliases
 
 alias lsl="ls -l"
+
+alias isgit="show_git"
+
+alias isg="isgit"
+
+alias igi="isgit"
 
 # ls 'full'
 alias lsf="ls $PWD/*"

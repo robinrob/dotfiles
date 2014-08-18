@@ -340,3 +340,30 @@ function cleanhome {
 		mv $file ~/.Trash
 	done
 }
+
+function is_git {
+	result=`ls -d .git 2> /dev/null`
+	if [ "$result" ]
+	then
+		echo "yes"
+	fi
+}
+
+function show_git {
+	if [ "$(is_git)" ]
+	then
+		green "Is Git"
+	else
+		red "Not Git"
+	fi
+}
+
+function git_remote {
+	if [ "$(is_git)" ]
+	then
+		remote=`git remote show origin | grep "Fetch URL:" | awk '{print $3}'`
+		green $remote
+	else
+		red "Not Git"
+	fi 
+}
