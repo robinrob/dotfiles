@@ -269,6 +269,8 @@ alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd $RUBY_HOME"
 
+alias cdrk="cd $RAKEFILE_HOME"
+
 alias cdz="cd $ZSH_HOME"
 
 alias cda="cd $AWK_HOME"
