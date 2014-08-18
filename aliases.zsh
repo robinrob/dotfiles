@@ -401,9 +401,7 @@ alias cdp2="cd $PY_HOME/python2"
 
 alias cdp3="cd $PY_HOME/python3"
 
-alias rkc="rake count"
-
-alias rka="rake count_all"
+alias rkc="rake count_all"
 
 alias mkd="mkdir"
 
