@@ -65,9 +65,11 @@ alias czsh="cat ~/.zshrc"
 
 alias edit=$EDITOR
 
-alias conf="edit ~/.ssh/config"
+alias conf="$EDITOR ~/.ssh/config"
 
-alias zshrc="edit ~/.zshrc"
+alias maws="mate $AWS_CONFIG"
+
+alias eaws="$EDITOR $AWS_CONFIG"
 
 alias nocchef="cd $NOCCHEF"
 
@@ -90,12 +92,6 @@ alias mr="mate $RECORDS_PATH"
 alias erec="$EDITOR $RECORDS_PATH"
 
 alias cms="edit $DOCS_HOME/commands.txt"
-
-alias cdk="cd $KITCHENPLAN_HOME"
-
-alias cddl="cd ~/Downloads"
-
-alias cdmv="cd ~/Movies"
 
 alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
 
@@ -121,10 +117,21 @@ alias sfind="lib_find $SH_HOME"
 
 alias prfind="lib_find $PROG_HOME"
 
+# Navigation
+
 alias cdms="cd $MSCHEF"
 
 alias cdnoc="cd $NOCCHEF"
 
+alias cdcam="cd $CAMERA_HOME"
+
+alias cdk="cd $KITCHENPLAN_HOME"
+
+alias cddl="cd ~/Downloads"
+
+alias cdmv="cd ~/Movies"
+
+alias cdaws="cd `dirname $AWS_CONFIG`"
 
 # Development operations
 
@@ -229,11 +236,15 @@ alias mfn="mate $DOTFILES_HOME/functions.zsh"
 
 alias cdd="cd $DOTFILES_HOME"
 
+alias cdl="cd $LOCAL_HOME"
+
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd $RUBY_HOME"
 
 alias cdwr="cd $WORK_RUBY_HOME"
+
+alias cdwp="cd $WORK_PYTHON_HOME"
 
 alias cdsh="cd $SH_HOME"
 
@@ -406,7 +417,7 @@ alias splu="mate $TEMP_HOME/splunk_searches.txt"
 # Web shortcuts
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
-alias phonegap="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
+alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
 alias cms="edit $DOCS_HOME/commands.txt"
 
@@ -423,13 +434,15 @@ alias learmount="open http://www.flightglobal.com/blogs/learmount"
 # Records
 alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
 
-alias mrec="mate $IMPORTANT_HOME/records/record.txt"
+alias mrec="mate $RECORDS_PATH"
 
 alias cardcredit="get_record rbc-credit"
 
 alias cardhsbc="get_record hsbc-debit"
 
 alias cardrbc="get_record rbc-debit"
+
+alias rssaws="get_record rss-aws"
 
 alias ad="address"
 
