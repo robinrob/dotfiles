@@ -160,6 +160,8 @@ alias jsnew="new node js"
 
 alias tnew="new txt"
 
+alias demo="open $MOBILEAPP_HOME/www/index.html"
+
 
 # Git aliases
 
@@ -253,7 +255,7 @@ alias mfn="mate $DOTFILES_HOME/functions.zsh"
 
 alias cdd="cd $DOTFILES_HOME"
 
-alias cdm="cd $JS_HOME/projects/mobile-app"
+alias cdm="cd $JS_HOME/projects/mobile-app-cordova"
 
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
@@ -536,3 +538,5 @@ alias lsa="lsf"
 alias shell="echo $SHELL"
 
 alias dir="dirname"
+
+alias cdcocos="cd $COCOS_HOME"
