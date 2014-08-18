@@ -3,6 +3,14 @@
 
 source $DOTFILES_HOME/colors.sh
 
+function hidden_dir_exists() {
+	result=`find . -depth 1 -name $1`
+	if [ -n "$result" ]
+	then
+	  echo "yes"
+	fi
+}
+
 function cat_print {
 	cat $1 && cat $1 | pbcopy
 }
@@ -197,6 +205,7 @@ function mvd {
 function lib_find {
 	DIR=$1
 	PATTERN=$2
+	CAT=$3
 	
 	result_find=`find $DIR -name *$PATTERN*`
 	result_grep=`grep -r $PATTERN $DIR`
@@ -209,7 +218,14 @@ function lib_find {
 	
 	for result in $results
 	do
-		echo $result
+		# If $3 null
+		if [ -z "$3" ]
+		then
+			echo $result
+		# If $3 not null
+		else
+			cat $result
+		fi
 	done
 }
 
@@ -290,4 +306,27 @@ function svwb {
 
 function cddir {
 	cd `dirname $1`
+}
+
+function bb {
+	result=`ls -d .git 2> /dev/null`
+	if [ "$result" ]
+	then
+		repo=`git remote show origin | grep "Fetch URL:" | awk '{split($3,a,"/"); print a[2]}'`
+		green "Repo found: $repo"
+		url="https://bitbucket.org/robinrob/$repo"
+	else
+		url="https://bitbucket.org/robinrob"
+	fi
+	
+	green "Opening $url ..."
+	open $url
+}
+
+function cleanhome {
+	for file in `find . -name [a-zA-Z0-9]\* -depth 1 -type f`
+	do
+		green "Moving $file to $TRASH_HOME"
+		mv $file ~/.Trash
+	done
 }

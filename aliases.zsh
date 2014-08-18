@@ -255,11 +255,13 @@ alias mfn="mate $DOTFILES_HOME/functions.zsh"
 
 alias cdd="cd $DOTFILES_HOME"
 
-alias cdm="cd $JS_HOME/projects/mobile-app-cordova"
+alias cdm="cd $JS_HOME/projects"
 
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd $RUBY_HOME"
+
+alias cdz="cd $ZSH_HOME"
 
 alias cda="cd $AWK_HOME"
 
@@ -303,9 +305,7 @@ alias kel="knife environment list"
 alias knl="knife node list"
 
 
-
-
-alias cleanhome="$SH_HOME/clean_home.sh"
+#Shortcuts
 
 alias emptytrash="rm -rf ~/.Trash/*"
 
@@ -448,7 +448,7 @@ alias cms="edit $DOCS_HOME/commands.txt"
 
 alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
 
-alias bb="open https://bitbucket.org/dashboard/overview"
+alias bbh="open https://bitbucket.org/dashboard/overview"
 
 alias bbc="open https://bitbucket.org/repo/create"
 
