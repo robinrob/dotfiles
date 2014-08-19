@@ -363,3 +363,23 @@ function git_remote {
 function cdj {
 	cd $JS_HOME/$(join $@)
 }
+
+function del_except {
+	while getopts :r:f: name
+	do
+		case $name in
+		r) REGEX="$OPTARG" ;;
+	    f) FOR_REAL="$OPTARG" ;;
+	    *) usage ;;
+		esac
+	done
+
+	if [ -n "$FOR_REAL" ]
+	then
+		red "Executing for real!"
+		despace -t d && find . -depth 1 \( ! -regex ".*$REGEX.*" \) | xargs rm -r
+	else
+		green "Running in test mode."
+		despace -t d && find . -depth 1 \( ! -regex ".*$REGEX.*" \) | xargs
+	fi	
+}

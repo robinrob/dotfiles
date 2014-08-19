@@ -23,6 +23,8 @@ unalias sd
 
 unalias gg
 
+unalias ga
+
 
 # Aliases
 ###############################################################################
@@ -276,7 +278,11 @@ alias fp="find $PWD -name "
 
 alias gcm="git checkout master"
 
+alias gcmm="git commit -m"
+
 alias gcd="git checkout develop"
+
+alias ga="git add"
 
 alias bi="bundle install"
 
