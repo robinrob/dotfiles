@@ -71,6 +71,8 @@ alias conf="$EDITOR ~/.ssh/config"
 
 alias maws="mate $AWS_CONFIG"
 
+alias caws="cat $AWS_CONFIG"
+
 alias eaws="$EDITOR $AWS_CONFIG"
 
 alias nocchef="cd $NOCCHEF"
@@ -212,6 +214,8 @@ alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="svwb; cd_save $DOTFILES_HOME"
 
+alias ddi="cd_diff $DOTFILES_HOME"
+
 alias dst="cd_status $DOTFILES_HOME"
 
 alias DSV="dsv"
@@ -300,7 +304,7 @@ alias cds="cd $SH_HOME"
 
 alias cdjs="cd $JS_HOME"
 
-alias cdj="cdjs"
+# alias cdj="cdjs"
 
 alias cdsc="cd $SCREENSHOTS_HOME"
 
@@ -458,9 +462,11 @@ alias gstat='cd $PROG_HOME && gs'
 
 alias pb="pbcopy"
 
-alias splu="mate $TEMP_HOME/splunk_searches.txt"
+alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
 # Web shortcuts
+alias van="open https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
+
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
 alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
@@ -483,7 +489,7 @@ alias safari="http://my.safaribooksonline.com/search?q=$1"
 
 alias google="open https://www.google.ca/#q=$1&safe=active"
 
-alias splunk="open https://cr-splunk-1.cloudreach.co.uk:8000"
+alias splw="open https://cr-splunk-1.cloudreach.co.uk:8000"
 
 alias stk="stackoverflow"
 

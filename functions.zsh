@@ -3,6 +3,10 @@
 
 source $DOTFILES_HOME/colors.sh
 
+function join {
+	local IFS="$1"; shift; echo "$*";
+}
+
 function hidden_dir_exists() {
 	result=`find . -depth 1 -name $1`
 	if [ -n "$result" ]
@@ -131,21 +135,27 @@ function cd_pull {
 }
 
 function cd_save {
-	cd_action $1 save
-}
-
-function cd_status {
-	cd_action $1 status
+	cd_action $1 rake save
 }
 
 function cd_count_all {
-	cd_action $1 count_all
+	cd_action $1 rake count_all
+}
+
+function cd_status {
+	cd_action $1 git status
+}
+
+function cd_diff {
+	cd_action $1 git diff
 }
 
 function cd_action {
-	cd $1
-	green "In repo: $1"
-	rake $2
+	REPO=$1
+	cd $REPO
+	green "In repo: $REPO"
+	shift
+	$@
 	cd -
 }
 
@@ -348,4 +358,8 @@ function git_remote {
 	else
 		red "Not Git"
 	fi 
+}
+
+function cdj {
+	cd $JS_HOME/$(join $@)
 }
