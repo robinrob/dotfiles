@@ -23,6 +23,8 @@ unalias sd
 
 unalias gg
 
+unalias ga
+
 
 # Aliases
 ###############################################################################
@@ -67,15 +69,23 @@ alias czsh="cat ~/.zshrc"
 
 alias edit=$EDITOR
 
-alias conf="edit ~/.ssh/config"
+alias conf="$EDITOR ~/.ssh/config"
 
-alias zshrc="edit ~/.zshrc"
+alias maws="mate $AWS_CONFIG"
+
+alias caws="cat $AWS_CONFIG"
+
+alias eaws="$EDITOR $AWS_CONFIG"
 
 alias nocchef="cd $NOCCHEF"
 
 alias mschef="cd $MSCHEF"
 
 # Shortcuts
+
+alias reminderrobin="reminder robin@mrrobinsmith.com"
+
+alias reminderwork="reminder robin.smith@cloudreach.co.uk"
 
 alias residency="$ADOBE_PATH $CANADA_HOME/residency_form.pdf"
 
@@ -92,12 +102,6 @@ alias mr="mate $RECORDS_PATH"
 alias erec="$EDITOR $RECORDS_PATH"
 
 alias cms="edit $DOCS_HOME/commands.txt"
-
-alias cdk="cd $KITCHENPLAN_HOME"
-
-alias cddl="cd ~/Downloads"
-
-alias cdmv="cd ~/Movies"
 
 alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
 
@@ -135,10 +139,27 @@ alias zshfind="file_grep ~/.zshrc"
 
 alias sshfind="file_grep ~/.ssh/config"
 
+# Navigation
+
 alias cdms="cd $MSCHEF"
 
 alias cdnoc="cd $NOCCHEF"
 
+alias cdcam="cd $CAMERA_HOME"
+
+alias cdk="cd $KITCHENPLAN_HOME"
+
+alias cddl="cd ~/Downloads"
+
+alias cdmv="cd ~/Movies"
+
+alias cdaws="cd `dirname $AWS_CONFIG`"
+
+alias cdm="cd $JS_HOME/projects"
+
+alias cdmb="cd $JS_HOME/projects/mobile-app-cordova"
+
+alias cdg="cd $JS_HOME/projects/mobile-game-cocos"
 
 # Development operations
 
@@ -197,6 +218,8 @@ alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="svwb; cd_save $DOTFILES_HOME"
 
+alias ddi="cd_diff $DOTFILES_HOME"
+
 alias dst="cd_status $DOTFILES_HOME"
 
 alias DSV="dsv"
@@ -213,11 +236,17 @@ alias fpl="fab pull"
 
 alias ssv="cd_save $SH_HOME"
 
-alias ssv="cd_save $SH_HOME"
-
 alias sst="cd_status $SH_HOME"
 
 alias spl="cd_pull $SH_HOME"
+
+alias zpl="cd_pull $ZSH_HOME"
+
+alias zsv="cd_save $ZSH_HOME"
+
+alias zsv="cd_save $ZSH_HOME"
+
+alias zst="cd_status $ZSH_HOME"
 
 alias bsv="cd_save $BACKUPS_HOME"
 
@@ -251,7 +280,11 @@ alias fp="find $PWD -name "
 
 alias gcm="git checkout master"
 
+alias gcmm="git commit -m"
+
 alias gcd="git checkout develop"
+
+alias ga="git add"
 
 alias bi="bundle install"
 
@@ -269,12 +302,6 @@ alias mfn="mate $DOTFILES_HOME/functions.zsh"
 
 alias cdd="cd $DOTFILES_HOME"
 
-alias cdm="cd $JS_HOME/projects"
-
-alias cdmb="cd $JS_HOME/projects/mobile-app-cordova"
-
-alias cdg="cd $JS_HOME/projects/mobile-game-cocos"
-
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd $RUBY_HOME"
@@ -291,7 +318,7 @@ alias cds="cd $SH_HOME"
 
 alias cdjs="cd $JS_HOME"
 
-alias cdj="cdjs"
+# alias cdj="cdjs"
 
 alias cdsc="cd $SCREENSHOTS_HOME"
 
@@ -355,7 +382,9 @@ alias gb="git branch"
 
 alias gi="$EDITOR .gitignore"
 
-alias ecmd="edit $DOCS_HOME/commands.txt"
+alias ecmd="$EDITOR $DOCS_HOME/commands.txt"
+
+alias cleanhome="$SH_HOME/clean_home.sh"
 
 alias e="$EDITOR"
 
@@ -374,8 +403,6 @@ alias ad="address"
 alias ph="phone"
 
 alias em="copy_print robin@mrrobinsmith.com"
-
-alias eaws="$EDITOR $AWS_CONFIG"
 
 alias editor="echo $EDITOR"
 
@@ -449,9 +476,11 @@ alias gstat='cd $PROG_HOME && gs'
 
 alias pb="pbcopy"
 
-alias splu="mate $TEMP_HOME/splunk_searches.txt"
+alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
 # Web shortcuts
+alias van="open https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
+
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
 alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
@@ -473,6 +502,8 @@ alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 alias safari="http://my.safaribooksonline.com/search?q=$1"
 
 alias google="open https://www.google.ca/#q=$1&safe=active"
+
+alias splw="open https://cr-splunk-1.cloudreach.co.uk:8000"
 
 alias stk="stackoverflow"
 
@@ -496,6 +527,8 @@ alias cardrbc="get_record rbc-debit"
 alias docsec1="get_record doctors_secretary1"
 
 alias docsec2="get_record doctors_secretary2"
+
+alias rssaws="get_record rss-aws"
 
 alias ad="address"
 

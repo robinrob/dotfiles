@@ -69,6 +69,8 @@ export WORK_HOME=~/Programming/work
 
 export WORK_RUBY_HOME=~/Programming/work/ruby
 
+export WORK_PYTHON_HOME=~/Programming/work/python
+
 export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
