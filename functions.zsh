@@ -219,7 +219,7 @@ function libfind {
 	then
 		for result in $results
 		do
-			echo $result
+			echo $result | sed "s/$PATTERN/$(green $PATTERN)/"
 		done
 	fi
 	
@@ -233,10 +233,10 @@ function libfind {
 		then
 			echo
 			green $result
-			cat $result
+			cat $result | sed "s/$PATTERN/$(green $PATTERN)/"
 		# If CAT null
 		else
-			echo $result
+			echo $result | sed "s/$PATTERN/$(green $PATTERN)/"
 		fi
 	done
 }
