@@ -364,8 +364,10 @@ function git_remote {
 	fi 
 }
 
-function cdj {
-	cd $JS_HOME/$(join $@)
+function cd_dir {
+	DIR=$1
+	shift
+	cd $DIR/$(join / $@)
 }
 
 function del_except {

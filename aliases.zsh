@@ -300,23 +300,31 @@ alias men="mate $DOTFILES_HOME/env_variables.zsh"
 
 alias mfn="mate $DOTFILES_HOME/functions.zsh"
 
-alias cdd="cd $DOTFILES_HOME"
+alias cdpr="cd_dir $PROG_HOME"
+
+alias cdd="cd_dir $DOTFILES_HOME"
 
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
-alias cdr="cd $RUBY_HOME"
+alias cdr="cd_dir $RUBY_HOME"
 
-alias cdrk="cd $RAKEFILE_HOME"
+alias cdp="cd_dir $PY_HOME"
 
-alias cdz="cd $ZSH_HOME"
+alias cdp2="cd $PY_HOME/python2"
 
-alias cda="cd $AWK_HOME"
+alias cdp3="cd $PY_HOME/python3"
 
-alias cdwr="cd $WORK_RUBY_HOME"
+alias cdrk="cd_dir $RAKEFILE_HOME"
 
-alias cds="cd $SH_HOME"
+alias cdz="cd_dir $ZSH_HOME"
 
-alias cdjs="cd $JS_HOME"
+alias cda="cd_dir $AWK_HOME"
+
+alias cdwr="cd_dir $WORK_RUBY_HOME"
+
+alias cds="cd_dir $SH_HOME"
+
+alias cdjs="cd_dir $JS_HOME"
 
 # alias cdj="cdjs"
 
@@ -424,17 +432,9 @@ alias prsv="cd_save $PROG_HOME"
 
 alias prc="cd_count_all $PROG_HOME"
 
-alias cdpr="cd $PROG_HOME"
-
 alias pst="cd_status $PY_HOME"
 
 alias psv="cd_save $PY_HOME"
-
-alias cdp="cd $PY_HOME"
-
-alias cdp2="cd $PY_HOME/python2"
-
-alias cdp3="cd $PY_HOME/python3"
 
 alias rkc="rake count_all"
 
