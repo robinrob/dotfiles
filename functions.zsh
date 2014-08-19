@@ -202,6 +202,7 @@ function mvd {
 }
 
 function libfind {
+	COLOR='red'
 	while getopts :c:d:p: name
 	do
 		case $name in
@@ -219,7 +220,7 @@ function libfind {
 	then
 		for result in $results
 		do
-			echo $result | sed "s/$PATTERN/$(green $PATTERN)/"
+			echo $result | sed "s/$PATTERN/$($COLOR $PATTERN)/"
 		done
 	fi
 	
@@ -231,17 +232,17 @@ function libfind {
 		# If CAT not null
 		if [ -n "$CAT" ]
 		then
-			# echo
-			green $result
-			cat $result | sed "s/$PATTERN/$(green $PATTERN)/"
+			eval "$COLOR $result"
+			cat $result | sed "s/$PATTERN/$($COLOR $PATTERN)/"
 		# If CAT null
 		else
-			echo $result | sed "s/$PATTERN/$(green $PATTERN)/"
+			echo $result | sed "s/$PATTERN/$($COLOR $PATTERN)/"
 		fi
 	done
 }
 
-function libfind_s {
+# libfind-cat
+function libfind_c {
 	libfind -c cat -d $1 -p $2
 }
 

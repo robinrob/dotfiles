@@ -109,31 +109,31 @@ alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias rk="rake"
 
-alias rfind="libfind_s $RUBY_HOME"
+alias rfind="libfind_c $RUBY_HOME"
 
-alias pfind="libfind_s $PYTHON_HOME"
+alias pfind="libfind_c $PYTHON_HOME"
 
-alias lfind="libfind_s $LOCAL_HOME"
+alias lfind="libfind_c $LOCAL_HOME"
 
-alias dfind="libfind_s $DOTFILES_HOME"
+alias dfind="libfind_c $DOTFILES_HOME"
 
-alias jsfind="libfind_s $JS_HOME/practise"
+alias jsfind="libfind_c $JS_HOME/practise"
 
 alias jfind="jsfind"
 
-alias npmfind="libfind_s $NPMLIB_HOME"
+alias npmfind="libfind_c $NPMLIB_HOME"
 
-alias jvfind="libfind_s $JV_HOME"
+alias jvfind="libfind_c $JV_HOME"
 
-alias cfind="libfind_s $C_HOME"
+alias cfind="libfind_c $C_HOME"
 
-alias sfind="libfind_s $SH_HOME"
+alias sfind="libfind_c $SH_HOME"
 
-alias zfind="libfind_s $ZSH_HOME"
+alias zfind="libfind_c $ZSH_HOME"
 
-alias prfind="libfind_s $PROG_HOME"
+alias prfind="libfind_c $PROG_HOME"
 
-alias afind="libfind_s $AWK_HOME"
+alias afind="libfind_c $AWK_HOME"
 
 alias zshfind="file_grep ~/.zshrc"
 
