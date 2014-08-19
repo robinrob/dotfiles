@@ -324,9 +324,9 @@ alias cdwr="cd_dir $WORK_RUBY_HOME"
 
 alias cds="cd_dir $SH_HOME"
 
-alias cdjs="cd_dir $JS_HOME"
+alias cdj="cd_dir $JS_HOME"
 
-# alias cdj="cdjs"
+alias cdjs="cdj"
 
 alias cdsc="cd $SCREENSHOTS_HOME"
 
