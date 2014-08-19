@@ -501,6 +501,8 @@ alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 
 alias safari="http://my.safaribooksonline.com/search?q=$1"
 
+alias sfhtml5="http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
+
 alias google="open https://www.google.ca/#q=$1&safe=active"
 
 alias splw="open https://cr-splunk-1.cloudreach.co.uk:8000"

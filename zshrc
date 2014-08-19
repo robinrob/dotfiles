@@ -39,6 +39,7 @@ set -o vi
 
 
 # Syntax highlighing in `less`
+# Requires `brew install source-highlight`
 ##############################
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=" -R "
