@@ -115,9 +115,11 @@ alias dfind="libfind_s $DOTFILES_HOME"
 
 alias jsfind="libfind_s $JS_HOME/practise"
 
+alias jfind="jsfind"
+
 alias npmfind="libfind_s $NPMLIB_HOME"
 
-alias jfind="libfind_s $JV_HOME"
+alias jvfind="libfind_s $JV_HOME"
 
 alias cfind="libfind_s $C_HOME"
 

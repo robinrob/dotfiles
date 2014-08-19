@@ -213,23 +213,27 @@ function libfind {
 		esac
 	done
 	
-	result_find=`find $DIR -name *$PATTERN*`
-	result_grep=`grep -r $PATTERN $DIR`
+	result_grep="`grep -r $PATTERN $DIR`"
+	results=("${(f)result_grep}")
 	
-	if [ -n "$result_grep" ]
+	if [ -n "$results" ]
 	then
-		for result in $result_grep
+		for result in $results
 		do
 			echo $result
 		done
 	fi
 	
-	for result in $result_find
+	result_find=`find $DIR -name "*$PATTERN*"`
+	results=("${(f)result_find}")
+	
+	for result in $results
 	do
 		# If CAT not null
 		if [ -n "$CAT" ]
 		then
-			green $result:
+			echo
+			green $result
 			cat $result
 		# If CAT null
 		else
