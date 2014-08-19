@@ -223,7 +223,7 @@ function libfind {
 		done
 	fi
 	
-	result_find=`find $DIR -name "*$PATTERN*"`
+	result_find=`find $DIR -type f -name "*$PATTERN*"`
 	results=("${(f)result_find}")
 	
 	for result in $results
@@ -231,7 +231,7 @@ function libfind {
 		# If CAT not null
 		if [ -n "$CAT" ]
 		then
-			echo
+			# echo
 			green $result
 			cat $result | sed "s/$PATTERN/$(green $PATTERN)/"
 		# If CAT null
