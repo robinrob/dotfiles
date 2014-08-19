@@ -479,6 +479,8 @@ alias safari="http://my.safaribooksonline.com/search?q=$1"
 
 alias google="open https://www.google.ca/#q=$1&safe=active"
 
+alias splunk="open https://cr-splunk-1.cloudreach.co.uk:8000"
+
 alias stk="stackoverflow"
 
 alias wk="wiki"
