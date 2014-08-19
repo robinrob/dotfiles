@@ -232,11 +232,17 @@ alias fpl="fab pull"
 
 alias ssv="cd_save $SH_HOME"
 
-alias ssv="cd_save $SH_HOME"
-
 alias sst="cd_status $SH_HOME"
 
 alias spl="cd_pull $SH_HOME"
+
+alias zpl="cd_pull $ZSH_HOME"
+
+alias zsv="cd_save $ZSH_HOME"
+
+alias zsv="cd_save $ZSH_HOME"
+
+alias zst="cd_status $ZSH_HOME"
 
 alias bsv="cd_save $BACKUPS_HOME"
 
