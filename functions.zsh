@@ -27,20 +27,9 @@ function get_record {
 }
 
 function reminder {
-	reminder $1 robin@mrrobinsmith.com
-}
-
-function reminderwork {
-	reminder $1 robin.smith@cloudreach.co.uk
-}
-
-function reminder {
-	SUBJECT=$1
-	if [ -z "$2" ]
-	then
-	    ADDRESS='robin.smith@cloudreach.co.uk'
-	fi
-	echo $1 | mail -s "REMINDER: $SUBJECT" $ADDRESS
+	ADDRESS=$1
+	SUBJECT=$2
+	echo $SUBJECT | mail -s "REMINDER: $SUBJECT" $ADDRESS
 }
 
 function note {

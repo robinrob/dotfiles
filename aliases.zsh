@@ -79,6 +79,10 @@ alias mschef="cd $MSCHEF"
 
 # Shortcuts
 
+alias reminderrobin="reminder robin@mrrobinsmith.com"
+
+alias reminderwork="reminder robin.smith@cloudreach.co.uk"
+
 alias residency="$ADOBE_PATH $CANADA_HOME/residency_form.pdf"
 
 alias sabihin="song sabihin_mo_na"
