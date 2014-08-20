@@ -202,7 +202,7 @@ function mvd {
 }
 
 function libfind {
-	COLOR='red'
+	COLOR='green'
 	while getopts :c:d:p: name
 	do
 		case $name in

@@ -320,7 +320,11 @@ alias cdz="cd_dir $ZSH_HOME"
 
 alias cda="cd_dir $AWK_HOME"
 
+alias cdw="cd_dir $WORK_HOME"
+
 alias cdwr="cd_dir $WORK_RUBY_HOME"
+
+alias cdwp="cd_dir $WORK_PYTHON_HOME"
 
 alias cds="cd_dir $SH_HOME"
 
@@ -362,6 +366,8 @@ alias knl="knife node list"
 
 #Shortcuts
 
+alias window="open /Users/robinsmith/Dropbox/Camera\ Uploads/gif/window.gif"
+
 alias emptytrash="rm -rf ~/.Trash/*"
 
 alias cgi="cat .gitignore"
@@ -380,6 +386,8 @@ alias rki="rake install"
 
 alias fbs="fab save"
 
+alias fcl="fab clean"
+
 alias cgc="cat ~/.gitconfig"
 
 alias mgi="mate .gitignore"
@@ -391,6 +399,8 @@ alias gb="git branch"
 alias gi="$EDITOR .gitignore"
 
 alias ecmd="$EDITOR $DOCS_HOME/commands.txt"
+
+alias cmd="mate $DOCS_HOME/commands.txt"
 
 alias cleanhome="$SH_HOME/clean_home.sh"
 
