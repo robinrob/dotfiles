@@ -201,6 +201,13 @@ function mvd {
 	mv ~/Downloads/$1 $2
 }
 
+function color_keywords {
+	TEXT=$1
+	PATTERN=$2
+	COLOR=$3
+	echo $TEXT | sed "s/$PATTERN/$($COLOR $PATTERN)/"
+}
+
 function libfind {
 	COLOR='green'
 	while getopts :c:d:p: name
@@ -220,7 +227,7 @@ function libfind {
 	then
 		for result in $results
 		do
-			echo $result | sed "s/$PATTERN/$($COLOR $PATTERN)/"
+			color_keywords $result $PATTERN $COLOR
 		done
 	fi
 	
@@ -233,10 +240,10 @@ function libfind {
 		if [ -n "$CAT" ]
 		then
 			eval "$COLOR $result"
-			cat $result | sed "s/$PATTERN/$($COLOR $PATTERN)/"
+			color_keywords "`cat $result`" $PATTERN $COLOR
 		# If CAT null
 		else
-			echo $result | sed "s/$PATTERN/$($COLOR $PATTERN)/"
+			color_keywords $result $PATTERN $COLOR
 		fi
 	done
 }
