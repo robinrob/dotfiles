@@ -330,6 +330,8 @@ alias cds="cd_dir $SH_HOME"
 
 alias cdj="cd_dir $JS_HOME"
 
+alias cdjpr="cd_dir $JS_HOME practise"
+
 alias cdjs="cdj"
 
 alias cdsc="cd $SCREENSHOTS_HOME"
@@ -509,9 +511,9 @@ alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
 alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 
-alias safari="http://my.safaribooksonline.com/search?q=$1"
+alias safari="open http://my.safaribooksonline.com/search?q=$1"
 
-alias sfhtml5="http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
+alias sfhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 
 alias google="open https://www.google.ca/#q=$1&safe=active"
 
