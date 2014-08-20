@@ -515,6 +515,8 @@ alias safari="open http://my.safaribooksonline.com/search?q=$1"
 
 alias sfhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 
+alias sfjs="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
+
 alias google="open https://www.google.ca/#q=$1&safe=active"
 
 alias splw="open https://cr-splunk-1.cloudreach.co.uk:8000"
