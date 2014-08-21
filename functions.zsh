@@ -270,14 +270,24 @@ function file_grep {
 	grep -A 3 $2 $1
 }
 
-function rks {
+function rake_do {
+	TASK=$1
+	
 	if [ -f Rakefile ]
 	then
-		rake save
+		rake $TASK
 	else
 		red "No Rakefile!"
 		red "\`rake -f $RAKEFILE_HOME/Rakefile save\` to use master Rakefile"
 	fi
+}
+
+function rks {
+	rake_do save
+}
+
+function rkc {
+	rake_do commit
 }
 
 function killp {
