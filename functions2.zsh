@@ -65,9 +65,9 @@ function new {
 	FILE_DISPLAY=$(yellow $FILE)
 	COLOR="green"
 	CREATE_SHEBANG_MSG="$COLOR 'Creating, +x''ing and shebanging new file: $FILE_DISPLAY'"
-	SHEBANG_MSG="$COLOR 'Shebanging and +x''ing existing file: $FILE_DISPLAY'"
-	CREATE_MSG="$COLOR 'Creating new file: $FILE_DISPLAY'"
-	OPEN_MSG="$COLOR 'Opening existing file: $FILE_DISPLAY'"
+	SHEBANG_MSG="$COLOR Shebanging and +x''ing existing file: $FILE_DISPLAY"
+	CREATE_MSG="$COLOR Creating new file: $FILE_DISPLAY"
+	OPEN_MSG="$COLOR Opening existing file: $FILE_DISPLAY"
 	
 	if ! [ -f $FILE ]
 	then
@@ -85,7 +85,7 @@ function new {
 		then
 			CONTENTS=`cat $FILE`
 			rm $FILE
-			eval $SHEBANG_MSG
+			eval $CREATE_SHEBANG_MSG
 			echo "#!/usr/bin/env $INTERPRETER" > $FILE
 			echo $CONTENTS >> $FILE
 			chmod +x $FILE
