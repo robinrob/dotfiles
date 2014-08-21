@@ -37,6 +37,8 @@ export JV_HOME=$PROG_HOME/java
 
 export JS_HOME=$PROG_HOME/javascript
 
+export JS_LIB_HOME=$PROG_HOME/javascript/lib
+
 export HTMLCSS_HOME=$PROG_HOME/html-css
 
 export RUBY_HOME=$PROG_HOME/ruby

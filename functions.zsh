@@ -62,26 +62,31 @@ function new {
 	fi
 	
 	FILE="$FILENAME.$EXTENSION"
+	FILE_DISPLAY=$(yellow $FILE)
 	
 	if ! [ -f $FILE ]
 	then
 		if [ -n "$INTERPRETER" ]
 		then	
-			green "Creating and shebanging new file: ${FILE}"
-			echo "#!/usr/bin/env $INTERPRETER" > $FILE
+			green "Creating and shebanging new file: $FILE_DISPLAY"
+			echo "#!/usr/bin/env $INTERPRETER\n" > $FILE
 			chmod +x $FILE
 		else
-			green "Creating new file: ${FILE}"
+			green "Creating new file: $FILE_DISPLAY"
 			touch $FILE
 		fi
-			
 	else
-		CONTENTS=`cat $FILE`
-		rm $FILE
-		green "Shebanging existing file: ${FILE}"
-		echo "#!/usr/bin/env $INTERPRETER" > $FILE
-		echo $CONTENTS >> $FILE
-		chmod +x $FILE
+		if [ -n "$INTERPRETER" ]
+		then
+			CONTENTS=`cat $FILE`
+			rm $FILE
+			green "Shebanging existing file: $FILE_DISPLAY"
+			echo "#!/usr/bin/env $INTERPRETER" > $FILE
+			echo $CONTENTS >> $FILE
+			chmod +x $FILE
+		else
+			green "Opening existing file: $FILE_DISPLAY"
+		fi
 	fi
 	
 	INTERPRETER=""
@@ -362,11 +367,11 @@ function show_git {
 	fi
 }
 
-function git_remote {
+function git_remote_origin {
 	if [ "$(is_git)" ]
 	then
-		remote=`git remote show origin | grep "Fetch URL:" | awk '{print $3}'`
-		green $remote
+		origin=`git config --get remote.origin.url`
+		green $origin
 	else
 		red "Not Git"
 	fi 
@@ -378,11 +383,11 @@ function cd_dir {
 	cd $DIR/$(join / $@)
 }
 
-function del_except {
+function delexcept {
 	while getopts :r:f: name
 	do
 		case $name in
-		r) REGEX="$OPTARG" ;;
+			r) REGEX="$OPTARG" ;;
 	    f) FOR_REAL="$OPTARG" ;;
 	    *) usage ;;
 		esac
@@ -395,5 +400,8 @@ function del_except {
 	else
 		green "Running in test mode."
 		despace -t d && find . -depth 1 \( ! -regex ".*$REGEX.*" \) | xargs
-	fi	
+	fi
+	
+	FOR_REAL=''
+	REGEX=''
 }

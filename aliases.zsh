@@ -35,111 +35,43 @@ alias m="mate"
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
-# Shell operations
-
-alias rs="source ~/.zshrc"
-
-alias RS="source ~/.zshrc"
-
-alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
-
-alias vconf="vim ~/.ssh/config"
-
-alias mssh="mate ~/.ssh/config"
-
-alias mconf="mssh"
-
-alias essh="edit ~/.ssh/config"
-
-alias ess="edit ~/.ssh/config"
-
-alias econf="edit ~/.ssh/config"
-
-alias vzsh="vim ~/.zshrc"
-
-alias mzsh="mate ~/.zshrc"
-
-alias msz="mzsh"
-
-alias ezsh="edit ~/.zshrc"
-
-alias ezs="ezsh"
-
-alias czsh="cat ~/.zshrc"
-
-alias edit=$EDITOR
-
-alias conf="$EDITOR ~/.ssh/config"
-
-alias maws="mate $AWS_CONFIG"
-
-alias caws="cat $AWS_CONFIG"
-
-alias eaws="$EDITOR $AWS_CONFIG"
-
-alias nocchef="cd $NOCCHEF"
-
-alias mschef="cd $MSCHEF"
-
-# Shortcuts
-
-alias reminderrobin="reminder robin@mrrobinsmith.com"
-
-alias reminderwork="reminder robin.smith@cloudreach.co.uk"
-
-alias residency="$ADOBE_PATH $CANADA_HOME/residency_form.pdf"
-
-alias sabihin="song sabihin_mo_na"
-
-alias sb="sabihin"
-
-alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
-
-alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
-
-alias mr="mate $RECORDS_PATH"
-
-alias erec="$EDITOR $RECORDS_PATH"
-
-alias cms="edit $DOCS_HOME/commands.txt"
-
-alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
-
-alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
-
-alias rk="rake"
-
-alias rfind="libfind_c $RUBY_HOME"
-
-alias pfind="libfind_c $PYTHON_HOME"
-
-alias lfind="libfind_c $LOCAL_HOME"
-
-alias dfind="libfind_c $DOTFILES_HOME"
-
-alias jsfind="libfind_c $JS_HOME/practise"
-
-alias jfind="jsfind"
-
-alias npmfind="libfind_c $NPMLIB_HOME"
-
-alias jvfind="libfind_c $JV_HOME"
-
-alias cfind="libfind_c $C_HOME"
-
-alias sfind="libfind_c $SH_HOME"
-
-alias zfind="libfind_c $ZSH_HOME"
-
-alias prfind="libfind_c $PROG_HOME"
-
-alias afind="libfind_c $AWK_HOME"
-
-alias zshfind="file_grep ~/.zshrc"
-
-alias sshfind="file_grep ~/.ssh/config"
-
 # Navigation
+
+alias cdpr="cd_dir $PROG_HOME"
+
+alias cdd="cd_dir $DOTFILES_HOME"
+
+alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
+
+alias cdr="cd_dir $RUBY_HOME"
+
+alias cdp="cd_dir $PY_HOME"
+
+alias cdp2="cd $PY_HOME/python2"
+
+alias cdp3="cd $PY_HOME/python3"
+
+alias cdrk="cd_dir $RAKEFILE_HOME"
+
+alias cdz="cd_dir $ZSH_HOME"
+
+alias cda="cd_dir $AWK_HOME"
+
+alias cdw="cd_dir $WORK_HOME"
+
+alias cdwr="cd_dir $WORK_RUBY_HOME"
+
+alias cdwp="cd_dir $WORK_PYTHON_HOME"
+
+alias cds="cd_dir $SH_HOME"
+
+alias cdj="cd_dir $JS_HOME"
+
+alias cdjpr="cd_dir $JS_HOME practise"
+
+alias cdjs="cdj"
+
+alias cdsc="cd $SCREENSHOTS_HOME"
 
 alias cdms="cd $MSCHEF"
 
@@ -163,9 +95,15 @@ alias cdg="cd $JS_HOME/projects/mobile-game-cocos"
 
 # Development operations
 
+alias rk="rake"
+
+alias bi="bundle install"
+
 alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 alias sv="save"
+
+alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
 
 alias rkp="rake pull"
 
@@ -195,8 +133,38 @@ alias tnew="new txt"
 
 alias demo="open $MOBILEAPP_HOME/www/index.html"
 
+alias up2="pythonbrew use 2.7"
+
+alias up3="pythonbrew use 3.2"
+
+alias p2="~/.pythonbrew/pythons/Python-2.7/bin/python"
+
+alias p3="~/.pythonbrew/pythons/Python-3.2/bin/python3"
+
+alias pbrew="pythonbrew"
+
 
 # Git aliases
+
+alias gcmr="git submodule foreach 'git checkout master'"
+
+alias gsf="git submodule foreach"
+
+alias gpd="git push origin develop"
+
+alias gpm="git push origin master"
+
+alias gpld="git push origin develop"
+
+alias gplm="git push origin master"
+
+alias gcm="git checkout master"
+
+alias gcmm="git commit -m"
+
+alias gcd="git checkout develop"
+
+alias ga="git add"
 
 alias gsi="git submodule init"
 
@@ -208,7 +176,7 @@ alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
 
-alias gro="git_remote"
+alias gro="git_remote_origin"
 
 alias grh="git reset HEAD"
 
@@ -266,27 +234,67 @@ alias qpl="cd_pull $QUIZ_HOME"
 
 alias qsv="cd_save $QUIZ_HOME"
 
-alias gpd="git push origin develop"
 
-alias gpm="git push origin master"
+# Chef
+alias kel="knife environment list"
 
-alias gpld="git push origin develop"
+alias knl="knife node list"
 
-alias gplm="git push origin master"
+# Shortcuts
 
-alias conf="mate config.json"
+alias rs="source ~/.zshrc"
 
-alias fp="find $PWD -name "
+alias RS="source ~/.zshrc"
 
-alias gcm="git checkout master"
+alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
-alias gcmm="git commit -m"
+alias vconf="vim ~/.ssh/config"
 
-alias gcd="git checkout develop"
+alias mssh="mate ~/.ssh/config"
 
-alias ga="git add"
+alias mconf="mssh"
 
-alias bi="bundle install"
+alias essh="edit ~/.ssh/config"
+
+alias ess="edit ~/.ssh/config"
+
+alias econf="edit ~/.ssh/config"
+
+alias vzsh="vim ~/.zshrc"
+
+alias mzsh="mate ~/.zshrc"
+
+alias ezsh="edit ~/.zshrc"
+
+alias ezs="ezsh"
+
+alias czsh="cat ~/.zshrc"
+
+alias edit=$EDITOR
+
+alias conf="$EDITOR ~/.ssh/config"
+
+alias maws="mate $AWS_CONFIG"
+
+alias caws="cat $AWS_CONFIG"
+
+alias eaws="$EDITOR $AWS_CONFIG"
+
+alias reminderrobin="reminder robin@mrrobinsmith.com"
+
+alias reminderwork="reminder robin.smith@cloudreach.co.uk"
+
+alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
+
+alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
+
+alias mr="mate $RECORDS_PATH"
+
+alias erec="$EDITOR $RECORDS_PATH"
+
+alias cms="edit $DOCS_HOME/commands.txt"
+
+alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
 
@@ -299,42 +307,6 @@ alias mal="mate $DOTFILES_HOME/aliases.zsh"
 alias men="mate $DOTFILES_HOME/env_variables.zsh"
 
 alias mfn="mate $DOTFILES_HOME/functions.zsh"
-
-alias cdpr="cd_dir $PROG_HOME"
-
-alias cdd="cd_dir $DOTFILES_HOME"
-
-alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
-
-alias cdr="cd_dir $RUBY_HOME"
-
-alias cdp="cd_dir $PY_HOME"
-
-alias cdp2="cd $PY_HOME/python2"
-
-alias cdp3="cd $PY_HOME/python3"
-
-alias cdrk="cd_dir $RAKEFILE_HOME"
-
-alias cdz="cd_dir $ZSH_HOME"
-
-alias cda="cd_dir $AWK_HOME"
-
-alias cdw="cd_dir $WORK_HOME"
-
-alias cdwr="cd_dir $WORK_RUBY_HOME"
-
-alias cdwp="cd_dir $WORK_PYTHON_HOME"
-
-alias cds="cd_dir $SH_HOME"
-
-alias cdj="cd_dir $JS_HOME"
-
-alias cdjpr="cd_dir $JS_HOME practise"
-
-alias cdjs="cdj"
-
-alias cdsc="cd $SCREENSHOTS_HOME"
 
 alias t="touch"
 
@@ -354,19 +326,7 @@ alias bcodes="cat $IMPORTANT_HOME/passwords/Backup-codes-robin.smith.txt"
 
 alias gcl="git clone"
 
-alias cms="mate $TEMP_HOME/commands.txt"
-
-alias nocknife="cd $NOCCHEF && knife"
-
-alias msknife="cd $MSCHEF && knife"
-
-# Chef
-alias kel="knife environment list"
-
-alias knl="knife node list"
-
-
-#Shortcuts
+alias cmd="mate $TEMP_HOME/commands.txt"
 
 alias window="open /Users/robinsmith/Dropbox/Camera\ Uploads/gif/window.gif"
 
@@ -410,25 +370,9 @@ alias e="$EDITOR"
 
 alias E="e"
 
-alias skytrain="open $COMMON_DOCS_HOME/useful/vancouver_skytrain_map.pdf"
-
-alias sky="skytrain"
-
-alias tube="open $COMMON_DOCS_HOME/useful/tube_map.pdf"
-
-alias pc="postcode"
-
-alias ad="address"
-
-alias ph="phone"
-
-alias em="copy_print robin@mrrobinsmith.com"
+alias email="copy_print robin@mrrobinsmith.com"
 
 alias editor="echo $EDITOR"
-
-alias gcmr="git submodule foreach 'git checkout master'"
-
-alias gsf="git submodule foreach"
 
 alias sprog="du -dh $PROG_HOME"
 
@@ -448,7 +392,7 @@ alias pst="cd_status $PY_HOME"
 
 alias psv="cd_save $PY_HOME"
 
-alias rkc="rake count_all"
+alias rkct="rake count_all"
 
 alias mkd="mkdir"
 
@@ -457,10 +401,6 @@ alias gra="git remote add"
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
 
 alias cdt="cd $TRASH_HOME"
-
-alias mobileideas="$EDITOR $MERCURY_HOME/creative/mobile/ideas.txt"
-
-alias mi="mobileideas"
 
 alias gbd="git branch develop && git checkout develop"
 
@@ -490,6 +430,42 @@ alias pb="pbcopy"
 
 alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
+alias chrome="$CHROME_PATH"
+
+alias adobe="$ADOBE_PATH"
+
+# Shell functions
+
+alias rfind="libfind_c $RUBY_HOME"
+
+alias pfind="libfind_c $PYTHON_HOME"
+
+alias lfind="libfind_c $LOCAL_HOME"
+
+alias dfind="libfind_c $DOTFILES_HOME"
+
+alias jsfind="libfind_c $JS_HOME/practise"
+
+alias jfind="jsfind"
+
+alias npmfind="libfind_c $NPMLIB_HOME"
+
+alias jvfind="libfind_c $JV_HOME"
+
+alias cfind="libfind_c $C_HOME"
+
+alias sfind="libfind_c $SH_HOME"
+
+alias zfind="libfind_c $ZSH_HOME"
+
+alias prfind="libfind_c $PROG_HOME"
+
+alias afind="libfind_c $AWK_HOME"
+
+alias zshfind="file_grep ~/.zshrc"
+
+alias sshfind="file_grep ~/.ssh/config"
+
 # Web shortcuts
 alias van="open https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
 
@@ -513,9 +489,11 @@ alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 
 alias safari="open http://my.safaribooksonline.com/search?q=$1"
 
-alias sfhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
+alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 
-alias sfjs="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
+alias bkjs="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
+
+alias bkcocos="open http://my.safaribooksonline.com/book/programming/iphone/9780132180863"
 
 alias google="open https://www.google.ca/#q=$1&safe=active"
 
@@ -529,7 +507,7 @@ alias sf="safari"
 
 alias gg="google"
 
-# Records
+# Records & docs
 alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
 
 alias mrec="mate $RECORDS_PATH"
@@ -568,11 +546,27 @@ alias workaddress="get_record work_address"
 
 alias workpostcode="get_record work_postcode"
 
-# Information
+alias residency="$ADOBE_PATH $CANADA_HOME/residency_form.pdf"
 
-alias skytrain="open $USEFUL_HOME/vancouver_skytrain_map.pdf"
+alias sabihin="song sabihin_mo_na"
+
+alias sb="sabihin"
+
+alias skytrain="open $COMMON_DOCS_HOME/useful/vancouver_skytrain_map.pdf"
 
 alias sky="skytrain"
+
+alias tube="open $COMMON_DOCS_HOME/useful/tube_map.pdf"
+
+alias pc="postcode"
+
+alias ad="address"
+
+alias ph="phone"
+
+alias mobileideas="$EDITOR $MERCURY_HOME/creative/mobile/ideas.txt"
+
+alias mi="mobileideas"
 
 # Screenshots
 
@@ -582,25 +576,11 @@ alias lasts="cd $SCREENSHOTS_HOME && lastf -s $SCREENSHOT_NAME"
 
 alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
 
-alias up2="pythonbrew use 2.7"
-
-alias up3="pythonbrew use 3.2"
-
-alias p2="~/.pythonbrew/pythons/Python-2.7/bin/python"
-
-alias p3="~/.pythonbrew/pythons/Python-3.2/bin/python3"
-
-# Synonyms
+# Shell Aliases
 
 alias wh="which"
 
-alias chrome="$CHROME_PATH"
-
-alias adobe="$ADOBE_PATH"
-
 alias chr="chrome"
-
-# Aliases
 
 alias lsl="ls -l"
 
@@ -610,11 +590,8 @@ alias isg="isgit"
 
 alias igi="isgit"
 
-# ls 'full'
-alias lsf="ls $PWD/*"
-
 # ls 'absolute'
-alias lsa="lsf"
+alias lsa="ls $PWD/*"
 
 alias shell="echo $SHELL"
 
