@@ -61,6 +61,11 @@ function new {
 		FILENAME=$2
 	fi
 	
+	if ! [ "${FILENAME##*\.}" -eq "$FILENAME" ]
+	then
+		FILENAME="${FILENAME##*\.}"
+	fi
+	
 	FILE="$FILENAME.$EXTENSION"
 	FILE_DISPLAY=$(yellow $FILE)
 	COLOR="green"
@@ -280,7 +285,12 @@ function rake_do {
 	
 	if [ -f Rakefile ]
 	then
-		rake $TASK
+		if [ -n "$2" ]
+		then
+			rake $TASK"[$2]"
+		else
+			rake $TASK
+		fi
 	else
 		red "No Rakefile!"
 		red "\`rake -f $RAKEFILE_HOME/Rakefile save\` to use master Rakefile"
@@ -288,11 +298,11 @@ function rake_do {
 }
 
 function rks {
-	rake_do save
+	rake_do save $@
 }
 
 function rkc {
-	rake_do commit
+	rake_do commit $@
 }
 
 function killp {
@@ -419,4 +429,8 @@ function delexcept {
 	
 	FOR_REAL=''
 	REGEX=''
+}
+
+function count_non_empty {
+	grep . $1 | wc -l
 }

@@ -5,6 +5,8 @@ export HOSTNAME=`hostname`
 
 export EDITOR=mate
 
+# export PROG_HOME=$HOME/Programming/robin
+
 export PROG_HOME=$HOME/Programming/robin
 
 export SH_HOME=$PROG_HOME/sh
@@ -148,3 +150,5 @@ export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d/
 export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/22.6.2/
 
 export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/bin/
+
+export GREP_COLOR="0;32"

@@ -1,4 +1,5 @@
-# Un-Aliases ###############################################################################
+# Un-Aliases
+###############################################################################
 unalias todo
 
 unalias gr
@@ -26,8 +27,48 @@ unalias gg
 unalias ga
 
 
+# Hashes
+###############################################################################
+
+hash -d robin="$PROG_HOME"
+
+
 # Aliases
 ###############################################################################
+
+# Hash Aliases
+alias prg="nocorrect robin"
+
+# Global aliases
+alias -g L='| less'
+
+alias -g NUL="> /dev/null 2>&1"
+
+alias -g pr="practise"
+
+# Shell Aliases
+alias mkdir='mkdir -pv'
+
+alias wh="which"
+
+alias chr="chrome"
+
+alias lsl="ls -l"
+
+alias isgit="show_git"
+
+alias isg="isgit"
+
+alias igi="isgit"
+
+# ls 'absolute'
+alias lsa="ls $PWD/*"
+
+alias shell="echo $SHELL"
+
+alias dir="dirname"
+
+alias cdcocos="cd $COCOS_HOME"
 
 # Tools
 
@@ -44,6 +85,10 @@ alias cdd="cd_dir $DOTFILES_HOME"
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
 alias cdr="cd_dir $RUBY_HOME"
+
+alias cdmr="cd_dir $RUBY_HOME/projects/mrrobinsmith.com"
+
+alias cdq="cd_dir $RUBY_HOME/projects/quiz"
 
 alias cdp="cd_dir $PY_HOME"
 
@@ -143,8 +188,24 @@ alias p3="~/.pythonbrew/pythons/Python-3.2/bin/python3"
 
 alias pbrew="pythonbrew"
 
+alias cen="count_non_empty $DOTFILES_HOME/env_variables.zsh"
+
+alias cal="count_non_empty $DOTFILES_HOME/aliases.zsh"
+
+alias cfn="grep function $DOTFILES_HOME/functions.zsh | wc -l"
+
+# alias lfn='grep -o "function [a-zA-Z0-9_]* "'$DOTFILES_HOME/functions.zsh'| awk ''{print $2}'' | grep ''.*'''
 
 # Git aliases
+alias gbd="git branch develop && git checkout develop"
+
+alias gbx="git branch -d"
+
+alias gbm="git branch master && git checkout master	"
+
+alias gch="git checkout"
+
+alias gb="git branch"
 
 alias gcmr="git submodule foreach 'git checkout master'"
 
@@ -180,8 +241,11 @@ alias gro="git_remote_origin"
 
 alias grh="git reset HEAD"
 
+alias gra="git remote add"
 
-# Git Repos
+alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
+
+# Git repo operations
 alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="svwb; cd_save $DOTFILES_HOME"
@@ -234,13 +298,12 @@ alias qpl="cd_pull $QUIZ_HOME"
 
 alias qsv="cd_save $QUIZ_HOME"
 
-
 # Chef
 alias kel="knife environment list"
 
 alias knl="knife node list"
 
-# Shortcuts
+# Viewing and editing files
 
 alias rs="source ~/.zshrc"
 
@@ -336,10 +399,6 @@ alias cgi="cat .gitignore"
 
 alias cx="chmod +x"
 
-alias back="cd - > /dev/null"
-
-alias bk="back"
-
 alias kne="knife node edit --editor vim"
 
 alias kee="knife environment edit --editor vim"
@@ -355,8 +414,6 @@ alias cgc="cat ~/.gitconfig"
 alias mgi="mate .gitignore"
 
 alias mgm="mate .gitmodules"
-
-alias gb="git branch"
 
 alias gi="$EDITOR .gitignore"
 
@@ -396,19 +453,7 @@ alias rkct="rake count_all"
 
 alias mkd="mkdir"
 
-alias gra="git remote add"
-
-alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
-
 alias cdt="cd $TRASH_HOME"
-
-alias gbd="git branch develop && git checkout develop"
-
-alias gbx="git branch -d"
-
-alias gbm="git branch master && git checkout master	"
-
-alias gch="git checkout"
 
 alias plane="copy_print NQFLIZ"
 
@@ -436,7 +481,7 @@ alias adobe="$ADOBE_PATH"
 
 # Shell functions
 
-alias rfind="libfind_c $RUBY_HOME"
+alias rfind="libfind_c $RUBY_HOME/practice"
 
 alias pfind="libfind_c $PYTHON_HOME"
 
@@ -473,7 +518,7 @@ alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7
 
 alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
-alias stackoverflow="http://stackoverflow.com/users/3946669/robin-smith"
+alias stackoverflow="open http://stackoverflow.com/users/3946669/robin-smith"
 
 alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
 
@@ -492,6 +537,8 @@ alias safari="open http://my.safaribooksonline.com/search?q=$1"
 alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 
 alias bkjs="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
+
+alias bkzsh="open http://my.safaribooksonline.com/book/operating-systems-and-server-administration/unix/9781783282937"
 
 alias bkcocos="open http://my.safaribooksonline.com/book/programming/iphone/9780132180863"
 
@@ -575,26 +622,3 @@ alias screenshots="cd $SCREENSHOTS_HOME"
 alias lasts="cd $SCREENSHOTS_HOME && lastf -s $SCREENSHOT_NAME"
 
 alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
-
-# Shell Aliases
-
-alias wh="which"
-
-alias chr="chrome"
-
-alias lsl="ls -l"
-
-alias isgit="show_git"
-
-alias isg="isgit"
-
-alias igi="isgit"
-
-# ls 'absolute'
-alias lsa="ls $PWD/*"
-
-alias shell="echo $SHELL"
-
-alias dir="dirname"
-
-alias cdcocos="cd $COCOS_HOME"

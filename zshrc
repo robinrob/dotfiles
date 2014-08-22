@@ -33,8 +33,10 @@ for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 prompt robin
 
 
-# Command-line editing mode
+# Shell options
 ###########################
+unsetopt correct
+setopt autocd
 set -o vi
 
 
