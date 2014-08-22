@@ -32,12 +32,16 @@ unalias ga
 
 hash -d robin="$PROG_HOME"
 
+hash -d dotfiles="$DOTFILES_HOME"
+
 
 # Aliases
 ###############################################################################
 
 # Hash Aliases
 alias prg="nocorrect robin"
+
+alias d="dotfiles"
 
 # Global aliases
 alias -g L='| less'
