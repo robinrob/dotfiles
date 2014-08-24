@@ -109,9 +109,8 @@ function hcnew {
 	PROJECT=$1
 	mkdir $PROJECT
 	cd $PROJECT
-	hnew $PROJECT
-	cssnew "style"
-	$EDITOR *
+	touch $PROJECT.html
+	touch styles.css
 }
 
 function hcexample {
@@ -125,18 +124,8 @@ function hcexample {
 
 function hnew {
 	FILE="$1.html"
-	cp $HTMLCSS_HOME/template.html $FILE
+	cp $HTML_TEMPLATE $FILE
 	$EDITOR $FILE
-}
-
-function hnew {
-	FILE="$1.html"
-	cp $HTMLCSS_HOME/template.html $FILE
-	$EDITOR $FILE
-}
-
-function cssnew {
-	$EDITOR "$1.css"
 }
 
 function cd_pull {
@@ -146,7 +135,7 @@ function cd_pull {
 
 	branch=$comps[2]
 
-	`cd $1 && git pull origin $branch > /dev/null`
+	cd $1 && git pull origin $branch > /dev/null
 }
 
 function cd_save {

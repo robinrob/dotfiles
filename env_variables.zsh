@@ -43,6 +43,8 @@ export JS_LIB_HOME=$PROG_HOME/javascript/lib
 
 export HTMLCSS_HOME=$PROG_HOME/html-css
 
+export HTML_TEMPLATE=$PROG_HOME/html-css/projects/template/template.html
+
 export RUBY_HOME=$PROG_HOME/ruby
 
 export AWK_HOME=$PROG_HOME/awk
@@ -82,6 +84,8 @@ export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 export LOCAL_HOME=$PROG_HOME/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
+
+export INTELLIJ_CONFIG=~/Library/Preferences/IntelliJIdea13/keymaps/Robin.xml
 
 export RUBYMINE_CONFIG=~/Library/Preferences/RubyMine60/keymaps/Robin.xml
 

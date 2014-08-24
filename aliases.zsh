@@ -26,29 +26,45 @@ unalias gg
 
 unalias ga
 
+unalias d
+
 
 # Hashes
 ###############################################################################
 
 hash -d robin="$PROG_HOME"
 
+hash -d rby="$RUBY_HOME"
+
 hash -d dotfiles="$DOTFILES_HOME"
+
+hash -d javascript="$JS_HOME"
+
+hash -d html-css="$HTMLCSS_HOME"
 
 
 # Aliases
 ###############################################################################
 
-# Hash Aliases
-alias prg="nocorrect robin"
-
-alias d="dotfiles"
-
 # Global aliases
+alias -g p="prog"
+
+alias -g r="rby"
+
+alias -g d="dotfiles"
+
+alias -g css="html-css"
+
 alias -g L='| less'
 
 alias -g NUL="> /dev/null 2>&1"
 
-alias -g pr="practise"
+alias -g pr="practice"
+
+alias -g prj="projects"
+
+# Hash aliases
+alias js="javascript"
 
 # Shell Aliases
 alias mkdir='mkdir -pv'
@@ -116,19 +132,21 @@ alias cds="cd_dir $SH_HOME"
 
 alias cdj="cd_dir $JS_HOME"
 
-alias cdjpr="cd_dir $JS_HOME practise"
+alias cdjpr="cd_dir $JS_HOME practice"
 
 alias cdjs="cdj"
 
-alias cdsc="cd $SCREENSHOTS_HOME"
+alias cdh="cd_dir $HTMLCSS_HOME"
 
-alias cdms="cd $MSCHEF"
+alias cdsc="cd_dir $SCREENSHOTS_HOME"
 
-alias cdnoc="cd $NOCCHEF"
+alias cdms="cd_dir $MSCHEF"
 
-alias cdcam="cd $CAMERA_HOME"
+alias cdnoc="cd_dir $NOCCHEF"
 
-alias cdk="cd $KITCHENPLAN_HOME"
+alias cdcam="cd_dir $CAMERA_HOME"
+
+alias cdk="cd_dir $KITCHENPLAN_HOME"
 
 alias cddl="cd ~/Downloads"
 
@@ -136,13 +154,16 @@ alias cdmv="cd ~/Movies"
 
 alias cdaws="cd `dirname $AWS_CONFIG`"
 
-alias cdm="cd $JS_HOME/projects"
+alias cdm="cd_dir $JS_HOME/projects"
 
-alias cdmb="cd $JS_HOME/projects/mobile-app-cordova"
+alias cdmb="cd_dir $JS_HOME/projects/mobile-app-cordova"
 
-alias cdg="cd $JS_HOME/projects/mobile-game-cocos"
+alias cdg="cd_dir $JS_HOME/projects/mobile-game-cocos"
 
 # Development operations
+alias mrdb="psql -U msl -d mrrobinsmith_development"
+
+alias rls="rails server"
 
 alias rk="rake"
 
@@ -150,15 +171,15 @@ alias bi="bundle install"
 
 alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
-alias sv="save"
-
 alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
+
+alias rkd="rake deploy"
 
 alias rkp="rake pull"
 
-alias rku="rakeup"
+alias rkup="rakeup"
 
-alias rkd="rakedown"
+alias rkdown="rakedown"
 
 alias fbu="fabup"
 
@@ -177,6 +198,10 @@ alias znew="new zsh zsh"
 alias rnew="new ruby rb"
 
 alias jsnew="new node js"
+
+alias jnew="jsnew"
+
+alias cssnew="new css"
 
 alias tnew="new txt"
 
@@ -250,13 +275,19 @@ alias gra="git remote add"
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
 
 # Git repo operations
+alias pl="cd_pull"
+
+alias st="cd_status"
+
+alias sv="cd_save"
+
 alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="svwb; cd_save $DOTFILES_HOME"
 
 alias ddi="cd_diff $DOTFILES_HOME"
 
-alias dst="cd_status $DOTFILES_HOME"
+alias dst="cd_status d"
 
 alias DSV="dsv"
 
@@ -351,7 +382,7 @@ alias reminderrobin="reminder robin@mrrobinsmith.com"
 
 alias reminderwork="reminder robin.smith@cloudreach.co.uk"
 
-alias tagalog="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
+alias tagalog="cd_dir $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
 
@@ -380,8 +411,6 @@ alias t="touch"
 alias mmutt="mate ~/.mutt/muttrc"
 
 alias gl="git log"
-
-alias jnew="jsnew"
 
 alias t2="t22"
 
@@ -461,8 +490,6 @@ alias cdt="cd $TRASH_HOME"
 
 alias plane="copy_print NQFLIZ"
 
-alias pl="plane"
-
 alias gclm="git clone -b master"
 
 alias gclb="git clone -b "
@@ -485,6 +512,8 @@ alias adobe="$ADOBE_PATH"
 
 # Shell functions
 
+alias lf="libfind_c"
+
 alias rfind="libfind_c $RUBY_HOME/practice"
 
 alias pfind="libfind_c $PYTHON_HOME"
@@ -493,7 +522,7 @@ alias lfind="libfind_c $LOCAL_HOME"
 
 alias dfind="libfind_c $DOTFILES_HOME"
 
-alias jsfind="libfind_c $JS_HOME/practise"
+alias jsfind="libfind_c $JS_HOME/practice"
 
 alias jfind="jsfind"
 
@@ -516,6 +545,10 @@ alias zshfind="file_grep ~/.zshrc"
 alias sshfind="file_grep ~/.ssh/config"
 
 # Web shortcuts
+alias mrr="open http://mrrobinsmith.com"
+
+alias mrrd="open http://localhost:3000"
+
 alias van="open https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
 
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
@@ -540,11 +573,17 @@ alias safari="open http://my.safaribooksonline.com/search?q=$1"
 
 alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 
+alias bkcss="open http://my.safaribooksonline.com/book/web-development/css/9781457174315"
+
 alias bkjs="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
+
+alias bkrails="open http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
 
 alias bkzsh="open http://my.safaribooksonline.com/book/operating-systems-and-server-administration/unix/9781783282937"
 
 alias bkcocos="open http://my.safaribooksonline.com/book/programming/iphone/9780132180863"
+
+alias railst="open http://guides.rubyonrails.org/getting_started.html"
 
 alias google="open https://www.google.ca/#q=$1&safe=active"
 

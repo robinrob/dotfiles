@@ -54,8 +54,8 @@ alias more='less'
 
 # Ruby
 ######
-rvm use ruby-2.0.0-p247 1> /dev/null
-green "Using \`Ruby-2.0.0\`"
+rvm use ruby-2.1.1 1> /dev/null
+green "Using \`Ruby-2.1.1\`"
 
 if [ "$HOSTNAME" = "venus.local" ]
 then
