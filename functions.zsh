@@ -340,7 +340,7 @@ function lsd {
 
 function save_jetbrains {
 	green "Copying Jetbrains config from $INTELLIJ_CONFIG ..."
-	cp $INTELLIJ_CONFIG $DOTFILES_HOME/
+	yes | cp $INTELLIJ_CONFIG $DOTFILES_HOME/
 }
 
 function cd_dir {
