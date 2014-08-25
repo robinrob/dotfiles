@@ -95,6 +95,10 @@ export WEBSTORM_CONFIG=~/Library/Preferences/WebStorm8/keymaps/Robin.xml
 
 export FILES_HOME=~/Dropbox
 
+export PICTURES_HOME=~/Google\ Drive/pictures/pictures
+
+export PHOTOS_HOME=~/Google\ Drive/pictures/photos
+
 export HOSTFILES_HOME=$FILES_HOME/$HOSTNAME
 
 export COMMON_HOME=$FILES_HOME/common
@@ -142,6 +146,8 @@ export CAMERA_HOME=$FILES_HOME/"Camera Uploads"
 export TRASH_HOME=~/.Trash
 
 export CHROME_PATH="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
+
+export FIREFOX_PATH="/Applications/Firefox.app/Contents/MacOS/firefox"
 
 export CANADA_HOME=$MERCURY_HOME/docs/IMPORTANT/canada
 

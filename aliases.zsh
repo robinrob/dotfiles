@@ -47,21 +47,21 @@ hash -d html-css="$HTMLCSS_HOME"
 ###############################################################################
 
 # Global aliases
-alias -g p="prog"
-
-alias -g r="rby"
-
-alias -g d="dotfiles"
-
-alias -g css="html-css"
-
-alias -g L='| less'
-
-alias -g NUL="> /dev/null 2>&1"
-
-alias -g pr="practice"
-
-alias -g prj="projects"
+# alias -g p="prog"
+#
+# alias -g r="rby"
+#
+# alias -g d="dotfiles"
+#
+# alias -g css="html-css"
+#
+# alias -g L='| less'
+#
+# alias -g NUL="> /dev/null 2>&1"
+#
+# alias -g pr="practice"
+#
+# alias -g pro="projects"
 
 # Hash aliases
 alias js="javascript"
@@ -81,9 +81,6 @@ alias isg="isgit"
 
 alias igi="isgit"
 
-# ls 'absolute'
-alias lsa="ls $PWD/*"
-
 alias shell="echo $SHELL"
 
 alias dir="dirname"
@@ -91,6 +88,11 @@ alias dir="dirname"
 alias cdcocos="cd $COCOS_HOME"
 
 # Tools
+alias chrome="$CHROME_PATH"
+
+alias adobe="$ADOBE_PATH"
+
+alias firefox="$FIREFOX_PATH"
 
 alias m="mate"
 
@@ -98,55 +100,55 @@ alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
 
 # Navigation
 
-alias cdpr="cd_dir $PROG_HOME"
+alias cdpr="cddir $PROG_HOME"
 
-alias cdd="cd_dir $DOTFILES_HOME"
+alias cdd="cddir $DOTFILES_HOME"
 
 alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
 
-alias cdr="cd_dir $RUBY_HOME"
+alias cdr="cddir $RUBY_HOME"
 
-alias cdmr="cd_dir $RUBY_HOME/projects/mrrobinsmith.com"
+alias cdmr="cddir $RUBY_HOME/projects/mrrobinsmith.com"
 
-alias cdq="cd_dir $RUBY_HOME/projects/quiz"
+alias cdq="cddir $RUBY_HOME/projects/quiz"
 
-alias cdp="cd_dir $PY_HOME"
+alias cdp="cddir $PY_HOME"
 
 alias cdp2="cd $PY_HOME/python2"
 
 alias cdp3="cd $PY_HOME/python3"
 
-alias cdrk="cd_dir $RAKEFILE_HOME"
+alias cdrk="cddir $RAKEFILE_HOME"
 
-alias cdz="cd_dir $ZSH_HOME"
+alias cdz="cddir $ZSH_HOME"
 
-alias cda="cd_dir $AWK_HOME"
+alias cda="cddir $AWK_HOME"
 
-alias cdw="cd_dir $WORK_HOME"
+alias cdw="cddir $WORK_HOME"
 
-alias cdwr="cd_dir $WORK_RUBY_HOME"
+alias cdwr="cddir $WORK_RUBY_HOME"
 
-alias cdwp="cd_dir $WORK_PYTHON_HOME"
+alias cdwp="cddir $WORK_PYTHON_HOME"
 
-alias cds="cd_dir $SH_HOME"
+alias cds="cddir $SH_HOME"
 
-alias cdj="cd_dir $JS_HOME"
+alias cdj="cddir $JS_HOME"
 
-alias cdjpr="cd_dir $JS_HOME practice"
+alias cdjpr="cddir $JS_HOME practice"
 
 alias cdjs="cdj"
 
-alias cdh="cd_dir $HTMLCSS_HOME"
+alias cdh="cddir $HTMLCSS_HOME"
 
-alias cdsc="cd_dir $SCREENSHOTS_HOME"
+alias cdsc="cddir $SCREENSHOTS_HOME"
 
-alias cdms="cd_dir $MSCHEF"
+alias cdms="cddir $MSCHEF"
 
-alias cdnoc="cd_dir $NOCCHEF"
+alias cdnoc="cddir $NOCCHEF"
 
-alias cdcam="cd_dir $CAMERA_HOME"
+alias cdcam="cddir $CAMERA_HOME"
 
-alias cdk="cd_dir $KITCHENPLAN_HOME"
+alias cdk="cddir $KITCHENPLAN_HOME"
 
 alias cddl="cd ~/Downloads"
 
@@ -154,11 +156,11 @@ alias cdmv="cd ~/Movies"
 
 alias cdaws="cd `dirname $AWS_CONFIG`"
 
-alias cdm="cd_dir $JS_HOME/projects"
+alias cdm="cddir $JS_HOME/projects"
 
-alias cdmb="cd_dir $JS_HOME/projects/mobile-app-cordova"
+alias cdmb="cddir $JS_HOME/projects/mobile-app-cordova"
 
-alias cdg="cd_dir $JS_HOME/projects/mobile-game-cocos"
+alias cdg="cddir $JS_HOME/projects/mobile-game-cocos"
 
 # Development operations
 alias mrdb="psql -U msl -d mrrobinsmith_development"
@@ -226,6 +228,10 @@ alias cfn="grep function $DOTFILES_HOME/functions.zsh | wc -l"
 # alias lfn='grep -o "function [a-zA-Z0-9_]* "'$DOTFILES_HOME/functions.zsh'| awk ''{print $2}'' | grep ''.*'''
 
 # Git aliases
+alias gi="git init"
+
+alias grm="git rm -r --cached"
+
 alias gbd="git branch develop && git checkout develop"
 
 alias gbx="git branch -d"
@@ -283,7 +289,7 @@ alias sv="cd_save"
 
 alias dpl="cd_pull $DOTFILES_HOME"
 
-alias dsv="svwb; cd_save $DOTFILES_HOME"
+alias dsv="save_jetbrains; cd_save $DOTFILES_HOME"
 
 alias ddi="cd_diff $DOTFILES_HOME"
 
@@ -382,7 +388,7 @@ alias reminderrobin="reminder robin@mrrobinsmith.com"
 
 alias reminderwork="reminder robin.smith@cloudreach.co.uk"
 
-alias tagalog="cd_dir $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
+alias tagalog="cddir $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
 
@@ -448,7 +454,7 @@ alias mgi="mate .gitignore"
 
 alias mgm="mate .gitmodules"
 
-alias gi="$EDITOR .gitignore"
+alias egi="$EDITOR .gitignore"
 
 alias ecmd="$EDITOR $DOCS_HOME/commands.txt"
 
@@ -506,11 +512,9 @@ alias pb="pbcopy"
 
 alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
-alias chrome="$CHROME_PATH"
-
-alias adobe="$ADOBE_PATH"
-
 # Shell functions
+
+alias kp="killp"
 
 alias lf="libfind_c"
 
@@ -521,6 +525,8 @@ alias pfind="libfind_c $PYTHON_HOME"
 alias lfind="libfind_c $LOCAL_HOME"
 
 alias dfind="libfind_c $DOTFILES_HOME"
+
+alias hfind="libfind_c $HTMLCSS_HOME"
 
 alias jsfind="libfind_c $JS_HOME/practice"
 
@@ -545,6 +551,10 @@ alias zshfind="file_grep ~/.zshrc"
 alias sshfind="file_grep ~/.ssh/config"
 
 # Web shortcuts
+alias swimming="http://www.newark-sherwooddc.gov.uk/glc/groveswimming/"
+
+alias ask="open http://stackoverflow.com/questions/ask"
+
 alias mrr="open http://mrrobinsmith.com"
 
 alias mrrd="open http://localhost:3000"
@@ -555,7 +565,7 @@ alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7
 
 alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
-alias stackoverflow="open http://stackoverflow.com/users/3946669/robin-smith"
+alias stack="open http://stackoverflow.com/users/3946669/robin-smith"
 
 alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
 

@@ -113,6 +113,12 @@ function hcnew {
 	touch styles.css
 }
 
+function hcprnew {
+	PROJECT=$1
+	cat $HTMLCSS_HOME/projects/template/practice_template.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+	# $EDITOR $PROJECT.html
+}
+
 function hcexample {
 	PROJECT=$1
 	mkdir $PROJECT
@@ -262,7 +268,8 @@ function al {
 }
 
 function fr {
-	find . -name $1
+	PATTERN=$1
+	find . -name $PATTERN 2> /dev/null
 }
 
 function file_grep {
@@ -281,8 +288,8 @@ function rake_do {
 			rake $TASK
 		fi
 	else
-		red "No Rakefile!"
-		red "\`rake -f $RAKEFILE_HOME/Rakefile save\` to use master Rakefile"
+		red "No Rakefile! Using Rakefile at $RAKEFILE_HOME ..."
+		rake -f $RAKEFILE_HOME/Rakefile save
 	fi
 }
 
@@ -295,26 +302,25 @@ function rkc {
 }
 
 function killp {
-	if [ -z $1 ]
+	PROCESS=$1
+	if [ -z $PROCESS ]
 	then
 		red "Must give name of process!"
 		
 	else
+		green "Killing all $PROCESS processes ..."
 		
-		green "Killing all $1 processes ..."
-	
-		sh -c  "PROCESSES=eval('ps aux')"
-		# ; for process in $PROCESSES; do green '"'Killing $1 process: $process ...'"'; kill $process; done"
+		ps aux | grep $PROCESS | awk '{print $2}' | xargs kill 2> /dev/null
 	fi
 }
 
 function rakeup {
-	git submodule add git@bitbucket.org:robinrob/rakefile.git rake
+	git submodule add --force git@bitbucket.org:robinrob/rakefile.git rake
 	ln -s rake/Rakefile ./
 }
 
 function rakedown {
-	rake sub_deinit[rake]
+	rake -r $RAKEFILE_HOME/Rakefile sub_deinit[rake]
 	rm Rakefile
 }
 
@@ -324,7 +330,7 @@ function fabup {
 }
 
 function fabdown {
-	fab sub_deinit:rake
+	fab sub_deinit:fabfile
 	rm fabfile.py
 }
 
@@ -332,9 +338,15 @@ function lsd {
 	ls `dirname $1`
 }
 
-function svwb {
-	green "Copying Jetbrains config from $WEBSTORM_CONFIG ..."
-	cp $WEBSTORM_CONFIG $DOTFILES_HOME/
+function save_jetbrains {
+	green "Copying Jetbrains config from $INTELLIJ_CONFIG ..."
+	cp $INTELLIJ_CONFIG $DOTFILES_HOME/
+}
+
+function cd_dir {
+	DIR=$1
+	shift
+	cd $DIR/$(join / $@)
 }
 
 function cddir {
@@ -391,12 +403,6 @@ function git_remote_origin {
 	fi 
 }
 
-function cd_dir {
-	DIR=$1
-	shift
-	cd $DIR/$(join / $@)
-}
-
 function delexcept {
 	while getopts :r:f: name
 	do
@@ -422,4 +428,8 @@ function delexcept {
 
 function count_non_empty {
 	grep . $1 | wc -l
+}
+
+function lsa {
+	ls $PWD/$1
 }
