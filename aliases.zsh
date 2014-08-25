@@ -100,45 +100,47 @@ alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
 
 # Navigation
 
-alias cdpr="cddir $PROG_HOME"
+alias cdpr="cd_dir $PROG_HOME"
 
-alias cdd="cddir $DOTFILES_HOME"
+alias cdd="cd_dir $DOTFILES_HOME"
 
-alias cdb="cd $RUBY_HOME/projects/aws-backup-manager"
+alias cdb="cd_dir $RUBY_HOME/projects/aws-backup-manager"
 
-alias cdr="cddir $RUBY_HOME"
+alias cdr="cd_dir $RUBY_HOME"
 
-alias cdmr="cddir $RUBY_HOME/projects/mrrobinsmith.com"
+alias cdmr="cd_dir $RUBY_HOME/projects/mrrobinsmith.com"
 
-alias cdq="cddir $RUBY_HOME/projects/quiz"
+alias cdq="cd_dir $RUBY_HOME/projects/quiz"
 
-alias cdp="cddir $PY_HOME"
+alias cdp="cd_dir $PY_HOME"
 
-alias cdp2="cd $PY_HOME/python2"
+alias cdp2="cd_dir $PY_HOME/python2"
 
-alias cdp3="cd $PY_HOME/python3"
+alias cdp3="cd_dir $PY_HOME/python3"
 
-alias cdrk="cddir $RAKEFILE_HOME"
+alias cdrk="cd_dir $RAKEFILE_HOME"
 
-alias cdz="cddir $ZSH_HOME"
+alias cdz="cd_dir $ZSH_HOME"
 
-alias cda="cddir $AWK_HOME"
+alias cda="cd_dir $AWK_HOME"
 
-alias cdw="cddir $WORK_HOME"
+alias cdw="cd_dir $WORK_HOME"
 
-alias cdwr="cddir $WORK_RUBY_HOME"
+alias cdwr="cd_dir $WORK_RUBY_HOME"
 
-alias cdwp="cddir $WORK_PYTHON_HOME"
+alias cdwp="cd_dir $WORK_PYTHON_HOME"
 
-alias cds="cddir $SH_HOME"
+alias cds="cd_dir $SH_HOME"
 
-alias cdj="cddir $JS_HOME"
+alias cdj="cd_dir $JS_HOME"
 
-alias cdjpr="cddir $JS_HOME practice"
+alias cdjpr="cd_dir $JS_HOME practice"
 
 alias cdjs="cdj"
 
-alias cdh="cddir $HTMLCSS_HOME"
+alias cdh="cd_dir $HTMLCSS_HOME"
+
+alias cdrecipe="cd $HTMLCSS_HOME/projects/recipe-finder"
 
 alias cdsc="cddir $SCREENSHOTS_HOME"
 
