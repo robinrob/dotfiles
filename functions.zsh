@@ -148,6 +148,10 @@ function cd_save {
 	cd_action $1 rake save
 }
 
+function cd_commit {
+	cd_action $1 rake commit
+}
+
 function cd_count_all {
 	cd_action $1 rake count_all
 }

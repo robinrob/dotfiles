@@ -28,6 +28,8 @@ unalias ga
 
 unalias d
 
+unalias s
+
 
 # Hashes
 ###############################################################################
@@ -296,6 +298,8 @@ alias sv="cd_save"
 alias dpl="cd_pull $DOTFILES_HOME"
 
 alias dsv="save_jetbrains; cd_save $DOTFILES_HOME"
+
+alias dcm="cd_commit $DOTFILES_HOME"
 
 alias ddi="cd_diff $DOTFILES_HOME"
 
