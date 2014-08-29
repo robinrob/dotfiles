@@ -250,21 +250,35 @@ function libfind {
 	
 	for result in $results
 	do
-		# If CAT not null
-		if [ -n "$CAT" ]
+
+		if [[ "$CAT" == "" ]]
 		then
+			color_keywords $result $PATTERN $COLOR
+		else
+			# If CAT not null
 			eval "$COLOR $result"
 			color_keywords "`cat $result`" $PATTERN $COLOR
-		# If CAT null
-		else
-			color_keywords $result $PATTERN $COLOR
 		fi
 	done
 }
 
-# libfind-cat
+# cat
 function libfind_c {
-	libfind -c cat -d $1 -p $2
+	libfind -c yes -d $1 -p $2
+}
+
+# libfind-shortcut
+function libfind_s {
+	DIR=$1
+	PATTERN=$2
+	CAT=$3
+	
+	if [[ "$CAT" == "no" ]]
+	then
+			libfind -d $1 -p $2 -c ""
+	else
+			libfind -d $1 -p $2 -c yes
+	fi
 }
 
 function al {
