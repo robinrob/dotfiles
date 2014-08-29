@@ -281,6 +281,7 @@ function rake_do {
 	
 	if [ -f Rakefile ]
 	then
+		green "Rakefile found: $(ls $PWD/Rakefile)"
 		if [ -n "$2" ]
 		then
 			rake $TASK"[$2]"
@@ -432,4 +433,10 @@ function count_non_empty {
 
 function lsa {
 	ls $PWD/$1
+}
+
+function firefox {
+	FILE=$1
+	killp firefox
+	$FIREFOX_PATH $FILE &
 }

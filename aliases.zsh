@@ -92,9 +92,9 @@ alias chrome="$CHROME_PATH"
 
 alias adobe="$ADOBE_PATH"
 
-alias firefox="$FIREFOX_PATH"
-
 alias m="mate"
+
+alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
@@ -167,19 +167,23 @@ alias cdg="cddir $JS_HOME/projects/mobile-game-cocos"
 # Development operations
 alias mrdb="psql -U msl -d mrrobinsmith_development"
 
+alias rksv="rake_do server"
+
 alias rls="rails server"
 
 alias rk="rake"
 
 alias bi="bundle install"
 
+alias bu="bundle update"
+
 alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
 
-alias rkd="rake deploy"
+alias rkd="rake_do deploy"
 
-alias rkp="rake pull"
+alias rkp="rake_do pull"
 
 alias rkup="rakeup"
 
@@ -434,7 +438,7 @@ alias cmd="mate $TEMP_HOME/commands.txt"
 
 alias window="open /Users/robinsmith/Dropbox/Camera\ Uploads/gif/window.gif"
 
-alias emptytrash="rm -rf ~/.Trash/*"
+alias emptytrash="sudo rm -rf ~/.Trash/*"
 
 alias cgi="cat .gitignore"
 
@@ -553,7 +557,11 @@ alias zshfind="file_grep ~/.zshrc"
 alias sshfind="file_grep ~/.ssh/config"
 
 # Web shortcuts
-alias swimming="http://www.newark-sherwooddc.gov.uk/glc/groveswimming/"
+alias recipe="open /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"
+
+alias reciped="open /Users/msl/Programming/robin/html-css/projects/recipe-finder/index.html"
+
+alias swimming="open http://www.newark-sherwooddc.gov.uk/glc/groveswimming/"
 
 alias ask="open http://stackoverflow.com/questions/ask"
 
