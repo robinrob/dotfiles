@@ -303,7 +303,13 @@ alias dcm="cd_commit $DOTFILES_HOME"
 
 alias ddi="cd_diff $DOTFILES_HOME"
 
-alias dst="cd_status d"
+alias dst="cd_status $DOTFILES_HOME"
+
+alias hsv="cd_save $HTMLCSS_HOME"
+
+alias hcm="cd_commit $HTMLCSS_HOME"
+
+alias hst="cd_status $HTMLCSS_HOME"
 
 alias DSV="dsv"
 
@@ -602,6 +608,8 @@ alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 alias safari="open http://my.safaribooksonline.com/search?q=$1"
 
 alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
+
+alias bkboot="open http://my.safaribooksonline.com/book/web-design-and-development/9781457174346"
 
 alias bkcss="open http://my.safaribooksonline.com/book/web-development/css/9781457174315"
 

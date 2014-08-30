@@ -145,19 +145,19 @@ function cd_pull {
 }
 
 function cd_save {
-	cd_action $1 rake save
+	cd_action $1 rake_do save
 }
 
 function cd_commit {
-	cd_action $1 rake commit
+	cd_action $1 rake_do commit
 }
 
 function cd_count_all {
-	cd_action $1 rake count_all
+	cd_action $1 rake_do count_all
 }
 
 function cd_status {
-	cd_action $1 git status
+	cd_action $1 rake_do status
 }
 
 function cd_diff {
