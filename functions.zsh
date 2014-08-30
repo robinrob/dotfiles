@@ -170,7 +170,7 @@ function cd_action {
 	green "In repo: $REPO"
 	shift
 	$@
-	cd -
+	cd - > /dev/null
 }
 
 function opens {
