@@ -374,7 +374,7 @@ function lsd {
 }
 
 function save_jetbrains {
-	green "Copying Jetbrains config from $INTELLIJ_CONFIG ..."
+	echo "$(green "Copying Jetbrains config from: ")$(yellow "$INTELLIJ_CONFIG ...")"
 	cp $INTELLIJ_CONFIG $DOTFILES_HOME/
 }
 
