@@ -126,6 +126,11 @@ function hcprnew {
 	# $EDITOR $PROJECT.html
 }
 
+function hjprnew {
+	PROJECT=$1
+	cat $HTMLCSS_HOME/projects/template/practice_js.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+}
+
 function hcexample {
 	PROJECT=$1
 	mkdir $PROJECT
