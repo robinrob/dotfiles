@@ -195,25 +195,25 @@ alias fbu="fabup"
 
 alias fbd="fabdown"
 
-alias anew="new awk awk"
+alias anew="new_s awk awk"
 
-alias pnew="new python py"
+alias pnew="new_s python py"
 
-alias bnew="new bash sh"
+alias bnew="new_s bash sh"
 
-alias snew="new sh sh"
+alias snew="new_s sh sh"
 
-alias znew="new zsh zsh"
+alias znew="new_s zsh zsh"
 
-alias rnew="new ruby rb"
+alias rnew="new_s ruby rb"
 
 alias jsnew="new node js"
 
 alias jnew="jsnew"
 
-alias cssnew="new css"
+alias cssnew="new -i '' -e css -f"
 
-alias tnew="new txt"
+alias tnew="new -i '' -e txt -f"
 
 alias demo="open $MOBILEAPP_HOME/www/index.html"
 

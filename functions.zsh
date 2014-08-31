@@ -49,19 +49,17 @@ function write {
 }
 
 function new {
-	if [ $# -eq 3 ]
-	then
-		INTERPRETER=$1
-		EXTENSION=$2
-		FILENAME=$3
-		
-	elif [ $# -eq 2 ]
-	then
-		EXTENSION=$1
-		FILENAME=$2
-	fi
+	while getopts :i:e:f: name
+	do
+		case $name in
+			i) INTERPRETER="$OPTARG" ;;
+			e) EXTENSION="$OPTARG" ;;
+			f) FILENAME="$OPTARG" ;;
+			*) usage ;;                # display usage and exit
+		esac
+	done
 	
-	if ! [ "${FILENAME##*\.}" -eq "$FILENAME" ]
+	if ! [[ "${FILENAME##*\.}" == "$FILENAME" ]]
 	then
 		FILENAME="${FILENAME##*\.}"
 	fi
@@ -103,7 +101,16 @@ function new {
 	FILENAME=""
 	EXTENSION=""
 	$EDITOR $FILE
-}	
+}
+
+# Shortcut for `new` function
+function new_s {
+	INTERPRETER=$1
+	EXTENSION=$2
+	FILENAME=$3
+	
+	new -i $INTERPRETER -e $EXTENSION -f $FILENAME
+}
 
 function hcnew {
 	PROJECT=$1
