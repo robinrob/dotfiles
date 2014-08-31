@@ -49,12 +49,13 @@ function write {
 }
 
 function new {
-	while getopts :i:e:f: name
+	while getopts :i:e:f:o: name
 	do
 		case $name in
 			i) INTERPRETER="$OPTARG" ;;
 			e) EXTENSION="$OPTARG" ;;
 			f) FILENAME="$OPTARG" ;;
+			o) NO_OPEN="$OPTARG" ;;
 			*) usage ;;                # display usage and exit
 		esac
 	done
@@ -67,7 +68,7 @@ function new {
 	FILE="$FILENAME.$EXTENSION"
 	FILE_DISPLAY=$(yellow $FILE)
 	COLOR="green"
-	CREATE_SHEBANG_MSG="$COLOR 'Creating, +x''ing and shebanging new file: $FILE_DISPLAY'"
+	CREATE_SHEBANG_MSG="$COLOR 'Creating, +x-ing and shebanging new file: $FILE_DISPLAY'"
 	SHEBANG_MSG="$COLOR 'Shebanging and +x''ing existing file: $FILE_DISPLAY'"
 	CREATE_MSG="$COLOR 'Creating new file: $FILE_DISPLAY'"
 	OPEN_MSG="$COLOR 'Opening existing file: $FILE_DISPLAY'"
@@ -100,7 +101,10 @@ function new {
 	INTERPRETER=""
 	FILENAME=""
 	EXTENSION=""
-	$EDITOR $FILE
+	if ! [[ "$NO_OPEN" == "noopen" ]]
+	then
+		$EDITOR $FILE
+	fi
 }
 
 # Shortcut for `new` function

@@ -207,7 +207,7 @@ alias znew="new_s zsh zsh"
 
 alias rnew="new_s ruby rb"
 
-alias jsnew="new node js"
+alias jsnew="new -i node -e js -o noopen -f"
 
 alias jnew="jsnew"
 
