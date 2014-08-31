@@ -183,7 +183,7 @@ function cd_diff {
 function cd_action {
 	REPO=$1
 	cd $REPO
-	green "In repo: $REPO"
+	echo "$(green "In repo: ")$(yellow $REPO)"
 	shift
 	$@
 	cd - > /dev/null
@@ -315,7 +315,7 @@ function rake_do {
 	
 	if [ -f Rakefile ]
 	then
-		green "Rakefile found: $(ls $PWD/Rakefile)"
+		echo "$(green "Rakefile found: ")$(yellow $(ls $PWD/Rakefile))"
 		if [ -n "$2" ]
 		then
 			rake $TASK"[$2]"

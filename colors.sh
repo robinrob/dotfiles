@@ -15,37 +15,30 @@ ccpink=$(echo "\033[0;35m")
 ccblack=$(echo "\033[0;30m")
 ccend=$(echo "\033[0m")
 
-red()
-{
+function red() {
 	echo ${ccred}$1${ccend}
 }
 
-blue()
-{
+function blue() {
 	echo ${ccblue}$1${ccend}
 }
 
-green()
-{
+function green() {
 	echo ${ccgreen}$1${ccend}
 }
 
-yellow()
-{
+function yellow() {
 	echo ${ccyellow}$1${ccend}
 }
 
-pink()
-{
+function pink() {
 	echo ${ccpink}$1${ccend}
 }
 
-black()
-{
+function black() {
 	echo ${ccblack}$1${ccend}
 }
 
-default()
-{
+function default() {
 	echo ${ccend}$1${ccend}
 }
