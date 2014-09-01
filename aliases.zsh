@@ -69,6 +69,8 @@ hash -d html-css="$HTMLCSS_HOME"
 alias js="javascript"
 
 # Shell Aliases
+alias x="chmod +x"
+
 alias mkdir='mkdir -pv'
 
 alias wh="which"
@@ -106,7 +108,7 @@ alias cdpr="cd_dir $PROG_HOME"
 
 alias cdd="cd_dir $DOTFILES_HOME"
 
-alias cdb="cd_dir $RUBY_HOME/projects/aws-backup-manager"
+alias cdb="cd_dir $HTMLCSS_HOME/practice/bootstrap"
 
 alias cdr="cd_dir $RUBY_HOME"
 
@@ -207,7 +209,7 @@ alias znew="new_s zsh zsh"
 
 alias rnew="new_s ruby rb"
 
-alias jsnew="new -i node -e js -o noopen -f"
+# alias jsnew="new -i node -e js -o noopen -f"
 
 alias jnew="jsnew"
 
@@ -609,7 +611,7 @@ alias safari="open http://my.safaribooksonline.com/search?q=$1"
 
 alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 
-alias bkboot="open http://my.safaribooksonline.com/book/web-design-and-development/9781457174346"
+alias bkstrap="open http://my.safaribooksonline.com/book/web-design-and-development/9781457174346"
 
 alias bkcss="open http://my.safaribooksonline.com/book/web-development/css/9781457174315"
 

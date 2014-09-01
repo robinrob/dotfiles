@@ -126,13 +126,25 @@ function hcnew {
 
 function hcprnew {
 	PROJECT=$1
-	cat $HTMLCSS_HOME/projects/template/practice_template.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+	cat $DOTFILES_HOME/templates/practice_css.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 	# $EDITOR $PROJECT.html
 }
 
 function hjprnew {
 	PROJECT=$1
-	cat $HTMLCSS_HOME/projects/template/practice_js.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+	cat $DOTFILES_HOME/templates/practice_js.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+}
+
+function bprnew {
+	PROJECT=$1
+	cat $DOTFILES_HOME/templates/practice_bootstrap.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+}
+
+function jsnew {
+	new -i node -e js -o noopen -f $1
+	# rm $1.js
+	# cat $DOTFILES_HOME/templates/practice_js.js > $1.js
+	echo "require(process.env.JS_LIB_HOME + '/log')\n" >> $1.js
 }
 
 function hcexample {

@@ -107,6 +107,8 @@ export COMMON_DOCS_HOME=$COMMON_HOME/docs
 
 export MERCURY_HOME=$FILES_HOME/mercury.local
 
+export SONGS_HOME=$MERCURY_HOME/docs/creative/songs
+
 export VENUS_HOME=$FILES_HOME/venus.local
 
 export TEMP_HOME=$HOSTFILES_HOME/temp
