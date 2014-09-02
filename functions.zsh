@@ -335,8 +335,8 @@ function rake_do {
 			rake $TASK
 		fi
 	else
-		red "No Rakefile! Using Rakefile at $RAKEFILE_HOME ..."
-		rake -f $RAKEFILE_HOME/Rakefile save
+		red "No Rakefile!"
+		# rake -f $RAKEFILE_HOME/Rakefile save
 	fi
 }
 

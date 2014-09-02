@@ -126,6 +126,8 @@ alias cdrk="cd_dir $RAKEFILE_HOME"
 
 alias cdz="cd_dir $ZSH_HOME"
 
+alias cdl="cd_dir $LOCAL_HOME"
+
 alias cda="cd_dir $AWK_HOME"
 
 alias cdw="cd_dir $WORK_HOME"
