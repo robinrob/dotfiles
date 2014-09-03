@@ -164,3 +164,5 @@ export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/22.6.2/
 export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/bin/
 
 export GREP_COLOR="0;32"
+
+export BROWSER="firefox"

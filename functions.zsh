@@ -484,5 +484,5 @@ function lsa {
 function firefox {
 	FILE=$1
 	killp firefox
-	$FIREFOX_PATH $FILE &
+	$FIREFOX_PATH $FILE
 }
