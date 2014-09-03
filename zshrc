@@ -42,15 +42,6 @@ setopt autocd
 set -o vi
 
 
-# Syntax highlighing in `less`
-# Requires `brew install source-highlight`
-##############################
-export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
-export LESS=" -R "
-alias less='less -m -N -g -i -J --underline-special --SILENT'
-alias more='less'
-
-
 # Development
 ###############################################################################
 
@@ -73,7 +64,6 @@ pythonbrew use 2.7 2> /dev/null
 
 # Environment variables
 #############################
-
 DOTFILES_HOME=~/Programming/robin/dotfiles
 source $DOTFILES_HOME/env_variables.zsh
 

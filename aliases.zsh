@@ -69,6 +69,10 @@ hash -d html-css="$HTMLCSS_HOME"
 alias js="javascript"
 
 # Shell Aliases
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+
+alias more='less'
+
 alias x="chmod +x"
 
 alias mkdir='mkdir -pv'
