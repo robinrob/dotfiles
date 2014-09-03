@@ -19,5 +19,5 @@ sudo chown root:wheel sudoers
 sudo cp sudoers /etc/sudoers
 sudo chmod 444 sudoers
 
-red "Removing folder ~/.vim"
-sudo rm -rf ~/.vim
+red "Removing folder: ~/.vim"
+rm -rf ~/.vim

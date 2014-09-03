@@ -31,6 +31,8 @@ unalias d
 unalias s
 
 
+
+
 # Hashes
 ###############################################################################
 
@@ -110,6 +112,8 @@ alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
 
 alias cdpr="cd_dir $PROG_HOME"
 
+alias cdc="cdpr"
+
 alias cdd="cd_dir $DOTFILES_HOME"
 
 alias cdb="cd_dir $HTMLCSS_HOME/practice/bootstrap"
@@ -150,29 +154,29 @@ alias cdjs="cdj"
 
 alias cdh="cd_dir $HTMLCSS_HOME"
 
-alias cdrecipe="cd $HTMLCSS_HOME/projects/recipe-finder"
+alias cdrecipe="cd_dir $HTMLCSS_HOME/projects/recipe-finder"
 
-alias cdsc="cddir $SCREENSHOTS_HOME"
+alias cdsc="cd_dir $SCREENSHOTS_HOME"
 
-alias cdms="cddir $MSCHEF"
+alias cdms="cd_dir $MSCHEF"
 
-alias cdnoc="cddir $NOCCHEF"
+alias cdnoc="cd_dir $NOCCHEF"
 
-alias cdcam="cddir $CAMERA_HOME"
+alias cdcam="cd_dir $CAMERA_HOME"
 
-alias cdk="cddir $KITCHENPLAN_HOME"
+alias cdk="cd_dir $KITCHENPLAN_HOME"
 
-alias cddl="cd ~/Downloads"
+alias cddl="cd_dr ~/Downloads"
 
-alias cdmv="cd ~/Movies"
+alias cdmv="cd_dr ~/Movies"
 
-alias cdaws="cd `dirname $AWS_CONFIG`"
+alias cdaws="cd_dr `dirname $AWS_CONFIG`"
 
-alias cdm="cddir $JS_HOME/projects"
+alias cdm="cd_dir $JS_HOME/projects"
 
-alias cdmb="cddir $JS_HOME/projects/mobile-app-cordova"
+alias cdmb="cd_dir $JS_HOME/projects/mobile-app-cordova"
 
-alias cdg="cddir $JS_HOME/projects/mobile-game-cocos"
+alias cdg="cd_dir $JS_HOME/projects/mobile-game-cocos"
 
 # Development operations
 alias mrdb="psql -U msl -d mrrobinsmith_development"
@@ -418,7 +422,7 @@ alias reminderrobin="reminder robin@mrrobinsmith.com"
 
 alias reminderwork="reminder robin.smith@cloudreach.co.uk"
 
-alias tagalog="cddir $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
+alias tagalog="cd_dir $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g 3"
 
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
 
@@ -535,8 +539,6 @@ alias cdrc="cd $RECEIPTS_HOME"
 alias cdrp="cdrc"
 
 alias c="cat"
-
-alias gstat='cd $PROG_HOME && gs'
 
 alias pb="pbcopy"
 
