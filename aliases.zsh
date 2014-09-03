@@ -31,6 +31,8 @@ unalias d
 unalias s
 
 
+
+
 # Hashes
 ###############################################################################
 
@@ -105,6 +107,8 @@ alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
 # Navigation
 
 alias cdpr="cd_dir $PROG_HOME"
+
+alias cdc="cdpr"
 
 alias cdd="cd_dir $DOTFILES_HOME"
 
