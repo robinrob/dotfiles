@@ -532,8 +532,6 @@ alias cdrp="cdrc"
 
 alias c="cat"
 
-alias gstat='cd $PROG_HOME && gs'
-
 alias pb="pbcopy"
 
 alias splq="mate $TEMP_HOME/splunk_searches.txt"
