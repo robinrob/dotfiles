@@ -93,7 +93,7 @@ alias dir="dirname"
 
 alias cdcocos="cd $COCOS_HOME"
 
-# Tools
+# Applications
 alias chrome="$CHROME_PATH"
 
 alias adobe="$ADOBE_PATH"
@@ -103,6 +103,18 @@ alias m="mate"
 alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
 
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+
+alias firefoxp="/Applications/Firefox.app/Contents/MacOS/firefox-bin -p"
+
+alias ffp="firefoxp"
+
+alias firefoxr="/Applications/Firefox.app/Contents/MacOS/firefox-bin -p Robin &"
+
+alias ffr="firefoxr"
+
+alias firefoxc="/Applications/Firefox.app/Contents/MacOS/firefox-bin -p Cloudreach &"
+
+alias ffc="firefoxc"
 
 # Navigation
 
@@ -544,6 +556,10 @@ alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
 alias kp="killp"
 
+alias killpf="killp firefox"
+
+alias kpf="killpf"
+
 alias lf="libfind_s"
 
 alias rfind="libfind_s $RUBY_HOME/practice"
@@ -611,7 +627,13 @@ alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
 alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 
-alias safari="open http://my.safaribooksonline.com/search?q=$1"
+alias safari="open http://my.safaribooksonline.com/myrecentpages"
+
+alias sf="safari"
+
+alias safaris="open http://my.safaribooksonline.com/search?q=$1"
+
+alias sfs="safaris"
 
 alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 
@@ -619,7 +641,11 @@ alias bkstrap="open http://my.safaribooksonline.com/book/web-design-and-developm
 
 alias bkcss="open http://my.safaribooksonline.com/book/web-development/css/9781457174315"
 
-alias bkjs="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
+alias bkjsp="http://my.safaribooksonline.com/book/programming/javascript/9781449399115"
+
+alias bkjs="open http://my.safaribooksonline.com/book/programming/javascript/9781849693127"
+
+alias bkjs1="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
 
 alias bkrails="open http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
 
@@ -636,8 +662,6 @@ alias splw="open https://cr-splunk-1.cloudreach.co.uk:8000"
 alias stk="stackoverflow"
 
 alias wk="wiki"
-
-alias sf="safari"
 
 alias gg="google"
 
