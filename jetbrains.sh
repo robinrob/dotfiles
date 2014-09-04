@@ -15,8 +15,8 @@ green "Installing Jetbrains IDE config files ..."
 
 install IntelliJIdea $INTELLIJ_CONFIG
 
-install RubyMine $RUBYMINE_CONFIG
-
-install PyCharm $PYCHARM_CONFIG
-
-install WebStorm $WEBSTORM_CONFIG
+# install RubyMine $RUBYMINE_CONFIG
+#
+# install PyCharm $PYCHARM_CONFIG
+#
+# install WebStorm $WEBSTORM_CONFIG

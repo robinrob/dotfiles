@@ -71,6 +71,10 @@ hash -d html-css="$HTMLCSS_HOME"
 alias js="javascript"
 
 # Shell Aliases
+alias less='less -m -N -g -i -J --underline-special --SILENT'
+
+alias more='less'
+
 alias x="chmod +x"
 
 alias mkdir='mkdir -pv'
@@ -174,11 +178,11 @@ alias cdcam="cd_dir $CAMERA_HOME"
 
 alias cdk="cd_dir $KITCHENPLAN_HOME"
 
-alias cddl="cd_dr ~/Downloads"
+alias cddl="cd_dir ~/Downloads"
 
-alias cdmv="cd_dr ~/Movies"
+alias cdmv="cd_dir ~/Movies"
 
-alias cdaws="cd_dr `dirname $AWS_CONFIG`"
+alias cdaws="cd_dir `dirname $AWS_CONFIG`"
 
 alias cdm="cd_dir $JS_HOME/projects"
 

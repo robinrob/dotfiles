@@ -166,3 +166,9 @@ export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/bin/
 export GREP_COLOR="0;32"
 
 export BROWSER="firefox"
+
+# Syntax highlighing in `less`
+# Requires `brew install source-highlight`
+##############################
+export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+export LESS=" -R "
