@@ -599,6 +599,8 @@ alias zshfind="file_grep ~/.zshrc"
 alias sshfind="file_grep ~/.ssh/config"
 
 # Web shortcuts
+alias translate="open https://translate.google.com/"
+
 alias recipe="open /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"
 
 alias reciped="open /Users/msl/Programming/robin/html-css/projects/recipe-finder/index.html"
