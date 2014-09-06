@@ -631,15 +631,13 @@ alias news="open https://bbc.co.uk/news"
 
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
-alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
-
 alias safari="open http://my.safaribooksonline.com/myrecentpages"
 
 alias sf="safari"
 
-alias safaris="open http://my.safaribooksonline.com/search?q=$1"
-
 alias sfs="safaris"
+
+alias bkless="open http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 
 alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 

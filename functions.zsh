@@ -490,3 +490,15 @@ function firefox {
 	killp firefox
 	$FIREFOX_PATH $FILE
 }
+
+function safaris {
+	open "http://my.safaribooksonline.com/search?q=$1"
+}
+
+function wiki {
+	open "http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
+}
+
+# function amazon {
+# 	open "http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=Less%20Web%20Development%20Essentials"
+# }
