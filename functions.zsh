@@ -124,18 +124,18 @@ function hcnew {
 	touch styles.css
 }
 
-function hcprnew {
+function hcnew {
 	PROJECT=$1
 	cat $DOTFILES_HOME/templates/practice_css.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 	# $EDITOR $PROJECT.html
 }
 
-function hjprnew {
+function hjnew {
 	PROJECT=$1
 	cat $DOTFILES_HOME/templates/practice_js.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
 
-function hbprnew {
+function hbnew {
 	PROJECT=$1
 	cat $DOTFILES_HOME/templates/practice_bootstrap.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
