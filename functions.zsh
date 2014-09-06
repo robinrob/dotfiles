@@ -207,7 +207,10 @@ function opens {
 
 function rns {
 	cd $SCREENSHOTS_HOME && despace
-	mv `lasts` $1
+	
+	cmd="cp `lasts` $1"
+	green $cmd
+	eval $cmd
 }
 
 function gr {
@@ -404,9 +407,10 @@ function bb {
 	result=`ls -d .git 2> /dev/null`
 	if [ "$result" ]
 	then
-		repo=`git config --get remote.origin.url | awk '{split($1,a,"/"); print a[2]}'`
-		green "Repo found: $repo"
-		url="https://bitbucket.org/robinrob/$repo"
+		# url=`git config --get remote.origin.url | awk '{split($1,a,"/"); print a[2]}'`
+		url=`git config --get remote.origin.url | awk '{split($1,a,"@"); print a[2]}' | awk '{split($1,a,":"); print a[2]}'`
+		url="https://bitbucket.org/${url}"
+		green "Repo found: $url"
 	else
 		url="https://bitbucket.org/robinrob"
 	fi
