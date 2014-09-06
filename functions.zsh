@@ -207,7 +207,10 @@ function opens {
 
 function rns {
 	cd $SCREENSHOTS_HOME && despace
-	mv `lasts` $1
+	
+	cmd="cp `lasts` $1"
+	green $cmd
+	eval $cmd
 }
 
 function gr {
