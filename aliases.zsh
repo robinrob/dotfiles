@@ -574,7 +574,7 @@ alias lfind="libfind_s $LOCAL_HOME"
 
 alias dfind="libfind_s $DOTFILES_HOME"
 
-alias hfind="libfind_s $HTMLCSS_HOME"
+alias hfind="libfind_s $HTMLCSS_HOME/practice"
 
 alias jsfind="libfind_s $JS_HOME/practice"
 
