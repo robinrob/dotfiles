@@ -135,7 +135,7 @@ function hjprnew {
 	cat $DOTFILES_HOME/templates/practice_js.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
 
-function bprnew {
+function hbprnew {
 	PROJECT=$1
 	cat $DOTFILES_HOME/templates/practice_bootstrap.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
