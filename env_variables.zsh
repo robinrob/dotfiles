@@ -45,7 +45,7 @@ export HTMLCSS_HOME=$PROG_HOME/html-css
 
 export HTMLLESS_HOME=$PROG_HOME/html-less
 
-export HTML_TEMPLATE=$PROG_HOME/html-css/projects/template/template.html
+export HTML_TEMPLATES_HOME=$PROG_HOME/html-css/projects/templates
 
 export RUBY_HOME=$PROG_HOME/ruby
 

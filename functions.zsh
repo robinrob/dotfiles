@@ -118,37 +118,34 @@ function new_s {
 
 function hnew {
 	PROJECT=$1
-	cat $DOTFILES_HOME/templates/template.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+	cat $HTML_TEMPLATES_HOME/template.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
 
 function hcnew {
 	PROJECT=$1
-	cat $DOTFILES_HOME/templates/practice_css.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
-	# $EDITOR $PROJECT.html
+	cat $HTML_TEMPLATES_HOME/practice_css.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
 
 function hlnew {
 	PROJECT=$1
 	mkdir $PROJECT
-	cat $DOTFILES_HOME/templates/template.html | sed 's/Title/'$PROJECT'/' > $PROJECT/$PROJECT.html
+	cat $HTML_TEMPLATES_HOME/template.html | sed 's/Title/'$PROJECT'/' > $PROJECT/$PROJECT.html
 	touch $PROJECT/styles.less
 	cd $PROJECT
 }
 
 function hjnew {
 	PROJECT=$1
-	cat $DOTFILES_HOME/templates/practice_js.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+	cat $HTML_TEMPLATES_HOME/practice_js.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
 
 function hbnew {
 	PROJECT=$1
-	cat $DOTFILES_HOME/templates/practice_bootstrap.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+	cat $HTML_TEMPLATES_HOME/practice_bootstrap.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
 
 function jsnew {
 	new -i node -e js -o noopen -f $1
-	# rm $1.js
-	# cat $DOTFILES_HOME/templates/practice_js.js > $1.js
 	echo "require(process.env.JS_LIB_HOME + '/log')\n" >> $1.js
 }
 
