@@ -43,6 +43,8 @@ export JS_LIB_HOME=$PROG_HOME/javascript/lib
 
 export HTMLCSS_HOME=$PROG_HOME/html-css
 
+export HTMLLESS_HOME=$PROG_HOME/html-less
+
 export HTML_TEMPLATE=$PROG_HOME/html-css/projects/template/template.html
 
 export RUBY_HOME=$PROG_HOME/ruby
@@ -172,3 +174,5 @@ export BROWSER="firefox"
 ##############################
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
 export LESS=" -R "
+
+export LESSC_PATH="/usr/local/lib/node_modules/less/bin/lessc"

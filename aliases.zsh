@@ -30,8 +30,7 @@ unalias d
 
 unalias s
 
-
-
+unalias lc
 
 # Hashes
 ###############################################################################
@@ -97,7 +96,9 @@ alias dir="dirname"
 
 alias cdcocos="cd $COCOS_HOME"
 
-# Applications
+# Applications/Tools
+alias lessc="$LESSC_PATH"
+
 alias chrome="$CHROME_PATH"
 
 alias adobe="$ADOBE_PATH"
@@ -165,6 +166,8 @@ alias cdjpr="cd_dir $JS_HOME practice"
 alias cdjs="cdj"
 
 alias cdh="cd_dir $HTMLCSS_HOME"
+
+alias cdls="cd_dir $HTMLLESS_HOME"
 
 alias cdrecipe="cd_dir $HTMLCSS_HOME/projects/recipe-finder"
 

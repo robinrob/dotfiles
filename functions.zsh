@@ -116,18 +116,23 @@ function new_s {
 	new -i $INTERPRETER -e $EXTENSION -f $FILENAME
 }
 
-function hcnew {
+function hnew {
 	PROJECT=$1
-	mkdir $PROJECT
-	cd $PROJECT
-	touch $PROJECT.html
-	touch styles.css
+	cat $DOTFILES_HOME/templates/template.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
 
 function hcnew {
 	PROJECT=$1
 	cat $DOTFILES_HOME/templates/practice_css.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 	# $EDITOR $PROJECT.html
+}
+
+function hlnew {
+	PROJECT=$1
+	mkdir $PROJECT
+	cat $DOTFILES_HOME/templates/template.html | sed 's/Title/'$PROJECT'/' > $PROJECT/$PROJECT.html
+	touch $PROJECT/styles.less
+	cd $PROJECT
 }
 
 function hjnew {
@@ -154,12 +159,6 @@ function hcexample {
 	hnew $PROJECT
 	cssnew "style"
 	$EDITOR$EDITOR *
-}
-
-function hnew {
-	FILE="$1.html"
-	cp $HTML_TEMPLATE $FILE
-	$EDITOR $FILE
 }
 
 function cd_pull {
@@ -534,4 +533,19 @@ function urlencode {
 	setopt localoptions extendedglob
 	input=( ${(s::)1} )
 	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
+}
+
+function trn {
+	echo "$@" | trans
+}
+
+function trnf {
+	echo "$@" | trans :tl
+}
+
+function lc {
+	LESS_FILE=$1
+	cmd="$LESSC_PATH $LESS_FILE > styles.css"
+	green $cmd
+	$LESSC_PATH $LESS_FILE > styles.css
 }
