@@ -599,8 +599,6 @@ alias zshfind="file_grep ~/.zshrc"
 alias sshfind="file_grep ~/.ssh/config"
 
 # Web shortcuts
-alias translate="open https://translate.google.com/"
-
 alias recipe="open /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"
 
 alias reciped="open /Users/msl/Programming/robin/html-css/projects/recipe-finder/index.html"
@@ -709,6 +707,8 @@ alias workaddress="get_record work_address"
 alias workpostcode="get_record work_postcode"
 
 alias residency="$ADOBE_PATH $CANADA_HOME/residency_form.pdf"
+
+alias songs="cd $SONGS_HOME"
 
 alias sabihin="song sabihin_mo_na"
 

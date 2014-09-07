@@ -499,6 +499,39 @@ function wiki {
 	open "http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 }
 
-# function amazon {
-# 	open "http://www.amazon.com/s/ref=nb_sb_noss?url=search-alias%3Daps&field-keywords=Less%20Web%20Development%20Essentials"
-# }
+function translate {
+	while getopts :f:t: name
+	do
+		case $name in
+			f) FROM="$OPTARG" ;;
+			t) TO="$OPTARG" ;;
+			*) usage ;;                # display usage and exit
+		esac
+	done
+
+	if [[ "$FROM" == "" ]]
+	then
+		FROM="tl"
+	else
+		shift; shift;
+	fi
+
+	if [[ "$TO" == "" ]]
+	then
+		TO="en"
+	else
+		shift; shift;
+	fi
+	
+	echo $@
+
+	args="$@"
+	url="https://translate.google.com/#$FROM/$TO/$(urlencode ""$args"")"
+	open $url
+}
+
+function urlencode {
+	setopt localoptions extendedglob
+	input=( ${(s::)1} )
+	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
+}
