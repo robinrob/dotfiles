@@ -30,7 +30,7 @@ unalias d
 
 unalias s
 
-
+unalias gst
 
 
 # Hashes
