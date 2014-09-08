@@ -32,6 +32,9 @@ unalias s
 
 unalias gst
 
+unalias lc
+
+
 
 # Hashes
 ###############################################################################
@@ -97,7 +100,11 @@ alias dir="dirname"
 
 alias cdcocos="cd $COCOS_HOME"
 
-# Applications
+# Applications/Tools
+alias lessc="$LESSC_PATH"
+
+alias lc="lessc"
+
 alias chrome="$CHROME_PATH"
 
 alias adobe="$ADOBE_PATH"
@@ -165,6 +172,8 @@ alias cdjpr="cd_dir $JS_HOME practice"
 alias cdjs="cdj"
 
 alias cdh="cd_dir $HTMLCSS_HOME"
+
+alias cdls="cd_dir $HTMLLESS_HOME"
 
 alias cdrecipe="cd_dir $HTMLCSS_HOME/projects/recipe-finder"
 
@@ -496,6 +505,12 @@ alias fcl="fab clean"
 
 alias cgc="cat ~/.gitconfig"
 
+alias crk="cat Rakefile"
+
+alias mrk="mate Rakefile"
+
+alias mgf="mate Gemfile"
+
 alias mgi="mate .gitignore"
 
 alias mgm="mate .gitmodules"
@@ -601,6 +616,8 @@ alias sshfind="file_grep ~/.ssh/config"
 # Web shortcuts
 alias translate="open https://translate.google.com/"
 
+alias crockford="open https://www.youtube.com/results?search_query=douglas+crockford"
+
 alias recipe="open /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"
 
 alias reciped="open /Users/msl/Programming/robin/html-css/projects/recipe-finder/index.html"
@@ -613,7 +630,15 @@ alias mrr="open http://mrrobinsmith.com"
 
 alias mrrd="open http://localhost:3000"
 
+alias r4b3="open http://rails4-bootstrap3.herokuapp.com"
+
+alias r4b3-orig="open http://rails4-bootstrap3-orig.herokuapp.com"
+
+alias dev="open http://localhost:3000"
+
 alias van="open https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
+
+alias shopping="open https://docs.google.com/a/cloudreach.co.uk/spreadsheets/d/1rVCLgwbWg8uhbyCzyjRYTgpv2G08_Z-_aiwm2kNtI9w/edit#gid=0"
 
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
@@ -640,6 +665,10 @@ alias sf="safari"
 alias safaris="open http://my.safaribooksonline.com/search?q=$1"
 
 alias sfs="safaris"
+
+alias bksass="open http://my.safaribooksonline.com/book/web-development/css/9781849694544"
+
+alias bkless="open http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 
 alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 
@@ -711,6 +740,8 @@ alias workaddress="get_record work_address"
 alias workpostcode="get_record work_postcode"
 
 alias residency="$ADOBE_PATH $CANADA_HOME/residency_form.pdf"
+
+alias songs="cd $SONGS_HOME"
 
 alias sabihin="song sabihin_mo_na"
 

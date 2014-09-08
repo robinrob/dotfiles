@@ -116,34 +116,36 @@ function new_s {
 	new -i $INTERPRETER -e $EXTENSION -f $FILENAME
 }
 
+function hnew {
+	PROJECT=$1
+	cat $HTML_TEMPLATES_HOME/template.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+}
+
 function hcnew {
 	PROJECT=$1
+	cat $HTML_TEMPLATES_HOME/practice_css.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+}
+
+function hlnew {
+	PROJECT=$1
 	mkdir $PROJECT
+	cat $HTML_TEMPLATES_HOME/template.html | sed 's/Title/'$PROJECT'/' > $PROJECT/$PROJECT.html
+	touch $PROJECT/styles.less
 	cd $PROJECT
-	touch $PROJECT.html
-	touch styles.css
 }
 
-function hcprnew {
+function hjnew {
 	PROJECT=$1
-	cat $DOTFILES_HOME/templates/practice_css.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
-	# $EDITOR $PROJECT.html
+	cat $HTML_TEMPLATES_HOME/practice_js.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
 
-function hjprnew {
+function hbnew {
 	PROJECT=$1
-	cat $DOTFILES_HOME/templates/practice_js.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
-}
-
-function hbprnew {
-	PROJECT=$1
-	cat $DOTFILES_HOME/templates/practice_bootstrap.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
+	cat $HTML_TEMPLATES_HOME/practice_bootstrap.html | sed 's/Title/'$PROJECT'/' > $PROJECT.html
 }
 
 function jsnew {
 	new -i node -e js -o noopen -f $1
-	# rm $1.js
-	# cat $DOTFILES_HOME/templates/practice_js.js > $1.js
 	echo "require(process.env.JS_LIB_HOME + '/log')\n" >> $1.js
 }
 
@@ -154,12 +156,6 @@ function hcexample {
 	hnew $PROJECT
 	cssnew "style"
 	$EDITOR$EDITOR *
-}
-
-function hnew {
-	FILE="$1.html"
-	cp $HTML_TEMPLATE $FILE
-	$EDITOR $FILE
 }
 
 function cd_pull {
@@ -276,7 +272,7 @@ function libfind {
 		done
 	fi
 	
-	result_find=`find $DIR -type f -name "*$PATTERN*"`
+	result_find=`find $DIR -path ./lib -prune -o -type f -name "*$PATTERN*"`
 	results=("${(f)result_find}")
 	
 	for result in $results
@@ -318,7 +314,7 @@ function al {
 
 function fr {
 	PATTERN=$1
-	find . -name $PATTERN 2> /dev/null
+	find . -name *$PATTERN* 2> /dev/null
 }
 
 function file_grep {
@@ -489,4 +485,66 @@ function firefox {
 	FILE=$1
 	killp firefox
 	$FIREFOX_PATH $FILE
+}
+
+function safaris {
+	open "http://my.safaribooksonline.com/search?q=`urlencode $@`"
+}
+
+function wiki {
+	open "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
+}
+
+function amz {
+	open "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
+}
+
+function translate {
+	while getopts :f:t: name
+	do
+		case $name in
+			f) FROM="$OPTARG" ;;
+			t) TO="$OPTARG" ;;
+			*) usage ;;                # display usage and exit
+		esac
+	done
+
+	if [[ "$FROM" == "" ]]
+	then
+		FROM="tl"
+	else
+		shift; shift;
+	fi
+
+	if [[ "$TO" == "" ]]
+	then
+		TO="en"
+	else
+		shift; shift;
+	fi
+
+	args="$@"
+	url="https://translate.google.com/#$FROM/$TO/$(urlencode ""$args"")"
+	open $url
+}
+
+function urlencode {
+	setopt localoptions extendedglob
+	input=( ${(s::)@} )
+	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
+}
+
+function trn {
+	echo "$@" | trans
+}
+
+function trnf {
+	echo "$@" | trans :tl
+}
+
+function lc {
+	LESS_FILE=$1
+	cmd="$LESSC_PATH $LESS_FILE > styles.css"
+	green $cmd
+	$LESSC_PATH $LESS_FILE > styles.css
 }
