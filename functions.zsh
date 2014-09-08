@@ -272,7 +272,7 @@ function libfind {
 		done
 	fi
 	
-	result_find=`find $DIR -type f -name "*$PATTERN*"`
+	result_find=`find $DIR -path ./lib -prune -o -type f -name "*$PATTERN*"`
 	results=("${(f)result_find}")
 	
 	for result in $results

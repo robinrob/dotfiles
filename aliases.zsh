@@ -630,6 +630,8 @@ alias dev="open http://localhost:3000"
 
 alias van="open https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
 
+alias shopping="open https://docs.google.com/a/cloudreach.co.uk/spreadsheets/d/1rVCLgwbWg8uhbyCzyjRYTgpv2G08_Z-_aiwm2kNtI9w/edit#gid=0"
+
 alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
 alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
