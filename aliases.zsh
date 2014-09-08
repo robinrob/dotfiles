@@ -99,6 +99,8 @@ alias cdcocos="cd $COCOS_HOME"
 # Applications/Tools
 alias lessc="$LESSC_PATH"
 
+alias lc="lessc"
+
 alias chrome="$CHROME_PATH"
 
 alias adobe="$ADOBE_PATH"
@@ -499,6 +501,12 @@ alias fcl="fab clean"
 
 alias cgc="cat ~/.gitconfig"
 
+alias crk="cat Rakefile"
+
+alias mrk="mate Rakefile"
+
+alias mgf="mate Gemfile"
+
 alias mgi="mate .gitignore"
 
 alias mgm="mate .gitmodules"
@@ -602,6 +610,8 @@ alias zshfind="file_grep ~/.zshrc"
 alias sshfind="file_grep ~/.ssh/config"
 
 # Web shortcuts
+alias crockford="open https://www.youtube.com/results?search_query=douglas+crockford"
+
 alias recipe="open /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"
 
 alias reciped="open /Users/msl/Programming/robin/html-css/projects/recipe-finder/index.html"
@@ -612,7 +622,11 @@ alias ask="open http://stackoverflow.com/questions/ask"
 
 alias mrr="open http://mrrobinsmith.com"
 
-alias mrrd="open http://localhost:3000"
+alias r4b3="open http://rails4-bootstrap3.herokuapp.com"
+
+alias r4b3-orig="open http://rails4-bootstrap3-orig.herokuapp.com"
+
+alias dev="open http://localhost:3000"
 
 alias van="open https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
 
@@ -637,6 +651,8 @@ alias safari="open http://my.safaribooksonline.com/myrecentpages"
 alias sf="safari"
 
 alias sfs="safaris"
+
+alias bksass="open http://my.safaribooksonline.com/book/web-development/css/9781849694544"
 
 alias bkless="open http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 

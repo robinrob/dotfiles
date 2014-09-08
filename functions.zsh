@@ -314,7 +314,7 @@ function al {
 
 function fr {
 	PATTERN=$1
-	find . -name $PATTERN 2> /dev/null
+	find . -name *$PATTERN* 2> /dev/null
 }
 
 function file_grep {
@@ -488,11 +488,15 @@ function firefox {
 }
 
 function safaris {
-	open "http://my.safaribooksonline.com/search?q=$1"
+	open "http://my.safaribooksonline.com/search?q=`urlencode $@`"
 }
 
 function wiki {
-	open "http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
+	open "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
+}
+
+function amz {
+	open "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
 }
 
 function translate {
@@ -518,8 +522,6 @@ function translate {
 	else
 		shift; shift;
 	fi
-	
-	echo $@
 
 	args="$@"
 	url="https://translate.google.com/#$FROM/$TO/$(urlencode ""$args"")"
@@ -528,7 +530,7 @@ function translate {
 
 function urlencode {
 	setopt localoptions extendedglob
-	input=( ${(s::)1} )
+	input=( ${(s::)@} )
 	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
 }
 
