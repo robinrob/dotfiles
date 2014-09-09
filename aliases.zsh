@@ -80,6 +80,8 @@ alias more='less'
 
 alias x="chmod +x"
 
+alias mx="chmod -x"
+
 alias mkdir='mkdir -pv'
 
 alias wh="which"
@@ -101,6 +103,8 @@ alias dir="dirname"
 alias cdcocos="cd $COCOS_HOME"
 
 # Applications/Tools
+alias psql="/Applications/Postgres.app/Contents/Versions/9.3/bin/psql"
+
 alias lessc="$LESSC_PATH"
 
 alias lc="lessc"
@@ -636,7 +640,7 @@ alias r4b3-orig="open http://rails4-bootstrap3-orig.herokuapp.com"
 
 alias dev="open http://localhost:3000"
 
-alias van="open https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
+alias van="chrome https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
 
 alias shopping="open https://docs.google.com/a/cloudreach.co.uk/spreadsheets/d/1rVCLgwbWg8uhbyCzyjRYTgpv2G08_Z-_aiwm2kNtI9w/edit#gid=0"
 
