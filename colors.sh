@@ -24,53 +24,53 @@ cclightpurple=$(echo "\033[1;35m")
 ccguess=$(echo "\033[1;39m")
 
 function default() {
-	echo ${ccend}$1${ccend}
+	echo ${ccend}$@${ccend}
 }
 
 function black() {
-	echo ${ccblack}$1${ccend}
+	echo ${ccblack}$@${ccend}
 }
 
 function darkgrey() {
-	echo ${ccdarkgrey}$1${ccend}
+	echo ${ccdarkgrey}$@${ccend}
 }
 
 function red() {
-	echo ${ccred}$1${ccend}
+	echo ${ccred}$@${ccend}
 }
 
 function green() {
-	echo ${ccgreen}$1${ccend}
+	echo ${ccgreen}$@${ccend}
 }
 
 function yellow() {
-	echo ${ccyellow}$1${ccend}
+	echo ${ccyellow}$@${ccend}
 }
 
 function blue() {
-	echo ${ccblue}$1${ccend}
+	echo ${ccblue}$@${ccend}
 }
 
 function pink() {
-	echo ${ccpink}$1${ccend}
+	echo ${ccpink}$@${ccend}
 }
 
 function cyan() {
-	echo ${cccyan}$1${ccend}
+	echo ${cccyan}$@${ccend}
 }
 
 function white() {
-	echo ${ccwhite}$1${ccend}
+	echo ${ccwhite}$@${ccend}
 }
 
 function lightpurple() {
-	echo ${cclightpurple}$1${ccend}
+	echo ${cclightpurple}$@${ccend}
 }
 
 function brown() {
-	echo ${ccbrown}$1${ccend}
+	echo ${ccbrown}$@${ccend}
 }
 
 function lightblue() {
-	echo ${cclightblue}$1${ccend}
+	echo ${cclightblue}$@${ccend}
 }

@@ -7,6 +7,11 @@ function join {
 	local IFS="$1"; shift; echo "$*";
 }
 
+function join_args {
+	IFS=""
+	echo "$*"
+}
+
 function hidden_dir_exists() {
 	result=`find . -depth 1 -name $1`
 	if [ -n "$result" ]
@@ -339,6 +344,10 @@ function rake_do {
 	fi
 }
 
+function rsd {
+	rake_do "sub_deinit[$1]"
+}
+
 function rks {
 	rake_do save $@
 }
@@ -384,9 +393,13 @@ function lsd {
 	ls `dirname $1`
 }
 
+function silent_cp {
+	yes | cp $1 $2 1> /dev/null 2> /dev/null
+}
+
 function save_jetbrains {
 	echo "$(green "Copying Jetbrains config from: ")$(yellow "$INTELLIJ_CONFIG ...")"
-	cp $INTELLIJ_CONFIG $DOTFILES_HOME/
+	silent_cp $INTELLIJ_CONFIG $DOTFILES_HOME/
 }
 
 function cd_dir {
@@ -415,6 +428,24 @@ function bb {
 	open $url
 }
 
+function bb_url {
+	GIT_URL=`git config --get remote.origin.url`
+	echo "https://bitbucket.org/`echo $GIT_URL | awk '{split($1,a,"@"); print a[2]}' | awk '{split($1,a,":"); print a[2]}'`"
+}
+
+function bb_commit_url {
+	COMMIT=$1
+	echo "`bb_url`/commits/$COMMIT"
+}
+
+function bbcm {
+	open `bb_commit_url $1`
+}
+
+function bbcmr {
+	open "`bb_commit_url $1`/raw"
+}
+
 function cleanhome {
 	for file in `find . -name [a-zA-Z0-9]\* -depth 1 -type f`
 	do
@@ -440,14 +471,20 @@ function show_git {
 	fi
 }
 
-function git_remote_origin {
+function gro {
 	if [ "$(is_git)" ]
 	then
-		origin=`git config --get remote.origin.url`
-		green $origin
+		green `git_origin`
 	else
 		red "Not Git"
 	fi 
+}
+
+function git_origin {
+	if [ "$(is_git)" ]
+	then
+		echo `git config --get remote.origin.url`
+	fi
 }
 
 function delexcept {
@@ -475,6 +512,10 @@ function delexcept {
 
 function count_non_empty {
 	grep . $1 | wc -l
+}
+
+function lsp {
+	ls $1 | pb
 }
 
 function lsa {
@@ -547,4 +588,37 @@ function lc {
 	cmd="$LESSC_PATH $LESS_FILE > styles.css"
 	green $cmd
 	$LESSC_PATH $LESS_FILE > styles.css
+}
+
+function gdoc {
+	chrome $1
+}
+
+function web {
+	open `wrap_single $1`
+}
+
+function wrap_single {
+	echo "'$@'"
+}
+
+function bookmark {
+	NAME=$1
+	URL=$2
+	if [[ "$3" != "" ]]
+	then
+		BROWSER=$3
+	else
+		BROWSER="open"
+	fi
+	
+	result=`grep "alias $NAME" $DOTFILES_HOME/bookmarks.zsh`
+	if [[ "$result" != "" ]]
+	then
+		red "Bookmark already exists!"	
+	else
+		echo "\nalias ${NAME}=\"${BROWSER} '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
+		source $DOTFILES_HOME/bookmarks.zsh
+		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
+	fi
 }

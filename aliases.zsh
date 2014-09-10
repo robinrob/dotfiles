@@ -30,7 +30,16 @@ unalias d
 
 unalias s
 
+unalias gst
+
 unalias lc
+
+unalias sf
+
+
+# Web Shortcuts/Bookmarks
+source $DOTFILES_HOME/bookmarks.zsh
+
 
 # Hashes
 ###############################################################################
@@ -76,6 +85,8 @@ alias more='less'
 
 alias x="chmod +x"
 
+alias mx="chmod -x"
+
 alias mkdir='mkdir -pv'
 
 alias wh="which"
@@ -97,11 +108,15 @@ alias dir="dirname"
 alias cdcocos="cd $COCOS_HOME"
 
 # Applications/Tools
+alias psql="/Applications/Postgres.app/Contents/Versions/9.3/bin/psql"
+
 alias lessc="$LESSC_PATH"
 
 alias lc="lessc"
 
 alias chrome="$CHROME_PATH"
+
+alias safari="/Applications/Safari.app/Contents/MacOS/Safari"
 
 alias adobe="$ADOBE_PATH"
 
@@ -311,8 +326,6 @@ alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
 
-alias gro="git_remote_origin"
-
 alias grh="git reset HEAD"
 
 alias gra="git remote add"
@@ -426,6 +439,8 @@ alias ezsh="edit ~/.zshrc"
 alias ezs="ezsh"
 
 alias czsh="cat ~/.zshrc"
+
+alias mbk="m $DOTFILES_HOME/bookmarks.zsh"
 
 alias edit=$EDITOR
 
@@ -610,85 +625,6 @@ alias afind="libfind_s $AWK_HOME"
 alias zshfind="file_grep ~/.zshrc"
 
 alias sshfind="file_grep ~/.ssh/config"
-
-# Web shortcuts
-alias crockford="open https://www.youtube.com/results?search_query=douglas+crockford"
-
-alias recipe="open /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"
-
-alias reciped="open /Users/msl/Programming/robin/html-css/projects/recipe-finder/index.html"
-
-alias swimming="open http://www.newark-sherwooddc.gov.uk/glc/groveswimming/"
-
-alias ask="open http://stackoverflow.com/questions/ask"
-
-alias mrr="open http://mrrobinsmith.com"
-
-alias r4b3="open http://rails4-bootstrap3.herokuapp.com"
-
-alias r4b3-orig="open http://rails4-bootstrap3-orig.herokuapp.com"
-
-alias dev="open http://localhost:3000"
-
-alias van="open https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit"
-
-alias shopping="open https://docs.google.com/a/cloudreach.co.uk/spreadsheets/d/1rVCLgwbWg8uhbyCzyjRYTgpv2G08_Z-_aiwm2kNtI9w/edit#gid=0"
-
-alias gdoc="open 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
-
-alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
-
-alias stack="open http://stackoverflow.com/users/3946669/robin-smith"
-
-alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
-
-alias bbh="open https://bitbucket.org/dashboard/overview"
-
-alias bbc="open https://bitbucket.org/repo/create"
-
-alias news="open https://bbc.co.uk/news"
-
-alias learmount="open http://www.flightglobal.com/blogs/learmount"
-
-alias safari="open http://my.safaribooksonline.com/myrecentpages"
-
-alias sf="safari"
-
-alias sfs="safaris"
-
-alias bksass="open http://my.safaribooksonline.com/book/web-development/css/9781849694544"
-
-alias bkless="open http://my.safaribooksonline.com/book/web-development/css/9781783981465"
-
-alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
-
-alias bkstrap="open http://my.safaribooksonline.com/book/web-design-and-development/9781457174346"
-
-alias bkcss="open http://my.safaribooksonline.com/book/web-development/css/9781457174315"
-
-alias bkjsp="http://my.safaribooksonline.com/book/programming/javascript/9781449399115"
-
-alias bkjs="open http://my.safaribooksonline.com/book/programming/javascript/9781849693127"
-
-alias bkjs1="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
-
-alias bkrails="open http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
-
-alias bkzsh="open http://my.safaribooksonline.com/book/operating-systems-and-server-administration/unix/9781783282937"
-
-alias bkcocos="open http://my.safaribooksonline.com/book/programming/iphone/9780132180863"
-
-alias railst="open http://guides.rubyonrails.org/getting_started.html"
-
-alias google="open https://www.google.ca/#q=$1&safe=active"
-
-alias splw="open https://cr-splunk-1.cloudreach.co.uk:8000"
-
-alias stk="stackoverflow"
-
-alias wk="wiki"
-
-alias gg="google"
 
 # Records & docs
 alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
