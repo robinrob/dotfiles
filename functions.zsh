@@ -607,7 +607,8 @@ function bookmark {
 	then
 		red "Bookmark already exists!"	
 	else
-		echo "\nalias ${NAME}=\"open ${URL}\"" >> $DOTFILES_HOME/bookmarks.zsh
+		echo "\nalias ${NAME}=\"open '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
+		source $DOTFILES_HOME/bookmarks.zsh
 		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
 	fi
 }

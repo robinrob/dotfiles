@@ -1,7 +1,4 @@
 # Bookmarks
-alias robscases="web https://cloudreach.my.salesforce.com/500?fcf=00B20000006RBOv"
-
-alias gabscases="web https://cloudreach.my.salesforce.com/500?fcf=00B20000006SMJf"
 
 alias translate="open https://translate.google.com/"
 
@@ -87,4 +84,10 @@ alias wk="wiki"
 
 alias gg="google"
 
-alias robin="open http://mrrobinsmith.com"
+alias robscases="open 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006RBOv'"
+
+alias gabscases="open 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006SMJf'"
+
+alias unassigned="open 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079jxp'"
+
+alias pending="open 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006XDXH'"
