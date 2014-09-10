@@ -605,13 +605,19 @@ function wrap_single {
 function bookmark {
 	NAME=$1
 	URL=$2
+	if [[ "$3" != "" ]]
+	then
+		BROWSER=$3
+	else
+		BROWSER="open"
+	fi
 	
 	result=`grep "alias $NAME" $DOTFILES_HOME/bookmarks.zsh`
 	if [[ "$result" != "" ]]
 	then
 		red "Bookmark already exists!"	
 	else
-		echo "\nalias ${NAME}=\"open '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
+		echo "\nalias ${NAME}=\"${BROWSER} '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
 		source $DOTFILES_HOME/bookmarks.zsh
 		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
 	fi

@@ -2,7 +2,7 @@
 
 alias translate="open https://translate.google.com/"
 
-alias crockford="open https://www.youtube.com/results?search_query=douglas+crockford"
+alias crockford="open 'https://www.youtube.com/results?search_query=douglas+crockford'"
 
 alias recipe="open /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"
 
@@ -21,8 +21,6 @@ alias r4b3="open http://rails4-bootstrap3.herokuapp.com"
 alias r4b3-orig="open http://rails4-bootstrap3-orig.herokuapp.com"
 
 alias dev="open http://localhost:3000"
-
-alias van="gdoc 'https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit'"
 
 alias venues="gdoc 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc?key=0AoV1py6VJXyMdEw1ZmhfOWZLaGZzdTk1Q3VkZjYwLXc#gid=0'"
 
@@ -91,3 +89,9 @@ alias gabscases="open 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006S
 alias unassigned="open 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079jxp'"
 
 alias pending="open 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006XDXH'"
+
+alias van="chrome 'https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit'"
+
+alias petr="open 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079yBg'"
+
+alias zenoss="open 'http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole'"
