@@ -393,13 +393,13 @@ function lsd {
 	ls `dirname $1`
 }
 
+function silient_cp {
+	yes | cp $1 $2 1> /dev/null 2> /dev/null
+}
+
 function save_jetbrains {
 	echo "$(green "Copying Jetbrains config from: ")$(yellow "$INTELLIJ_CONFIG ...")"
 	silent_cp $INTELLIJ_CONFIG $DOTFILES_HOME/
-}
-
-function silient_cp {
-	yes | cp $1 $2 1> /dev/null 2> /dev/null
 }
 
 function cd_dir {
