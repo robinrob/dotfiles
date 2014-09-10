@@ -622,3 +622,13 @@ function bookmark {
 		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
 	fi
 }
+
+function wiki {
+	SEARCH_TERMS="$@"
+	open "http://en.wikipedia.org/wiki/Special:Search?search=${SEARCH_TERMS}&go=Go"
+}
+
+function sfs {
+	SEARCH_TERMS="$@"
+	open "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
+}

@@ -42,11 +42,7 @@ alias news="open https://bbc.co.uk/news"
 
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
-alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
-
 alias sf="open http://my.safaribooksonline.com/myrecentpages"
-
-alias sfs="open http://my.safaribooksonline.com/search?q=$1"
 
 alias bksass="open http://my.safaribooksonline.com/book/web-development/css/9781849694544"
 
