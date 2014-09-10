@@ -28,8 +28,6 @@ alias shopping="gdoc 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc
 
 alias gdoct="gdoc https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#"
 
-alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
-
 alias stack="open http://stackoverflow.com/users/3946669/robin-smith"
 
 alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
@@ -65,6 +63,8 @@ alias bkjs="open http://my.safaribooksonline.com/book/programming/javascript/978
 alias bkjs1="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
 
 alias bkrails="open http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
+
+alias bkpg="safari http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
 alias bkzsh="open http://my.safaribooksonline.com/book/operating-systems-and-server-administration/unix/9781783282937"
 

@@ -91,6 +91,8 @@ alias mkdir='mkdir -pv'
 
 alias wh="which"
 
+alias w="which"
+
 alias chr="chrome"
 
 alias lsl="ls -l"
@@ -114,17 +116,11 @@ alias lessc="$LESSC_PATH"
 
 alias lc="lessc"
 
-alias chrome="$CHROME_PATH"
+alias chrome="open -a 'Google Chrome'"
 
-alias safari="/Applications/Safari.app/Contents/MacOS/Safari"
+alias safari="open -a Safari"
 
-alias adobe="$ADOBE_PATH"
-
-alias m="mate"
-
-alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
-
-alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+alias firefox="open -a Firefox"
 
 alias firefoxp="/Applications/Firefox.app/Contents/MacOS/firefox-bin -p"
 
@@ -137,6 +133,14 @@ alias ffr="firefoxr"
 alias firefoxc="/Applications/Firefox.app/Contents/MacOS/firefox-bin -p Cloudreach &"
 
 alias ffc="firefoxc"
+
+alias adobe="$ADOBE_PATH"
+
+alias m="mate"
+
+alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
+
+alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
 # Navigation
 

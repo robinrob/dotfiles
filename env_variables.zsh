@@ -149,10 +149,6 @@ export CAMERA_HOME=$FILES_HOME/"Camera Uploads"
 
 export TRASH_HOME=~/.Trash
 
-export CHROME_PATH="/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome"
-
-export FIREFOX_PATH="/Applications/Firefox.app/Contents/MacOS/firefox"
-
 export CANADA_HOME=$MERCURY_HOME/docs/IMPORTANT/canada
 
 export ADOBE_PATH="/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader"

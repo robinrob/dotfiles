@@ -522,12 +522,6 @@ function lsa {
 	ls $PWD/$1
 }
 
-function firefox {
-	FILE=$1
-	killp firefox
-	$FIREFOX_PATH $FILE
-}
-
 function safaris {
 	open "http://my.safaribooksonline.com/search?q=`urlencode $@`"
 }
