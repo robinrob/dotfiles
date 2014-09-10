@@ -125,6 +125,8 @@ alias ffc="firefoxc"
 
 # Navigation
 
+alias cdi="cd_dir"
+
 alias cdpr="cd_dir $PROG_HOME"
 
 alias cdc="cdpr"
@@ -698,6 +700,8 @@ alias cardcredit="get_record rbc-credit"
 alias cardhsbc="get_record hsbc-debit"
 
 alias cardrbc="get_record rbc-debit"
+
+alias doc="cat $IMPORTANT_HOME/records/doc.txt"
 
 alias docsec1="get_record doctors_secretary1"
 
