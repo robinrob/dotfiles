@@ -7,6 +7,11 @@ function join {
 	local IFS="$1"; shift; echo "$*";
 }
 
+function join_args {
+	IFS=""
+	echo "$*"
+}
+
 function hidden_dir_exists() {
 	result=`find . -depth 1 -name $1`
 	if [ -n "$result" ]
@@ -582,10 +587,27 @@ function lc {
 }
 
 function gdoc {
-	URL=$1
-	chrome `wrap_single $1`
+	chrome $1
+}
+
+function web {
+	open `wrap_single $1`
 }
 
 function wrap_single {
 	echo "'$@'"
+}
+
+function bookmark {
+	NAME=$1
+	URL=$2
+	
+	result=`grep "alias $NAME" $DOTFILES_HOME/bookmarks.zsh`
+	if [[ "$result" != "" ]]
+	then
+		red "Bookmark already exists!"	
+	else
+		echo "\nalias ${NAME}=\"open ${URL}\"" >> $DOTFILES_HOME/bookmarks.zsh
+		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
+	fi
 }
