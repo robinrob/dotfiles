@@ -393,7 +393,7 @@ function lsd {
 	ls `dirname $1`
 }
 
-function silient_cp {
+function silent_cp {
 	yes | cp $1 $2 1> /dev/null 2> /dev/null
 }
 
