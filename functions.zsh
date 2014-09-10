@@ -339,6 +339,10 @@ function rake_do {
 	fi
 }
 
+function rsd {
+	rake_do "sub_deinit[$1]"
+}
+
 function rks {
 	rake_do save $@
 }
@@ -415,6 +419,24 @@ function bb {
 	open $url
 }
 
+function bb_url {
+	GIT_URL=`git config --get remote.origin.url`
+	echo "https://bitbucket.org/`echo $GIT_URL | awk '{split($1,a,"@"); print a[2]}' | awk '{split($1,a,":"); print a[2]}'`"
+}
+
+function bb_commit_url {
+	COMMIT=$1
+	echo "`bb_url`/commits/$COMMIT"
+}
+
+function bbcm {
+	open `bb_commit_url $1`
+}
+
+function bbcmr {
+	open "`bb_commit_url $1`/raw"
+}
+
 function cleanhome {
 	for file in `find . -name [a-zA-Z0-9]\* -depth 1 -type f`
 	do
@@ -440,14 +462,20 @@ function show_git {
 	fi
 }
 
-function git_remote_origin {
+function gro {
 	if [ "$(is_git)" ]
 	then
-		origin=`git config --get remote.origin.url`
-		green $origin
+		green `git_origin`
 	else
 		red "Not Git"
 	fi 
+}
+
+function git_origin {
+	if [ "$(is_git)" ]
+	then
+		echo `git config --get remote.origin.url`
+	fi
 }
 
 function delexcept {

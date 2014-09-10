@@ -35,7 +35,6 @@ unalias gst
 unalias lc
 
 
-
 # Hashes
 ###############################################################################
 
@@ -318,8 +317,6 @@ alias gsur="git submodule update --init --recursive"
 alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
-
-alias gro="git_remote_origin"
 
 alias grh="git reset HEAD"
 
