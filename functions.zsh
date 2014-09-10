@@ -580,3 +580,12 @@ function lc {
 	green $cmd
 	$LESSC_PATH $LESS_FILE > styles.css
 }
+
+function gdoc {
+	URL=$1
+	chrome `wrap_single $1`
+}
+
+function wrap_single {
+	echo "'$@'"
+}
