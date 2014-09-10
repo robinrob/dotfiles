@@ -120,6 +120,8 @@ alias chrome="open -a 'Google Chrome'"
 
 alias safari="open -a Safari"
 
+alias book="safari"
+
 alias firefox="open -a Firefox"
 
 alias firefoxp="/Applications/Firefox.app/Contents/MacOS/firefox-bin -p"

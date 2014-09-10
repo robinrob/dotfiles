@@ -42,33 +42,33 @@ alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
 alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 
-alias sf="open http://my.safaribooksonline.com/myrecentpages"
+alias sf="book http://my.safaribooksonline.com/myrecentpages"
 
-alias sfs="open http://my.safaribooksonline.com/search?q=$1"
+alias sfs="book http://my.safaribooksonline.com/search?q=$1"
 
-alias bksass="open http://my.safaribooksonline.com/book/web-development/css/9781849694544"
+alias bksass="book http://my.safaribooksonline.com/book/web-development/css/9781849694544"
 
-alias bkless="open http://my.safaribooksonline.com/book/web-development/css/9781783981465"
+alias bkless="book http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 
-alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
+alias bkhtml5="book http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
 
-alias bkstrap="open http://my.safaribooksonline.com/book/web-design-and-development/9781457174346"
+alias bkstrap="book http://my.safaribooksonline.com/book/web-design-and-development/9781457174346"
 
-alias bkcss="open http://my.safaribooksonline.com/book/web-development/css/9781457174315"
+alias bkcss="book http://my.safaribooksonline.com/book/web-development/css/9781457174315"
 
 alias bkjsp="http://my.safaribooksonline.com/book/programming/javascript/9781449399115"
 
-alias bkjs="open http://my.safaribooksonline.com/book/programming/javascript/9781849693127"
+alias bkjs="book http://my.safaribooksonline.com/book/programming/javascript/9781849693127"
 
-alias bkjs1="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
+alias bkjs1="book http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
 
-alias bkrails="open http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
+alias bkrails="book http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
 
 alias bkpg="safari http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
-alias bkzsh="open http://my.safaribooksonline.com/book/operating-systems-and-server-administration/unix/9781783282937"
+alias bkzsh="book http://my.safaribooksonline.com/book/operating-systems-and-server-administration/unix/9781783282937"
 
-alias bkcocos="open http://my.safaribooksonline.com/book/programming/iphone/9780132180863"
+alias bkcocos="book http://my.safaribooksonline.com/book/programming/iphone/9780132180863"
 
 alias railst="open http://guides.rubyonrails.org/getting_started.html"
 
