@@ -477,6 +477,10 @@ function count_non_empty {
 	grep . $1 | wc -l
 }
 
+function lsp {
+	ls $1 | pb
+}
+
 function lsa {
 	ls $PWD/$1
 }
