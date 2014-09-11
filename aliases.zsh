@@ -59,6 +59,8 @@ hash -d html-css="$HTMLCSS_HOME"
 ###############################################################################
 
 # Global aliases
+alias -g Chrome="'Google Chrome'"
+
 # alias -g p="prog"
 #
 # alias -g r="rby"

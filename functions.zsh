@@ -1,6 +1,8 @@
 # Functions
 ###############################################################################
 
+# NEVER use aliases in this file! This file is loaded first before aliases.
+
 source $DOTFILES_HOME/colors.sh
 
 function join {
@@ -65,10 +67,7 @@ function new {
 		esac
 	done
 	
-	if ! [[ "${FILENAME##*\.}" == "$FILENAME" ]]
-	then
-		FILENAME="${FILENAME##*\.}"
-	fi
+	# FILENAME=`echo $FILENAME | awk 'FS='.' '
 	
 	FILE="$FILENAME.$EXTENSION"
 	FILE_DISPLAY=$(yellow $FILE)
@@ -617,6 +616,17 @@ function bookmark {
 	fi
 }
 
+function dev {
+	BROWSER=$1
+	
+	if [[ "$BROWSER" == "" ]]
+	then
+		BROWSER=$DEFAULT_BROWSER
+	fi
+	
+	open -a $BROWSER http://localhost:3000
+}
+
 function wiki {
 	SEARCH_TERMS="$@"
 	open "http://en.wikipedia.org/wiki/Special:Search?search=${SEARCH_TERMS}&go=Go"
@@ -624,5 +634,5 @@ function wiki {
 
 function sfs {
 	SEARCH_TERMS="$@"
-	open "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
+	open -a Safari "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
 }
