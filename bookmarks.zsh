@@ -40,16 +40,13 @@ alias news="open https://bbc.co.uk/news"
 
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
-alias sf="open http://my.safaribooksonline.com/myrecentpages"
-
-alias bksass="open http://my.safaribooksonline.com/book/web-development/css/9781849694544"
-alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
-
 alias sf="book http://my.safaribooksonline.com/myrecentpages"
 
-alias sfs="book http://my.safaribooksonline.com/search?q=$1"
+alias bkrb="book http://my.safaribooksonline.com/book/web-development/ruby/9780132480352"
 
-bksass="book http://my.safaribooksonline.com/book/web-development/css/9781849694544"			
+alias bksass="book http://my.safaribooksonline.com/book/web-development/css/9781849694544"
+
+alias sf="book http://my.safaribooksonline.com/myrecentpages"
 
 alias bkless="book http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 
@@ -98,3 +95,5 @@ alias van="chrome 'https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNa
 alias petr="open 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079yBg'"
 
 alias zenoss="open 'http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole'"
+
+alias robin="open 'http://mrrobinsmith.com'"
