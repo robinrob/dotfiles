@@ -67,10 +67,7 @@ function new {
 		esac
 	done
 	
-	if ! [[ "${FILENAME##*\.}" == "$FILENAME" ]]
-	then
-		FILENAME="${FILENAME##*\.}"
-	fi
+	# FILENAME=`echo $FILENAME | awk 'FS='.' '
 	
 	FILE="$FILENAME.$EXTENSION"
 	FILE_DISPLAY=$(yellow $FILE)
