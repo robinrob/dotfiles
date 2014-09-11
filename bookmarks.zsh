@@ -38,9 +38,9 @@ alias news="open https://bbc.co.uk/news"
 
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
-alias sf="open http://my.safaribooksonline.com/myrecentpages"
+alias sf="safari http://my.safaribooksonline.com/myrecentpages"
 
-alias bksass="open http://my.safaribooksonline.com/book/web-development/css/9781849694544"
+alias bksass="safari http://my.safaribooksonline.com/book/web-development/css/9781849694544"
 
 alias sf="book http://my.safaribooksonline.com/myrecentpages"
 

@@ -635,5 +635,5 @@ function wiki {
 
 function sfs {
 	SEARCH_TERMS="$@"
-	open "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
+	safari "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
 }
