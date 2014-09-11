@@ -627,3 +627,13 @@ function dev {
 	
 	open -a $BROWSER http://localhost:3000
 }
+
+function wiki {
+	SEARCH_TERMS="$@"
+	open "http://en.wikipedia.org/wiki/Special:Search?search=${SEARCH_TERMS}&go=Go"
+}
+
+function sfs {
+	SEARCH_TERMS="$@"
+	open "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
+}
