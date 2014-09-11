@@ -28,8 +28,6 @@ alias shopping="gdoc 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc
 
 alias gdoct="gdoc https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#"
 
-alias book="open http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
-
 alias stack="open http://stackoverflow.com/users/3946669/robin-smith"
 
 alias work="open http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
@@ -42,29 +40,41 @@ alias news="open https://bbc.co.uk/news"
 
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
+<<<<<<< HEAD
 alias sf="open http://my.safaribooksonline.com/myrecentpages"
 
 alias bksass="open http://my.safaribooksonline.com/book/web-development/css/9781849694544"
+=======
+alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 
-alias bkless="open http://my.safaribooksonline.com/book/web-development/css/9781783981465"
+alias sf="book http://my.safaribooksonline.com/myrecentpages"
 
-alias bkhtml5="open http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
+alias sfs="book http://my.safaribooksonline.com/search?q=$1"
 
-alias bkstrap="open http://my.safaribooksonline.com/book/web-design-and-development/9781457174346"
+alias bksass="book http://my.safaribooksonline.com/book/web-development/css/9781849694544"
+>>>>>>> fbe426b667217181219e8b46fbd8ec07f02c496f
 
-alias bkcss="open http://my.safaribooksonline.com/book/web-development/css/9781457174315"
+alias bkless="book http://my.safaribooksonline.com/book/web-development/css/9781783981465"
+
+alias bkhtml5="book http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
+
+alias bkstrap="book http://my.safaribooksonline.com/book/web-design-and-development/9781457174346"
+
+alias bkcss="book http://my.safaribooksonline.com/book/web-development/css/9781457174315"
 
 alias bkjsp="http://my.safaribooksonline.com/book/programming/javascript/9781449399115"
 
-alias bkjs="open http://my.safaribooksonline.com/book/programming/javascript/9781849693127"
+alias bkjs="book http://my.safaribooksonline.com/book/programming/javascript/9781849693127"
 
-alias bkjs1="open http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
+alias bkjs1="book http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
 
-alias bkrails="open http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
+alias bkrails="book http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
 
-alias bkzsh="open http://my.safaribooksonline.com/book/operating-systems-and-server-administration/unix/9781783282937"
+alias bkpg="safari http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
-alias bkcocos="open http://my.safaribooksonline.com/book/programming/iphone/9780132180863"
+alias bkzsh="book http://my.safaribooksonline.com/book/operating-systems-and-server-administration/unix/9781783282937"
+
+alias bkcocos="book http://my.safaribooksonline.com/book/programming/iphone/9780132180863"
 
 alias railst="open http://guides.rubyonrails.org/getting_started.html"
 

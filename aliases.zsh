@@ -91,6 +91,8 @@ alias mkdir='mkdir -pv'
 
 alias wh="which"
 
+alias w="which"
+
 alias chr="chrome"
 
 alias lsl="ls -l"
@@ -114,17 +116,13 @@ alias lessc="$LESSC_PATH"
 
 alias lc="lessc"
 
-alias chrome="$CHROME_PATH"
+alias chrome="open -a 'Google Chrome'"
 
-alias safari="/Applications/Safari.app/Contents/MacOS/Safari"
+alias safari="open -a Safari"
 
-alias adobe="$ADOBE_PATH"
+alias book="safari"
 
-alias m="mate"
-
-alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
-
-alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+alias firefox="open -a Firefox"
 
 alias firefoxp="/Applications/Firefox.app/Contents/MacOS/firefox-bin -p"
 
@@ -138,7 +136,17 @@ alias firefoxc="/Applications/Firefox.app/Contents/MacOS/firefox-bin -p Cloudrea
 
 alias ffc="firefoxc"
 
+alias adobe="$ADOBE_PATH"
+
+alias m="mate"
+
+alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
+
+alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
+
 # Navigation
+
+alias cdi="cd_dir"
 
 alias cdpr="cd_dir $PROG_HOME"
 
@@ -634,6 +642,8 @@ alias cardcredit="get_record rbc-credit"
 alias cardhsbc="get_record hsbc-debit"
 
 alias cardrbc="get_record rbc-debit"
+
+alias doc="cat $IMPORTANT_HOME/records/doc.txt"
 
 alias docsec1="get_record doctors_secretary1"
 
