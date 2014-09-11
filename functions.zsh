@@ -1,6 +1,8 @@
 # Functions
 ###############################################################################
 
+# NEVER use aliases in this file! This file is loaded first before aliases.
+
 source $DOTFILES_HOME/colors.sh
 
 function join {
@@ -635,5 +637,5 @@ function wiki {
 
 function sfs {
 	SEARCH_TERMS="$@"
-	safari "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
+	open -a Safari "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
 }

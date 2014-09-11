@@ -44,6 +44,8 @@ alias bksass="safari http://my.safaribooksonline.com/book/web-development/css/97
 
 alias sf="book http://my.safaribooksonline.com/myrecentpages"
 
+alias bkrb="book http://my.safaribooksonline.com/book/web-development/ruby/9780132480352"
+
 alias bkless="book http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 
 alias bkhtml5="book http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
@@ -52,7 +54,7 @@ alias bkstrap="book http://my.safaribooksonline.com/book/web-design-and-developm
 
 alias bkcss="book http://my.safaribooksonline.com/book/web-development/css/9781457174315"
 
-alias bkjsp="http://my.safaribooksonline.com/book/programming/javascript/9781449399115"
+alias bkjsp="book http://my.safaribooksonline.com/book/programming/javascript/9781449399115"
 
 alias bkjs="book http://my.safaribooksonline.com/book/programming/javascript/9781849693127"
 
@@ -60,7 +62,7 @@ alias bkjs1="book http://my.safaribooksonline.com/book/programming/javascript/97
 
 alias bkrails="book http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
 
-alias bkpg="safari http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
+alias bkpg="book http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
 alias bkzsh="book http://my.safaribooksonline.com/book/operating-systems-and-server-administration/unix/9781783282937"
 
