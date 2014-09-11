@@ -40,19 +40,16 @@ alias news="open https://bbc.co.uk/news"
 
 alias learmount="open http://www.flightglobal.com/blogs/learmount"
 
-<<<<<<< HEAD
 alias sf="open http://my.safaribooksonline.com/myrecentpages"
 
 alias bksass="open http://my.safaribooksonline.com/book/web-development/css/9781849694544"
-=======
 alias wiki="open http://en.wikipedia.org/wiki/Special:Search?search=$1&go=Go"
 
 alias sf="book http://my.safaribooksonline.com/myrecentpages"
 
 alias sfs="book http://my.safaribooksonline.com/search?q=$1"
 
-alias bksass="book http://my.safaribooksonline.com/book/web-development/css/9781849694544"
->>>>>>> fbe426b667217181219e8b46fbd8ec07f02c496f
+bksass="book http://my.safaribooksonline.com/book/web-development/css/9781849694544"			
 
 alias bkless="book http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 
