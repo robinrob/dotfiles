@@ -151,6 +151,8 @@ export TRASH_HOME=~/.Trash
 
 export CANADA_HOME=$MERCURY_HOME/docs/IMPORTANT/canada
 
+export DEFAULT_BROWSER="Firefox"
+
 export ADOBE_PATH="/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader"
 
 export COCOS_HOME="/usr/local/Library/cocos2d-js-v3.0-rc2"

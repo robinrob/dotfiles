@@ -20,8 +20,6 @@ alias r4b3="open http://rails4-bootstrap3.herokuapp.com"
 
 alias r4b3-orig="open http://rails4-bootstrap3-orig.herokuapp.com"
 
-alias dev="open http://localhost:3000"
-
 alias venues="gdoc 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc?key=0AoV1py6VJXyMdEw1ZmhfOWZLaGZzdTk1Q3VkZjYwLXc#gid=0'"
 
 alias shopping="gdoc 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc?key=1rVCLgwbWg8uhbyCzyjRYTgpv2G08_Z-_aiwm2kNtI9w#gid=0'"

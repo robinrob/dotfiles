@@ -616,3 +616,14 @@ function bookmark {
 		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
 	fi
 }
+
+function dev {
+	BROWSER=$1
+	
+	if [[ "$BROWSER" == "" ]]
+	then
+		BROWSER=$DEFAULT_BROWSER
+	fi
+	
+	open -a $BROWSER http://localhost:3000
+}
