@@ -522,6 +522,12 @@ function wiki {
 	open "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
 }
 
+function urlencode {
+	setopt localoptions extendedglob
+	input=( ${(s::)@} )
+	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
+}
+
 function google {
 	open "https://www.google.ca/#q=`urlencode $@`&safe=active"
 }
@@ -561,12 +567,6 @@ function translate {
 	args="$@"
 	url="https://translate.google.com/#$FROM/$TO/$(urlencode ""$args"")"
 	open $url
-}
-
-function urlencode {
-	setopt localoptions extendedglob
-	input=( ${(s::)@} )
-	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
 }
 
 function trn {

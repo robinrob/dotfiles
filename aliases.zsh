@@ -118,6 +118,8 @@ alias dir="dirname"
 alias cdcocos="cd $COCOS_HOME"
 
 # Applications/Tools
+alias browser="open -a $DEFAULT_BROWSER"
+
 alias psql="/Applications/Postgres.app/Contents/Versions/9.3/bin/psql"
 
 alias lessc="$LESSC_PATH"
