@@ -69,15 +69,9 @@ alias bkcocos="book http://my.safaribooksonline.com/book/programming/iphone/9780
 
 alias railst="open http://guides.rubyonrails.org/getting_started.html"
 
-alias google="open https://www.google.ca/#q=$1&safe=active"
-
 alias splw="open https://cr-splunk-1.cloudreach.co.uk:8000"
 
 alias stk="stackoverflow"
-
-alias wk="wiki"
-
-alias gg="google"
 
 alias robscases="open 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006RBOv'"
 

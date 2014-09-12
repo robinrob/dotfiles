@@ -116,6 +116,7 @@ function new_s {
 	INTERPRETER=$1
 	EXTENSION=$2
 	FILENAME=$3
+	NOOPEN=$3
 	
 	new -i $INTERPRETER -e $EXTENSION -f $FILENAME
 }
@@ -529,6 +530,14 @@ function wiki {
 	open "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
 }
 
+function google {
+	open "https://www.google.ca/#q=`urlencode $@`&safe=active"
+}
+
+function rubydoc {
+	open "http://ruby-doc.com/search.html?&q=`urlencode $@`"
+}
+
 function amz {
 	open "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
 }
@@ -584,7 +593,7 @@ function lc {
 }
 
 function gdoc {
-	chrome $1
+	open -a Chrome $1
 }
 
 function web {
@@ -635,4 +644,9 @@ function wiki {
 function sfs {
 	SEARCH_TERMS="$@"
 	open -a Safari "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
+}
+
+function unixtime {
+	SECS=$1
+	ruby -e "require 'Date'; puts DateTime.strptime('$SECS', '%s')"
 }

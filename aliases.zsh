@@ -38,6 +38,12 @@ unalias sf
 
 
 # Web Shortcuts/Bookmarks
+alias rd="rubydoc"
+
+alias wk="wiki"
+
+alias gg="google"
+
 source $DOTFILES_HOME/bookmarks.zsh
 
 
@@ -259,9 +265,7 @@ alias snew="new_s sh sh"
 
 alias znew="new_s zsh zsh"
 
-alias rnew="new_s ruby rb"
-
-# alias jsnew="new -i node -e js -o noopen -f"
+alias rnew="new -i ruby -e rb -o noopen -f"
 
 alias jnew="jsnew"
 
