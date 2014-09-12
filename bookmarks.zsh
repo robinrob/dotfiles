@@ -88,3 +88,7 @@ alias petr="open 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079yBg'"
 alias zenoss="open 'http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole'"
 
 alias robin="open 'http://mrrobinsmith.com'"
+
+alias crockfordlanguage="open 'https://www.youtube.com/watch?v=9e_oEE72d3U'"
+
+alias renew="open 'https://vpl.bibliocommons.com/user/login'"
