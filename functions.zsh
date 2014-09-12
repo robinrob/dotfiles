@@ -14,14 +14,6 @@ function join_args {
 	echo "$*"
 }
 
-function hidden_dir_exists() {
-	result=`find . -depth 1 -name $1`
-	if [ -n "$result" ]
-	then
-	  echo "yes"
-	fi
-}
-
 function cat_print {
 	cat $1 && cat $1 | pbcopy
 }
@@ -649,4 +641,8 @@ function sfs {
 function unixtime {
 	SECS=$1
 	ruby -e "require 'Date'; puts DateTime.strptime('$SECS', '%s')"
+}
+
+function timeunix {
+	ruby -e "require 'Time'; puts Time.now().to_i"
 }
