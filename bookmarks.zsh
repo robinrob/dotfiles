@@ -22,11 +22,11 @@ alias r4b3-orig="browser http://rails4-bootstrap3-orig.herokuapp.com"
 
 alias dev="browser http://localhost:3000"
 
-alias venues="gdoc 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc?key=0AoV1py6VJXyMdEw1ZmhfOWZLaGZzdTk1Q3VkZjYwLXc#gid=0'"
+alias venues="chrome 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc?key=0AoV1py6VJXyMdEw1ZmhfOWZLaGZzdTk1Q3VkZjYwLXc#gid=0'"
 
-alias shopping="gdoc 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc?key=1rVCLgwbWg8uhbyCzyjRYTgpv2G08_Z-_aiwm2kNtI9w#gid=0'"
+alias shopping="chrome 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc?key=1rVCLgwbWg8uhbyCzyjRYTgpv2G08_Z-_aiwm2kNtI9w#gid=0'"
 
-alias gdoct="gdoc https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#"
+alias gtemp="chrome 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
 alias stack="browser http://stackoverflow.com/users/3946669/robin-smith"
 

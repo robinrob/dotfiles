@@ -404,6 +404,14 @@ function cddir {
 	cd `dirname $1`
 }
 
+function browser {
+	open -a $BROWSER $@
+}
+
+function chrome {
+	open -a Google\ Chrome $@
+}
+
 function bb {
 	result=`ls -d .git 2> /dev/null`
 	if [ "$result" ]
@@ -417,7 +425,7 @@ function bb {
 	fi
 	
 	green "Opening $url ..."
-	open $url
+	open -a $BROWSER $url
 }
 
 function bb_url {
@@ -582,10 +590,6 @@ function lc {
 	cmd="$LESSC_PATH $LESS_FILE > styles.css"
 	green $cmd
 	$LESSC_PATH $LESS_FILE > styles.css
-}
-
-function gdoc {
-	open -a Chrome $1
 }
 
 function web {
