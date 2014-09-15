@@ -1,4 +1,4 @@
-source ~/Programming/robin/dotfiles/colors.sh
+source ~/Programming/robin/dotfiles/colors.zsh
 
 echo "$(white I)$(yellow " am ")$(cyan awesome)"
 
@@ -47,10 +47,11 @@ set -o vi
 
 # Ruby
 ######
-rvm use ruby-2.1.1 1> /dev/null
-green "Using \`Ruby-2.1.1\`"
+ruby="2.1.1"
+eval "rvm use ruby-"$ruby 1> /dev/null
+green "Using \`Ruby-$ruby\`"
 
-if [ "$HOSTNAME" = "venus.local" ]
+if [[ "$HOSTNAME" == "venus.local" ]]
 then
 	rvm gemset use chef --create
 fi
@@ -59,7 +60,7 @@ fi
 ########
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
-pythonbrew use 2.7 2> /dev/null
+pythonbrew use 3.2 2> /dev/null
 
 
 # Environment variables

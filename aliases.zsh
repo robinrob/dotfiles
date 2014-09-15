@@ -118,6 +118,10 @@ alias dir="dirname"
 alias cdcocos="cd $COCOS_HOME"
 
 # Applications/Tools
+alias tran="trans :tl"
+
+alias tren="trans :en"
+
 alias psql="/Applications/Postgres.app/Contents/Versions/9.3/bin/psql"
 
 alias lessc="$LESSC_PATH"
@@ -265,7 +269,7 @@ alias snew="new_s sh sh"
 
 alias znew="new_s zsh zsh"
 
-alias rnew="new -i ruby -e rb -o noopen -f"
+# alias rnew="new -i ruby -e rb -o noopen -f"
 
 alias jnew="jsnew"
 

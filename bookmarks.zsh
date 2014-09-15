@@ -4,6 +4,8 @@ alias translate="open https://translate.google.com/"
 
 alias crockford="open 'https://www.youtube.com/results?search_query=douglas+crockford'"
 
+alias limmy="ytube limmy\'s show"
+
 alias recipe="open /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"
 
 alias reciped="open /Users/msl/Programming/robin/html-css/projects/recipe-finder/index.html"
@@ -45,6 +47,7 @@ alias bkrb="book http://my.safaribooksonline.com/book/web-development/ruby/97801
 alias bksass="book http://my.safaribooksonline.com/book/web-development/css/9781849694544"
 
 alias sf="book http://my.safaribooksonline.com/myrecentpages"
+
 alias bkless="book http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 
 alias bkhtml5="book http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"

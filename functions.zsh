@@ -3,7 +3,7 @@
 
 # NEVER use aliases in this file! This file is loaded first before aliases.
 
-source $DOTFILES_HOME/colors.sh
+source $DOTFILES_HOME/colors.zsh
 
 function join {
 	local IFS="$1"; shift; echo "$*";
@@ -47,6 +47,16 @@ function write {
 	cd $DOCS_HOME/creative/writing && $EDITOR "$1.txt"
 }
 
+function prepend {
+	FILE=$1
+	TEXT=$2
+	
+	CONTENTS=`cat $FILE`
+	rm $FILE
+	echo $TEXT > $FILE
+	echo $CONTENTS >> $FILE
+}
+
 function new {
 	while getopts :i:e:f:o: name
 	do
@@ -58,8 +68,6 @@ function new {
 			*) usage ;;                # display usage and exit
 		esac
 	done
-	
-	# FILENAME=`echo $FILENAME | awk 'FS='.' '
 	
 	FILE="$FILENAME.$EXTENSION"
 	FILE_DISPLAY=$(yellow $FILE)
@@ -83,20 +91,19 @@ function new {
 	else
 		if [ -n "$INTERPRETER" ]
 		then
-			CONTENTS=`cat $FILE`
-			rm $FILE
 			eval $SHEBANG_MSG
-			echo "#!/usr/bin/env $INTERPRETER" > $FILE
-			echo $CONTENTS >> $FILE
+			prepend $FILE "#!/usr/bin/env $INTERPRETER\n"
 			chmod +x $FILE
 		else
 			eval $OPEN_MSG
 		fi
 	fi
 	
+	# Reset variables for subsequent executions!
 	INTERPRETER=""
 	FILENAME=""
 	EXTENSION=""
+	
 	if ! [[ "$NO_OPEN" == "noopen" ]]
 	then
 		$EDITOR $FILE
@@ -144,6 +151,12 @@ function hbnew {
 function jsnew {
 	new -i node -e js -o noopen -f $1
 	echo "require(process.env.JS_LIB_HOME + '/log')\n" >> $1.js
+}
+
+function rnew {
+	new -i ruby -e rb -o noopen -f $1
+	echo "\$LOAD_PATH << '.'\n\nrequire 'lib/log.rb'\n" >> $1.rb
+	white "`cat $1.rb`"
 }
 
 function hcexample {
@@ -239,7 +252,7 @@ function mvd {
 	mv ~/Downloads/$1 $2
 }
 
-function color_keywords {
+function color_words {
 	TEXT=$1
 	PATTERN=$2
 	COLOR=$3
@@ -247,7 +260,7 @@ function color_keywords {
 }
 
 function libfind {
-	COLOR='green'
+	COLOR='maganda'
 	while getopts :c:d:p: name
 	do
 		case $name in
@@ -265,7 +278,7 @@ function libfind {
 	then
 		for result in $results
 		do
-			color_keywords $result $PATTERN $COLOR
+			color_words $result $PATTERN $COLOR
 		done
 	fi
 	
@@ -277,11 +290,11 @@ function libfind {
 
 		if [[ "$CAT" == "" ]]
 		then
-			color_keywords $result $PATTERN $COLOR
+			color_words $result $PATTERN $COLOR
 		else
 			# If CAT not null
 			eval "$COLOR $result"
-			color_keywords "`cat $result`" $PATTERN $COLOR
+			color_words "`cat $result`" $PATTERN $COLOR
 		fi
 	done
 }
@@ -524,6 +537,10 @@ function wiki {
 
 function google {
 	open "https://www.google.ca/#q=`urlencode $@`&safe=active"
+}
+
+function ytube {
+	open "https://www.youtube.com/results?search_query=hello`urlencode $@`"
 }
 
 function rubydoc {
