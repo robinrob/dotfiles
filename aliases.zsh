@@ -65,8 +65,6 @@ hash -d html-css="$HTMLCSS_HOME"
 ###############################################################################
 
 # Global aliases
-alias -g Chrome="'Google Chrome'"
-
 # alias -g p="prog"
 #
 # alias -g r="rby"
@@ -90,10 +88,6 @@ alias js="javascript"
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 
 alias more='less'
-
-alias x="chmod +x"
-
-alias mx="chmod -x"
 
 alias mkdir='mkdir -pv'
 
@@ -127,8 +121,6 @@ alias psql="/Applications/Postgres.app/Contents/Versions/9.3/bin/psql"
 alias lessc="$LESSC_PATH"
 
 alias lc="lessc"
-
-alias chrome="open -a 'Google Chrome'"
 
 alias safari="open -a Safari"
 
@@ -520,7 +512,9 @@ alias emptytrash="sudo rm -rf ~/.Trash/*"
 
 alias cgi="cat .gitignore"
 
-alias cx="chmod +x"
+alias x="chmod +x"
+
+alias mx="chmod -x"
 
 alias kne="knife node edit --editor vim"
 

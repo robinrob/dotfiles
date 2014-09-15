@@ -417,6 +417,14 @@ function cddir {
 	cd `dirname $1`
 }
 
+function browser {
+	open -a $BROWSER $@
+}
+
+function chrome {
+	open -a Google\ Chrome $@
+}
+
 function bb {
 	result=`ls -d .git 2> /dev/null`
 	if [ "$result" ]
@@ -430,7 +438,7 @@ function bb {
 	fi
 	
 	green "Opening $url ..."
-	open $url
+	open -a $BROWSER $url
 }
 
 function bb_url {
@@ -535,6 +543,12 @@ function wiki {
 	open "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
 }
 
+function urlencode {
+	setopt localoptions extendedglob
+	input=( ${(s::)@} )
+	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
+}
+
 function google {
 	open "https://www.google.ca/#q=`urlencode $@`&safe=active"
 }
@@ -580,12 +594,6 @@ function translate {
 	open $url
 }
 
-function urlencode {
-	setopt localoptions extendedglob
-	input=( ${(s::)@} )
-	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
-}
-
 function trn {
 	echo "$@" | trans
 }
@@ -599,10 +607,6 @@ function lc {
 	cmd="$LESSC_PATH $LESS_FILE > styles.css"
 	green $cmd
 	$LESSC_PATH $LESS_FILE > styles.css
-}
-
-function gdoc {
-	open -a Chrome $1
 }
 
 function web {

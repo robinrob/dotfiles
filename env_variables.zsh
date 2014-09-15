@@ -151,7 +151,7 @@ export TRASH_HOME=~/.Trash
 
 export CANADA_HOME=$MERCURY_HOME/docs/IMPORTANT/canada
 
-export DEFAULT_BROWSER="Firefox"
+export BROWSER="Google Chrome"
 
 export ADOBE_PATH="/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader"
 
@@ -164,8 +164,6 @@ export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/22.6.2/
 export ANT_ROOT=/usr/local/Cellar/ant/1.9.4/bin/
 
 export GREP_COLOR="0;32"
-
-export BROWSER="firefox"
 
 # Syntax highlighing in `less`
 # Requires `brew install source-highlight`

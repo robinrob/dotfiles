@@ -2,6 +2,8 @@ source ~/Programming/robin/dotfiles/colors.zsh
 
 echo "$(white I)$(yellow " am ")$(cyan awesome)"
 
+# echo `eval "echo \`echo "$(white I)$(yellow " am ")$(cyan awesome)"\`"`
+
 # First-time stuff!
 ###############################################################################
 
