@@ -47,6 +47,8 @@ export HTMLLESS_HOME=$PROG_HOME/html-less
 
 export HTML_TEMPLATES_HOME=$PROG_HOME/html-css/projects/templates
 
+export SCALA_HOME=$PROG_HOME/scala
+
 export RUBY_HOME=$PROG_HOME/ruby
 
 export AWK_HOME=$PROG_HOME/awk
@@ -151,7 +153,12 @@ export TRASH_HOME=~/.Trash
 
 export CANADA_HOME=$MERCURY_HOME/docs/IMPORTANT/canada
 
-export BROWSER="Google Chrome"
+if [[ "$HOSTNAME" == "mercury.local" ]]
+then
+	export BROWSER="Safari"
+else
+	export BROWSER="Google Chrome"
+fi
 
 export ADOBE_PATH="/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader"
 

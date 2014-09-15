@@ -536,11 +536,11 @@ function lsa {
 }
 
 function safaris {
-	open "http://my.safaribooksonline.com/search?q=`urlencode $@`"
+	browser "http://my.safaribooksonline.com/search?q=`urlencode $@`"
 }
 
 function wiki {
-	open "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
+	browser "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
 }
 
 function urlencode {
@@ -550,19 +550,23 @@ function urlencode {
 }
 
 function google {
-	open "https://www.google.ca/#q=`urlencode $@`&safe=active"
+	browser "https://www.google.ca/#q=`urlencode $@`&safe=active"
 }
 
 function ytube {
-	open "https://www.youtube.com/results?search_query=hello`urlencode $@`"
+	browser "https://www.youtube.com/results?search_query=hello`urlencode $@`"
 }
 
 function rubydoc {
-	open "http://ruby-doc.com/search.html?&q=`urlencode $@`"
+	browser "http://ruby-doc.com/search.html?&q=`urlencode $@`"
 }
 
 function amz {
-	open "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
+	browser "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
+}
+
+function stacks {
+	browser "http://stackoverflow.com/search?q=`urlencode $@`"
 }
 
 function translate {
@@ -651,7 +655,7 @@ function dev {
 
 function wiki {
 	SEARCH_TERMS="$@"
-	open "http://en.wikipedia.org/wiki/Special:Search?search=${SEARCH_TERMS}&go=Go"
+	browser "http://en.wikipedia.org/wiki/Special:Search?search=${SEARCH_TERMS}&go=Go"
 }
 
 function sfs {

@@ -112,6 +112,10 @@ alias dir="dirname"
 alias cdcocos="cd $COCOS_HOME"
 
 # Applications/Tools
+alias sc="scala"
+
+alias scc="scalac"
+
 alias tran="trans :tl"
 
 alias tren="trans :en"
@@ -160,6 +164,8 @@ alias cdd="cd_dir $DOTFILES_HOME"
 
 alias cdb="cd_dir $HTMLCSS_HOME/practice/bootstrap"
 
+alias cdsc="cd_dir $SCALA_HOME"
+
 alias cdr="cd_dir $RUBY_HOME"
 
 alias cdmr="cd_dir $RUBY_HOME/projects/mrrobinsmith.com"
@@ -200,7 +206,7 @@ alias cdls="cd_dir $HTMLLESS_HOME"
 
 alias cdrecipe="cd_dir $HTMLCSS_HOME/projects/recipe-finder"
 
-alias cdsc="cd_dir $SCREENSHOTS_HOME"
+alias cdscr="cd_dir $SCREENSHOTS_HOME"
 
 alias cdms="cd_dir $MSCHEF"
 
