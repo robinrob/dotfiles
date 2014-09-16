@@ -76,9 +76,11 @@ alias splw="browser https://cr-splunk-1.cloudreach.co.uk:8000"
 
 alias stk="stackoverflow"
 
-alias robscases="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006RBOv'"
+alias robscases="cases 00B20000006RBOv'"
 
-alias gabscases="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006SMJf'"
+alias gabscases="cases 00B20000006SMJf'"
+
+alias seanscases="cases 00B20000007AD8A"
 
 alias unassigned="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079jxp'"
 

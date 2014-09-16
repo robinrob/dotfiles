@@ -535,6 +535,10 @@ function lsa {
 	ls $PWD/$1
 }
 
+function rubygems {
+	browser "https://rubygems.org/search?utf8=%E2%9C%93&query=`urlencode $@`"
+}
+
 function safaris {
 	browser "http://my.safaribooksonline.com/search?q=`urlencode $@`"
 }
@@ -553,20 +557,12 @@ function google {
 	browser "https://www.google.ca/#q=`urlencode $@`&safe=active"
 }
 
-function ytube {
-	browser "https://www.youtube.com/results?search_query=hello`urlencode $@`"
-}
-
 function rubydoc {
 	browser "http://ruby-doc.com/search.html?&q=`urlencode $@`"
 }
 
 function amz {
 	browser "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
-}
-
-function stacks {
-	browser "http://stackoverflow.com/search?q=`urlencode $@`"
 }
 
 function translate {
@@ -670,4 +666,9 @@ function unixtime {
 
 function timeunix {
 	ruby -e "require 'Time'; puts Time.now().to_i"
+}
+
+function cases {
+	ID=$1
+	open -a $BROWSER "https://cloudreach.my.salesforce.com/500?fcf=$ID"
 }
