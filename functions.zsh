@@ -82,7 +82,8 @@ function new {
 		if [ -n "$INTERPRETER" ]
 		then	
 			eval $CREATE_SHEBANG_MSG
-			echo "#!/usr/bin/env $INTERPRETER\n" > $FILE
+			echo "#!/usr/bin/env $INTERPRETER
+" > $FILE
 			chmod +x $FILE
 		else
 			eval $CREATE_MSG
@@ -92,7 +93,8 @@ function new {
 		if [ -n "$INTERPRETER" ]
 		then
 			eval $SHEBANG_MSG
-			prepend $FILE "#!/usr/bin/env $INTERPRETER\n"
+			prepend $FILE "#!/usr/bin/env $INTERPRETER
+"
 			chmod +x $FILE
 		else
 			eval $OPEN_MSG
@@ -150,12 +152,16 @@ function hbnew {
 
 function jsnew {
 	new -i node -e js -o noopen -f $1
-	echo "require(process.env.JS_LIB_HOME + '/log')\n" >> $1.js
+	echo "require(process.env.JS_LIB_HOME + '/log')
+" >> $1.js
 }
 
 function rnew {
 	new -i ruby -e rb -o noopen -f $1
-	echo "\$LOAD_PATH << '.'\n\nrequire 'lib/log.rb'\n" >> $1.rb
+	echo "\$LOAD_PATH << '.'
+
+require 'lib/log.rb'
+" >> $1.rb
 	white "`cat $1.rb`"
 }
 
@@ -319,7 +325,8 @@ function libfind_s {
 }
 
 function al {
-	echo "\nalias $1=\"$2\"" >> $DOTFILES_HOME/aliases.zsh
+	echo "
+alias $1=\"$2\"" >> $DOTFILES_HOME/aliases.zsh
 }
 
 function fr {
@@ -535,6 +542,16 @@ function lsa {
 	ls $PWD/$1
 }
 
+function urlencode {
+	setopt localoptions extendedglob
+	input=( ${(s::)@} )
+	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
+}
+
+function points {
+	browser "https://sites.google.com/a/cloudreach.co.uk/points-lists/system/app/pages/search?scope=search-site&q=`urlencode $@`"
+}
+
 function rubygems {
 	browser "https://rubygems.org/search?utf8=%E2%9C%93&query=`urlencode $@`"
 }
@@ -545,12 +562,6 @@ function safaris {
 
 function wiki {
 	browser "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
-}
-
-function urlencode {
-	setopt localoptions extendedglob
-	input=( ${(s::)@} )
-	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
 }
 
 function google {
@@ -632,7 +643,8 @@ function bookmark {
 	then
 		red "Bookmark already exists!"	
 	else
-		echo "\nalias ${NAME}=\"${BROWSER} '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
+		echo "
+alias ${NAME}=\"${BROWSER} '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
 		source $DOTFILES_HOME/bookmarks.zsh
 		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
 	fi
@@ -656,7 +668,7 @@ function wiki {
 
 function sfs {
 	SEARCH_TERMS="$@"
-	open -a Safari "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
+	open -a Safari "http://my.safaribooksonline.com/search?q=$REPLACEMENT_TERMS"
 }
 
 function unixtime {
@@ -673,14 +685,18 @@ function cases {
 	open -a $BROWSER "https://cloudreach.my.salesforce.com/500?fcf=$ID"
 }
 
-function sed_all {
-	REPLACEMENT=$1
-	shift
-	FILES="$*"
+function replace_all {
+	SEARCH=$1
+	REPLACEMENT=$2
+	FILE_PATTERN="$3"
 	
-	for file in $FILES
+	result=`find . -depth 1 -name $FILE_PATTERN`
+	files=("${(f)result}")
+	
+	for file in $files
 	do
-		cat $file | sed 's/mercury.local/$MERCURY_HOSTNAME/g' > $file
-		cat $file | sed 's/venus.local/$VENUS_HOSTNAME/g' > $file
+		new_contents=`cat $file | sed "s/$SEARCH/$REPLACEMENT/g"`
+		rm $file
+		echo $new_contents > $file
 	done
 }
