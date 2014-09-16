@@ -118,10 +118,6 @@ alias scc="scalac"
 
 alias tran="trans :tl"
 
-alias tren="trans :en"
-
-alias psql="/Applications/Postgres.app/Contents/Versions/9.3/bin/psql"
-
 alias lessc="$LESSC_PATH"
 
 alias lc="lessc"

@@ -94,6 +94,8 @@ PATH=$PATH:$LOCAL_HOME/bin
 
 # OS X
 ######
+defaults write com.apple.Safari AlwaysShowTabBar -bool NO
+
 defaults write com.apple.Finder AppleShowAllFiles NO 2> /dev/null
 
 # http://www.tekrevue.com/tip/how-to-customize-screenshot-options-in-mac-os-x/
@@ -105,23 +107,9 @@ defaults write com.apple.screencapture name $HOSTNAME
 defaults write -g ApplePersistence -bool no 2> /dev/null
 chflags nohidden ~/Library/ 2> /dev/null
 
+# Speed at which Dock auto-hides
+# defaults write com.apple.dock autohide-time-modifier -float 0.0
+
 
 # Ubuntu
 ########
-
-
-# Logic to source .zshrc exactly twice
-# if [ -n `ls ~/.zsh_switch` ]
-# then
-# 	touch ~/.zsh_switch
-# fi
-#
-#
-# if [[ `cat ~/.zsh_switch` -eq 0 ]]
-# then
-# 	echo 1 >! ~/.zsh_switch
-# 	source ~/.zshrc > /dev/null 2>&1;
-#
-# else
-# 	echo 0 >! ~/.zsh_switch
-# fi
