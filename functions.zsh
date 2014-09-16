@@ -672,3 +672,15 @@ function cases {
 	ID=$1
 	open -a $BROWSER "https://cloudreach.my.salesforce.com/500?fcf=$ID"
 }
+
+function sed_all {
+	REPLACEMENT=$1
+	shift
+	FILES="$*"
+	
+	for file in $FILES
+	do
+		cat $file | sed 's/mercury.local/$MERCURY_HOSTNAME/g' > $file
+		cat $file | sed 's/venus.local/$VENUS_HOSTNAME/g' > $file
+	done
+}

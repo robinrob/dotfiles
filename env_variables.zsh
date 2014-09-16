@@ -4,6 +4,10 @@
 # sudo hostname <name> to change
 export HOSTNAME=`hostname`
 
+export MERCURY_HOSTNAME='mercury'
+
+export VENUS_HOSTNAME='venus'
+
 export EDITOR=mate
 
 # export PROG_HOME=$HOME/Programming/robin
