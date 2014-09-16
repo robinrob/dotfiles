@@ -45,6 +45,7 @@ alias bkrb="book http://my.safaribooksonline.com/book/web-development/ruby/97801
 alias bksass="book http://my.safaribooksonline.com/book/web-development/css/9781849694544"
 
 alias sf="book http://my.safaribooksonline.com/myrecentpages"
+
 alias bkless="book http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 
 alias bkhtml5="book http://my.safaribooksonline.com/book/programming/game-programming/9781430266976"
@@ -73,9 +74,11 @@ alias splw="browser https://cr-splunk-1.cloudreach.co.uk:8000"
 
 alias stk="stackoverflow"
 
-alias robscases="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006RBOv'"
+alias robscases="cases 00B20000006RBOv'"
 
-alias gabscases="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006SMJf'"
+alias gabscases="cases 00B20000006SMJf'"
+
+alias seanscases="cases 00B20000007AD8A"
 
 alias unassigned="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079jxp'"
 

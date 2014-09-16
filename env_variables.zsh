@@ -1,6 +1,7 @@
 # Environment variables
 #############################
 
+# sudo hostname <name> to change
 export HOSTNAME=`hostname`
 
 export EDITOR=mate

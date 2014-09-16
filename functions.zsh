@@ -522,12 +522,16 @@ function lsa {
 	ls $PWD/$1
 }
 
+function rubygems {
+	browser "https://rubygems.org/search?utf8=%E2%9C%93&query=`urlencode $@`"
+}
+
 function safaris {
-	open "http://my.safaribooksonline.com/search?q=`urlencode $@`"
+	browser "http://my.safaribooksonline.com/search?q=`urlencode $@`"
 }
 
 function wiki {
-	open "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
+	browser "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
 }
 
 function urlencode {
@@ -537,15 +541,15 @@ function urlencode {
 }
 
 function google {
-	open "https://www.google.ca/#q=`urlencode $@`&safe=active"
+	browser "https://www.google.ca/#q=`urlencode $@`&safe=active"
 }
 
 function rubydoc {
-	open "http://ruby-doc.com/search.html?&q=`urlencode $@`"
+	browser "http://ruby-doc.com/search.html?&q=`urlencode $@`"
 }
 
 function amz {
-	open "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
+	browser "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
 }
 
 function translate {
@@ -634,7 +638,7 @@ function dev {
 
 function wiki {
 	SEARCH_TERMS="$@"
-	open "http://en.wikipedia.org/wiki/Special:Search?search=${SEARCH_TERMS}&go=Go"
+	browser "http://en.wikipedia.org/wiki/Special:Search?search=${SEARCH_TERMS}&go=Go"
 }
 
 function sfs {
@@ -649,4 +653,9 @@ function unixtime {
 
 function timeunix {
 	ruby -e "require 'Time'; puts Time.now().to_i"
+}
+
+function cases {
+	ID=$1
+	open -a $BROWSER "https://cloudreach.my.salesforce.com/500?fcf=$ID"
 }
