@@ -23,6 +23,7 @@ cclightpurple=$(echo "\033[1;35m")
 
 ccguess=$(echo "\033[1;39m")
 
+
 function default() {
 	echo ${ccend}$@${ccend}
 }
@@ -63,8 +64,12 @@ function white() {
 	echo ${ccwhite}$@${ccend}
 }
 
-function lightpurple() {
+function magenta() {
 	echo ${cclightpurple}$@${ccend}
+}
+
+function maganda() {
+	magenta $@
 }
 
 function brown() {

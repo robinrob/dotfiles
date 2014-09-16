@@ -6,6 +6,8 @@ alias crockford="browser 'https://www.youtube.com/results?search_query=douglas+c
 
 alias recipe="browser /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"
 
+alias limmy="ytube limmy\'s show"
+
 alias reciped="browser /Users/msl/Programming/robin/html-css/projects/recipe-finder/index.html"
 
 alias swimming="browser http://www.newark-sherwooddc.gov.uk/glc/groveswimming/"
@@ -28,7 +30,7 @@ alias shopping="chrome 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/c
 
 alias gtemp="chrome 'https://drive.google.com/a/cloudreach.co.uk/templates?state=%7B%22folderId%22:%220AIV1py6VJXyMUk9PVA%22,%22action%22:%22create%22,%22userId%22:%22111853091861331127431%22%7D#'"
 
-alias stack="browser http://stackoverflow.com/users/3946669/robin-smith"
+alias stack="browser 'http://stackoverflow.com/users/3946669/robin-smith'"
 
 alias work="browser http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
 
