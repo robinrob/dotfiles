@@ -547,12 +547,6 @@ function wiki {
 	browser "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
 }
 
-function urlencode {
-	setopt localoptions extendedglob
-	input=( ${(s::)@} )
-	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
-}
-
 function google {
 	browser "https://www.google.ca/#q=`urlencode $@`&safe=active"
 }
@@ -563,6 +557,16 @@ function rubydoc {
 
 function amz {
 	browser "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
+}
+
+function ytube {
+	browser "https://www.youtube.com/results?search_query=`urlencode $@`"
+}
+
+function urlencode {
+	setopt localoptions extendedglob
+	input=( ${(s::)@} )
+	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
 }
 
 function translate {
@@ -647,16 +651,6 @@ function dev {
 	fi
 	
 	open -a $BROWSER http://localhost:3000
-}
-
-function wiki {
-	SEARCH_TERMS="$@"
-	browser "http://en.wikipedia.org/wiki/Special:Search?search=${SEARCH_TERMS}&go=Go"
-}
-
-function sfs {
-	SEARCH_TERMS="$@"
-	open -a Safari "http://my.safaribooksonline.com/search?q=$SEARCH_TERMS"
 }
 
 function unixtime {
