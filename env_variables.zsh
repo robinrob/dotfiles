@@ -90,7 +90,7 @@ export NOCCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-noc-chef
 
 export MSCHEF=$WORK_HOME/ruby/cloudreach-chef/cloudreach-ms-chef
 
-export LOCAL_HOME=$PROG_HOME/local
+export LOCAL_HOME=$RUBY_HOME/projects/local
 
 export TODO_HOME=$LOCAL_HOME/lib/todo.csv
 

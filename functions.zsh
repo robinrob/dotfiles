@@ -155,7 +155,7 @@ function jsnew {
 
 function rnew {
 	new -i ruby -e rb -o noopen -f $1
-	echo "\$LOAD_PATH << '.'\n\nrequire 'lib/log.rb'" >> $1.rb
+	echo "\n\$LOAD_PATH << '.'\n\nrequire 'lib/log.rb'" >> $1.rb
 	white "`cat $1.rb`"
 }
 
