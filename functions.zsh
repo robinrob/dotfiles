@@ -576,6 +576,15 @@ function amz {
 	browser "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
 }
 
+function salesf {
+	browser "https://cloudreach.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=01t&sen=a0D&sen=098&sen=800&sen=005&sen=00P&sen=006&sen=501&sen=001&sen=00T&sen=00U&sen=810&sen=500&sen=003&sen=00O&sen=00a&sen=a08&sen=550&str=`urlencode $@`"
+}
+
+function cases {
+	ID=$1
+	open -a $BROWSER "https://cloudreach.my.salesforce.com/500?fcf=$ID"
+}
+
 function translate {
 	while getopts :f:t: name
 	do
@@ -661,16 +670,6 @@ function dev {
 	open -a $BROWSER http://localhost:3000
 }
 
-function wiki {
-	SEARCH_TERMS="$@"
-	browser "http://en.wikipedia.org/wiki/Special:Search?search=${SEARCH_TERMS}&go=Go"
-}
-
-function sfs {
-	SEARCH_TERMS="$@"
-	open -a Safari "http://my.safaribooksonline.com/search?q=$REPLACEMENT_TERMS"
-}
-
 function unixtime {
 	SECS=$1
 	ruby -e "require 'Date'; puts DateTime.strptime('$SECS', '%s')"
@@ -678,11 +677,6 @@ function unixtime {
 
 function timeunix {
 	ruby -e "require 'Time'; puts Time.now().to_i"
-}
-
-function cases {
-	ID=$1
-	open -a $BROWSER "https://cloudreach.my.salesforce.com/500?fcf=$ID"
 }
 
 function replace_all {
