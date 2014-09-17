@@ -96,12 +96,6 @@ export TODO_HOME=$LOCAL_HOME/lib/todo.csv
 
 export INTELLIJ_CONFIG=~/Library/Preferences/IntelliJIdea13/keymaps/Robin.xml
 
-export RUBYMINE_CONFIG=~/Library/Preferences/RubyMine60/keymaps/Robin.xml
-
-export PYCHARM_CONFIG=~/Library/Preferences/PyCharm30/keymaps/Robin.xml
-
-export WEBSTORM_CONFIG=~/Library/Preferences/WebStorm8/keymaps/Robin.xml
-
 export FILES_HOME=~/Dropbox
 
 export PICTURES_HOME=~/Google\ Drive/pictures/pictures

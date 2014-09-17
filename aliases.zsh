@@ -482,10 +482,6 @@ alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
 
-alias msp="get_record $IMPORTANT_HOME/records/bc_msp.txt insurance"
-
-alias mspaccount="get_record $IMPORTANT_HOME/records/bc_msp.txt account"
-
 alias mal="mate $DOTFILES_HOME/aliases.zsh"
 
 alias men="mate $DOTFILES_HOME/env_variables.zsh"
@@ -652,6 +648,10 @@ alias cardhsbc="get_record hsbc-debit"
 alias cardrbc="get_record rbc-debit"
 
 alias doc="cat $IMPORTANT_HOME/records/doc.txt"
+
+alias mspnum="get_record msp_num"
+
+alias mspaccount="get_record msp_account"
 
 alias docsec1="get_record doctors_secretary1"
 

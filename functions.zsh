@@ -93,7 +93,6 @@ function new {
 		then
 			eval $SHEBANG_MSG
 			prepend $FILE "#!/usr/bin/env $INTERPRETER\n"
-"
 			chmod +x $FILE
 		else
 			eval $OPEN_MSG
