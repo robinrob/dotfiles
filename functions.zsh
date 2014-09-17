@@ -82,7 +82,7 @@ function new {
 		if [ -n "$INTERPRETER" ]
 		then	
 			eval $CREATE_SHEBANG_MSG
-			echo "#!/usr/bin/env $INTERPRETER\n" > $FILE
+			echo "#!/usr/bin/env $INTERPRETER" > $FILE
 			chmod +x $FILE
 		else
 			eval $CREATE_MSG
@@ -93,6 +93,7 @@ function new {
 		then
 			eval $SHEBANG_MSG
 			prepend $FILE "#!/usr/bin/env $INTERPRETER\n"
+"
 			chmod +x $FILE
 		else
 			eval $OPEN_MSG
@@ -150,12 +151,12 @@ function hbnew {
 
 function jsnew {
 	new -i node -e js -o noopen -f $1
-	echo "require(process.env.JS_LIB_HOME + '/log')\n" >> $1.js
+	echo "require(process.env.JS_LIB_HOME + '/log')" >> $1.js
 }
 
 function rnew {
 	new -i ruby -e rb -o noopen -f $1
-	echo "\$LOAD_PATH << '.'\n\nrequire 'lib/log.rb'\n" >> $1.rb
+	echo "\$LOAD_PATH << '.'\n\nrequire 'lib/log.rb'" >> $1.rb
 	white "`cat $1.rb`"
 }
 
@@ -319,7 +320,7 @@ function libfind_s {
 }
 
 function al {
-	echo "\nalias $1=\"$2\"" >> $DOTFILES_HOME/aliases.zsh
+	echo "alias $1=\"$2\"" >> $DOTFILES_HOME/aliases.zsh
 }
 
 function fr {
@@ -535,6 +536,16 @@ function lsa {
 	ls $PWD/$1
 }
 
+function urlencode {
+	setopt localoptions extendedglob
+	input=( ${(s::)@} )
+	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
+}
+
+function points {
+	browser "https://sites.google.com/a/cloudreach.co.uk/points-lists/system/app/pages/search?scope=search-site&q=`urlencode $@`"
+}
+
 function rubygems {
 	browser "https://rubygems.org/search?utf8=%E2%9C%93&query=`urlencode $@`"
 }
@@ -563,10 +574,13 @@ function ytube {
 	browser "https://www.youtube.com/results?search_query=`urlencode $@`"
 }
 
-function urlencode {
-	setopt localoptions extendedglob
-	input=( ${(s::)@} )
-	print ${(j::)input/(#b)([^A-Za-z0-9_.!~*\'\(\)-])/%$(([##16]#match))}
+function salesf {
+	browser "https://cloudreach.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=01t&sen=a0D&sen=098&sen=800&sen=005&sen=00P&sen=006&sen=501&sen=001&sen=00T&sen=00U&sen=810&sen=500&sen=003&sen=00O&sen=00a&sen=a08&sen=550&str=`urlencode $@`"
+}
+
+function cases {
+	ID=$1
+	open -a $BROWSER "https://cloudreach.my.salesforce.com/500?fcf=$ID"
 }
 
 function translate {
@@ -636,7 +650,7 @@ function bookmark {
 	then
 		red "Bookmark already exists!"	
 	else
-		echo "\nalias ${NAME}=\"${BROWSER} '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
+		echo "alias ${NAME}=\"${BROWSER} '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
 		source $DOTFILES_HOME/bookmarks.zsh
 		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
 	fi
@@ -662,7 +676,18 @@ function timeunix {
 	ruby -e "require 'Time'; puts Time.now().to_i"
 }
 
-function cases {
-	ID=$1
-	open -a $BROWSER "https://cloudreach.my.salesforce.com/500?fcf=$ID"
+function replace_all {
+	SEARCH=$1
+	REPLACEMENT=$2
+	FILE_PATTERN="$3"
+	
+	result=`find . -depth 1 -name $FILE_PATTERN`
+	files=("${(f)result}")
+	
+	for file in $files
+	do
+		new_contents=`cat $file | sed "s/$SEARCH/$REPLACEMENT/g"`
+		rm $file
+		echo $new_contents > $file
+	done
 }

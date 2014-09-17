@@ -4,6 +4,10 @@
 # sudo hostname <name> to change
 export HOSTNAME=`hostname`
 
+export MERCURY_HOSTNAME='mercury'
+
+export VENUS_HOSTNAME='venus'
+
 export EDITOR=mate
 
 # export PROG_HOME=$HOME/Programming/robin
@@ -110,7 +114,7 @@ export COMMON_HOME=$FILES_HOME/common
 
 export COMMON_DOCS_HOME=$COMMON_HOME/docs
 
-export MERCURY_HOME=$FILES_HOME/mercury.local
+export MERCURY_HOME=$FILES_HOME/$MERCURY_HOSTNAME
 
 export SONGS_HOME=$MERCURY_HOME/docs/creative/songs
 
@@ -154,7 +158,7 @@ export TRASH_HOME=~/.Trash
 
 export CANADA_HOME=$MERCURY_HOME/docs/IMPORTANT/canada
 
-if [[ "$HOSTNAME" == "mercury.local" ]]
+if [[ "$HOSTNAME" == "$MERCURY_HOSTNAME" ]]
 then
 	export BROWSER="Safari"
 else

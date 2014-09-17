@@ -7,21 +7,21 @@
 #Brown       0;33     Yellow        1;33
 #Light Gray  0;37     White         1;37
 
-ccend=$(echo "\033[0m")
-ccblack=$(echo "\033[0;30m")
-ccdarkgrey=$(echo "\033[1;30m")
-ccred=$(echo "\033[0;31m")
-ccgreen=$(echo "\033[0;32m")
-ccyellow=$(echo "\033[1;33m")
-ccbrown=$(echo "\033[0;33m")
-ccblue=$(echo "\033[0;34m")
-cclightblue=$(echo "\033[1;34m")
-ccpink=$(echo "\033[0;35m")
-cccyan=$(echo "\033[0;36m")
-ccwhite=$(echo "\033[1;37m")
-cclightpurple=$(echo "\033[1;35m")
+ccend=$(echo "[0m")
+ccblack=$(echo "[0;30m")
+ccdarkgrey=$(echo "[1;30m")
+ccred=$(echo "[0;31m")
+ccgreen=$(echo "[0;32m")
+ccyellow=$(echo "[1;33m")
+ccbrown=$(echo "[0;33m")
+ccblue=$(echo "[0;34m")
+cclightblue=$(echo "[1;34m")
+ccpink=$(echo "[0;35m")
+cccyan=$(echo "[0;36m")
+ccwhite=$(echo "[1;37m")
+cclightpurple=$(echo "[1;35m")
 
-ccguess=$(echo "\033[1;39m")
+ccguess=$(echo "[1;39m")
 
 
 function default() {

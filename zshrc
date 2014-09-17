@@ -53,7 +53,7 @@ ruby="2.1.1"
 eval "rvm use ruby-"$ruby 1> /dev/null
 green "Using \`Ruby-$ruby\`"
 
-if [[ "$HOSTNAME" == "venus.local" ]]
+if [[ "$HOSTNAME" == "venus" ]]
 then
 	rvm gemset use chef --create
 fi

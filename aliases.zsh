@@ -292,6 +292,8 @@ alias cfn="grep function $DOTFILES_HOME/functions.zsh | wc -l"
 # alias lfn='grep -o "function [a-zA-Z0-9_]* "'$DOTFILES_HOME/functions.zsh'| awk ''{print $2}'' | grep ''.*'''
 
 # Git aliases
+alias grrm="git remote rm"
+
 alias gi="git init"
 
 alias grm="git rm -r --cached"
