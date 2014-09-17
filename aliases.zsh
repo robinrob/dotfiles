@@ -614,9 +614,7 @@ alias dfind="libfind_s $DOTFILES_HOME"
 
 alias hfind="libfind_s $HTMLCSS_HOME/practice"
 
-alias jsfind="libfind_s $JS_HOME/practice"
-
-alias jfind="jsfind"
+alias jfind="libfind_s $JS_HOME/practice"
 
 alias npmfind="libfind_s $NPMLIB_HOME"
 
@@ -626,7 +624,7 @@ alias cfind="libfind_s $C_HOME"
 
 alias sfind="libfind_s $SH_HOME"
 
-alias zfind="libfind_s $ZSH_HOME"
+alias zfind="libfind_s $ZSH_HOME/practice"
 
 alias prfind="libfind_s $PROG_HOME"
 

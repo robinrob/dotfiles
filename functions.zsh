@@ -690,3 +690,21 @@ function replace_all {
 		echo $new_contents > $file
 	done
 }
+
+function sshfind {
+	HOST=$1
+	grep -A 3 $HOST ~/.ssh/config
+}
+
+function killp {
+	NAME=$1
+
+	processes=`ps aux | grep $NAME | awk '{print $2}' | xargs`
+	processes=("${(s: :)processes}")
+	
+	green "Killing all `yellow $NAME` `green 'processes ...'`"
+	for process in $processes
+	do
+		`kill $process 2> /dev/null`
+	done
+}
