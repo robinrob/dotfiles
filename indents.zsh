@@ -1,4 +1,4 @@
-source colors.sh
+source colors.zsh
 
 ITEM="> "
 

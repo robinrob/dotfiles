@@ -1,4 +1,5 @@
-source ~/Programming/robin/dotfiles/colors.zsh
+DOTFILES_HOME=~/Programming/robin/zsh/projects/dotfiles
+source $DOTFILES_HOME/colors.zsh
 
 echo "$(white I)$(yellow " am ")$(cyan awesome)"
 
@@ -50,7 +51,7 @@ set -o vi
 # Ruby
 ######
 ruby="2.1.1"
-eval "rvm use ruby-"$ruby 1> /dev/null
+# eval "rvm use ruby-"$ruby 1> /dev/null
 green "Using \`Ruby-$ruby\`"
 
 if [[ "$HOSTNAME" == "venus" ]]
@@ -67,7 +68,6 @@ pythonbrew use 3.2 2> /dev/null
 
 # Environment variables
 #############################
-DOTFILES_HOME=~/Programming/robin/dotfiles
 source $DOTFILES_HOME/env_variables.zsh
 
 

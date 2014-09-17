@@ -32,7 +32,7 @@ export ZSH_HOME=$PROG_HOME/zsh
 
 export SH_HOME=$PROG_HOME/sh
 
-export DOTFILES_HOME=$PROG_HOME/dotfiles
+export DOTFILES_HOME=$ZSH_HOME/projects/dotfiles
 
 export BACKUPS_HOME=$RUBY_HOME/projects/aws-backup-manager
 
@@ -175,6 +175,21 @@ export GREP_COLOR="0;32"
 # Requires `brew install source-highlight`
 ##############################
 export LESSOPEN="| /usr/local/bin/src-hilite-lesspipe.sh %s"
+
 export LESS=" -R "
 
 export LESSC_PATH="/usr/local/lib/node_modules/less/bin/lessc"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+
+# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
+export COCOS_CONSOLE_ROOT=/usr/local/Library/cocos2d-js-v3.0-rc2/tools/cocos2d-console/bin
+export PATH=$COCOS_CONSOLE_ROOT:$PATH
+
+# Add environment variable ANT_ROOT for cocos2d-x
+export ANT_ROOT=/usr/local/bin
+export PATH=$ANT_ROOT:$PATH
+
+# Add environment variable NDK_ROOT for cocos2d-x
+export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d/
+export PATH=$NDK_ROOT:$PATH

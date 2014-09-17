@@ -6,7 +6,7 @@ unalias gr
 
 unalias cdb
 
-unalias gcl
+# unalias gcl
 
 unalias c
 
@@ -14,7 +14,7 @@ unalias gb
 
 unalias gi
 
-unalias e
+# unalias e
 
 unalias gra
 
@@ -22,7 +22,7 @@ unalias gbd
 
 unalias sd
 
-unalias gg
+# unalias gg
 
 unalias ga
 
@@ -32,7 +32,7 @@ unalias s
 
 unalias gst
 
-unalias lc
+# unalias lc
 
 unalias sf
 
