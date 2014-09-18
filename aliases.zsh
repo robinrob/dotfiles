@@ -85,6 +85,8 @@ hash -d html-css="$HTMLCSS_HOME"
 alias js="javascript"
 
 # Shell Aliases
+alias rbdoc="rubydoc"
+
 alias crl="crontab -l"
 
 alias cre="crontab -e"

@@ -48,11 +48,15 @@ alias news="browser https://bbc.co.uk/news"
 
 alias learmount="browser http://www.flightglobal.com/blogs/learmount"
 
+alias sf="book http://my.safaribooksonline.com/myrecentpages"
+
+alias bk=sf
+
+alias bkcoders="book http://my.safaribooksonline.com/book/programming/9781430219484"
+
 alias bkrb="book http://my.safaribooksonline.com/book/web-development/ruby/9780132480352"
 
 alias bksass="book http://my.safaribooksonline.com/book/web-development/css/9781849694544"
-
-alias sf="book http://my.safaribooksonline.com/myrecentpages"
 
 alias bkless="book http://my.safaribooksonline.com/book/web-development/css/9781783981465"
 
@@ -103,4 +107,5 @@ alias robin="open 'http://mrrobinsmith.com'"
 alias crockfordlanguage="open 'https://www.youtube.com/watch?v=9e_oEE72d3U'"
 
 alias renew="open 'https://vpl.bibliocommons.com/user/login'"
+
 alias tagging="open 'https://sites.google.com/a/cloudreach.co.uk/points-lists/aws/lab-instance-tagging'"
