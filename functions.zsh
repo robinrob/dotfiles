@@ -708,3 +708,7 @@ function killp {
 		`kill $process 2> /dev/null`
 	done
 }
+
+function updatesubs{
+	git submodule foreach --recursive "git commit -am 'Updates.' || exit 0"
+}
