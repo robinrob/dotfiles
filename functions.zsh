@@ -714,5 +714,6 @@ function updatesubs {
 }
 
 function save_code {
-	rake each_sub["git checkout master && git commit -am 'Auto-update.' && git pull origin master && git push origin master"]
+	# rake each_sub["rake save"]
+	rake each_sub["git checkout master; git commit -am 'Auto-update.'; git pull origin master; git push origin master"]
 }
