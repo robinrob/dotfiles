@@ -198,6 +198,8 @@ alias cds="cd_dir $SH_HOME"
 
 alias cdj="cd_dir $JS_HOME"
 
+alias cdjv="cd_dir $JV_HOME"
+
 alias cdjpr="cd_dir $JS_HOME practice"
 
 alias cdjs="cdj"
