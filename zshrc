@@ -5,7 +5,6 @@ echo "$(white I)$(yellow " am ")$(cyan awesome)"
 
 # Environment variables
 #############################
-DOTFILES_HOME=~/Programming/robin/dotfiles
 source $DOTFILES_HOME/env_variables.zsh
 
 
