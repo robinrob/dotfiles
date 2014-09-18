@@ -3,6 +3,11 @@ source $DOTFILES_HOME/colors.zsh
 
 echo "$(white I)$(yellow " am ")$(cyan awesome)"
 
+# Environment variables
+#############################
+source $DOTFILES_HOME/env_variables.zsh
+
+
 # echo `eval "echo \`echo "$(white I)$(yellow " am ")$(cyan awesome)"\`"`
 
 # First-time stuff!
@@ -45,16 +50,17 @@ setopt autocd
 set -o vi
 
 
+
 # Development
 ###############################################################################
 
 # Ruby
 ######
 ruby="2.1.1"
-# eval "rvm use ruby-"$ruby 1> /dev/null
+eval "rvm use ruby-"$ruby 1> /dev/null
 green "Using \`Ruby-$ruby\`"
 
-if [[ "$HOSTNAME" == "venus" ]]
+if [[ "$HOSTNAME" == "$VENUS_HOSTNAME" ]]
 then
 	rvm gemset use chef --create
 fi
@@ -64,11 +70,6 @@ fi
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
 pythonbrew use 3.2 2> /dev/null
-
-
-# Environment variables
-#############################
-source $DOTFILES_HOME/env_variables.zsh
 
 
 # Functions

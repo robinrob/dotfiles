@@ -82,9 +82,9 @@ alias splw="browser https://cr-splunk-1.cloudreach.co.uk:8000"
 
 alias stk="stackoverflow"
 
-alias robscases="cases 00B20000006RBOv'"
+alias robscases="cases 00B20000006RBOv"
 
-alias gabscases="cases 00B20000006SMJf'"
+alias gabscases="cases 00B20000006SMJf"
 
 alias seanscases="cases 00B20000007AD8A"
 
@@ -103,3 +103,4 @@ alias robin="open 'http://mrrobinsmith.com'"
 alias crockfordlanguage="open 'https://www.youtube.com/watch?v=9e_oEE72d3U'"
 
 alias renew="open 'https://vpl.bibliocommons.com/user/login'"
+alias tagging="open 'https://sites.google.com/a/cloudreach.co.uk/points-lists/aws/lab-instance-tagging'"
