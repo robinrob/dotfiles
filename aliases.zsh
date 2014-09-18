@@ -85,6 +85,10 @@ hash -d html-css="$HTMLCSS_HOME"
 alias js="javascript"
 
 # Shell Aliases
+alias crl="crontab -l"
+
+alias cre="crontab -e"
+
 alias less='less -m -N -g -i -J --underline-special --SILENT'
 
 alias more='less'
