@@ -2,10 +2,6 @@
 	path = yadr
 	url = https://github.com/skwp/dotfiles.git
 	ignore = dirty
-[submodule "yadr/zsh/prezto"]
-	path = yadr/zsh/prezto
-	url = https://github.com/sorin-ionescu/prezto.git
-	ignore = dirty
 [submodule "rake"]
 	path = rake
 	url = git@bitbucket.org:robinrob/rakefile.git
