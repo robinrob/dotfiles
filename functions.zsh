@@ -709,6 +709,6 @@ function killp {
 	done
 }
 
-function updatesubs{
-	git submodule foreach --recursive "git commit -am 'Updates.' || exit 0"
+function updatesubs {
+	git submodule foreach --recursive "`git commit -am 'Updates.' && git push` || exit 0"
 }
