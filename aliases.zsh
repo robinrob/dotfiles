@@ -253,7 +253,7 @@ alias rkp="rake_do pull"
 
 alias rkup="rakeup"
 
-alias rkdown="rakedown"
+alias rkdn="rakedown"
 
 alias fbu="fabup"
 
