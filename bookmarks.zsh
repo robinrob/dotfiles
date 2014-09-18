@@ -101,3 +101,4 @@ alias robin="open 'http://mrrobinsmith.com'"
 alias crockfordlanguage="open 'https://www.youtube.com/watch?v=9e_oEE72d3U'"
 
 alias renew="open 'https://vpl.bibliocommons.com/user/login'"
+alias tagging="open 'https://sites.google.com/a/cloudreach.co.uk/points-lists/aws/lab-instance-tagging'"
