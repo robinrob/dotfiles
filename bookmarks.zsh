@@ -32,7 +32,9 @@ alias gtemp="chrome 'https://drive.google.com/a/cloudreach.co.uk/templates?state
 
 alias gdoc="chrome 'https://docs.google.com/a/mrrobinsmith.com/document/d/1J4f4VHCkW70SxNwqHrTsFSSwbppJzpzR1pSmHJeEntY/edit'"
 
-alias doit="chrome 'https://docs.google.com/a/mrrobinsmith.com/spreadsheet/ccc?key=0Aganxin54gVEdEg4eEk2ekpCaFZqb3pwT3JNS3hkRHc&usp=drive_web#gid=0'"
+alias doit="chrome 'https://docs.google.com/a/mrrobinsmith.com/spreadsheet/ccc?key=0Aganxin54gVEdEg4eEk2ekpCaFZqb3pwT3JNS3hkRHc&usp=drive_web#gid=1'"
+
+alias tasks="chrome 'https://docs.google.com/a/mrrobinsmith.com/spreadsheet/ccc?key=0Aganxin54gVEdEg4eEk2ekpCaFZqb3pwT3JNS3hkRHc&usp=drive_web#gid=0'" 
 
 alias stack="browser 'http://stackoverflow.com/users/3946669/robin-smith'"
 
