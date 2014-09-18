@@ -6,7 +6,7 @@ unalias gr
 
 unalias cdb
 
-unalias gcl
+# unalias gcl
 
 unalias c
 
@@ -14,7 +14,7 @@ unalias gb
 
 unalias gi
 
-unalias e
+# unalias e
 
 unalias gra
 
@@ -22,7 +22,7 @@ unalias gbd
 
 unalias sd
 
-unalias gg
+# unalias gg
 
 unalias ga
 
@@ -32,7 +32,7 @@ unalias s
 
 unalias gst
 
-unalias lc
+# unalias lc
 
 unalias sf
 
@@ -486,10 +486,6 @@ alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
 
-alias msp="get_record $IMPORTANT_HOME/records/bc_msp.txt insurance"
-
-alias mspaccount="get_record $IMPORTANT_HOME/records/bc_msp.txt account"
-
 alias mal="mate $DOTFILES_HOME/aliases.zsh"
 
 alias men="mate $DOTFILES_HOME/env_variables.zsh"
@@ -622,9 +618,7 @@ alias dfind="libfind_s $DOTFILES_HOME"
 
 alias hfind="libfind_s $HTMLCSS_HOME/practice"
 
-alias jsfind="libfind_s $JS_HOME/practice"
-
-alias jfind="jsfind"
+alias jfind="libfind_s $JS_HOME/practice"
 
 alias npmfind="libfind_s $NPMLIB_HOME"
 
@@ -634,7 +628,7 @@ alias cfind="libfind_s $C_HOME"
 
 alias sfind="libfind_s $SH_HOME"
 
-alias zfind="libfind_s $ZSH_HOME"
+alias zfind="libfind_s $ZSH_HOME/practice"
 
 alias prfind="libfind_s $PROG_HOME"
 
@@ -656,6 +650,10 @@ alias cardhsbc="get_record hsbc-debit"
 alias cardrbc="get_record rbc-debit"
 
 alias doc="cat $IMPORTANT_HOME/records/doc.txt"
+
+alias mspnum="get_record msp_num"
+
+alias mspaccount="get_record msp_account"
 
 alias docsec1="get_record doctors_secretary1"
 

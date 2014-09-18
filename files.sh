@@ -1,6 +1,6 @@
 #!/usr/bin/env sh
 
-source colors.sh
+source colors.zsh
 
 ./symlinks.sh
 

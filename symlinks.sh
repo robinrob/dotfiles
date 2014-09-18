@@ -1,7 +1,7 @@
 #!/bin/sh
 
-source colors.sh
-source indents.sh
+source colors.zsh
+source indents.zsh
 
 green "Sym-linking dotfiles ..."
 

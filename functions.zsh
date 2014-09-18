@@ -82,8 +82,7 @@ function new {
 		if [ -n "$INTERPRETER" ]
 		then	
 			eval $CREATE_SHEBANG_MSG
-			echo "#!/usr/bin/env $INTERPRETER
-" > $FILE
+			echo "#!/usr/bin/env $INTERPRETER" > $FILE
 			chmod +x $FILE
 		else
 			eval $CREATE_MSG
@@ -93,8 +92,7 @@ function new {
 		if [ -n "$INTERPRETER" ]
 		then
 			eval $SHEBANG_MSG
-			prepend $FILE "#!/usr/bin/env $INTERPRETER
-"
+			prepend $FILE "#!/usr/bin/env $INTERPRETER\n"
 			chmod +x $FILE
 		else
 			eval $OPEN_MSG
@@ -152,16 +150,12 @@ function hbnew {
 
 function jsnew {
 	new -i node -e js -o noopen -f $1
-	echo "require(process.env.JS_LIB_HOME + '/log')
-" >> $1.js
+	echo "require(process.env.JS_LIB_HOME + '/log')" >> $1.js
 }
 
 function rnew {
 	new -i ruby -e rb -o noopen -f $1
-	echo "\$LOAD_PATH << '.'
-
-require 'lib/log.rb'
-" >> $1.rb
+	echo "\n\$LOAD_PATH << '.'\n\nrequire 'lib/log.rb'" >> $1.rb
 	white "`cat $1.rb`"
 }
 
@@ -325,8 +319,7 @@ function libfind_s {
 }
 
 function al {
-	echo "
-alias $1=\"$2\"" >> $DOTFILES_HOME/aliases.zsh
+	echo "alias $1=\"$2\"" >> $DOTFILES_HOME/aliases.zsh
 }
 
 function fr {
@@ -576,6 +569,10 @@ function amz {
 	browser "http://www.amazon.com/s/ref=nb_sb_noss_2?url=search-alias%3Daps&field-keywords=`urlencode $@`"
 }
 
+function ytube {
+	browser "https://www.youtube.com/results?search_query=`urlencode $@`"
+}
+
 function salesf {
 	browser "https://cloudreach.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=01t&sen=a0D&sen=098&sen=800&sen=005&sen=00P&sen=006&sen=501&sen=001&sen=00T&sen=00U&sen=810&sen=500&sen=003&sen=00O&sen=00a&sen=a08&sen=550&str=`urlencode $@`"
 }
@@ -652,8 +649,7 @@ function bookmark {
 	then
 		red "Bookmark already exists!"	
 	else
-		echo "
-alias ${NAME}=\"${BROWSER} '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
+		echo "alias ${NAME}=\"${BROWSER} '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
 		source $DOTFILES_HOME/bookmarks.zsh
 		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
 	fi
@@ -692,5 +688,23 @@ function replace_all {
 		new_contents=`cat $file | sed "s/$SEARCH/$REPLACEMENT/g"`
 		rm $file
 		echo $new_contents > $file
+	done
+}
+
+function sshfind {
+	HOST=$1
+	grep -A 3 $HOST ~/.ssh/config
+}
+
+function killp {
+	NAME=$1
+
+	processes=`ps aux | grep $NAME | awk '{print $2}' | xargs`
+	processes=("${(s: :)processes}")
+	
+	green "Killing all `yellow $NAME` `green 'processes ...'`"
+	for process in $processes
+	do
+		`kill $process 2> /dev/null`
 	done
 }

@@ -1,4 +1,5 @@
-source ~/Programming/robin/dotfiles/colors.zsh
+DOTFILES_HOME=~/Programming/robin/zsh/projects/dotfiles
+source $DOTFILES_HOME/colors.zsh
 
 echo "$(white I)$(yellow " am ")$(cyan awesome)"
 
@@ -70,8 +71,6 @@ fi
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
 pythonbrew use 3.2 2> /dev/null
-
-
 
 
 # Functions

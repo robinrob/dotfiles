@@ -1,7 +1,7 @@
 #!/usr/bin/env sh
 
-source colors.sh
-source indents.sh
+source colors.zsh
+source indents.zsh
 source functions.zsh
 
 function install() {
