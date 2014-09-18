@@ -712,3 +712,7 @@ function killp {
 function updatesubs {
 	git submodule foreach --recursive "`git commit -am 'Updates.' && git push` || exit 0"
 }
+
+function save_code {
+	rake each_sub["git checkout master && git commit -am 'Auto-update.' && git pull origin master && git push origin master"]
+}

@@ -85,8 +85,6 @@ hash -d html-css="$HTMLCSS_HOME"
 alias js="javascript"
 
 # Shell Aliases
-alias rbdoc="rubydoc"
-
 alias crl="crontab -l"
 
 alias cre="crontab -e"
@@ -603,6 +601,9 @@ alias pb="pbcopy"
 alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
 # Shell functions
+alias rbdoc="rubydoc"
+
+alias svc="save_code"
 
 alias kp="killp"
 
