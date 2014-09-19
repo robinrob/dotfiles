@@ -415,7 +415,7 @@ function save_crontab {
 	SAVE_PATH="$DOTFILES_HOME/$CRON_NAME"
 	rm -f $SAVE_PATH
 	green "Saving crontab to $SAVE_PATH ..."
-	crontab -l > SAVE_PATH
+	crontab -l > $SAVE_PATH
 }
 
 function save_jetbrains {
