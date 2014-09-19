@@ -410,9 +410,11 @@ function save_jetbrains {
 function cd_dir {
 	cd "$(join / $@)"
 		
-	branch=`git_branch`
-	if ! [[ "$branch" == 'master' ]]
+	val=$(echo `git branch` | grep detached)
+
+	if ! [[ "$val" == "" ]]
 	then
+		red "On detached HEAD!"
 		git checkout master
 	fi
 }
