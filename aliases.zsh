@@ -119,6 +119,9 @@ alias dir="dirname"
 
 alias cdcocos="cd $COCOS_HOME"
 
+# Shell shortcuts
+alias syslog="tail -f /var/log/system.log"
+
 # Applications/Tools
 alias sc="scala"
 
