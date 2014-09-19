@@ -183,7 +183,7 @@ function cd_pull {
 
 	branch=$comps[2]
 
-	cd $1 && git pull origin $branch > /dev/null
+	cd $1 && git pull origin $1 > /dev/null
 }
 
 function cd_save {
@@ -410,15 +410,29 @@ function silent_cp {
 	yes | cp $1 $2 1> /dev/null 2> /dev/null
 }
 
+function save_crontab {
+	CRON_NAME="$HOSTNAME.cron"
+	SAVE_PATH="$DOTFILES/$CRON_NAME"
+	rm -f $SAVE_PATH
+	green "Saving crontab to $SAVE_PATH ..."
+	crontab -l > SAVE_PATH
+}
+
 function save_jetbrains {
 	echo "$(green "Copying Jetbrains config from: ")$(yellow "$INTELLIJ_CONFIG ...")"
 	silent_cp $INTELLIJ_CONFIG $DOTFILES_HOME/
 }
 
 function cd_dir {
-	DIR=$1
-	shift
-	cd $DIR/$(join / $@)
+	cd "$(join / $@)"
+		
+	val=$(echo `git branch` | grep detached)
+
+	if ! [[ "$val" == "" ]]
+	then
+		red "On detached HEAD!"
+		git checkout master
+	fi
 }
 
 function cddir {
@@ -724,4 +738,9 @@ function updatesubs {
 function save_code {
 	# rake each_sub["rake save"]
 	rake each_sub["git checkout master; git commit -am 'Auto-update.'; git pull origin master; git push origin master"]
+}
+
+function git_branch {
+	output=`git branch`
+	echo $output[3,-1]
 }

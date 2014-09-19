@@ -36,6 +36,8 @@ unalias gst
 
 unalias sf
 
+# unalias cd > /dev/null 2> /dev/null
+
 
 # Web Shortcuts/Bookmarks
 alias rd="rubydoc"
@@ -361,7 +363,7 @@ alias sv="cd_save"
 
 alias dpl="cd_pull $DOTFILES_HOME"
 
-alias dsv="save_jetbrains; cd_save $DOTFILES_HOME"
+alias dsv="save_crontab; save_jetbrains; cd_save $DOTFILES_HOME"
 
 alias dcm="cd_commit $DOTFILES_HOME"
 
@@ -600,7 +602,7 @@ alias pb="pbcopy"
 
 alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
-# Shell functions
+# Shell functions/function aliases
 alias rbdoc="rubydoc"
 
 alias svc="save_code"
