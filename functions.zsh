@@ -417,12 +417,6 @@ function cd_dir {
 	fi
 }
 
-# function cd {
-# 	PATH="$(join / $@)"
-# 	echo $PATH
-# 	/usr/bin/cd "$PATH"
-# }
-
 function cddir {
 	cd `dirname $1`
 }
