@@ -85,6 +85,8 @@ hash -d html-css="$HTMLCSS_HOME"
 alias js="javascript"
 
 # Shell Aliases
+alias dt="date"
+
 alias crl="crontab -l"
 
 alias cre="crontab -e"
@@ -555,8 +557,6 @@ alias cleanhome="$SH_HOME/clean_home.sh"
 alias e="$EDITOR"
 
 alias E="e"
-
-alias email="copy_print robin@mrrobinsmith.com"
 
 alias editor="echo $EDITOR"
 

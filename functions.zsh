@@ -29,10 +29,18 @@ function get_record {
 	copy_print ""$val2""
 }
 
-function reminder {
+function email {
 	ADDRESS=$1
 	SUBJECT=$2
-	echo $SUBJECT | mail -s "REMINDER: $SUBJECT" $ADDRESS
+	BODY=$3
+	
+	echo "$BODY" | mail -s "$SUBJECT" "$ADDRESS"
+}
+
+function reminder {
+	ADDRESS=$1
+	MESSAGE=$2
+	email $ADDRESS "REMINDER: $MESSAGE"
 }
 
 function note {
