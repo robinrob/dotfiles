@@ -413,9 +413,12 @@ function silent_cp {
 function save_crontab {
 	CRON_NAME="$HOSTNAME.cron"
 	SAVE_PATH="$DOTFILES_HOME/$CRON_NAME"
+	
 	rm -f $SAVE_PATH
 	green "Saving crontab to $SAVE_PATH ..."
-	crontab -l > $SAVE_PATH
+	crontab -l > "tmp.cron"
+	silent_cp tmp.cron $SAVE_PATH
+	rm tmp.cron
 }
 
 function save_jetbrains {
