@@ -175,7 +175,7 @@ function cd_pull {
 
 	branch=$comps[2]
 
-	cd $1 && git pull origin $branch > /dev/null
+	cd $1 && git pull origin $1 > /dev/null
 }
 
 function cd_save {
@@ -408,10 +408,20 @@ function save_jetbrains {
 }
 
 function cd_dir {
-	DIR=$1
-	shift
-	cd $DIR/$(join / $@)
+	cd "$(join / $@)"
+		
+	branch=`git_branch`
+	if ! [[ "$branch" == 'master' ]]
+	then
+		git checkout master
+	fi
 }
+
+# function cd {
+# 	PATH="$(join / $@)"
+# 	echo $PATH
+# 	/usr/bin/cd "$PATH"
+# }
 
 function cddir {
 	cd `dirname $1`
@@ -716,4 +726,9 @@ function updatesubs {
 function save_code {
 	# rake each_sub["rake save"]
 	rake each_sub["git checkout master; git commit -am 'Auto-update.'; git pull origin master; git push origin master"]
+}
+
+function git_branch {
+	output=`git branch`
+	echo $output[3,-1]
 }
