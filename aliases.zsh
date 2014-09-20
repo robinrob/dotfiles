@@ -87,6 +87,8 @@ hash -d html-css="$HTMLCSS_HOME"
 alias js="javascript"
 
 # Shell Aliases
+alias dt="date"
+
 alias crl="crontab -l"
 
 alias cre="crontab -e"
@@ -116,6 +118,9 @@ alias shell="echo $SHELL"
 alias dir="dirname"
 
 alias cdcocos="cd $COCOS_HOME"
+
+# Shell shortcuts
+alias syslog="tail -f /var/log/system.log"
 
 # Applications/Tools
 alias sc="scala"
@@ -361,7 +366,7 @@ alias sv="cd_save"
 
 alias dpl="cd_pull $DOTFILES_HOME"
 
-alias dsv="save_jetbrains; cd_save $DOTFILES_HOME"
+alias dsv="save_crontab; save_jetbrains; cd_save $DOTFILES_HOME"
 
 alias dcm="cd_commit $DOTFILES_HOME"
 
@@ -552,13 +557,9 @@ alias ecmd="$EDITOR $DOCS_HOME/commands.txt"
 
 alias cmd="mate $DOCS_HOME/commands.txt"
 
-alias cleanhome="$SH_HOME/clean_home.sh"
-
 alias e="$EDITOR"
 
 alias E="e"
-
-alias email="copy_print robin@mrrobinsmith.com"
 
 alias editor="echo $EDITOR"
 

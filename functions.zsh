@@ -29,10 +29,18 @@ function get_record {
 	copy_print ""$val2""
 }
 
-function reminder {
+function email {
 	ADDRESS=$1
 	SUBJECT=$2
-	echo $SUBJECT | mail -s "REMINDER: $SUBJECT" $ADDRESS
+	BODY=$3
+	
+	echo "$BODY" | mail -s "$SUBJECT" "$ADDRESS"
+}
+
+function reminder {
+	ADDRESS=$1
+	MESSAGE=$2
+	email $ADDRESS "REMINDER: $MESSAGE"
 }
 
 function note {
@@ -402,6 +410,18 @@ function silent_cp {
 	yes | cp $1 $2 1> /dev/null 2> /dev/null
 }
 
+function save_crontab {
+	CRON_NAME="$HOSTNAME.cron"
+	SAVE_PATH="$DOTFILES_HOME/$CRON_NAME"
+	TMP_PATH="${SAVE_PATH}.tmp"
+	
+	rm -f $SAVE_PATH
+	green "Saving crontab to $SAVE_PATH ..."
+	crontab -l > $TMP_PATH
+	silent_cp $TMP_PATH $SAVE_PATH
+	rm $TMP_PATH
+}
+
 function save_jetbrains {
 	echo "$(green "Copying Jetbrains config from: ")$(yellow "$INTELLIJ_CONFIG ...")"
 	silent_cp $INTELLIJ_CONFIG $DOTFILES_HOME/
@@ -410,7 +430,7 @@ function save_jetbrains {
 function cd_dir {
 	cd "$(join / $@)"
 		
-	val=$(echo `git branch` | grep detached)
+	val=$(echo `git branch 2> /dev/null` | grep detached)
 
 	if ! [[ "$val" == "" ]]
 	then
@@ -727,4 +747,8 @@ function save_code {
 function git_branch {
 	output=`git branch`
 	echo $output[3,-1]
+}
+
+function clean_home {
+	find ~/ -depth 1 \( ! -regex '.*/\..*' \) -type f -name * | xargs rm
 }
