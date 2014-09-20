@@ -56,9 +56,9 @@ set -o vi
 
 # Ruby
 ######
-ruby="2.1.1"
-eval "rvm use ruby-"$ruby 1> /dev/null
-green "Using \`Ruby-$ruby\`"
+# ruby="2.1.1"
+# eval "rvm use ruby-"$ruby 1> /dev/null
+# green "Using \`Ruby-$ruby\`"
 
 if [[ "$HOSTNAME" == "$VENUS_HOSTNAME" ]]
 then
@@ -69,7 +69,7 @@ fi
 ########
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
-pythonbrew use 3.2 2> /dev/null
+# pythonbrew use 3.2 2> /dev/null
 
 
 # Functions
