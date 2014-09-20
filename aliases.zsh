@@ -557,8 +557,6 @@ alias ecmd="$EDITOR $DOCS_HOME/commands.txt"
 
 alias cmd="mate $DOCS_HOME/commands.txt"
 
-alias cleanhome="$SH_HOME/clean_home.sh"
-
 alias e="$EDITOR"
 
 alias E="e"

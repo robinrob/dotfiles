@@ -430,7 +430,7 @@ function save_jetbrains {
 function cd_dir {
 	cd "$(join / $@)"
 		
-	val=$(echo `git branch` | grep detached)
+	val=$(echo `git branch 2> /dev/null` | grep detached)
 
 	if ! [[ "$val" == "" ]]
 	then
@@ -747,4 +747,8 @@ function save_code {
 function git_branch {
 	output=`git branch`
 	echo $output[3,-1]
+}
+
+function clean_home {
+	find ~/ -depth 1 \( ! -regex '.*/\..*' \) -type f -name * | xargs rm
 }
