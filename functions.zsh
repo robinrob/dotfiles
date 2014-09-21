@@ -5,6 +5,16 @@
 
 source $DOTFILES_HOME/colors.zsh
 
+function upper {
+	TEXT="$@"
+	echo $TEXT:u
+}
+
+function lower {
+	TEXT="$@"
+	echo $TEXT:l
+}
+
 function join {
 	local IFS="$1"; shift; echo "$*";
 }
@@ -326,8 +336,65 @@ function libfind_s {
 	fi
 }
 
+function exec_exists {
+	EXEC=$1
+	
+	if [[ "`which $EXEC`" == "$EXEC not found" ]]
+	then
+		echo "no"
+	else
+		echo "yes"
+	fi
+}
+
+function alias_exists {
+	NAME=$1
+	ALIAS_FILE=$2
+	result=`grep "alias $NAME" $ALIAS_FILE`
+	
+	if [[ "$result" == "" ]]
+	then
+		echo "no"	
+	else
+		echo "yes"
+	fi
+}
+
+function create_alias {
+	NAME=$1
+	VALUE=$2
+	ALIAS_FILE=$3
+	SUCCESS_MSG=$4
+	
+	if [[ "$(alias_exists $NAME $ALIAS_FILE)" == "no" ]]
+	then
+		echo "\nalias $NAME=\"$VALUE\"" >> $ALIAS_FILE
+		echo "$SUCCESS_MSG"
+	else
+		red "Alias already exists!"
+	fi
+}
+
 function al {
-	echo "alias $1=\"$2\"" >> $DOTFILES_HOME/aliases.zsh
+	create_alias $1 $2 $DOTFILES_HOME/aliases.zsh
+}
+
+function bookmark {
+	NAME=$1
+	URL=$2
+	BROWSER=$3
+	if [[ "$BROWSER" == "" ]]
+	then
+		BROWSER="open"
+	fi
+	
+	ALIAS="${BROWSER} '${URL}'"
+	BOOKMARKS_PATH=$DOTFILES_HOME/bookmarks.zsh
+	SUCCESS_MSG="`yellow $NAME` `green bookmarked as` `yellow $URL`"
+	
+	create_alias $NAME $ALIAS $BOOKMARKS_PATH $SUCCESS_MSG
+	
+	source $BOOKMARKS_PATH
 }
 
 function fr {
@@ -658,27 +725,6 @@ function web {
 
 function wrap_single {
 	echo "'$@'"
-}
-
-function bookmark {
-	NAME=$1
-	URL=$2
-	if [[ "$3" != "" ]]
-	then
-		BROWSER=$3
-	else
-		BROWSER="open"
-	fi
-	
-	result=`grep "alias $NAME" $DOTFILES_HOME/bookmarks.zsh`
-	if [[ "$result" != "" ]]
-	then
-		red "Bookmark already exists!"	
-	else
-		echo "alias ${NAME}=\"${BROWSER} '${URL}'\"" >> $DOTFILES_HOME/bookmarks.zsh
-		source $DOTFILES_HOME/bookmarks.zsh
-		echo "`yellow $NAME` `green bookmarked as` `yellow $URL`"
-	fi
 }
 
 function dev {
