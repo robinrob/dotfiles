@@ -628,6 +628,10 @@ function lsa {
 	ls $PWD/$1
 }
 
+function lsad {
+	ls -d $PWD/$1
+}
+
 function urlencode {
 	setopt localoptions extendedglob
 	input=( ${(s::)@} )
