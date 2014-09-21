@@ -798,3 +798,7 @@ function git_branch {
 function clean_home {
 	find ~/ -depth 1 \( ! -regex '.*/\..*' \) -type f -name * | xargs rm
 }
+
+function this_dir {
+	echo ${PWD##*/}
+}
