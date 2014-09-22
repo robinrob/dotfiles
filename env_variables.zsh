@@ -54,11 +54,11 @@ export HTMLLESS_HOME=$PROG_HOME/html-less
 
 export HTML_TEMPLATES_HOME=$HTMLCSS_HOME/templates
 
+export RUBY_HOME=$PROG_HOME/ruby
+
 export RUBY_TEMPLATES_HOME=$RUBY_HOME/templates
 
 export SCALA_HOME=$PROG_HOME/scala
-
-export RUBY_HOME=$PROG_HOME/ruby
 
 export AWK_HOME=$PROG_HOME/awk
 

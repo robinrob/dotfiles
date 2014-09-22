@@ -40,13 +40,13 @@ unalias sf
 
 
 # Web Shortcuts/Bookmarks
+source $DOTFILES_HOME/bookmarks.zsh
+
 alias rd="rubydoc"
 
 alias wk="wiki"
 
 alias gg="google"
-
-source $DOTFILES_HOME/bookmarks.zsh
 
 
 # Hashes
@@ -87,6 +87,8 @@ hash -d html-css="$HTMLCSS_HOME"
 alias js="javascript"
 
 # Shell Aliases
+alias lsltr="ls -ltr | awk '{print \$9}' | tail +2"
+
 alias dt="date"
 
 alias crl="crontab -l"
@@ -170,6 +172,8 @@ alias cdb="cd_dir $HTMLCSS_HOME/practice/bootstrap"
 alias cdsc="cd_dir $SCALA_HOME"
 
 alias cdr="cd_dir $RUBY_HOME"
+
+alias cdpl="cd_dir $PERL_HOME"
 
 alias cdmr="cd_dir $RUBY_HOME/projects/mrrobinsmith.com"
 

@@ -177,6 +177,12 @@ function rnew {
 	white "`cat $NAME.rb`"
 }
 
+function plnew {
+	FILENAME="$1.pl"
+	cp $PERL_HOME/templates/practice.pl $FILENAME
+	white "`cat $FILENAME`"
+}
+
 function hcexample {
 	PROJECT=$1
 	mkdir $PROJECT
@@ -515,11 +521,11 @@ function browser {
 }
 
 function safari {
-	open -a Safari
+	open -a Safari $@
 }
 
 function firefox {
-	open -a Firefox
+	open -a Firefox $@
 }
 
 function chrome {
@@ -655,7 +661,7 @@ function rubygems {
 }
 
 function sfs {
-	safari "http://my.safaribooksonline.com/search?q=`urlencode $@`"
+	open -a Safari "http://my.safaribooksonline.com/search?q=`urlencode $@`"
 }
 
 function wiki {

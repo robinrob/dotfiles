@@ -70,7 +70,7 @@ alias bkjs="book http://my.safaribooksonline.com/book/programming/javascript/978
 
 alias bkjs1="book http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
 
-alias bkrails="book http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
+alias bkrails="open -a Safari http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
 
 alias bkpg="book http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
@@ -109,3 +109,5 @@ alias tagging="open 'https://sites.google.com/a/cloudreach.co.uk/points-lists/aw
 alias robin="open 'http://mrrobinsmith.com'"
 
 alias bkrb2="safari 'http://my.safaribooksonline.com/book/web-development/ruby/0768667208'"
+
+alias bkregex="safari 'http://my.safaribooksonline.com/book/programming/regular-expressions/0596528124'"
