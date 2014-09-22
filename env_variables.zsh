@@ -8,7 +8,7 @@ export MERCURY_HOSTNAME='mercury'
 
 export VENUS_HOSTNAME='venus'
 
-export EDITOR=mvim
+export EDITOR=vim
 
 export VISUAL=mvim
 

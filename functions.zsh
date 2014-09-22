@@ -172,9 +172,9 @@ function jsnew {
 }
 
 function rnew {
-	new -i ruby -e rb -o noopen -f $1
-	echo "\n\$LOAD_PATH << '.'\n\nrequire 'lib/log.rb'" >> $1.rb
-	white "`cat $1.rb`"
+	NAME=$1
+	cp $RUBY_HOME/templates/practice.rb $NAME.rb
+	white "`cat $NAME.rb`"
 }
 
 function hcexample {
@@ -514,6 +514,14 @@ function browser {
 	open -a $BROWSER $@
 }
 
+function safari {
+	open -a Safari
+}
+
+function firefox {
+	open -a Firefox
+}
+
 function chrome {
 	open -a Google\ Chrome $@
 }
@@ -553,7 +561,7 @@ function bbcmr {
 }
 
 function cleanhome {
-	for file in `find . -name [a-zA-Z0-9]\* -depth 1 -type f`
+	for file in `find . \( ! -regex '.*/\..*' \) -type f -name *`
 	do
 		green "Moving $file to $TRASH_HOME"
 		mv $file ~/.Trash
