@@ -1,7 +1,5 @@
 # Bookmarks
 
-alias translate="browser https://translate.google.com/"
-
 alias crockford="browser 'https://www.youtube.com/results?search_query=douglas+crockford'"
 
 alias recipe="browser /Users/msl/Programming/robin/html-css/projects/book/chapter05/index.html"

@@ -705,7 +705,7 @@ function translate {
 
 	args="$@"
 	url="https://translate.google.com/#$FROM/$TO/$(urlencode ""$args"")"
-	open $url
+	browser $url
 }
 
 function trn {
