@@ -646,8 +646,8 @@ function rubygems {
 	browser "https://rubygems.org/search?utf8=%E2%9C%93&query=`urlencode $@`"
 }
 
-function safaris {
-	browser "http://my.safaribooksonline.com/search?q=`urlencode $@`"
+function sfs {
+	safari "http://my.safaribooksonline.com/search?q=`urlencode $@`"
 }
 
 function wiki {

@@ -107,3 +107,5 @@ alias renew="open 'https://vpl.bibliocommons.com/user/login'"
 alias tagging="open 'https://sites.google.com/a/cloudreach.co.uk/points-lists/aws/lab-instance-tagging'"
 
 alias robin="open 'http://mrrobinsmith.com'"
+
+alias bkrb2="safari 'http://my.safaribooksonline.com/book/web-development/ruby/0768667208'"
