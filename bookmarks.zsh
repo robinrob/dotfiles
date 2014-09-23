@@ -20,7 +20,7 @@ alias r4b3="browser http://rails4-bootstrap3.herokuapp.com"
 
 alias r4b3-orig="browser http://rails4-bootstrap3-orig.herokuapp.com"
 
-alias dev="browser http://localhost:3000"
+alias dev="chrome http://localhost:3000 && safari http://localhost:3000"
 
 alias venues="chrome 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc?key=0AoV1py6VJXyMdEw1ZmhfOWZLaGZzdTk1Q3VkZjYwLXc#gid=0'"
 
@@ -111,3 +111,4 @@ alias robin="open 'http://mrrobinsmith.com'"
 alias bkrb2="safari 'http://my.safaribooksonline.com/book/web-development/ruby/0768667208'"
 
 alias bkregex="safari 'http://my.safaribooksonline.com/book/programming/regular-expressions/0596528124'"
+alias bkhaml="safari 'http://my.safaribooksonline.com/book/web-development/ruby/9781783283774'"
