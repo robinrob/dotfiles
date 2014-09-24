@@ -487,8 +487,6 @@ alias tagalog="cd_dir $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/tagalog.csv -t 10 -g
 
 alias capitals="cd $QUIZ_HOME && ./quiz.rb -f $QUIZ_HOME/capitals.csv -t 10 -g 3"
 
-alias mr="mate $RECORDS_PATH"
-
 alias erec="$EDITOR $RECORDS_PATH"
 
 alias cms="edit $DOCS_HOME/commands.txt"
