@@ -347,8 +347,6 @@ alias gsi="git submodule init"
 
 alias gsu="git submodule update"
 
-alias gsur="git submodule update --init --recursive"
-
 alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
@@ -356,6 +354,10 @@ alias cgm="cat .gitmodules"
 alias grh="git reset HEAD"
 
 alias gra="git remote add"
+
+alias grao="git remote add origin"
+
+alias gpom="git push origin master"
 
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
 
