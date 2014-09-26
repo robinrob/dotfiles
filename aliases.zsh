@@ -361,6 +361,8 @@ alias grao="git remote add origin"
 
 alias gpom="git push origin master"
 
+alias gplom="git pull origin master"
+
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
 
 # Git repo operations
