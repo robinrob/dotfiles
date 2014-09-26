@@ -240,6 +240,8 @@ alias cdg="cd_dir $JS_HOME/projects/mobile-game-cocos"
 # Development operations
 alias mrdb="psql -U msl -d mrrobinsmith_development"
 
+alias rsc="rails console"
+
 alias rksv="rake_do server"
 
 alias rls="rails server"
