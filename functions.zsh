@@ -278,7 +278,7 @@ function color_words {
 	TEXT=$1
 	PATTERN=$2
 	COLOR=$3
-	echo $TEXT | sed "s/$PATTERN/$($COLOR $PATTERN)/"
+	echo $TEXT | gsed "s/$PATTERN/$($COLOR $PATTERN)/gI"
 }
 
 function libfind {
@@ -293,9 +293,11 @@ function libfind {
 		esac
 	done
 	
-	result_grep="`grep -r $PATTERN $DIR`"
+	result_grep="`ggrep --binary-file=without-match --line-number -i --no-messages --recursive --word-regexp $PATTERN $DIR`"
+	# grep -ri $PATTERN $DIR
+	# result_grep="`grep -ri $PATTERN $DIR`"
 	results=("${(f)result_grep}")
-	
+
 	if [ -n "$results" ]
 	then
 		for result in $results
@@ -306,7 +308,7 @@ function libfind {
 	
 	result_find=`find $DIR -path ./lib -prune -o -type f -name "*$PATTERN*"`
 	results=("${(f)result_find}")
-	
+
 	for result in $results
 	do
 
@@ -664,6 +666,10 @@ function sfs {
 
 function wiki {
 	browser "http://en.wikipedia.org/wiki/Special:Search?search=`urlencode $@`&go=Go"
+}
+
+function imdb {
+	browser "http://www.imdb.com/find?ref_=nv_sr_fn&q=`urlencode $@`&s=all"
 }
 
 function google {

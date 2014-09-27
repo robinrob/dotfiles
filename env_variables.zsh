@@ -197,3 +197,5 @@ export PATH=$ANT_ROOT:$PATH
 # Add environment variable NDK_ROOT for cocos2d-x
 export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d/
 export PATH=$NDK_ROOT:$PATH
+
+export GREP_COLORS='ms=01;35:mc=01;31:sl=:cx=:fn=0:ln=32:bn=32:se=36'

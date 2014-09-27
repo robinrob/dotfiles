@@ -7,7 +7,7 @@
 #Brown       0;33     Yellow        1;33
 #Light Gray  0;37     White         1;37
 
-ccend=$(echo "[0m")
+ccdefault=$(echo "[0m")
 ccblack=$(echo "[0;30m")
 ccdarkgrey=$(echo "[1;30m")
 ccred=$(echo "[0;31m")
@@ -25,47 +25,47 @@ ccguess=$(echo "[1;39m")
 
 
 function default() {
-	echo ${ccend}$@${ccend}
+	echo ${ccdefault}$@${ccdefault}
 }
 
 function black() {
-	echo ${ccblack}$@${ccend}
+	echo ${ccblack}$@${ccdefault}
 }
 
 function darkgrey() {
-	echo ${ccdarkgrey}$@${ccend}
+	echo ${ccdarkgrey}$@${ccdefault}
 }
 
 function red() {
-	echo ${ccred}$@${ccend}
+	echo ${ccred}$@${ccdefault}
 }
 
 function green() {
-	echo ${ccgreen}$@${ccend}
+	echo ${ccgreen}$@${ccdefault}
 }
 
 function yellow() {
-	echo ${ccyellow}$@${ccend}
+	echo ${ccyellow}$@${ccdefault}
 }
 
 function blue() {
-	echo ${ccblue}$@${ccend}
+	echo ${ccblue}$@${ccdefault}
 }
 
 function pink() {
-	echo ${ccpink}$@${ccend}
+	echo ${ccpink}$@${ccdefault}
 }
 
 function cyan() {
-	echo ${cccyan}$@${ccend}
+	echo ${cccyan}$@${ccdefault}
 }
 
 function white() {
-	echo ${ccwhite}$@${ccend}
+	echo ${ccwhite}$@${ccdefault}
 }
 
 function magenta() {
-	echo ${cclightpurple}$@${ccend}
+	echo ${cclightpurple}$@${ccdefault}
 }
 
 function maganda() {
@@ -73,9 +73,9 @@ function maganda() {
 }
 
 function brown() {
-	echo ${ccbrown}$@${ccend}
+	echo ${ccbrown}$@${ccdefault}
 }
 
 function lightblue() {
-	echo ${cclightblue}$@${ccend}
+	echo ${cclightblue}$@${ccdefault}
 }

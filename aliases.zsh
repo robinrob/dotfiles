@@ -38,6 +38,12 @@ unalias sf
 
 # unalias cd > /dev/null 2> /dev/null
 
+unalias lsg
+
+unalias ls
+
+unalias gls > /dev/null 2> /dev/null
+
 
 # Web Shortcuts/Bookmarks
 source $DOTFILES_HOME/bookmarks.zsh
@@ -86,6 +92,24 @@ hash -d html-css="$HTMLCSS_HOME"
 # Hash aliases
 alias js="javascript"
 
+
+# GNU aliases
+alias gegrep="gegrep"
+
+alias grep="ggrep"
+
+alias find="gfind"
+
+alias sed="gsed"
+
+alias ls="gls --color"
+
+alias cat="gcat"
+
+alias awk="gawk"
+
+alias "echo"="gecho"
+
 # Shell Aliases
 alias lsltr="ls -ltr | awk '{print \$9}' | tail +2"
 
@@ -122,6 +146,8 @@ alias dir="dirname"
 alias cdcocos="cd $COCOS_HOME"
 
 # Shell shortcuts
+alias mcol="mate $DOTFILES_HOME/colors.zsh"
+
 alias syslog="tail -f /var/log/system.log"
 
 # Applications/Tools

@@ -111,6 +111,7 @@ alias robin="open 'http://mrrobinsmith.com'"
 alias bkrb2="safari 'http://my.safaribooksonline.com/book/web-development/ruby/0768667208'"
 
 alias bkregex="safari 'http://my.safaribooksonline.com/book/programming/regular-expressions/0596528124'"
+
 alias bkhaml="safari 'http://my.safaribooksonline.com/book/web-development/ruby/9781783283774'"
 
 alias bkdsl="open 'http://my.safaribooksonline.com/book/software-engineering-and-development/ide/9780132107549'"
