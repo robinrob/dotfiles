@@ -174,7 +174,7 @@ function jsnew {
 function rnew {
 	NAME=$1
 	cp $RUBY_HOME/templates/practice.rb $NAME.rb
-	white "`cat $NAME.rb`"
+	brightwhite "`cat $NAME.rb`"
 }
 
 function plnew {

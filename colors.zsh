@@ -30,7 +30,7 @@ function color {
 	shift;
 	start='${cc'$color'}'
 	end='${ccdefault}'
-	echo `eval echo $start$@$end`
+	echo "`eval echo $start'$@'$end`"
 }
 
 function default {

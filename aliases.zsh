@@ -92,6 +92,8 @@ alias js="javascript"
 
 
 # GNU aliases
+alias gecho="echo"
+
 alias gegrep="gegrep"
 
 alias grep="ggrep"
