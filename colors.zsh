@@ -83,8 +83,12 @@ function brightblue {
 	color brightblue $@
 }
 
-function pink {
-	color pink $@
+function magenta {
+	color magenta $@
+}
+
+function brightmagenta {
+	color brightmagenta $@
 }
 
 function cyan {
@@ -103,22 +107,6 @@ function brightwhite {
 	color brightwhite $@
 }
 
-function magenta {
-	color magenta $@
-}
-
-function brightmagenta {
-	color brightmagenta $@
-}
-
 function maganda {
 	brightmagenta $@
-}
-
-function brown {
-	color brown $@
-}
-
-function guess {
-	color guess $@
 }
