@@ -194,12 +194,10 @@ function hcexample {
 
 function cd_pull {
 	output=`cd $1 && git branch | head -1 > /dev/null`
-		
 	comps=("${(s/* /)output}") # notice the quotes
-
 	branch=$comps[2]
 
-	cd $1 && git pull origin $1 > /dev/null
+	cd $1 && git pull origin $branch
 }
 
 function cd_save {

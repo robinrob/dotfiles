@@ -119,3 +119,5 @@ alias han="chrome 'https://docs.google.com/a/cloudreach.co.uk/document/d/1vYyK25
 alias reboots="chrome 'https://docs.google.com/a/cloudreach.co.uk/spreadsheets/d/1cEexs1IuUD2rtlj1YP8mmyIdDHHrciLAY2OvsdbuiBw/edit#gid=0'"
 
 alias ymca="open 'http://www.vanymca.org/centres/robertlee/sites/all/themes/ymca/documents/programs/PDFschedules/robert_lee_ymca_vancouver_aquatics_curr.pdf'"
+
+alias bkdsl="open 'http://my.safaribooksonline.com/book/software-engineering-and-development/ide/9780132107549'"
