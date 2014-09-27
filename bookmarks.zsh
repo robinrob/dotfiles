@@ -90,7 +90,7 @@ alias gabscases="cases 00B20000006SMJf"
 
 alias seanscases="cases 00B20000007AD8A"
 
-alias unassigned="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079jxp'"
+alias unassed="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079jxp'"
 
 alias pending="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006XDXH'"
 
@@ -111,4 +111,11 @@ alias robin="open 'http://mrrobinsmith.com'"
 alias bkrb2="safari 'http://my.safaribooksonline.com/book/web-development/ruby/0768667208'"
 
 alias bkregex="safari 'http://my.safaribooksonline.com/book/programming/regular-expressions/0596528124'"
+
 alias bkhaml="safari 'http://my.safaribooksonline.com/book/web-development/ruby/9781783283774'"
+
+alias han="chrome 'https://docs.google.com/a/cloudreach.co.uk/document/d/1vYyK25NFx3x9W57NqqigUj5e0m7Wdm8N2LmJqpDLHo8/edit?usp=drive_web'"
+
+alias reboots="chrome 'https://docs.google.com/a/cloudreach.co.uk/spreadsheets/d/1cEexs1IuUD2rtlj1YP8mmyIdDHHrciLAY2OvsdbuiBw/edit#gid=0'"
+
+alias ymca="open 'http://www.vanymca.org/centres/robertlee/sites/all/themes/ymca/documents/programs/PDFschedules/robert_lee_ymca_vancouver_aquatics_curr.pdf'"

@@ -69,7 +69,12 @@ fi
 ########
 [[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
 
-# pythonbrew use 3.2 2> /dev/null
+if [[ "$HOSTNAME" == "$VENUS_HOSTNAME" ]]
+then
+	pythonbrew use 2.7 2> /dev/null
+else
+	pythonbrew use 3.2 2> /dev/null
+fi
 
 
 # Functions
