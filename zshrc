@@ -1,7 +1,7 @@
 DOTFILES_HOME=~/Programming/robin/zsh/projects/dotfiles
 source $DOTFILES_HOME/colors.zsh
 
-echo "$(white I)$(lightyellow " am ")$(cyan awesome)"
+echo "$(brightwhite I)$(brightyellow " am ")$(brightcyan awesome)"
 
 # YADR stuff
 ############
