@@ -7,30 +7,36 @@
 #Brown       0;33     Yellow        1;33
 #bright Gray  0;37     White         1;37
 
-export ccdefault=$(echo "[0m")
-export ccblack=$(echo "[0;30m")
-export ccdarkgrey=$(echo "[1;30m")
-export ccred=$(echo "[0;31m")
-export ccbrightred=$(echo "[1;31m")
-export ccgreen=$(echo "[0;32m")
-export ccbrightgreen=$(echo "[1;32m")
-export ccyellow=$(echo "[0;33m")
-export ccbrightyellow=$(echo "[1;33m")
-export ccblue=$(echo "[0;34m")
-export ccbrightblue=$(echo "[1;34m")
-export ccmagenta=$(echo "[0;35m")
-export ccbrightmagenta=$(echo "[1;35m")
-export cccyan=$(echo "[0;36m")
-export ccbrightcyan=$(echo "[1;36m")
-export ccwhite=$(echo "[0;37m")
-export ccbrightwhite=$(echo "[1;37m")
+export ccdefault="0"
+export ccblack="0;30"
+export ccdarkgrey="1;30"
+export ccred="0;31"
+export ccbrightred="1;31"
+export ccgreen="0;32"
+export ccbrightgreen="1;32"
+export ccyellow="0;33"
+export ccbrightyellow="1;33"
+export ccblue="0;34"
+export ccbrightblue="1;34"
+export ccmagenta="0;35"
+export ccbrightmagenta="1;35"
+export cccyan="0;36"
+export ccbrightcyan="1;36"
+export ccwhite="0;37"
+export ccbrightwhite="1;37"
 
 function color {
 	color=$1
 	shift;
-	start='${cc'$color'}'
-	end='${ccdefault}'
+	start=$(colorencode $color)
+	end=$(colorencode default)
 	echo "`eval echo $start'$@'$end`"
+}
+
+function colorencode {
+	prefix='$(echo "[")'
+	suffix='m'
+	echo $prefix'${cc'$1'}'$suffix
 }
 
 function default {
