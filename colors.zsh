@@ -14,20 +14,16 @@ export ccred=$(echo "[0;31m")
 export ccbrightred=$(echo "[1;31m")
 export ccgreen=$(echo "[0;32m")
 export ccbrightgreen=$(echo "[1;32m")
-export ccbrightyellow=$(echo "[1;33m")
 export ccyellow=$(echo "[0;33m")
-export ccbrown=$(echo "[0;33m")
+export ccbrightyellow=$(echo "[1;33m")
 export ccblue=$(echo "[0;34m")
 export ccbrightblue=$(echo "[1;34m")
-export ccpink=$(echo "[0;35m")
+export ccmagenta=$(echo "[0;35m")
+export ccbrightmagenta=$(echo "[1;35m")
 export cccyan=$(echo "[0;36m")
 export ccbrightcyan=$(echo "[1;36m")
 export ccwhite=$(echo "[0;37m")
 export ccbrightwhite=$(echo "[1;37m")
-export ccmagenta=$(echo "[0;35m")
-export ccbrightmagenta=$(echo "[1;35m")
-
-export ccguess=$(echo "[1;39m")
 
 function color {
 	color=$1
@@ -77,6 +73,10 @@ function blue {
 	color blue $@
 }
 
+function brightblue {
+	color brightblue $@
+}
+
 function pink {
 	color pink $@
 }
@@ -113,6 +113,6 @@ function brown {
 	color brown $@
 }
 
-function brightblue {
-	color brightblue $@
+function guess {
+	color guess $@
 }

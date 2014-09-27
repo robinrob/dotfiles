@@ -46,25 +46,6 @@ function prompt_steeef_simplified_setup {
   # Add hook for calling vcs_info before each command.
   add-zsh-hook precmd prompt_steeef_simplified_precmd
 
-  # Use extended color pallete if available.
-  if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
-    _prompt_steeef_simplified_colors=(
-      "%F{81}"  # Turquoise
-      "%F{166}" # Orange
-      "%F{135}" # Purple
-      "%F{161}" # Hotpink
-      "%F{118}" # Limegreen
-    )
-  else
-    _prompt_steeef_simplified_colors=(
-      "%F{cyan}"
-      "%F{yellow}"
-      "[1;35m"
-      "%F{red}"
-      "%F{green}"
-    )
-  fi
-
   # Formats:
   #   %b - branchname
   #   %u - unstagedstr (see below)
