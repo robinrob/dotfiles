@@ -1,7 +1,18 @@
 DOTFILES_HOME=~/Programming/robin/zsh/projects/dotfiles
 source $DOTFILES_HOME/colors.zsh
 
-echo "$(white I)$(yellow " am ")$(cyan awesome)"
+echo "$(white I)$(lightyellow " am ")$(cyan awesome)"
+
+# YADR stuff
+############
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
+
+prompt robin
+
 
 # Environment variables
 #############################
@@ -32,15 +43,7 @@ source $DOTFILES_HOME/env_variables.zsh
 # ZSH setup
 ###############################################################################
 
-# YADR stuff
-############
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
 
-for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
-
-prompt robin
 
 
 # Shell options

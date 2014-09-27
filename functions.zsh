@@ -242,7 +242,7 @@ function rns {
 }
 
 function gr {
-	grep -r $1 *
+	grep -ri $1 *
 }
 
 function t3389 {
