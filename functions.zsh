@@ -405,7 +405,7 @@ function bookmark {
 
 function fr {
 	PATTERN=$1
-	find . -name *$PATTERN* 2> /dev/null
+	find . -name "*$PATTERN*" 2> /dev/null
 }
 
 function file_grep {
