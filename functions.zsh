@@ -417,12 +417,12 @@ function rake_do {
 	
 	if [ -f Rakefile ]
 	then
-		echo "$(green "Rakefile found: ")$(yellow $(ls $PWD/Rakefile))"
+		echo "$(green "Rakefile found: ")$(yellow $(/usr/local/bin/gls $PWD/Rakefile))"
 		if [ -n "$2" ]
 		then
 			rake $TASK"[$2]"
 		else
-			rake $TASK
+			rake $TASK	
 		fi
 	else
 		red "No Rakefile!"

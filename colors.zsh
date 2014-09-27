@@ -23,59 +23,66 @@ cclightpurple=$(echo "[1;35m")
 
 ccguess=$(echo "[1;39m")
 
-
-function default() {
-	echo ${ccdefault}$@${ccdefault}
+function color {
+	color=$1
+	shift;
+	start='${cc'$color'}'
+	end='${ccdefault}'
+	echo `eval echo $start$@$end`
 }
 
-function black() {
-	echo ${ccblack}$@${ccdefault}
+function default {
+	color default $@
 }
 
-function darkgrey() {
-	echo ${ccdarkgrey}$@${ccdefault}
+function black {
+	color black $@
 }
 
-function red() {
-	echo ${ccred}$@${ccdefault}
+function darkgrey {
+	color darkgrey $@
 }
 
-function green() {
-	echo ${ccgreen}$@${ccdefault}
+function red {
+	color red $@
 }
 
-function yellow() {
-	echo ${ccyellow}$@${ccdefault}
+function green {
+	color green $@
 }
 
-function blue() {
-	echo ${ccblue}$@${ccdefault}
+function yellow {
+	color yellow $@
 }
 
-function pink() {
-	echo ${ccpink}$@${ccdefault}
+function blue {
+	color blue $@
 }
 
-function cyan() {
-	echo ${cccyan}$@${ccdefault}
+function pink {
+	color pink $@
 }
 
-function white() {
-	echo ${ccwhite}$@${ccdefault}
+function cyan {
+	color cyan $@
 }
 
-function magenta() {
-	echo ${cclightpurple}$@${ccdefault}
+function white {
+	color white $@
 }
 
-function maganda() {
+function magenta {
+	color lightpurple $@
+}
+
+function maganda {
 	magenta $@
 }
 
-function brown() {
-	echo ${ccbrown}$@${ccdefault}
+function brown {
+	color brown $@
 }
 
-function lightblue() {
-	echo ${cclightblue}$@${ccdefault}
+function lightblue {
+	color lightblue $@
 }

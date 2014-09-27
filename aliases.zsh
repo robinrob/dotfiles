@@ -42,8 +42,6 @@ unalias lsg
 
 unalias ls
 
-unalias gls > /dev/null 2> /dev/null
-
 
 # Web Shortcuts/Bookmarks
 source $DOTFILES_HOME/bookmarks.zsh
@@ -102,7 +100,7 @@ alias find="gfind"
 
 alias sed="gsed"
 
-alias ls="gls --color"
+alias ls="/usr/local/bin/gls --color"
 
 alias cat="gcat"
 
