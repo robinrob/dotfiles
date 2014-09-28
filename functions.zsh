@@ -168,7 +168,7 @@ function hbnew {
 
 function jsnew {
 	new -i node -e js -o noopen -f $1
-	echo "require(process.env.JS_LIB_HOME + '/log')" >> $1.js
+	echo "\nrequire(process.env.JS_LIB_HOME + '/log')" >> $1.js
 }
 
 function rnew {
