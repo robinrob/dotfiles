@@ -688,6 +688,15 @@ function ytube {
 	browser "https://www.youtube.com/results?search_query=`urlencode $@`"
 }
 
+function stack {
+	browser "http://stackoverflow.com/search?q=`urlencode $@`"
+}
+
+function ask {
+
+	browser "http://stackoverflow.com/questions/ask?title=`urlencode $@`"
+}
+
 function salesf {
 	browser "https://cloudreach.my.salesforce.com/_ui/search/ui/UnifiedSearchResults?searchType=2&sen=01t&sen=a0D&sen=098&sen=800&sen=005&sen=00P&sen=006&sen=501&sen=001&sen=00T&sen=00U&sen=810&sen=500&sen=003&sen=00O&sen=00a&sen=a08&sen=550&str=`urlencode $@`"
 }
@@ -823,4 +832,14 @@ function clean_home {
 
 function this_dir {
 	echo ${PWD##*/}
+}
+
+function del {
+	files="$@"
+	files=(${(s: :)files})
+	
+	for file in $files
+	do
+		gmv $file $TRASH_HOME	
+	done
 }

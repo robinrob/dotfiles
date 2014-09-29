@@ -42,6 +42,8 @@ unalias lsg
 
 unalias ls
 
+unalias rm
+
 
 # Web Shortcuts/Bookmarks
 source $DOTFILES_HOME/bookmarks.zsh
@@ -92,6 +94,8 @@ alias js="javascript"
 
 
 # GNU aliases
+alias mv="gmv"
+
 alias gecho="echo"
 
 alias gegrep="gegrep"
@@ -580,6 +584,8 @@ alias crk="cat Rakefile"
 alias mrk="mate Rakefile"
 
 alias mgf="mate Gemfile"
+
+alias cgf="cat Gemfile"
 
 alias mgi="mate .gitignore"
 

@@ -10,11 +10,9 @@ alias reciped="browser /Users/msl/Programming/robin/html-css/projects/recipe-fin
 
 alias swimming="browser http://www.newark-sherwooddc.gov.uk/glc/groveswimming/"
 
-alias ask="browser http://stackoverflow.com/questions/ask"
+alias mrr="browser 'http://mrrobinsmith.com'"
 
-alias mrr="browser http://mrrobinsmith.com"
-
-alias mrrd="browser http://localhost:3000"
+alias mrrd="browser 'http://localhost:3000'"
 
 alias r4b3="browser http://rails4-bootstrap3.herokuapp.com"
 
@@ -33,8 +31,6 @@ alias gdoc="chrome 'https://docs.google.com/a/mrrobinsmith.com/document/d/1J4f4V
 alias doit="chrome 'https://docs.google.com/a/mrrobinsmith.com/spreadsheet/ccc?key=0Aganxin54gVEdEg4eEk2ekpCaFZqb3pwT3JNS3hkRHc&usp=drive_web#gid=1'"
 
 alias tasks="chrome 'https://docs.google.com/a/mrrobinsmith.com/spreadsheet/ccc?key=0Aganxin54gVEdEg4eEk2ekpCaFZqb3pwT3JNS3hkRHc&usp=drive_web#gid=0'" 
-
-alias stack="browser 'http://stackoverflow.com/users/3946669/robin-smith'"
 
 alias work="browser http://mail.google.com http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole?submitted=true https://cloudreach.my.salesforce.com"
 
@@ -82,7 +78,7 @@ alias railst="browser http://guides.rubyonrails.org/getting_started.html"
 
 alias splw="browser https://cr-splunk-1.cloudreach.co.uk:8000"
 
-alias stk="stackoverflow"
+alias stackh="browser 'http://stackoverflow.com/users/3946669/robin-smith'"
 
 alias robscases="cases 00B20000006RBOv"
 
@@ -121,3 +117,9 @@ alias reboots="chrome 'https://docs.google.com/a/cloudreach.co.uk/spreadsheets/d
 alias ymca="open 'http://www.vanymca.org/centres/robertlee/sites/all/themes/ymca/documents/programs/PDFschedules/robert_lee_ymca_vancouver_aquatics_curr.pdf'"
 
 alias bkdsl="open 'http://my.safaribooksonline.com/book/software-engineering-and-development/ide/9780132107549'"
+
+alias biographical="open 'http://www.imdb.com/genre/biography'"
+
+alias activerecord="open 'http://rubydoc.info/gems/activerecord/4.1.6/frames'"
+
+alias question="open 'http://stackoverflow.com/questions/26093485/intellij-idea-ultimate-red-underlines-ruby-shorthand-hash-literal'"
