@@ -66,7 +66,7 @@ alias bkjs="book http://my.safaribooksonline.com/book/programming/javascript/978
 
 alias bkjs1="book http://my.safaribooksonline.com/book/programming/javascript/9781847194145"
 
-alias bkrails="open -a Safari http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
+alias bkrails="browser -a Safari http://my.safaribooksonline.com/book/programming/ruby/9780133487954"
 
 alias bkpg="book http://my.safaribooksonline.com/book/programming/mobile/9781783287925"
 
@@ -96,13 +96,13 @@ alias petr="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079yB
 
 alias zenoss="browser 'http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole'"
 
-alias crockfordlanguage="open 'https://www.youtube.com/watch?v=9e_oEE72d3U'"
+alias crockfordlanguage="browser 'https://www.youtube.com/watch?v=9e_oEE72d3U'"
 
-alias renew="open 'https://vpl.bibliocommons.com/user/login'"
+alias renew="browser 'https://vpl.bibliocommons.com/user/login'"
 
-alias tagging="open 'https://sites.google.com/a/cloudreach.co.uk/points-lists/aws/lab-instance-tagging'"
+alias tagging="browser 'https://sites.google.com/a/cloudreach.co.uk/points-lists/aws/lab-instance-tagging'"
 
-alias robin="open 'http://mrrobinsmith.com'"
+alias robin="browser 'http://mrrobinsmith.com'"
 
 alias bkrb2="safari 'http://my.safaribooksonline.com/book/web-development/ruby/0768667208'"
 
@@ -114,12 +114,12 @@ alias han="chrome 'https://docs.google.com/a/cloudreach.co.uk/document/d/1vYyK25
 
 alias reboots="chrome 'https://docs.google.com/a/cloudreach.co.uk/spreadsheets/d/1cEexs1IuUD2rtlj1YP8mmyIdDHHrciLAY2OvsdbuiBw/edit#gid=0'"
 
-alias ymca="open 'http://www.vanymca.org/centres/robertlee/sites/all/themes/ymca/documents/programs/PDFschedules/robert_lee_ymca_vancouver_aquatics_curr.pdf'"
+alias ymca="browser 'http://www.vanymca.org/centres/robertlee/sites/all/themes/ymca/documents/programs/PDFschedules/robert_lee_ymca_vancouver_aquatics_curr.pdf'"
 
-alias bkdsl="open 'http://my.safaribooksonline.com/book/software-engineering-and-development/ide/9780132107549'"
+alias bkdsl="browser 'http://my.safaribooksonline.com/book/software-engineering-and-development/ide/9780132107549'"
 
-alias biographical="open 'http://www.imdb.com/genre/biography'"
+alias biographical="browser 'http://www.imdb.com/genre/biography'"
 
-alias activerecord="open 'http://rubydoc.info/gems/activerecord/4.1.6/frames'"
+alias activerecord="browser 'http://rubydoc.info/gems/activerecord/4.1.6/frames'"
 
-alias question="open 'http://stackoverflow.com/questions/26093485/intellij-idea-ultimate-red-underlines-ruby-shorthand-hash-literal'"
+alias question="browser 'http://stackoverflow.com/questions/26093485/intellij-idea-ultimate-red-underlines-ruby-shorthand-hash-literal'"

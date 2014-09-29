@@ -158,7 +158,7 @@ export CANADA_HOME=$MERCURY_HOME/docs/IMPORTANT/canada
 
 if [[ "$HOSTNAME" == "$MERCURY_HOSTNAME" ]]
 then
-	export BROWSER="Google Chrome"
+	export BROWSER="Safari"
 else
 	export BROWSER="Google Chrome"
 fi

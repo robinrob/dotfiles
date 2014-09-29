@@ -46,6 +46,8 @@ unalias rm
 
 
 # Web Shortcuts/Bookmarks
+alias q="question"
+
 source $DOTFILES_HOME/bookmarks.zsh
 
 alias rd="rubydoc"
