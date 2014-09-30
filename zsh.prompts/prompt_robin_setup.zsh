@@ -71,7 +71,7 @@ function prompt_steeef_simplified_setup {
   zstyle ':prezto:module:python:info:virtualenv' format '(%v)'
 
   # Define prompts.
-  PROMPT="$(maganda %n)$(brightwhite @)$(brightyellow %m%f) $(brightgreen %~%f) "'${vcs_info_msg_0_}'"$ "
+  PROMPT="%{$(maganda %n)%}%{$(brightwhite @)}%{$(brightyellow %m%f)} $(brightgreen %~%f)%} "'${vcs_info_msg_0_}'"$ "
   # "${_prompt_steeef_simplified_colors[3]}%n%f@${_prompt_steeef_simplified_colors[2]}%m%f ${_prompt_steeef_simplified_colors[5]}%~%f "'${vcs_info_msg_0_}'"$ "
   RPROMPT='%F{blue}${ruby_info[version]}'
 }
