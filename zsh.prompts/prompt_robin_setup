@@ -45,6 +45,25 @@ function prompt_steeef_simplified_setup {
 
   # Add hook for calling vcs_info before each command.
   add-zsh-hook precmd prompt_steeef_simplified_precmd
+  
+  # Use extended color pallete if available.
+  if [[ $TERM = *256color* || $TERM = *rxvt* ]]; then
+    _prompt_steeef_simplified_colors=(
+      "%F{81}"  # Turquoise
+      "%F{166}" # Orange
+      "%F{135}" # Purple
+      "%F{161}" # Hotpink
+      "%F{118}" # Limegreen
+    )
+  else
+    _prompt_steeef_simplified_colors=(
+      "%F{cyan}"
+      "%F{yellow}"
+      "%F{magenta}"
+      "%F{red}"
+      "%F{green}"
+    )
+  fi
 
   # Formats:
   #   %b - branchname
@@ -71,7 +90,7 @@ function prompt_steeef_simplified_setup {
   zstyle ':prezto:module:python:info:virtualenv' format '(%v)'
 
   # Define prompts.
-  PROMPT="$(maganda %n)$(brightwhite @)$(brightyellow %m%f) $(brightgreen %~%f) "'${vcs_info_msg_0_}'"$ "
+  PROMPT="${_prompt_steeef_simplified_colors[3]}%n%f@${_prompt_steeef_simplified_colors[2]}%m%f ${_prompt_steeef_simplified_colors[5]}%~%f "'${vcs_info_msg_0_}'"$ "
   # "${_prompt_steeef_simplified_colors[3]}%n%f@${_prompt_steeef_simplified_colors[2]}%m%f ${_prompt_steeef_simplified_colors[5]}%~%f "'${vcs_info_msg_0_}'"$ "
   RPROMPT='%F{blue}${ruby_info[version]}'
 }
