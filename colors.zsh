@@ -30,7 +30,12 @@ function color {
 	shift;
 	start=$(colorencode $color)
 	end=$(colorencode default)
-	echo "`eval echo $start'$@'$end`"
+	if [[ "$@" == "" ]]
+	then
+		echo "`eval echo $start`"
+	else
+		echo "`eval echo $start'$@'$end`"
+	fi
 }
 
 function colorencode {
