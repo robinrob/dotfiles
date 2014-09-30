@@ -843,3 +843,13 @@ function del {
 		gmv $file $TRASH_HOME	
 	done
 }
+
+function cdnoc {
+	cd_dir $NOCCHEF
+	rvm gemset use chef --create
+}
+
+function cdms {
+	cd_dir $MSCHEF
+	rvm gemset use chef --create
+}

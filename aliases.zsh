@@ -249,10 +249,6 @@ alias cdrecipe="cd_dir $HTMLCSS_HOME/projects/recipe-finder"
 
 alias cdscr="cd_dir $SCREENSHOTS_HOME"
 
-alias cdms="cd_dir $MSCHEF"
-
-alias cdnoc="cd_dir $NOCCHEF"
-
 alias cdcam="cd_dir $CAMERA_HOME"
 
 alias cdk="cd_dir $KITCHENPLAN_HOME"
