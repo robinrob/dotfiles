@@ -124,7 +124,7 @@ function new {
 	
 	if ! [[ "$NO_OPEN" == "noopen" ]]
 	then
-		$EDITOR $FILE
+		$VISUAL $FILE
 	fi
 }
 

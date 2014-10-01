@@ -8,9 +8,9 @@ export MERCURY_HOSTNAME='mercury'
 
 export VENUS_HOSTNAME='venus'
 
-export EDITOR=mate
+export EDITOR=vim
 
-export VISUAL=mate
+export VISUAL=mvim
 
 # export PROG_HOME=$HOME/Programming/robin
 

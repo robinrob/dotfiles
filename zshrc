@@ -3,6 +3,12 @@ source $DOTFILES_HOME/colors.zsh
 
 echo "$(brightwhite I)$(brightyellow " am ")$(brightcyan awesome)"
 
+
+# Environment variables
+#############################
+source $DOTFILES_HOME/env_variables.zsh
+
+
 # YADR stuff
 ############
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -13,10 +19,6 @@ for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
 prompt robin
 
-
-# Environment variables
-#############################
-source $DOTFILES_HOME/env_variables.zsh
 
 
 # echo `eval "echo \`echo "$(white I)$(yellow " am ")$(cyan awesome)"\`"`

@@ -595,9 +595,9 @@ alias ecmd="$EDITOR $DOCS_HOME/commands.txt"
 
 alias cmd="mate $DOCS_HOME/commands.txt"
 
-alias e="$EDITOR"
+alias e=$EDITOR
 
-alias E="e"
+alias v=$EDITOR
 
 alias editor="echo $EDITOR"
 
