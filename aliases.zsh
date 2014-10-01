@@ -274,6 +274,8 @@ alias rksv="rake_do server"
 
 alias rls="rails server"
 
+alias rkm="rake db:migrate"
+
 alias rk="rake"
 
 alias bi="bundle install"
