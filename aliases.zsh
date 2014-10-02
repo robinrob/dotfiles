@@ -205,6 +205,8 @@ alias cdsc="cd_dir $SCALA_HOME"
 
 alias cdr="cd_dir $RUBY_HOME"
 
+alias cdo="cd_dir $OCAML_HOME"
+
 alias cdpl="cd_dir $PERL_HOME"
 
 alias cdmr="cd_dir $RUBY_HOME/projects/mrrobinsmith.com"
@@ -305,6 +307,8 @@ alias pnew="new_s python py"
 alias bnew="new_s bash sh"
 
 alias snew="new_s sh sh"
+
+alias onew="new_s ocaml ocaml"
 
 alias znew="new_s zsh zsh"
 
@@ -428,7 +432,15 @@ alias rst="cd_status $RUBY_HOME"
 
 alias RSV="rsv"
 
-alias rpl="cd_pull $RUBY_HOME"
+alias opl="cd_pull $OCAML_HOME"
+
+alias osv="cd_save $OCAML_HOME"
+
+alias ocm="cd_commit $OCAML_HOME"
+
+alias ost="cd_status $OCAML_HOME"
+
+alias opl="cd_pull $OCAML_HOME"
 
 alias fpl="fab pull"
 

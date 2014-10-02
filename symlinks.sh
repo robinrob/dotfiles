@@ -7,7 +7,7 @@ green "Sym-linking dotfiles ..."
 
 DIR=`pwd`                  									
 OLD_DIR=/tmp/dotfiles             							
-FILES="yadr bashrc zshrc zsh.prompts vimrc gvimrc tm_properties gitconfig profile hushlogin"
+FILES="yadr bashrc zshrc zsh.prompts vimrc gvimrc tm_properties gitconfig profile hushlogin ocamlinit"
 
 yellow "\t${ITEM}Creating $OLD_DIR for backup of any existing dotfiles in ~ ..."
 rm -rf $OLD_DIR
