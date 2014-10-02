@@ -611,7 +611,7 @@ alias cmd="mate $DOCS_HOME/commands.txt"
 
 alias e=$EDITOR
 
-alias v=$EDITOR
+alias v=$VISUAL
 
 alias editor="echo $EDITOR"
 
