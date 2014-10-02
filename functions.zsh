@@ -853,3 +853,8 @@ function cdms {
 	cd_dir $MSCHEF
 	rvm gemset use chef --create
 }
+
+function newbrew {
+	package=$1
+	brew install $package && echo $package >> $DOTFILES_HOME/homebrew.txt
+}

@@ -644,6 +644,8 @@ alias pb="pbcopy"
 alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
 # Shell functions/function aliases
+alias nbrew="newbrew"
+
 alias rbdoc="rubydoc"
 
 alias svc="save_code"

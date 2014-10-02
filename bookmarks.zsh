@@ -123,3 +123,5 @@ alias biographical="browser 'http://www.imdb.com/genre/biography'"
 alias activerecord="browser 'http://rubydoc.info/gems/activerecord/4.1.6/frames'"
 
 alias question="browser 'http://stackoverflow.com/questions/26093485/intellij-idea-ultimate-red-underlines-ruby-shorthand-hash-literal'"
+
+alias bkcaml="open 'http://my.safaribooksonline.com/book/programming/9781449324735'"
