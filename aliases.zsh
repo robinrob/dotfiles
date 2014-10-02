@@ -672,6 +672,8 @@ alias lf="libfind_s"
 
 alias rfind="libfind_s $RUBY_HOME/practice"
 
+alias ofind="libfind_s $OCAML_HOME"
+
 alias pfind="libfind_s $PYTHON_HOME"
 
 alias lfind="libfind_s $LOCAL_HOME"
