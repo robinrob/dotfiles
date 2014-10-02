@@ -124,4 +124,6 @@ alias activerecord="browser 'http://rubydoc.info/gems/activerecord/4.1.6/frames'
 
 alias question="browser 'http://stackoverflow.com/questions/26093485/intellij-idea-ultimate-red-underlines-ruby-shorthand-hash-literal'"
 
+alias awssdk="open 'http://docs.aws.amazon.com/AWSRubySDK/latest/frames.html'"
+
 alias bkcaml="open 'http://my.safaribooksonline.com/book/programming/9781449324735'"
