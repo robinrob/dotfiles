@@ -76,7 +76,7 @@ alias bkcocos="book http://my.safaribooksonline.com/book/programming/iphone/9780
 
 alias railst="browser http://guides.rubyonrails.org/getting_started.html"
 
-alias splw="browser https://cr-splunk-1.cloudreach.co.uk:8000"
+alias splw="browser https://cr-splunk-1.cloudreach.co.uk:8000/en-US/app/ZenossForwarding"
 
 alias stackh="browser 'http://stackoverflow.com/users/3946669/robin-smith'"
 
