@@ -853,3 +853,12 @@ function cdms {
 	cd_dir $MSCHEF
 	rvm gemset use chef --create
 }
+
+function bashvulns {
+	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271'
+	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7169'
+	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6277'
+	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7187'
+	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6278'	
+	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7188'
+}
