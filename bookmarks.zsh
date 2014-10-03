@@ -127,3 +127,5 @@ alias question="browser 'http://stackoverflow.com/questions/26093485/intellij-id
 alias awssdk="open 'http://docs.aws.amazon.com/AWSRubySDK/latest/frames.html'"
 
 alias bkcaml="safari 'http://my.safaribooksonline.com/book/programming/9781449324735'"
+
+alias documentary="open 'http://www.imdb.com/search/title?at=0&sort=user_rating&title_type=documentary'"

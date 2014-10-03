@@ -867,3 +867,22 @@ function bashvulns {
 	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6278'	
 	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7188'
 }
+
+function languages {
+	languages=(ruby ocaml htmlcss zsh sh javascript)
+	for language in $languages
+	do
+		alias_lang_cmd $language sv cd_save
+		alias_lang_cmd $language cm cd_commit
+		alias_lang_cmd $language sv cd_save
+		alias_lang_cmd $language st cd_status
+		alias_lang_cmd $language pl cd_pull
+	done
+}
+
+function alias_lang_cmd {
+	lang=$1
+	alias_suff=$2
+	cmd=$3
+	alias "$lang[1]$alias_suff"="$cmd $(upper $lang)_HOME"
+}

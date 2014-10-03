@@ -195,8 +195,6 @@ alias cdi="cd_dir"
 
 alias cdpr="cd_dir $PROG_HOME"
 
-alias cdc="cdpr"
-
 alias cdd="cd_dir $DOTFILES_HOME"
 
 alias cdb="cd_dir $HTMLCSS_HOME/practice/bootstrap"
@@ -204,6 +202,8 @@ alias cdb="cd_dir $HTMLCSS_HOME/practice/bootstrap"
 alias cdsc="cd_dir $SCALA_HOME"
 
 alias cdr="cd_dir $RUBY_HOME"
+
+alias cdc="cd_dir $COFFEE_HOME"
 
 alias cdo="cd_dir $OCAML_HOME"
 
@@ -308,7 +308,7 @@ alias bnew="new_s bash sh"
 
 alias snew="new_s sh sh"
 
-alias onew="new_s ocaml ocaml"
+alias onew="new_s ocaml ml"
 
 alias znew="new_s zsh zsh"
 
@@ -418,59 +418,15 @@ alias ddi="cd_diff $DOTFILES_HOME"
 
 alias dst="cd_status $DOTFILES_HOME"
 
-alias hsv="cd_save $HTMLCSS_HOME"
-
-alias hcm="cd_commit $HTMLCSS_HOME"
-
-alias hst="cd_status $HTMLCSS_HOME"
+languages
 
 alias DSV="dsv"
 
-alias rsv="cd_save $RUBY_HOME"
-
-alias rcm="cd_commit $RUBY_HOME"
-
-alias rst="cd_status $RUBY_HOME"
-
-alias RSV="rsv"
-
-alias opl="cd_pull $OCAML_HOME"
-
-alias osv="cd_save $OCAML_HOME"
-
-alias ocm="cd_commit $OCAML_HOME"
-
-alias ost="cd_status $OCAML_HOME"
-
-alias opl="cd_pull $OCAML_HOME"
-
 alias fpl="fab pull"
-
-alias ssv="cd_save $SH_HOME"
-
-alias scm="cd_commit $SH_HOME"
-
-alias sst="cd_status $SH_HOME"
-
-alias spl="cd_pull $SH_HOME"
-
-alias zpl="cd_pull $ZSH_HOME"
-
-alias zsv="cd_save $ZSH_HOME"
-
-alias zcm="cd_commit $ZSH_HOME"
-
-alias zst="cd_status $ZSH_HOME"
 
 alias bsv="cd_save $BACKUPS_HOME"
 
 alias bpl="cd_pull $BACKUPS_HOME"
-
-alias jsv="cd_save $JS_HOME"
-
-alias jcm="cd_commit $JS_HOME"
-
-alias jst="cd_status $JS_HOME"
 
 alias lpl="cd_pull $LOCAL_HOME"
 

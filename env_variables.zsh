@@ -44,9 +44,11 @@ export C_HOME=$PROG_HOME/c
 
 export JV_HOME=$PROG_HOME/java
 
-export JS_HOME=$PROG_HOME/javascript
+export JAVASCRIPT_HOME=$PROG_HOME/javascript
 
-export JS_LIB_HOME=$PROG_HOME/javascript/lib
+export JS_HOME=$JAVASCRPIT_HOME
+
+export JS_LIB_HOME=$JAVASCRIPT_HOME/lib
 
 export HTMLCSS_HOME=$PROG_HOME/html-css
 
@@ -57,6 +59,8 @@ export HTML_TEMPLATES_HOME=$HTMLCSS_HOME/templates
 export RUBY_HOME=$PROG_HOME/ruby
 
 export OCAML_HOME=$PROG_HOME/ocaml
+
+export COFFEE_HOME=$PROG_HOME/coffeescript
 
 export RUBY_TEMPLATES_HOME=$RUBY_HOME/templates
 
