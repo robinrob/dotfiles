@@ -854,6 +854,11 @@ function cdms {
 	rvm gemset use chef --create
 }
 
+function newbrew {
+	package=$1
+	brew install $package && echo $package >> $DOTFILES_HOME/homebrew.txt
+}
+
 function bashvulns {
 	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-6271'
 	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7169'

@@ -205,6 +205,8 @@ alias cdsc="cd_dir $SCALA_HOME"
 
 alias cdr="cd_dir $RUBY_HOME"
 
+alias cdo="cd_dir $OCAML_HOME"
+
 alias cdpl="cd_dir $PERL_HOME"
 
 alias cdmr="cd_dir $RUBY_HOME/projects/mrrobinsmith.com"
@@ -306,6 +308,8 @@ alias bnew="new_s bash sh"
 
 alias snew="new_s sh sh"
 
+alias onew="new_s ocaml ocaml"
+
 alias znew="new_s zsh zsh"
 
 # alias rnew="new -i ruby -e rb -o noopen -f"
@@ -337,6 +341,8 @@ alias cfn="grep function $DOTFILES_HOME/functions.zsh | wc -l"
 # alias lfn='grep -o "function [a-zA-Z0-9_]* "'$DOTFILES_HOME/functions.zsh'| awk ''{print $2}'' | grep ''.*'''
 
 # Git aliases
+alias gst="git status"
+
 alias gSt="git stash"
 
 alias grrm="git remote rm"
@@ -428,7 +434,15 @@ alias rst="cd_status $RUBY_HOME"
 
 alias RSV="rsv"
 
-alias rpl="cd_pull $RUBY_HOME"
+alias opl="cd_pull $OCAML_HOME"
+
+alias osv="cd_save $OCAML_HOME"
+
+alias ocm="cd_commit $OCAML_HOME"
+
+alias ost="cd_status $OCAML_HOME"
+
+alias opl="cd_pull $OCAML_HOME"
 
 alias fpl="fab pull"
 
@@ -599,7 +613,7 @@ alias cmd="mate $DOCS_HOME/commands.txt"
 
 alias e=$EDITOR
 
-alias v=$EDITOR
+alias v=$VISUAL
 
 alias editor="echo $EDITOR"
 
@@ -644,6 +658,8 @@ alias pb="pbcopy"
 alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
 # Shell functions/function aliases
+alias nbrew="newbrew"
+
 alias rbdoc="rubydoc"
 
 alias svc="save_code"
@@ -657,6 +673,8 @@ alias kpf="killpf"
 alias lf="libfind_s"
 
 alias rfind="libfind_s $RUBY_HOME/practice"
+
+alias ofind="libfind_s $OCAML_HOME"
 
 alias pfind="libfind_s $PYTHON_HOME"
 

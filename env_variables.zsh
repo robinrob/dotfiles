@@ -56,6 +56,8 @@ export HTML_TEMPLATES_HOME=$HTMLCSS_HOME/templates
 
 export RUBY_HOME=$PROG_HOME/ruby
 
+export OCAML_HOME=$PROG_HOME/ocaml
+
 export RUBY_TEMPLATES_HOME=$RUBY_HOME/templates
 
 export SCALA_HOME=$PROG_HOME/scala
