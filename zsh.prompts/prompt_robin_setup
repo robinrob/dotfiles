@@ -1,7 +1,7 @@
 function prompt_robin_precmd {
   # Check for untracked files or updated submodules since vcs_info does not.
   if [[ -n $(git ls-files --other --exclude-standard 2> /dev/null) ]]; then
-    branch_format="%{$(brightwhite)%}(%{$(cyan)%}%b%f%u%c$(red)●%{$(brightwhite)%})%f "
+    branch_format="%{$(brightwhite)%}(%{$(brightcyan)%}%b%f%u%c$(red)●%{$(brightwhite)%})%f "
   else
     branch_format="%{$(brightwhite)%}(%}%{$(cyan)%}%b%f%u%c%{$(brightwhite)%})%f "
   fi
@@ -41,14 +41,14 @@ function prompt_robin_setup {
   #   %S - path in the repository
   local branch_format="%{($(cyan)%}%b%f%u%c)"
   local action_format="(%{$(magenta)%}%a%f)"
-  local unstaged_format="%{$(red)%}●%f"
+  local unstaged_format="%{$(brightyellow)%}●%f"
   local staged_format="%{$(green)%}●%f"
 
   # Set vcs_info parameters.
   zstyle ':vcs_info:*' enable bzr git hg svn
   zstyle ':vcs_info:*:prompt:*' check-for-changes true
-  zstyle ':vcs_info:*:prompt:*' unstagedstr "${unstaged_format}"
-  zstyle ':vcs_info:*:prompt:*' stagedstr "${staged_format}"
+	zstyle ':vcs_info:*:prompt:*' unstagedstr "${unstaged_format}"
+	zstyle ':vcs_info:*:prompt:*' stagedstr "${staged_format}"
   zstyle ':vcs_info:*:prompt:*' actionformats "${branch_format}${action_format}"
   zstyle ':vcs_info:*:prompt:*' formats "${branch_format}"
   zstyle ':vcs_info:*:prompt:*' nvcsformats   ""

@@ -1,7 +1,9 @@
 DOTFILES_HOME=~/Programming/robin/zsh/projects/dotfiles
 source $DOTFILES_HOME/colors.zsh
 
-echo "$(brightwhite I)$(brightyellow " am ")$(brightcyan awesome)"
+echo "$(brightwhite)I $(brightyellow)am $(brightcyan awesome)"
+# Or alternatively:
+# echo "$(brightwhite I)$(brightyellow " am ")$(brightcyan awesome)"
 
 
 # Environment variables
