@@ -30,6 +30,8 @@ source $DOTFILES_HOME/aliases.zsh
 
 
 # ZSH Shell configuration
+# autoload -Uz promptinit
+# promptinit
 prompt robin
 
 unsetopt correct

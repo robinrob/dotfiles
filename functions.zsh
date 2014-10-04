@@ -921,6 +921,16 @@ function odl {
 	open $last_download
 }
 
-function collapse_pwd {
-    echo $(pwd | sed -e "s,^$HOME,~,")
+function dir {	
+	if [[ $PWD == $HOME ]]
+	then
+		dir="~"
+	else
+		dir=`basename $PWD`
+	fi
+	echo $dir
+}
+
+function chpwd {
+  # echo "Changing directory from $OLDPWD to $PWD"
 }

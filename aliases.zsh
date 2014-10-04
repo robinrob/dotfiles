@@ -147,8 +147,6 @@ alias igi="isgit"
 
 alias shell="echo $SHELL"
 
-alias dir="dirname"
-
 alias cdcocos="cd $COCOS_HOME"
 
 # Shell shortcuts
