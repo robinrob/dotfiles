@@ -64,7 +64,7 @@ function prompt_robin_setup {
 	  hostcolor="$(brightred)"
   fi
 	
-	PROMPT="$(magandaprompt)%n%{$(brightwhite)%}@%{$hostcolor%}%B%M%b%f %{$(brightyellow)%}"'$(dir)'"/%{$(default)%} "'${vcs_info_msg_0_}'"%{$(brightwhite)%}$%{$(default)%} "
+	PROMPT="$(magandaprompt)%n$(brightwhiteprompt)@%{$hostcolor%}%B%M%b%f $(brightyellowprompt)\$(dir)/$(defaultprompt) \${vcs_info_msg_0_}$(brightwhiteprompt)\$$(defaultprompt) "
 }
 
 prompt_robin_setup "$@"
