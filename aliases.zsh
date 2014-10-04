@@ -575,6 +575,8 @@ alias v=$VISUAL
 
 alias editor="echo $EDITOR"
 
+alias visual="echo $VISUAL"
+
 alias sprog="du -dh $PROG_HOME"
 
 alias spr="sprog"
