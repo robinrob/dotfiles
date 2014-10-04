@@ -46,7 +46,7 @@ export JV_HOME=$PROG_HOME/java
 
 export JAVASCRIPT_HOME=$PROG_HOME/javascript
 
-export JS_HOME=$JAVASCRPIT_HOME
+export JS_HOME=$JAVASCRIPT_HOME
 
 export JS_LIB_HOME=$JAVASCRIPT_HOME/lib
 

@@ -879,7 +879,6 @@ function languages {
 	do
 		alias_lang_cmd $language sv cd_save
 		alias_lang_cmd $language cm cd_commit
-		alias_lang_cmd $language sv cd_save
 		alias_lang_cmd $language st cd_status
 		alias_lang_cmd $language pl cd_pull
 	done
@@ -891,3 +890,24 @@ function alias_lang_cmd {
 	cmd=$3
 	alias "$lang[1]$alias_suff"="$cmd $(upper $lang)_HOME"
 }
+
+# function languages2 {
+# 	languages=(ruby ocaml htmlcss zsh sh javascript coffeescript)
+# 	abbrs=(rb oc ht zs sh js cs)
+#
+# 	for language in $languages
+# 	do
+# 		alias_lang_cmd2 $language sv cd_save s
+# 		alias_lang_cmd2 $language cm cd_commit c
+# 		alias_lang_cmd2 $language st cd_status st
+# 		alias_lang_cmd2 $language pl cd_pull p
+# 	done
+# }
+#
+# function alias_lang_cmd {
+# 	lang=$1
+# 	alias_prefix=$2
+# 	cmd=$3
+# 	cmd_abbr=$4
+# 	alias "$lang[1]$alias_suff"="$cmd $(upper $lang)_HOME"
+# }
