@@ -44,6 +44,26 @@ function colorencode {
 	echo $prefix'${cc'$1'}'$suffix
 }
 
+function promptcolor {
+	color=$1
+	shift;
+	start=$(promptcolorencode $color)
+	end=$(promptcolorencode default)
+	if [[ "$@" == "" ]]
+	then
+		echo "`eval echo $start`"
+	else
+		echo "`eval echo $start'$@'$end`"
+	fi
+}
+
+function promptcolorencode {
+	prefix='%{$(echo "[")'
+	suffix='m%}'
+	echo $prefix'${cc'$1'}'$suffix
+}
+
+# Shell colors
 function default {
 	color default $@
 }
@@ -114,4 +134,77 @@ function brightwhite {
 
 function maganda {
 	brightmagenta $@
+}
+
+# Prompt colors
+function defaultprompt {
+	promptcolor default $@
+}
+
+function blackprompt {
+	promptcolor black $@
+}
+
+function darkgreyprompt {
+	promptcolor darkgrey $@
+}
+
+function redprompt {
+	promptcolor red $@
+}
+
+function brightredprompt {
+	promptcolor brightred $@
+}
+
+function greenprompt {
+	promptcolor green $@
+}
+
+function brightgreenprompt {
+	promptcolor brightgreen $@
+}
+
+function yellowprompt {
+	promptcolor yellow $@
+}
+
+function brightyellowprompt {
+	promptcolor brightyellow $@
+}
+
+function blueprompt {
+	promptcolor blue $@
+}
+
+function brightblueprompt {
+	promptcolor brightblue $@
+}
+
+function magentaprompt {
+	promptcolor magenta $@
+}
+
+function brightmagentaprompt {
+	promptcolor brightmagenta $@
+}
+
+function cyanprompt {
+	promptcolor cyan $@
+}
+
+function brightcyanprompt {
+	promptcolor brightcyan $@
+}
+
+function whiteprompt {
+	promptcolor white $@
+}
+
+function brightwhiteprompt {
+	promptcolor brightwhite $@
+}
+
+function magandaprompt {
+	brightmagentaprompt $@
 }
