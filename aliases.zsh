@@ -203,7 +203,7 @@ alias cdsc="cd_dir $SCALA_HOME"
 
 alias cdr="cd_dir $RUBY_HOME"
 
-alias cdc="cd_dir $COFFEE_HOME"
+alias cdc="cd_dir $COFFEESCRIPT_HOME"
 
 alias cdo="cd_dir $OCAML_HOME"
 

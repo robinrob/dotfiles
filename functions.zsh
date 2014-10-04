@@ -442,6 +442,11 @@ function rkc {
 	rake_do commit $@
 }
 
+function rka {
+	rake_do add $@
+	git status
+}
+
 function killp {
 	PROCESS=$1
 	if [ -z $PROCESS ]
@@ -869,7 +874,7 @@ function bashvulns {
 }
 
 function languages {
-	languages=(ruby ocaml htmlcss zsh sh javascript)
+	languages=(ruby ocaml htmlcss zsh sh javascript coffeescript)
 	for language in $languages
 	do
 		alias_lang_cmd $language sv cd_save

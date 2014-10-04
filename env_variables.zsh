@@ -60,7 +60,7 @@ export RUBY_HOME=$PROG_HOME/ruby
 
 export OCAML_HOME=$PROG_HOME/ocaml
 
-export COFFEE_HOME=$PROG_HOME/coffeescript
+export COFFEESCRIPT_HOME=$PROG_HOME/coffeescript
 
 export RUBY_TEMPLATES_HOME=$RUBY_HOME/templates
 
