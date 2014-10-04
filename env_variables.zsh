@@ -130,6 +130,8 @@ export DOCS_HOME=$HOSTFILES_HOME/docs
 
 export RDOCS_HOME=$RFILES_HOME/docs
 
+export DOWNLOADS_HOME='~/Downloads'
+
 export IMPORTANT_HOME=$DOCS_HOME/IMPORTANT
 
 export KNOWLEDGE_HOME=$DOCS_HOME/knowledge

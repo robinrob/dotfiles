@@ -79,6 +79,9 @@ function prompt_steeef_simplified_setup {
   fi
   
   PROMPT="%{$(brightmagenta)%}%n%{$(brightwhite)%}@%{$hostcolor%}%m%f%{$(brightyellow)%} %./%f "'${vcs_info_msg_0_}'"%{$(brightwhite)%}$%{$(default)%} "
+	
+	PROMPT="%{$(brightmagenta)%}%n%{$(brightwhite)%}%U@%u%{$hostcolor%}%B%M%b%f%{$(brightyellow)%} %./%f "'${vcs_info_msg_0_}'"%{$(brightwhite)%}$%{$(default)%} "
+	# RPS1=$PROMPT
   RPROMPT='%F{blue}${ruby_info[version]}'
 }
 

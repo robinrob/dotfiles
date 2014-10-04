@@ -911,3 +911,12 @@ function alias_lang_cmd {
 # 	cmd_abbr=$4
 # 	alias "$lang[1]$alias_suff"="$cmd $(upper $lang)_HOME"
 # }
+
+function odl {
+	cd ~/Downloads
+	despace
+	last_download=`ls -ltr  ~/Downloads | awk '{print $9}' | tail -1`
+	echo $last_download | pbcopy
+	green "Opening latest file: $(yellow)$last_download$(default)"
+	open $last_download
+}
