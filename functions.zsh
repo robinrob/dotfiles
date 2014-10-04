@@ -920,3 +920,7 @@ function odl {
 	green "Opening latest file: $(yellow)$last_download$(default)"
 	open $last_download
 }
+
+function collapse_pwd {
+    echo $(pwd | sed -e "s,^$HOME,~,")
+}

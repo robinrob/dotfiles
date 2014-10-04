@@ -9,6 +9,12 @@ echo "$(brightwhite I)$(brightyellow " am ")$(brightcyan awesome)"
 source $DOTFILES_HOME/env_variables.zsh
 
 
+# Functions
+###############################################################################
+
+source $DOTFILES_HOME/functions.zsh
+
+
 # YADR stuff
 ############
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
@@ -17,7 +23,19 @@ fi
 
 for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
+
+# Aliases
+###############################################################################
+source $DOTFILES_HOME/aliases.zsh
+
+
+# ZSH Shell configuration
 prompt robin
+
+unsetopt correct
+# setopt prompt_subst
+setopt autocd
+set -o vi
 
 
 
@@ -47,15 +65,6 @@ prompt robin
 
 
 
-
-# Shell options
-###########################
-unsetopt correct
-setopt autocd
-set -o vi
-
-
-
 # Development
 ###############################################################################
 
@@ -76,16 +85,6 @@ else
 	pythonbrew use 3.2 2> /dev/null
 fi
 
-
-# Functions
-###############################################################################
-
-source $DOTFILES_HOME/functions.zsh
-
-
-# Aliases
-###############################################################################
-source $DOTFILES_HOME/aliases.zsh
 
 
 # Path

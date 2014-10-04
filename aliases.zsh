@@ -447,6 +447,8 @@ alias knl="knife node list"
 
 alias mprompt="mate ~/.zsh.prompts/prompt_robin_setup"
 
+alias mpr="mprompt"
+
 alias rs="source ~/.zshrc"
 
 alias RS="source ~/.zshrc"

@@ -77,10 +77,19 @@ function prompt_steeef_simplified_setup {
   else
 	  hostcolor="$(brightred)"
   fi
-  
-  PROMPT="%{$(brightmagenta)%}%n%{$(brightwhite)%}@%{$hostcolor%}%m%f%{$(brightyellow)%} %./%f "'${vcs_info_msg_0_}'"%{$(brightwhite)%}$%{$(default)%} "
 	
-	PROMPT="%{$(brightmagenta)%}%n%{$(brightwhite)%}%U@%u%{$hostcolor%}%B%M%b%f%{$(brightyellow)%} %./%f "'${vcs_info_msg_0_}'"%{$(brightwhite)%}$%{$(default)%} "
+	# case $HOSTNAME in
+	# 	"venus") host="$OPTARG" ;;
+	# 	b) EXTENSION="$OPTARG" ;;
+	# 	f) FILENAME="$OPTARG" ;;
+	# 	o) NO_OPEN="$OPTARG" ;;
+	# 	*) usage ;;                # display usage and exit
+	# esac
+  
+	#   PROMPT="%{$(brightmagenta)%}%n%{$(brightwhite)%}@%{$hostcolor%}%m%f%{$(brightyellow)%} %./%f "'${vcs_info_msg_0_}'"%{$(brightwhite)%}$%{$(default)%} "
+	#
+	# PROMPT="%{$(brightmagenta)%}%n%{$(brightwhite)%}@%{$hostcolor%}%B%M%b%f%{$(brightyellow)%} %1C/%{$(default)%} "'${vcs_info_msg_0_}'"%{$(brightwhite)%}$%{$(default)%} "
+	PROMPT="%{$(brightmagenta)%}%n%{$(brightwhite)%}@%{$hostcolor%}%B%M%b%f%{$(brightyellow)%} "'${PWD/#$HOME/~}'"/ %{$(default)%}"'${vcs_info_msg_0_}'"%{$(brightwhite)%}$%{$(default)%} "
 	# RPS1=$PROMPT
   RPROMPT='%F{blue}${ruby_info[version]}'
 }
