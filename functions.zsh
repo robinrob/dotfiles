@@ -507,14 +507,6 @@ function save_jetbrains {
 
 function cd_dir {
 	cd "$(join / $@)"
-		
-	val=$(echo `git branch 2> /dev/null` | grep detached)
-
-	if ! [[ "$val" == "" ]]
-	then
-		red "On detached HEAD!"
-		git checkout master
-	fi
 }
 
 function cddir {
@@ -932,5 +924,15 @@ function dir {
 }
 
 function chpwd {
-  # echo "Changing directory from $OLDPWD to $PWD"
+  git_checkout_master_if_on_detached_head
+}
+
+function git_checkout_master_if_on_detached_head {
+	detached=$(echo `git branch 2> /dev/null` | grep detached)
+	
+	if [[ -n "$detached" ]]
+	then
+		red "On detached HEAD! $(green)Switching to branch $(yellow)master"
+		git checkout master
+	fi		
 }
