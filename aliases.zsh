@@ -270,6 +270,8 @@ alias cdmb="cd_dir $JS_HOME/projects/mobile-app-cordova"
 alias cdg="cd_dir $JS_HOME/projects/mobile-game-cocos"
 
 # Development operations
+alias gib="gem install bundler"
+
 alias rgl="rvm gemset list"
 
 alias rgu="rvm gemset use"
