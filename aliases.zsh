@@ -152,6 +152,8 @@ alias shell="echo $SHELL"
 alias cdcocos="cd $COCOS_HOME"
 
 # Shell shortcuts
+alias strash="du -dh $TRASH_HOME"
+
 alias mcol="mate $DOTFILES_HOME/colors.zsh"
 
 alias syslog="tail -f /var/log/system.log"

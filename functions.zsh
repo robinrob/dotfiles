@@ -564,7 +564,7 @@ function bbcmr {
 }
 
 function cleanhome {
-	for file in `find . \( ! -regex '.*/\..*' \) -type f -name *`
+	for file in `gfind . -maxdepth 1 \( ! -regex '.*/\..*' \) -type f`
 	do
 		green "Moving $file to $TRASH_HOME"
 		mv $file ~/.Trash
@@ -932,7 +932,7 @@ function chpwd {
 }
 
 function git_checkout_master_if_on_detached_head {
-	detached=$(echo `git branch 2> /dev/null` | grep detached)
+	detached=`git branch 2> /dev/null | grep detached`
 	
 	if [[ -n "$detached" ]]
 	then
