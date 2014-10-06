@@ -129,3 +129,5 @@ alias awssdk="open 'http://docs.aws.amazon.com/AWSRubySDK/latest/frames.html'"
 alias bkcaml="safari 'http://my.safaribooksonline.com/book/programming/9781449324735'"
 
 alias documentary="open 'http://www.imdb.com/search/title?at=0&sort=user_rating&title_type=documentary'"
+
+alias war="safari 'http://www2.warwick.ac.uk/fac/soc/economics/staff/mharrison/public/ehr2011postprint.pdf'"

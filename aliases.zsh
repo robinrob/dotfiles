@@ -117,6 +117,8 @@ alias awk="gawk"
 alias "echo"="gecho"
 
 # Shell Aliases
+alias cwd="pwd"
+
 alias lsltr="ls -ltr | awk '{print \$9}' | tail +2"
 
 alias dt="date"
@@ -266,6 +268,12 @@ alias cdmb="cd_dir $JS_HOME/projects/mobile-app-cordova"
 alias cdg="cd_dir $JS_HOME/projects/mobile-game-cocos"
 
 # Development operations
+alias rgl="rvm gemset list"
+
+alias rgu="rvm gemset use"
+
+alias rvl="rvm list"
+
 alias mrdb="psql -U msl -d mrrobinsmith_development"
 
 alias rsc="rails console"
@@ -456,6 +464,10 @@ alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 alias vconf="vim ~/.ssh/config"
 
 alias mssh="mate ~/.ssh/config"
+
+alias mrvm="mate ~/.rvmrc"
+
+alias mrvmrc="mate .rvmrc"
 
 alias mconf="mssh"
 
@@ -710,6 +722,8 @@ alias workpostcode="get_record work_postcode"
 alias residency="$ADOBE_PATH $CANADA_HOME/residency_form.pdf"
 
 alias songs="cd $SONGS_HOME"
+
+alias cdsongs="cd $SONGS_HOME"
 
 alias sabihin="song sabihin_mo_na"
 

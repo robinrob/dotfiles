@@ -75,8 +75,7 @@ set -o vi
 # Ruby
 ######
 ruby="2.1.1"
-eval "rvm use ruby-"$ruby 1> /dev/null 2> /dev/null
-green "Using \`Ruby-$ruby\`"
+rvm use ruby-"$ruby"
 
 # Python
 ########
@@ -126,3 +125,6 @@ chflags nohidden ~/Library/ 2> /dev/null
 
 # OPAM configuration
 . /Users/msl/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
+
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 

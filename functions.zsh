@@ -571,12 +571,16 @@ function cleanhome {
 	done
 }
 
+function dir_exists {
+	ls -d $1 2> /dev/null 1> /dev/null && echo "yes"
+}
+
 function is_git {
-	result=`ls -d .git 2> /dev/null`
-	if [ "$result" ]
-	then
-		echo "yes"
-	fi
+	dir_exists '.git'
+}
+
+function is_chef {
+	dir_exists '.chef'
 }
 
 function show_git {
@@ -924,7 +928,9 @@ function dir {
 }
 
 function chpwd {
-  git_checkout_master_if_on_detached_head
+	# rvm_use_gemset_if_dir_exists chef .chef
+	# rvm_use_gemset_if_cwd default mrrobinsmith.com
+	#   git_checkout_master_if_on_detached_head
 }
 
 function git_checkout_master_if_on_detached_head {
@@ -935,4 +941,28 @@ function git_checkout_master_if_on_detached_head {
 		red "On detached HEAD! $(green)Switching to branch $(yellow)master"
 		git checkout master
 	fi		
+}
+
+function rvm_use_gemset_if_dir_exists {
+	GEMSET=$1
+	DIR=$2
+	
+	if [[ -n $(dir_exists $DIR) ]]
+	then
+		rvm gemset use $GEMSET
+	fi	
+}
+
+function rvm_use_gemset_chef_if_chef {
+	rvm_use_gemset_if_dir_exists chef .chef
+}
+
+function rvm_use_gemset_if_cwd {
+	GEMSET=$1
+	DIR=$2
+	
+	if [[ `basename $PWD` == $DIR ]]
+	then
+		rvm gemset use $GEMSET
+	fi	
 }
