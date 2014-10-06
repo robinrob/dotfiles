@@ -928,9 +928,7 @@ function dir {
 }
 
 function chpwd {
-	# rvm_use_gemset_if_dir_exists chef .chef
-	# rvm_use_gemset_if_cwd default mrrobinsmith.com
-	#   git_checkout_master_if_on_detached_head
+	  git_checkout_master_if_on_detached_head
 }
 
 function git_checkout_master_if_on_detached_head {
@@ -943,26 +941,26 @@ function git_checkout_master_if_on_detached_head {
 	fi		
 }
 
-function rvm_use_gemset_if_dir_exists {
-	GEMSET=$1
-	DIR=$2
-	
-	if [[ -n $(dir_exists $DIR) ]]
-	then
-		rvm gemset use $GEMSET
-	fi	
-}
-
-function rvm_use_gemset_chef_if_chef {
-	rvm_use_gemset_if_dir_exists chef .chef
-}
-
-function rvm_use_gemset_if_cwd {
-	GEMSET=$1
-	DIR=$2
-	
-	if [[ `basename $PWD` == $DIR ]]
-	then
-		rvm gemset use $GEMSET
-	fi	
-}
+# function rvm_use_gemset_if_dir_exists {
+# 	GEMSET=$1
+# 	DIR=$2
+#
+# 	if [[ -n $(dir_exists $DIR) ]]
+# 	then
+# 		rvm gemset use $GEMSET
+# 	fi
+# }
+#
+# function rvm_use_gemset_chef_if_chef {
+# 	rvm_use_gemset_if_dir_exists chef .chef
+# }
+#
+# function rvm_use_gemset_if_cwd {
+# 	GEMSET=$1
+# 	DIR=$2
+#
+# 	if [[ `basename $PWD` == $DIR ]]
+# 	then
+# 		rvm gemset use $GEMSET
+# 	fi
+# }

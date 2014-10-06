@@ -272,6 +272,10 @@ alias rgl="rvm gemset list"
 
 alias rgu="rvm gemset use"
 
+alias rgc="rvm gemset create"
+
+alias rgd="rvm gemset delete"
+
 alias rvl="rvm list"
 
 alias mrdb="psql -U msl -d mrrobinsmith_development"
