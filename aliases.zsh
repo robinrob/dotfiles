@@ -286,11 +286,13 @@ alias mrdb="psql -U msl -d mrrobinsmith_development"
 
 alias rsc="rails console"
 
-alias rksv="rake_do server"
+alias rksv="rake server"
 
 alias rls="rails server"
 
 alias rkm="rake db:migrate"
+
+alias rkt="rake test"
 
 alias rk="rake"
 
@@ -699,9 +701,13 @@ alias mspnum="get_record msp_num"
 
 alias mspaccount="get_record msp_account"
 
-alias docsec1="get_record doctors_secretary1"
+alias delta="get_record deltares"
 
-alias docsec2="get_record doctors_secretary2"
+alias docsec1="get_record docsec1"
+
+alias docsec2="get_record docsec2"
+
+alias docsec3="get_record docsecnott"
 
 alias rssaws="get_record rss-aws"
 
