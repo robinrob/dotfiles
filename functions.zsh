@@ -928,7 +928,7 @@ function dir {
 }
 
 function chpwd {
-	  git_checkout_master_if_on_detached_head
+	git_checkout_master_if_on_detached_head
 }
 
 function git_checkout_master_if_on_detached_head {
