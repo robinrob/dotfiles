@@ -270,7 +270,15 @@ alias cdmb="cd_dir $JS_HOME/projects/mobile-app-cordova"
 alias cdg="cd_dir $JS_HOME/projects/mobile-game-cocos"
 
 # Development operations
+alias crv="cat .ruby-version"
+
+alias crg="cat .ruby-gemset"
+
+alias rgfl="rm Gemfile.lock"
+
 alias gib="gem install bundler"
+
+alias rge="rvm gemset empty"
 
 alias rgl="rvm gemset list"
 
@@ -286,13 +294,13 @@ alias mrdb="psql -U msl -d mrrobinsmith_development"
 
 alias rsc="rails console"
 
-alias rksv="rake server"
+alias rksv="rake_do server"
 
 alias rls="rails server"
 
-alias rkm="rake db:migrate"
+alias rkm="rake_do db:migrate"
 
-alias rkt="rake test"
+alias rkt="rake_do test"
 
 alias rk="rake"
 
@@ -417,7 +425,7 @@ alias gplom="git pull origin master"
 
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
 
-# Git repo operations
+# Development operations
 alias pl="cd_pull"
 
 alias st="cd_status"
@@ -707,7 +715,9 @@ alias docsec1="get_record docsec1"
 
 alias docsec2="get_record docsec2"
 
-alias docsec3="get_record docsecnott"
+alias docsec3="get_record docsecnott1"
+
+alias docsec4="get_record docsecnott2"
 
 alias rssaws="get_record rss-aws"
 

@@ -417,7 +417,7 @@ function rake_do {
 	
 	if [ -f Rakefile ]
 	then
-		echo "$(green "Rakefile found: ")$(yellow $(/usr/local/bin/gls $PWD/Rakefile))"
+		echo "$(green "Using Rakefile: ")$(yellow $(/usr/local/bin/gls $PWD/Rakefile))"
 		if [ -n "$2" ]
 		then
 			rake $TASK"[$2]"
@@ -486,6 +486,10 @@ function lsd {
 
 function silent_cp {
 	yes | cp $1 $2 1> /dev/null 2> /dev/null
+}
+
+function silent {
+	`$@ 2> /dev/null`
 }
 
 function save_crontab {
@@ -964,3 +968,13 @@ function git_checkout_master_if_on_detached_head {
 # 		rvm gemset use $GEMSET
 # 	fi
 # }
+
+function gemset {
+	RUBY_GEMSET=$1
+	RUBY_VERSION=$2
+	
+	silent rm .ruby-gemset
+	silent rm .ruby-version
+	echo $RUBY_GEMSET > .ruby-gemset
+	echo $RUBY_VERSION > .ruby-version
+}

@@ -1,3 +1,5 @@
+#!/usr/bin/env zsh -x
+
 DOTFILES_HOME=~/Programming/robin/zsh/projects/dotfiles
 source $DOTFILES_HOME/colors.zsh
 
@@ -69,27 +71,6 @@ set -o vi
 
 
 
-# Development
-###############################################################################
-
-# Ruby
-######
-ruby="2.1.1"
-rvm use ruby-"$ruby"
-
-# Python
-########
-[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
-
-if [[ "$HOSTNAME" == "$VENUS_HOSTNAME" ]]
-then
-	pythonbrew use 2.7 2> /dev/null
-else
-	pythonbrew use 3.2 2> /dev/null
-fi
-
-
-
 # Path
 ######
 PATH=$PATH:$EC2_HOME/bin
@@ -127,4 +108,27 @@ chflags nohidden ~/Library/ 2> /dev/null
 . /Users/msl/.opam/opam-init/init.zsh > /dev/null 2> /dev/null || true
 
 
+# Development
+###############################################################################
+
+
+# Python
+########
+[[ -s $HOME/.pythonbrew/etc/bashrc ]] && source $HOME/.pythonbrew/etc/bashrc
+
+if [[ "$HOSTNAME" == "$VENUS_HOSTNAME" ]]
+then
+	pythonbrew use 2.7 2> /dev/null
+else
+	pythonbrew use 3.2 2> /dev/null
+fi
+
+
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+
+
+# Ruby
+######
+# `rvm reset` is the magic secret command that fixes the path errors!!
+ruby="2.1.1"
+rvm use ruby-"$ruby"
