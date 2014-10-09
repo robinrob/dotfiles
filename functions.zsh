@@ -941,6 +941,25 @@ function git_checkout_master_if_on_detached_head {
 	fi		
 }
 
+function rvm_gem_list {
+	GEMSET=$1
+	rvm @$GEMSET do gem list
+}
+
+
+function gems {
+	rubygemset=".ruby-gemset"
+	if [[ -f $rubygemset ]]
+	then
+		gemset=`cat $rubygemset`
+		rvm_gem_list $gemset
+	else
+		red "No $rubygemset found."
+	fi
+}
+
+
+
 # function rvm_use_gemset_if_dir_exists {
 # 	GEMSET=$1
 # 	DIR=$2
