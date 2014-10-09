@@ -86,6 +86,8 @@ alias gabscases="cases 00B20000006SMJf"
 
 alias seanscases="cases 00B20000007AD8A"
 
+alias jaredscases="cases 00B20000007BLn1"
+
 alias unassed="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079jxp'"
 
 alias pending="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006XDXH'"
@@ -131,3 +133,6 @@ alias bkcaml="safari 'http://my.safaribooksonline.com/book/programming/978144932
 alias documentary="open 'http://www.imdb.com/search/title?at=0&sort=user_rating&title_type=documentary'"
 
 alias war="safari 'http://www2.warwick.ac.uk/fac/soc/economics/staff/mharrison/public/ehr2011postprint.pdf'"
+alias rfc="chrome 'https://drive.google.com/a/cloudreach.co.uk/previewtemplate?id=1TSCavbYKBAznqXOffWJtLA0VJsY3Pts3_TOtqWcOACs&mode=domain'"
+
+alias p1="chrome 'https://drive.google.com/a/cloudreach.co.uk/previewtemplate?id=1OvJFF7rc3gcU3qIJTaOO9PkfatC5-imNL1KkZrdMtmw&mode=domain'"
