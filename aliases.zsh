@@ -312,6 +312,8 @@ alias gnb="gem install bundler && bundle install"
 
 alias gib="gem install bundler"
 
+alias gi="gem install"
+
 alias bi="bundle install"
 
 alias bu="bundle update"
@@ -379,7 +381,7 @@ alias gSt="git stash"
 
 alias grrm="git remote rm"
 
-alias gi="git init"
+alias gin="git init"
 
 alias grm="git rm -r --cached"
 
@@ -592,6 +594,8 @@ alias crk="cat Rakefile"
 alias mrk="mate Rakefile"
 
 alias mgf="mate Gemfile"
+
+alias mgfl="mate Gemfile.lock"
 
 alias cgf="cat Gemfile"
 
