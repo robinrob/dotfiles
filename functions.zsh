@@ -386,16 +386,25 @@ function al {
 }
 
 function bookmark {
+	create_bookmark $@ $DOTFILES_HOME/bookmarks.zsh
+}
+
+function work_bookmark {
+	create_bookmark $@ chrome $DOTFILES_HOME/work_bookmarks.zsh
+}
+
+function create_bookmark {
 	NAME=$1
 	URL=$2
 	BROWSER=$3
+	BOOKMARKS_PATH=$4
+	
 	if [[ "$BROWSER" == "" ]]
 	then
 		BROWSER="open"
 	fi
 	
 	ALIAS="${BROWSER} '${URL}'"
-	BOOKMARKS_PATH=$DOTFILES_HOME/bookmarks.zsh
 	SUCCESS_MSG="`yellow $NAME` `green bookmarked as` `yellow $URL`"
 	
 	create_alias $NAME $ALIAS $BOOKMARKS_PATH $SUCCESS_MSG

@@ -49,6 +49,7 @@ unalias rm
 alias q="question"
 
 source $DOTFILES_HOME/bookmarks.zsh
+source $DOTFILES_HOME/work_bookmarks.zsh
 
 alias rd="rubydoc"
 
@@ -517,6 +518,8 @@ alias czsh="cat ~/.zshrc"
 
 alias mbk="m $DOTFILES_HOME/bookmarks.zsh"
 
+alias mwbk="m $DOTFILES_HOME/work_bookmarks.zsh"
+
 alias edit=$EDITOR
 
 alias conf="$EDITOR ~/.ssh/config"
@@ -658,6 +661,10 @@ alias pb="pbcopy"
 alias splq="mate $TEMP_HOME/splunk_searches.txt"
 
 # Shell functions/function aliases
+alias bkmark="bookmark"
+
+alias wbkmark="work_bookmark"
+
 alias nbrew="newbrew"
 
 alias rbdoc="rubydoc"
