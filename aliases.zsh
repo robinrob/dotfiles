@@ -6,6 +6,8 @@ unalias gr
 
 unalias cdb
 
+unalias gam
+
 # unalias gcl
 
 unalias c
@@ -153,6 +155,10 @@ alias shell="echo $SHELL"
 alias cdcocos="cd $COCOS_HOME"
 
 # Shell shortcuts
+alias cdgam="cd_dir $GAM_PATH"
+
+alias cdrec="cd_dir $RECEIPTS_HOME"
+
 alias strash="du -dh $TRASH_HOME"
 
 alias mcol="mate $DOTFILES_HOME/colors.zsh"
@@ -378,6 +384,8 @@ alias cfn="grep function $DOTFILES_HOME/functions.zsh | wc -l"
 # alias lfn='grep -o "function [a-zA-Z0-9_]* "'$DOTFILES_HOME/functions.zsh'| awk ''{print $2}'' | grep ''.*'''
 
 # Git aliases
+alias gas="git add *"
+
 alias gst="git status"
 
 alias gSt="git stash"
@@ -581,6 +589,8 @@ alias cgi="cat .gitignore"
 alias x="chmod +x"
 
 alias mx="chmod -x"
+
+alias kud="knife_upload_databag"
 
 alias kne="knife node edit --editor vim"
 

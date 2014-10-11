@@ -134,4 +134,3 @@ fi
 # `rvm reset` is the magic secret command that fixes the path errors!!
 ruby="2.1.1"
 rvm use ruby-"$ruby"
-# rvm reset
