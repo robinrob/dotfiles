@@ -1006,3 +1006,9 @@ function gemset {
 	echo $RUBY_GEMSET > .ruby-gemset
 	echo $RUBY_VERSION > .ruby-version
 }
+
+
+function knife_upload_databag {
+	DATABAG=$1
+	knife upload data bag $DATABAG
+}

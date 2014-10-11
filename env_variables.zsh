@@ -148,8 +148,6 @@ export PHONEGAP_HOME=/usr/local/Library/phonegap-2.9.0
 
 export ANDROID_HOME=/usr/local/Cellar/android-sdk
 
-export RECEIPTS_HOME=$DOCS_HOME/IMPORTANT/receipts
-
 export USEFUL_HOME=$DOCS_HOME/useful
 
 export AWS_CONFIG="~/.aws/config"
@@ -158,7 +156,9 @@ export KITCHENPLAN_HOME=/opt/kitchenplan
 
 export RECORDS_PATH=$MERCURY_HOME/docs/IMPORTANT/records/records.txt
 
-export CAMERA_HOME=$FILES_HOME/"Camera Uploads"
+export RECEIPTS_HOME="~/Google\ Drive/expenses/"
+
+export CAMERA_HOME=$FILES_HOME/"Camera\ Uploads"
 
 export TRASH_HOME=~/.Trash
 
