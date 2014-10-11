@@ -307,6 +307,8 @@ alias rkm="rake_do db:migrate"
 
 alias rkt="rake_do test"
 
+alias rkss="rake sub_sort"
+
 alias rk="rake"
 
 alias gnb="gem install bundler && bundle install"
