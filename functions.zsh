@@ -868,9 +868,8 @@ function cdms {
 	rvm gemset use chef --create
 }
 
-function newbrew {
-	package=$1
-	brew install $package && echo $package >> $DOTFILES_HOME/homebrew.txt
+function nbrew {
+	brew $@ && shift; echo $@ >> $DOTFILES_HOME/homebrew.txt
 }
 
 function bashvulns {

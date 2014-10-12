@@ -1,4 +1,3 @@
-
 alias warwick="chrome 'https://cloudreach.my.salesforce.com/0032000001AV6aC?srPos=1&srKp=003'"
 
 alias splunk="chrome 'https://cr-splunk-1.cloudreach.co.uk:8000/en-US/manager/search/saved/searches'"

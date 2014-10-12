@@ -161,7 +161,7 @@ alias cdrec="cd_dir $RECEIPTS_HOME"
 
 alias strash="du -dh $TRASH_HOME"
 
-alias mcol="mate $DOTFILES_HOME/colors.zsh"
+alias mcol="$EDITOR $DOTFILES_HOME/colors.zsh"
 
 alias syslog="tail -f /var/log/system.log"
 
@@ -192,7 +192,7 @@ alias ffc="firefoxc"
 
 alias adobe="$ADOBE_PATH"
 
-alias m="mate"
+alias m="$EDITOR"
 
 alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
 
@@ -304,6 +304,8 @@ alias rvl="rvm list"
 alias mrdb="psql -U msl -d mrrobinsmith_development"
 
 alias rsc="rails console"
+
+alias rkpl="cd rake; green 'Git-pulling rake ...'; git pull origin master; cd - > /dev/null"
 
 alias rksv="rake_do server"
 
@@ -489,8 +491,11 @@ alias kel="knife environment list"
 alias knl="knife node list"
 
 # Viewing and editing files
+alias mbrew="$EDITOR $DOTFILES_HOME/homebrew.txt"
 
-alias mprompt="mate ~/.zsh.prompts/prompt_robin_setup"
+alias cbrew="cat $DOTFILES_HOME/homebrew.txt"
+
+alias mprompt="$EDITOR ~/.zsh.prompts/prompt_robin_setup"
 
 alias mpr="mprompt"
 
@@ -502,11 +507,11 @@ alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 alias vconf="vim ~/.ssh/config"
 
-alias mssh="mate ~/.ssh/config"
+alias mssh="$EDITOR ~/.ssh/config"
 
-alias mrvm="mate ~/.rvmrc"
+alias mrvm="$EDITOR ~/.rvmrc"
 
-alias mrvmrc="mate .rvmrc"
+alias mrvmrc="$EDITOR .rvmrc"
 
 alias mconf="mssh"
 
@@ -518,7 +523,7 @@ alias econf="edit ~/.ssh/config"
 
 alias vzsh="vim ~/.zshrc"
 
-alias mzsh="mate ~/.zshrc"
+alias mzsh="$EDITOR ~/.zshrc"
 
 alias ezsh="edit ~/.zshrc"
 
@@ -534,7 +539,7 @@ alias edit=$EDITOR
 
 alias conf="$EDITOR ~/.ssh/config"
 
-alias maws="mate $AWS_CONFIG"
+alias maws="$EDITOR $AWS_CONFIG"
 
 alias caws="cat $AWS_CONFIG"
 
@@ -556,15 +561,15 @@ alias password="ruby $RUBY_HOME/projects/rbpassword/rbpassword.rb"
 
 alias rnsall="cd $SCREENSHOTS_HOME && despace"
 
-alias mal="mate $DOTFILES_HOME/aliases.zsh"
+alias mal="$EDITOR $DOTFILES_HOME/aliases.zsh"
 
-alias men="mate $DOTFILES_HOME/env_variables.zsh"
+alias men="$EDITOR $DOTFILES_HOME/env_variables.zsh"
 
-alias mfn="mate $DOTFILES_HOME/functions.zsh"
+alias mfn="$EDITOR $DOTFILES_HOME/functions.zsh"
 
 alias t="touch"
 
-alias mmutt="mate ~/.mutt/muttrc"
+alias mmutt="$EDITOR ~/.mutt/muttrc"
 
 alias gl="git log"
 
@@ -578,7 +583,7 @@ alias bcodes="cat $IMPORTANT_HOME/passwords/Backup-codes-robin.smith.txt"
 
 alias gcl="git clone"
 
-alias cmd="mate $TEMP_HOME/commands.txt"
+alias cmd="$EDITOR $TEMP_HOME/commands.txt"
 
 alias window="open /Users/robinsmith/Dropbox/Camera\ Uploads/gif/window.gif"
 
@@ -606,31 +611,27 @@ alias cgc="cat ~/.gitconfig"
 
 alias crk="cat Rakefile"
 
-alias mrk="mate Rakefile"
+alias mrk="$EDITOR Rakefile"
 
-alias mgf="mate Gemfile"
+alias mgf="$EDITOR Gemfile"
 
-alias mgfl="mate Gemfile.lock"
+alias mgfl="$EDITOR Gemfile.lock"
 
 alias cgf="cat Gemfile"
 
-alias mgi="mate .gitignore"
+alias mgi="$EDITOR .gitignore"
 
-alias mgm="mate .gitmodules"
+alias mgm="$EDITOR .gitmodules"
 
 alias egi="$EDITOR .gitignore"
 
 alias ecmd="$EDITOR $DOCS_HOME/commands.txt"
 
-alias cmd="mate $DOCS_HOME/commands.txt"
+alias cmd="$EDITOR $DOCS_HOME/commands.txt"
 
 alias e=$EDITOR
 
 alias v=$VISUAL
-
-alias editor="echo $EDITOR"
-
-alias visual="echo $VISUAL"
 
 alias sprog="du -dh $PROG_HOME"
 
@@ -670,26 +671,22 @@ alias c="cat"
 
 alias pb="pbcopy"
 
-alias splq="mate $TEMP_HOME/splunk_searches.txt"
+alias splq="$EDITOR $TEMP_HOME/splunk_searches.txt"
 
 # Shell functions/function aliases
+alias killa="killp"
+
+alias brew="nbrew"
+
 alias bkmark="bookmark"
 
 alias wbkmark="work_bookmark"
-
-alias nbrew="newbrew"
 
 alias rbdoc="rubydoc"
 
 alias svc="save_code"
 
-alias kp="killp"
-
-alias killpf="killp firefox"
-
-alias kpf="killpf"
-
-alias lf="libfind_s"
+alias lbf="libfind_s"
 
 alias rfind="libfind_s $RUBY_HOME/practice"
 
@@ -726,7 +723,7 @@ alias sshfind="file_grep ~/.ssh/config"
 # Records & docs
 alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
 
-alias mrec="mate $RECORDS_PATH"
+alias mrec="$EDITOR $RECORDS_PATH"
 
 alias cardcredit="get_record rbc-credit"
 

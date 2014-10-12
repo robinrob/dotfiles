@@ -8,6 +8,15 @@ echo "$(brightwhite)I $(brightyellow)am $(brightcyan awesome)"
 # echo "$(brightwhite I)$(brightyellow " am ")$(brightcyan awesome)"
 
 
+# YADR stuff
+############
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
+
+
 # Environment variables
 #############################
 source $DOTFILES_HOME/env_variables.zsh
@@ -17,15 +26,6 @@ source $DOTFILES_HOME/env_variables.zsh
 ###############################################################################
 
 source $DOTFILES_HOME/functions.zsh
-
-
-# YADR stuff
-############
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
-
-for config_file ($HOME/.yadr/zsh/*.zsh) source $config_file
 
 
 # Aliases
