@@ -155,6 +155,8 @@ alias shell="echo $SHELL"
 alias cdcocos="cd $COCOS_HOME"
 
 # Shell shortcuts
+alias rkls="rake each_sub['echo, quiet']"
+
 alias cdgam="cd_dir $GAM_PATH"
 
 alias cdrec="cd_dir $RECEIPTS_HOME"
@@ -199,12 +201,13 @@ alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
 # Navigation
-
 alias cdi="cd_dir"
 
 alias cdpr="cd_dir $PROG_HOME"
 
 alias cdd="cd_dir $DOTFILES_HOME"
+
+alias cdy="cd_dir $DOTFILES_HOME/yadr"
 
 alias cdb="cd_dir $HTMLCSS_HOME/practice/bootstrap"
 
@@ -307,13 +310,19 @@ alias rsc="rails console"
 
 alias rkpl="cd rake; green 'Git-pulling rake ...'; git pull origin master; cd - > /dev/null"
 
-alias rksv="rake_do server"
+alias rksv="cd rake; green 'Rake-saving rake ...'; rake save; cd - > /dev/null"
+
+alias rktr="rake each_sub['echo, quiet']"
+
+alias rkser="rake_do server"
 
 alias rls="rails server"
 
 alias rkm="rake_do db:migrate"
 
 alias rkt="rake_do test"
+
+alias rkr="rake routes"
 
 alias rkss="rake sub_sort"
 
@@ -509,6 +518,8 @@ alias vconf="vim ~/.ssh/config"
 
 alias mssh="$EDITOR ~/.ssh/config"
 
+alias mvrc="$EDITOR ~/.vimrc"
+
 alias mrvm="$EDITOR ~/.rvmrc"
 
 alias mrvmrc="$EDITOR .rvmrc"
@@ -532,6 +543,8 @@ alias ezs="ezsh"
 alias czsh="cat ~/.zshrc"
 
 alias mbk="m $DOTFILES_HOME/bookmarks.zsh"
+
+alias cbk="cat $DOTFILES_HOME/bookmarks.zsh"
 
 alias mwbk="m $DOTFILES_HOME/work_bookmarks.zsh"
 
@@ -678,9 +691,9 @@ alias killa="killp"
 
 alias brew="nbrew"
 
-alias bkmark="bookmark"
+alias bkmk="bookmark"
 
-alias wbkmark="work_bookmark"
+alias wbkmk="work_bookmark"
 
 alias rbdoc="rubydoc"
 

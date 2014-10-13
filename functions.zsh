@@ -386,26 +386,26 @@ function al {
 }
 
 function bookmark {
-	create_bookmark $@ $DOTFILES_HOME/bookmarks.zsh
+	create_bookmark $DOTFILES_HOME/bookmarks.zsh $@
 }
 
 function work_bookmark {
-	create_bookmark $@ chrome $DOTFILES_HOME/work_bookmarks.zsh
+	create_bookmark $DOTFILES_HOME/work_bookmarks.zsh $@ chrome
 }
 
 function create_bookmark {
-	NAME=$1
-	URL=$2
-	BROWSER=$3
-	BOOKMARKS_PATH=$4
+	BOOKMARKS_PATH=$1
+	NAME=$2
+	URL=$3
+	BROWSER=$4
 	
-	if [[ "$BROWSER" == "" ]]
+	if [ -z "$BROWSER" ]
 	then
 		BROWSER="open"
 	fi
 	
 	ALIAS="${BROWSER} '${URL}'"
-	SUCCESS_MSG="`yellow $NAME` `green bookmarked as` `yellow $URL`"
+  SUCCESS_MSG="$(yellow)$NAME $(green)bookmarked as $(yellow)$URL $(green)with browser $(yellow)$BROWSER"
 	
 	create_alias $NAME $ALIAS $BOOKMARKS_PATH $SUCCESS_MSG
 	
@@ -456,14 +456,23 @@ function rka {
 	git status
 }
 
+function null {
+  if [ -z "$1" ]
+  then
+    green yes
+  else
+    red no
+  fi
+}
+
 function killp {
-	PROCESS=$1
-	if [ -z $PROCESS ]
-	then
+  PROCESS=$1
+	if [ -z "$PROCESS" ]
+  then
 		red "Must give name of process!"
 		
 	else
-		green "Killing all $PROCESS processes ..."
+    echo "$(green)Killing all $(yellow)${PROCESS}$(green) processes ...$(default)"
 		
 		ps aux | grep $PROCESS | awk '{print $2}' | xargs kill 2> /dev/null
 	fi
@@ -813,18 +822,18 @@ function sshfind {
 	grep -A 3 $HOST ~/.ssh/config
 }
 
-function killp {
-	NAME=$1
-
-	processes=`ps aux | grep $NAME | awk '{print $2}' | xargs`
-	processes=("${(s: :)processes}")
-	
-	green "Killing all `yellow $NAME` `green 'processes ...'`"
-	for process in $processes
-	do
-		`kill $process 2> /dev/null`
-	done
-}
+#function killp {
+#	NAME=$1
+#
+#	processes=`ps aux | grep $NAME | awk '{print $2}' | xargs`
+#	processes=("${(s: :)processes}")
+#	
+#	green "Killing all `yellow $NAME` `green 'processes ...'`"
+#	for process in $processes
+#	do
+#		`kill $process 2> /dev/null`
+#	done
+#}
 
 function updatesubs {
 	git submodule foreach --recursive "`git commit -am 'Updates.' && git push` || exit 0"
@@ -859,13 +868,11 @@ function del {
 }
 
 function cdnoc {
-	cd_dir $NOCCHEF
-	rvm gemset use chef --create
+	cd_dir $NOCCHEF && rvm gemset use chef --create
 }
 
 function cdms {
-	cd_dir $MSCHEF
-	rvm gemset use chef --create
+	cd_dir $MSCHEF && rvm gemset use chef --create
 }
 
 function nbrew {
@@ -1010,4 +1017,16 @@ function gemset {
 function knife_upload_databag {
 	DATABAG=$1
 	knife upload data bag $DATABAG
+}
+
+
+function website () {
+  cd $MRROBINSMITHCOM_HOME
+  green 'Starting server ...'
+  rake server &
+  killp postgres
+  green 'Starting postgres ...'
+  postgres -D "/Users/msl/Library/Containers/com.heroku.postgres/Data/Library/Application Support/Postgres/var" &
+  green 'Opening https://localhost:3000'
+  safari http://localhost:3000
 }
