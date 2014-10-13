@@ -876,7 +876,7 @@ function cdms {
 }
 
 function nbrew {
-	brew $@ && shift; echo $@ >> $DOTFILES_HOME/homebrew.txt
+	brew $@ && shift && echo $@ >> $DOTFILES_HOME/homebrew.txt
 }
 
 function bashvulns {
