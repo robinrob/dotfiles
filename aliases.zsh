@@ -520,6 +520,8 @@ alias mssh="$EDITOR ~/.ssh/config"
 
 alias mvrc="$EDITOR ~/.vimrc"
 
+alias cvrc="cat ~/.vimrc"
+
 alias mrvm="$EDITOR ~/.rvmrc"
 
 alias mrvmrc="$EDITOR .rvmrc"
