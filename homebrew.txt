@@ -3,3 +3,4 @@ install
 opam
 install macvim --custom-icons --override-system-vim --with-lua --with-luajit
 zsh
+install sips

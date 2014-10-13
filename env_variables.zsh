@@ -58,6 +58,8 @@ export HTML_TEMPLATES_HOME=$HTMLCSS_HOME/templates
 
 export RUBY_HOME=$PROG_HOME/ruby
 
+export MARKDOWN_HOME=$PROG_HOME/markdown
+
 export OCAML_HOME=$PROG_HOME/ocaml
 
 export COFFEESCRIPT_HOME=$PROG_HOME/coffeescript

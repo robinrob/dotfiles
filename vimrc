@@ -103,6 +103,9 @@ set sidescroll=1
 
 " ================ Coping to/from OS clipboard! ========================
 set clipboard=unnamed
+set noignorecase
+set wrap
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
+

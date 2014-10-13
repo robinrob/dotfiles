@@ -1030,3 +1030,8 @@ function website () {
   green 'Opening https://localhost:3000'
   safari http://localhost:3000
 }
+
+function preview {
+  FILENAME=$1
+  ./render.rb $FILENAME && open -a $BROWSER html/$FILENAME.html
+}

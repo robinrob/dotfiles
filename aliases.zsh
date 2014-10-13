@@ -223,6 +223,8 @@ alias cdpl="cd_dir $PERL_HOME"
 
 alias cdmr="cd_dir $RUBY_HOME/projects/mrrobinsmith.com"
 
+alias cdbp="cd_dir $MRROBINSMITHCOM_HOME/public/blogposts"
+
 alias cdq="cd_dir $RUBY_HOME/projects/quiz"
 
 alias cdp="cd_dir $PY_HOME"
@@ -510,6 +512,12 @@ alias mpr="mprompt"
 
 alias rs="source ~/.zshrc"
 
+alias rsen="source $DOTFILES_HOME/env_variables.zsh"
+
+alias rsfn="source $DOTFILES_HOME/functions.zsh"
+
+alias rsal="source $DOTFILES_HOME/env_variables.zsh"
+
 alias RS="source ~/.zshrc"
 
 alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
@@ -624,15 +632,21 @@ alias fcl="fab clean"
 
 alias cgc="cat ~/.gitconfig"
 
-alias crk="cat Rakefile"
+alias mrd="m README.md"
+
+alias crd="cat README.md"
 
 alias mrk="$EDITOR Rakefile"
 
+alias crk="cat Rakefile"
+
 alias mgf="$EDITOR Gemfile"
+
+alias cgf="cat Gemfile"
 
 alias mgfl="$EDITOR Gemfile.lock"
 
-alias cgf="cat Gemfile"
+alias cgfl="cat Gemfile.lock"
 
 alias mgi="$EDITOR .gitignore"
 
@@ -761,6 +775,8 @@ alias docsec2="get_record docsec2"
 alias docsec3="get_record docsecnott1"
 
 alias docsec4="get_record docsecnott2"
+
+alias docsec5="get_record docsecbald1"
 
 alias rssaws="get_record rss-aws"
 
