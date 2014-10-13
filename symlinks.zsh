@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env zsh
 
 source colors.zsh
 source indents.zsh
@@ -7,7 +7,7 @@ green "Sym-linking dotfiles ..."
 
 DIR=`pwd`                  									
 OLD_DIR=/tmp/dotfiles             							
-FILES="yadr bashrc zshrc zsh.prompts vimrc gvimrc tm_properties gitconfig profile hushlogin ocamlinit rvmrc"
+FILES=(yadr bashrc zshrc zsh.prompts vimrc gvimrc tm_properties gitconfig profile hushlogin ocamlinit rvmrc)
 
 yellow "\t${ITEM}Creating $OLD_DIR for backup of any existing dotfiles in ~ ..."
 rm -rf $OLD_DIR

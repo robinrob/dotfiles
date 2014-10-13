@@ -1,10 +1,10 @@
-#!/usr/bin/env sh
+#!/usr/bin/env zsh
 
 source colors.zsh
 
-./symlinks.sh
+./symlinks.zsh
 
-./jetbrains.sh
+./jetbrains.zsh
 
 green "Installing crontab ..."
 crontab crontab.cron
