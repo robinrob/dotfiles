@@ -1026,7 +1026,7 @@ function website () {
   rake server &
   killp postgres
   green 'Starting postgres ...'
-  postgres -D $PG_DATA &
+  postgres &
   green 'Opening http://localhost:3000'
   safari http://localhost:3000
 }

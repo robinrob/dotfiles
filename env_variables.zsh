@@ -160,6 +160,7 @@ export RECORDS_PATH=$MERCURY_HOME/docs/IMPORTANT/records/records.txt
 
 export RECEIPTS_HOME=~/Google\ Drive/expenses/
 
+# This must NOT be wrapped in quotes or the whitespace-escaping in the path does not work!!
 export CAMERA_HOME=$FILES_HOME/Camera\ Uploads
 
 export TRASH_HOME=~/.Trash
@@ -173,7 +174,7 @@ else
 	export BROWSER="Google Chrome"
 fi
 
-export ADOBE_PATH="/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader"
+export ADOBE_PATH=/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader
 
 export COCOS_HOME="/usr/local/Library/cocos2d-js-v3.0-rc2"
 
@@ -214,10 +215,10 @@ export LS_COLORS='di=1;34:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:
 
 if [[ $HOSTNAME == "venus" ]]
 then
-  export PG_DATA=/Users/robinsmith/Library/Application\ Support/Postgres/var-9.3
+  export PGDATA=/Users/robinsmith/Library/Application\ Support/Postgres/var-9.3
 elif [[ $HOSTNAME == "mercury" ]]
 then
-  export PG_DATA=/Users/msl/Library/Containers/com.heroku.postgres/Data/Library/Application\ Support/Postgres/var
+  export PGDATA=/Users/msl/Library/Containers/com.heroku.postgres/Data/Library/Application\ Support/Postgres/var
 fi
 
-export PG_CONF=$PG_DATA/postgresql.conf
+export PG_CONF=$PGDATA/postgresql.conf
