@@ -407,7 +407,9 @@ alias grrm="git remote rm"
 
 alias gin="git init"
 
-alias grm="git rm -r --cached"
+alias gRm="git rm -r --cached"
+
+alias grm="git remote"
 
 alias gbd="git branch develop && git checkout develop"
 
