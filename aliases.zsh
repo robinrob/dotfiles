@@ -658,7 +658,7 @@ alias ecmd="$EDITOR $DOCS_HOME/commands.txt"
 
 alias cmd="$EDITOR $DOCS_HOME/commands.txt"
 
-alias e=$EDITOR
+alias e="echo"
 
 alias v=$VISUAL
 

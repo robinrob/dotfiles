@@ -158,9 +158,9 @@ export KITCHENPLAN_HOME=/opt/kitchenplan
 
 export RECORDS_PATH=$MERCURY_HOME/docs/IMPORTANT/records/records.txt
 
-export RECEIPTS_HOME="~/Google\ Drive/expenses/"
+export RECEIPTS_HOME=~/Google\ Drive/expenses/
 
-export CAMERA_HOME=$FILES_HOME/"Camera\ Uploads"
+export CAMERA_HOME=$FILES_HOME/Camera\ Uploads
 
 export TRASH_HOME=~/.Trash
 
@@ -211,3 +211,13 @@ export PATH=$NDK_ROOT:$PATH
 export GREP_COLORS='ms=01;35:mc=01;31:sl=:cx=:fn=0:ln=32:bn=32:se=36'
 
 export LS_COLORS='di=1;34:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
+
+if [[ $HOSTNAME == "venus" ]]
+then
+  export PG_DATA=/Users/robinsmith/Library/Application\ Support/Postgres/var-9.3
+elif [[ $HOSTNAME == "mercury" ]]
+then
+  export PG_DATA=/Users/msl/Library/Containers/com.heroku.postgres/Data/Library/Application\ Support/Postgres/var
+fi
+
+export PG_CONF=$PG_DATA/postgresql.conf
