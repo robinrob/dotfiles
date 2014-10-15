@@ -1,4 +1,4 @@
-# Un-Aliases
+############################################################################### Un-Aliases
 ###############################################################################
 unalias todo
 
@@ -620,6 +620,8 @@ alias mx="chmod -x"
 
 alias kud="knife_upload_databag"
 
+alias kdl="knife download"
+
 alias kne="knife node edit --editor vim"
 
 alias kee="knife environment edit --editor vim"
@@ -835,3 +837,5 @@ alias screenshots="cd $SCREENSHOTS_HOME"
 alias lasts="cd $SCREENSHOTS_HOME && lastf -s $SCREENSHOT_NAME"
 
 alias dels="cd $SCREENSHOTS_HOME && rm Screen*"
+
+alias test="hello"
