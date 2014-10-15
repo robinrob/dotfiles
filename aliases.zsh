@@ -267,6 +267,10 @@ alias cdscr="cd_dir $SCREENSHOTS_HOME"
 
 alias cdcam="cd_dir $CAMERA_HOME"
 
+alias cdt="cd $TRASH_HOME"
+
+alias cddr="cd ~/Google\ Drive"
+
 alias cdk="cd_dir $KITCHENPLAN_HOME"
 
 alias cddl="cd_dir ~/Downloads"
@@ -685,8 +689,6 @@ alias psv="cd_save $PY_HOME"
 alias rkct="rake count_all"
 
 alias mkd="mkdir"
-
-alias cdt="cd $TRASH_HOME"
 
 alias plane="copy_print NQFLIZ"
 
