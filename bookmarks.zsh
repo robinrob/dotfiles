@@ -102,8 +102,6 @@ alias renew="browser 'https://vpl.bibliocommons.com/user/login'"
 
 alias tagging="browser 'https://sites.google.com/a/cloudreach.co.uk/points-lists/aws/lab-instance-tagging'"
 
-alias robin="browser 'http://mrrobinsmith.com'"
-
 alias bkrb2="safari 'http://my.safaribooksonline.com/book/web-development/ruby/0768667208'"
 
 alias bkregex="safari 'http://my.safaribooksonline.com/book/programming/regular-expressions/0596528124'"

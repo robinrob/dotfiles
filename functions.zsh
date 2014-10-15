@@ -1042,3 +1042,12 @@ function cpscr {
   DESTINATION=$2
   cp $SCREENSHOTS_HOME/$SCREENSHOT $DESTINATION
 }
+
+function kul {
+  knife upload $@
+}
+
+function kdl {
+  knife download $@
+}
+
