@@ -401,6 +401,8 @@ alias cfn="cat $DOTFILES_HOME/functions.zsh"
 # alias lfn='grep -o "function [a-zA-Z0-9_]* "'$DOTFILES_HOME/functions.zsh'| awk ''{print $2}'' | grep ''.*'''
 
 # Git aliases
+alias grH="git reset HEAD"
+
 alias gas="git add *"
 
 alias gst="git status"
@@ -452,8 +454,6 @@ alias gsu="git submodule update"
 alias gsa="git submodule add"
 
 alias cgm="cat .gitmodules"
-
-alias grh="git reset HEAD"
 
 alias gra="git remote add"
 

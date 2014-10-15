@@ -10,7 +10,7 @@ export VENUS_HOSTNAME='venus'
 
 export EDITOR=mvim
 
-export VISUAL=mvim
+export VISUAL=vim
 
 # export PROG_HOME=$HOME/Programming/robin
 
