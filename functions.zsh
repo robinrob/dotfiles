@@ -1035,3 +1035,10 @@ function preview {
   FILENAME=$1
   ./render.rb $FILENAME && open -a $BROWSER html/$FILENAME.html
 }
+
+
+function cpscr {
+  SCREENSHOT=$1
+  DESTINATION=$2
+  cp $SCREENSHOTS_HOME/$SCREENSHOT $DESTINATION
+}
