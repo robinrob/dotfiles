@@ -392,7 +392,7 @@ alias cen="count_non_empty $DOTFILES_HOME/env_variables.zsh"
 
 alias cal="count_non_empty $DOTFILES_HOME/aliases.zsh"
 
-alias cfn="grep function $DOTFILES_HOME/functions.zsh | wc -l"
+alias cfn="cat $DOTFILES_HOME/functions.zsh"
 
 # alias lfn='grep -o "function [a-zA-Z0-9_]* "'$DOTFILES_HOME/functions.zsh'| awk ''{print $2}'' | grep ''.*'''
 
@@ -518,7 +518,7 @@ alias rsen="source $DOTFILES_HOME/env_variables.zsh"
 
 alias rsfn="source $DOTFILES_HOME/functions.zsh"
 
-alias rsal="source $DOTFILES_HOME/env_variables.zsh"
+alias rsal="source $DOTFILES_HOME/aliases.zsh"
 
 alias RS="source ~/.zshrc"
 
@@ -621,8 +621,6 @@ alias x="chmod +x"
 alias mx="chmod -x"
 
 alias kud="knife_upload_databag"
-
-alias kdl="knife download"
 
 alias kne="knife node edit --editor vim"
 

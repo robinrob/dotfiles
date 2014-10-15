@@ -3,3 +3,7 @@ alias warwick="chrome 'https://cloudreach.my.salesforce.com/0032000001AV6aC?srPo
 alias splunk="chrome 'https://cr-splunk-1.cloudreach.co.uk:8000/en-US/manager/search/saved/searches'"
 
 alias venues="chrome 'https://docs.google.com/a/cloudreach.co.uk/spreadsheet/ccc?key=0AoV1py6VJXyMdEw1ZmhfOWZLaGZzdTk1Q3VkZjYwLXc#gid=2'"
+
+alias searches="chrome 'https://cr-splunk-1.cloudreach.co.uk:8000/en-US/manager/ZenossForwarding/saved/searches'"
+
+alias splm="chrome 'https://cr-splunk-1.cloudreach.co.uk:8000/en-US/manager/ZenossForwarding'"
