@@ -120,7 +120,7 @@ if [[ "$HOSTNAME" == "$VENUS_HOSTNAME" ]]
 then
 	pythonbrew use 2.7 2> /dev/null
 else
-	pythonbrew use 3.2 2> /dev/null
+	pythonbrew use 2.7 2> /dev/null
 fi
 
 

@@ -138,4 +138,4 @@ alias war="open 'http://www2.warwick.ac.uk/fac/soc/economics/staff/mharrison/pub
 
 alias adventures="safari 'http://vim-adventures.com'"
 
-alias robin="firefox 'http://mrrobinsmith.com'"
+alias cocos2d2="safari 'http://my.safaribooksonline.com/book/programming/game-programming/9781783987863/firstchapter#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODM5ODc4NjMlMkZjaDAwbHZsMXNlYzAyX2h0bWwmcXVlcnk9'"
