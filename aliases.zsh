@@ -758,6 +758,10 @@ alias erec="$EDITOR $IMPORTANT_HOME/records/record.txt"
 
 alias mrec="$EDITOR $RECORDS_PATH"
 
+alias lahome="get_record la_home"
+
+alias lawork="get_record la_work"
+
 alias cardcredit="get_record rbc-credit"
 
 alias cardhsbc="get_record hsbc-debit"

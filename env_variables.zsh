@@ -176,7 +176,7 @@ fi
 
 export ADOBE_PATH=/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader
 
-export COCOS_HOME="/usr/local/Library/cocos2d-js-v3.0-rc2"
+export COCOS_HOME="/usr/local/Library/cocos2d-js"
 
 export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d/
 
