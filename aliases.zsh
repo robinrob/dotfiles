@@ -122,7 +122,7 @@ alias "echo"="gecho"
 # Shell Aliases
 alias cwd="pwd"
 
-alias lsltr="ls -ltr | awk '{print \$9}' | tail +2"
+alias lsltr="ls -ltr --color=none | awk '{print \$9}' | tail +2"
 
 alias dt="date"
 
