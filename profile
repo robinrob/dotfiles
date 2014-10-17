@@ -2,7 +2,7 @@
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
 # Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/usr/local/Library/cocos2d-js-v3.0-rc2/tools/cocos2d-console/bin
+export COCOS_CONSOLE_ROOT=/usr/local/Library/cocos2d-js/tools/cocos2d-console/bin
 export PATH=$COCOS_CONSOLE_ROOT:$PATH
 
 # Add environment variable ANT_ROOT for cocos2d-x
