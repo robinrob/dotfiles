@@ -265,7 +265,7 @@ alias cdrecipe="cd_dir $HTMLCSS_HOME/projects/recipe-finder"
 
 alias cdscr="cd_dir $SCREENSHOTS_HOME"
 
-alias cdcam="cd_dir $CAMERA_HOME"
+alias cdcam="cd_dir '$CAMERA_HOME'"
 
 alias cdt="cd $TRASH_HOME"
 
@@ -700,7 +700,7 @@ alias gclm="git clone -b master"
 
 alias gclb="git clone -b "
 
-alias cdrc="cd $RECEIPTS_HOME"
+alias cdrc="cd '$RECEIPTS_HOME'"
 
 alias cdrp="cdrc"
 
