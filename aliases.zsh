@@ -314,9 +314,9 @@ alias mrdb="psql -U msl -d mrrobinsmith_development"
 
 alias rsc="rails console"
 
-alias rkpl="cd rake; green 'Git-pulling rake ...'; git pull origin master; cd - > /dev/null"
+alias plrk="cd rake; green 'Git-pulling rake ...'; git pull origin master; cd - > /dev/null"
 
-alias rksv="cd rake; green 'Rake-saving rake ...'; rake save; cd - > /dev/null"
+alias svrk="cd rake; green 'Rake-saving rake ...'; rake save; cd - > /dev/null"
 
 alias rktr="rake each_sub['echo, quiet']"
 
@@ -346,7 +346,9 @@ alias bu="bundle update"
 
 alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
-alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
+#alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
+
+alias rkr="rake run"
 
 alias rkd="rake_do deploy"
 
@@ -449,7 +451,7 @@ alias ga="git add"
 
 alias gsi="git submodule init"
 
-alias gsu="git submodule update"
+alias gsu="git submodule update --init --recursive"
 
 alias gsa="git submodule add"
 
@@ -466,6 +468,8 @@ alias gplom="git pull origin master"
 alias gsr="git submodule add git@bitbucket.org:robinrob/rakefile.git rake && ln -s rake/Rakefile Rakefile"
 
 # Development operations
+alias ccr="cocos run -p web"
+
 alias pl="cd_pull"
 
 alias st="cd_status"
