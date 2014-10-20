@@ -1033,7 +1033,7 @@ function website () {
 
 function preview {
   FILENAME=$1
-  ./render.rb $FILENAME && open -a $BROWSER html/$FILENAME.html
+  $RUBY_HOME/practice/render.rb $FILENAME && open -a $BROWSER html/$FILENAME.html
 }
 
 

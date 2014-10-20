@@ -152,9 +152,11 @@ alias igi="isgit"
 
 alias shell="echo $SHELL"
 
-alias cdcocos="cd $COCOS_HOME"
+alias cdcocos="cd_dir $COCOS_HOME"
 
 # Shell shortcuts
+alias sshkey="cat ~/.ssh/id_rsa.pub | pbcopy"
+
 alias rkls="rake each_sub['echo, quiet']"
 
 alias cdgam="cd_dir $GAM_PATH"
@@ -168,6 +170,8 @@ alias mcol="$EDITOR $DOTFILES_HOME/colors.zsh"
 alias syslog="tail -f /var/log/system.log"
 
 # Applications/Tools
+alias mvim="mvim -p"
+
 alias sc="scala"
 
 alias scc="scalac"
@@ -348,7 +352,7 @@ alias save="rake -f $GLOBAL_RAKEFILE_HOME/Rakefile save_code"
 
 #alias rksr="rake -f $RAKEFILE_HOME/Rakefile save"
 
-alias rkr="rake run"
+alias rkrn="rake run"
 
 alias rkd="rake_do deploy"
 
@@ -624,7 +628,7 @@ alias emptytrash="sudo rm -rf ~/.Trash/*"
 
 alias cgi="cat .gitignore"
 
-alias x="chmod +x"
+alias px="chmod +x"
 
 alias mx="chmod -x"
 
@@ -711,6 +715,8 @@ alias pb="pbcopy"
 alias splq="$EDITOR $TEMP_HOME/splunk_searches.txt"
 
 # Shell functions/function aliases
+alias b="browser"
+
 alias killa="killp"
 
 alias brew="nbrew"
