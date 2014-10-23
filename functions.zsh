@@ -1051,3 +1051,22 @@ function kdl {
   knife download $@
 }
 
+function read {
+  TO_READ=$1
+
+  echo "$TO_READ" >> $LISTS_HOME/to_read.txt
+}
+
+function read1 {
+  safari "`head -1 $LISTS_HOME/to_read.txt`"
+}
+
+function srb {
+  red "Rebooting!"
+  sudo reboot
+}
+
+function ssd {
+  red "Shutting DOWN!"
+  sudo shutdown -h now
+}

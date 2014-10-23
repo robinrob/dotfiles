@@ -205,6 +205,8 @@ alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
 # Navigation
+alias cddocs="cd_dir $DOCS_HOME"
+
 alias cdi="cd_dir"
 
 alias cdpr="cd_dir $PROG_HOME"
@@ -218,6 +220,8 @@ alias cdb="cd_dir $HTMLCSS_HOME/practice/bootstrap"
 alias cdsc="cd_dir $SCALA_HOME"
 
 alias cdr="cd_dir $RUBY_HOME"
+
+alias cdegr="/Users/msl/Programming/robin/sh/practice/egrep"
 
 alias cdc="cd_dir $COFFEESCRIPT_HOME"
 
@@ -516,6 +520,10 @@ alias kel="knife environment list"
 alias knl="knife node list"
 
 # Viewing and editing files
+alias toread="cat $LISTS_HOME/to_read.txt"
+
+alias mtoread="m $LISTS_HOME/to_read.txt"
+
 alias mbrew="$EDITOR $DOTFILES_HOME/homebrew.txt"
 
 alias cbrew="cat $DOTFILES_HOME/homebrew.txt"
