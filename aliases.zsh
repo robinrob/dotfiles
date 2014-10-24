@@ -704,7 +704,7 @@ alias c="cat"
 
 alias pb="pbcopy"
 
-alias splq="$EDITOR $TEMP_HOME/splunk_searches.txt"
+alias splq="$EDITOR ${SPLUNK_HOME}/splunk_searches.txt"
 
 # Shell functions/function aliases
 alias killa="killp"

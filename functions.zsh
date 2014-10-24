@@ -889,8 +889,17 @@ function bashvulns {
 }
 
 function languages {
-	languages=(ruby ocaml htmlcss zsh sh javascript coffeescript)
-	for language in $languages
+  typeset -A languages
+  languages[ruby]=r
+  languages[ocaml]=o
+  languages[htmlcss]=h
+  languages[zsh]=z
+  languages[sh]=s
+  languages[javascript]=js
+  languages[coffeescript]=c
+  languages[perl]=pl
+	
+  for language in $languages
 	do
 		alias_lang_cmd $language sv cd_save
 		alias_lang_cmd $language cm cd_commit

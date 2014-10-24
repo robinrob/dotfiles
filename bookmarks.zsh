@@ -78,24 +78,6 @@ alias splw="browser https://cr-splunk-1.cloudreach.co.uk:8000/en-US/app/ZenossFo
 
 alias stackh="browser 'http://stackoverflow.com/users/3946669/robin-smith'"
 
-alias robscases="cases 00B20000006RBOv"
-
-alias gabscases="cases 00B20000006SMJf"
-
-alias seanscases="cases 00B20000007AD8A"
-
-alias jaredscases="cases 00B20000007BLn1"
-
-alias unassed="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079jxp'"
-
-alias pending="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B20000006XDXH'"
-
-alias van="chrome 'https://docs.google.com/a/cloudreach.co.uk/document/d/1u1feNasYhE5fm_xXdvAm_mZSKO-vKQshd9XTNu-Jtrg/edit'"
-
-alias petr="browser 'https://cloudreach.my.salesforce.com/500?fcf=00B200000079yBg'"
-
-alias zenoss="browser 'http://zenoss.cloudreach.co.uk:8080/zport/dmd/Events/evconsole'"
-
 alias crockfordlanguage="browser 'https://www.youtube.com/watch?v=9e_oEE72d3U'"
 
 alias renew="browser 'https://vpl.bibliocommons.com/user/login'"
