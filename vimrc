@@ -101,10 +101,6 @@ set scrolloff=8         "Start scrolling when we're 8 lines away from margins
 set sidescrolloff=15
 set sidescroll=1
 
-" ================ Coping to/from OS clipboard! ========================
-set clipboard=unnamed
-set noignorecase
-set wrap
 
 " ================ Custom Settings ========================
 so ~/.yadr/vim/settings.vim
@@ -117,3 +113,11 @@ so ~/.yadr/vim/settings.vim
   " set ai
   " set ruler
 " endif
+
+" ================ Robin's Settings ========================
+set clipboard=unnamed
+set noignorecase
+set wrap
+
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k

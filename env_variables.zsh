@@ -132,6 +132,8 @@ export TEMP_HOME=$HOSTFILES_HOME/temp
 
 export DOCS_HOME=$HOSTFILES_HOME/docs
 
+export LISTS_HOME=$DOCS_HOME/lists
+
 export RDOCS_HOME=$RFILES_HOME/docs
 
 export DOWNLOADS_HOME='~/Downloads'
@@ -178,8 +180,6 @@ fi
 
 export ADOBE_PATH=/Applications/Adobe\ Reader.app/Contents/MacOS/AdobeReader
 
-export COCOS_HOME="/usr/local/Library/cocos2d-js"
-
 export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d/
 
 export ANDROID_SDK_ROOT=/usr/local/Cellar/android-sdk/22.6.2/
@@ -197,19 +197,13 @@ export LESS=" -R "
 
 export LESSC_PATH="/usr/local/lib/node_modules/less/bin/lessc"
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+export COCOS_HOME="/usr/local/Library/cocos2d-js"
 
-# Add environment variable COCOS_CONSOLE_ROOT for cocos2d-x
-export COCOS_CONSOLE_ROOT=/usr/local/Library/cocos2d-js-v3.0-rc2/tools/cocos2d-console/bin
-export PATH=$COCOS_CONSOLE_ROOT:$PATH
+export COCOS_CONSOLE_ROOT="$COCOS_HOME/tools/cocos2d-console/bin"
 
-# Add environment variable ANT_ROOT for cocos2d-x
 export ANT_ROOT=/usr/local/bin
-export PATH=$ANT_ROOT:$PATH
 
-# Add environment variable NDK_ROOT for cocos2d-x
 export NDK_ROOT=/usr/local/Cellar/android-ndk/r9d/
-export PATH=$NDK_ROOT:$PATH
 
 export GREP_COLORS='ms=01;35:mc=01;31:sl=:cx=:fn=0:ln=32:bn=32:se=36'
 
@@ -224,3 +218,15 @@ then
 fi
 
 export PG_CONF=$PGDATA/postgresql.conf
+
+# Path
+######
+PATH=$PATH:$EC2_HOME/bin
+PATH=$PATH:$HOME/.rvm/bin
+PATH=$PATH:$LOCAL_HOME/bin
+PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.3/bin/
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$COCOS_CONSOLE_ROOT
+PATH=$PATH:$ANT_ROOT
+PATH=$PATH:$NDK_ROOT
+export PATH
