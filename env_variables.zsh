@@ -134,7 +134,7 @@ export TEMP_HOME=$HOSTFILES_HOME/temp
 
 export DOCS_HOME=$HOSTFILES_HOME/docs
 
-export LISTS_HOME=$DOCS_HOME/lists
+export LISTS_HOME=$MERCURY_HOME/docs/lists
 
 export RDOCS_HOME=$RFILES_HOME/docs
 
