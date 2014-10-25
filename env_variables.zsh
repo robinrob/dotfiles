@@ -44,6 +44,8 @@ export ZSHRC=$DOTFILES_HOME/zshrc
 
 export C_HOME=$PROG_HOME/c
 
+export C_PLUS_PLUS_HOME=$PROG_HOME/c
+
 export JV_HOME=$PROG_HOME/java
 
 export JAVASCRIPT_HOME=$PROG_HOME/javascript
@@ -126,7 +128,7 @@ export MERCURY_HOME=$FILES_HOME/$MERCURY_HOSTNAME
 
 export SONGS_HOME=$MERCURY_HOME/docs/creative/songs
 
-export VENUS_HOME=$FILES_HOME/venus.local
+export VENUS_HOME=$FILES_HOME/$VENUS_HOSTNAME
 
 export TEMP_HOME=$HOSTFILES_HOME/temp
 

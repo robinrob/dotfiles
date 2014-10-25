@@ -207,27 +207,7 @@ alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl
 # Navigation
 alias cddocs="cd_dir $DOCS_HOME"
 
-alias cdi="cd_dir"
-
-alias cdpr="cd_dir $PROG_HOME"
-
-alias cdd="cd_dir $DOTFILES_HOME"
-
-alias cdy="cd_dir $DOTFILES_HOME/yadr"
-
-alias cdb="cd_dir $HTMLCSS_HOME/practice/bootstrap"
-
-alias cdsc="cd_dir $SCALA_HOME"
-
-alias cdr="cd_dir $RUBY_HOME"
-
 alias cdegr="/Users/msl/Programming/robin/sh/practice/egrep"
-
-alias cdc="cd_dir $COFFEESCRIPT_HOME"
-
-alias cdo="cd_dir $OCAML_HOME"
-
-alias cdpl="cd_dir $PERL_HOME"
 
 alias cdmr="cd_dir $RUBY_HOME/projects/mrrobinsmith.com"
 
@@ -235,19 +215,13 @@ alias cdbp="cd_dir $MRROBINSMITHCOM_HOME/public/blogposts"
 
 alias cdq="cd_dir $RUBY_HOME/projects/quiz"
 
-alias cdp="cd_dir $PY_HOME"
-
 alias cdp2="cd_dir $PY_HOME/python2"
 
 alias cdp3="cd_dir $PY_HOME/python3"
 
 alias cdrk="cd_dir $RAKEFILE_HOME"
 
-alias cdz="cd_dir $ZSH_HOME"
-
 alias cdl="cd_dir $LOCAL_HOME"
-
-alias cda="cd_dir $AWK_HOME"
 
 alias cdw="cd_dir $WORK_HOME"
 
@@ -255,19 +229,7 @@ alias cdwr="cd_dir $WORK_RUBY_HOME"
 
 alias cdwp="cd_dir $WORK_PYTHON_HOME"
 
-alias cds="cd_dir $SH_HOME"
-
-alias cdj="cd_dir $JS_HOME"
-
-alias cdjv="cd_dir $JV_HOME"
-
 alias cdjpr="cd_dir $JS_HOME practice"
-
-alias cdjs="cdj"
-
-alias cdh="cd_dir $HTMLCSS_HOME"
-
-alias cdls="cd_dir $HTMLLESS_HOME"
 
 alias cdrecipe="cd_dir $HTMLCSS_HOME/projects/recipe-finder"
 
@@ -494,7 +456,7 @@ alias ddi="cd_diff $DOTFILES_HOME"
 
 alias dst="cd_status $DOTFILES_HOME"
 
-languages
+repo_cmds
 
 alias DSV="dsv"
 
@@ -691,16 +653,6 @@ alias spr="sprog"
 alias sd="du -dh"
 
 alias erk="edit rakefile"
-
-alias prst="cd_status $PROG_HOME"
-
-alias prsv="cd_save $PROG_HOME"
-
-alias prc="cd_count_all $PROG_HOME"
-
-alias pst="cd_status $PY_HOME"
-
-alias psv="cd_save $PY_HOME"
 
 alias rkct="rake count_all"
 

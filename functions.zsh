@@ -888,31 +888,49 @@ function bashvulns {
 	browser 'http://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2014-7188'
 }
 
-function languages {
-  typeset -A languages
-  languages[ruby]=r
-  languages[ocaml]=o
-  languages[htmlcss]=h
-  languages[zsh]=z
-  languages[sh]=s
-  languages[javascript]=js
-  languages[coffeescript]=c
-  languages[perl]=pl
+function repo_cmds {
+  typeset -A abbreviations
+  abbreviations[awk]=a
+  abbreviations[coffeescript]=cs
+  abbreviations[c]=c
+  abbreviations[c-plus-plus]=cp
+  abbreviations[htmlcss]=h
+  abbreviations[javascript]=js
+  abbreviations[markdown]=m
+  abbreviations[ocaml]=o
+  abbreviations[perl]=pl
+  abbreviations[prog]=pr
+  abbreviations[python]=p
+  abbreviations[ruby]=r
+  abbreviations[scala]=sc
+  abbreviations[sh]=s
+  abbreviations[zsh]=z
+  
 	
-  for language in $languages
+  for repo in ${(k)abbreviations}
 	do
-		alias_lang_cmd $language sv cd_save
-		alias_lang_cmd $language cm cd_commit
-		alias_lang_cmd $language st cd_status
-		alias_lang_cmd $language pl cd_pull
+		alias_repo_action $repo $abbreviations[$repo] sv cd_save
+		alias_repo_action $repo $abbreviations[$repo] cm cd_commit
+		alias_repo_action $repo $abbreviations[$repo] st cd_status
+		alias_repo_action $repo $abbreviations[$repo] pl cd_pull
+    alias_repo_nav $repo $abbreviations[$repo]
 	done
 }
 
-function alias_lang_cmd {
-	lang=$1
-	alias_suff=$2
-	cmd=$3
-	alias "$lang[1]$alias_suff"="$cmd $(upper $lang)_HOME"
+function alias_repo_action {
+	REPO=$1
+  REPO_ABBR=$2
+	ALIAS_SUFF=$3
+	CMD=$4
+
+	alias "$REPO_ABBR$ALIAS_SUFF"="$CMD $(upper $REPO)_HOME"
+}
+
+function alias_repo_nav {
+  REPO=$1
+  REPO_ABBR=$2
+
+  alias "cd${REPO_ABBR}"="cd $(upper $REPO)_HOME"
 }
 
 # function languages2 {
@@ -921,14 +939,14 @@ function alias_lang_cmd {
 #
 # 	for language in $languages
 # 	do
-# 		alias_lang_cmd2 $language sv cd_save s
-# 		alias_lang_cmd2 $language cm cd_commit c
-# 		alias_lang_cmd2 $language st cd_status st
-# 		alias_lang_cmd2 $language pl cd_pull p
+# 		alias_repo_action2 $language sv cd_save s
+# 		alias_repo_action2 $language cm cd_commit c
+# 		alias_repo_action2 $language st cd_status st
+# 		alias_repo_action2 $language pl cd_pull p
 # 	done
 # }
 #
-# function alias_lang_cmd {
+# function alias_repo_action {
 # 	lang=$1
 # 	alias_prefix=$2
 # 	cmd=$3
