@@ -59,9 +59,9 @@ function prompt_robin_setup {
   # Define prompts.
   if [[ "$HOSTNAME" == "$VENUS_HOSTNAME" ]]
   then
-	  hostcolor="$(brightgreen)"
+	  hostcolor="$(brightgreenprompt)"
   else
-	  hostcolor="$(brightred)"
+	  hostcolor="$(brightredprompt)"
   fi
 	
 	PROMPT="$(magandaprompt)%n$(brightwhiteprompt)@%{$hostcolor%}%B%M%b%f $(brightyellowprompt)\$(dir)/$(defaultprompt) \${vcs_info_msg_0_}$(brightwhiteprompt)\$$(defaultprompt) "
