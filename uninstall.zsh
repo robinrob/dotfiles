@@ -15,6 +15,7 @@ mkdir -p $OLD_DIR
 yellow "\t${ITEM}Moving any existing dotfiles from ~ to $OLD_DIR ..."
 for file in $FILES; do
 	cyan "\t\t$ITEM$file moved to $OLD_DIR"
-    mv ~/.$file $OLD_DIR/
+  mv ~/.$file $OLD_DIR/ 2> /dev/null
 done
 
+brightwhite 'Done.'
