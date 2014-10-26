@@ -1,8 +1,8 @@
 [submodule "rake"]
 	path = rake
 	url = git@bitbucket.org:robinrob/rakefile.git
-[submodule "yadr"]
-  path = yadr
+[submodule "framework"]
+  path = framework
   url = https://github.com/skwp/dotfiles
 [submodule "dotfiles-base"]
 	path = dotfiles-base
