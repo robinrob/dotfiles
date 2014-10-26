@@ -2,22 +2,16 @@
 
 source colors.zsh
 source indents.zsh
-
-green "Sym-linking dotfiles ..."
+source dotfiles.zsh
 
 DIR=`pwd`                  									
 OLD_DIR=/tmp/dotfiles             							
-FILES=(oh-my-zsh bashrc robinrc zsh.prompts vimrc gvimrc ideavim tm_properties gitconfig profile hushlogin ocamlinit rvmrc)
+FILES=`dot_files`
+FILES=(${(s: :)FILES})
 
-yellow "\t${ITEM}Creating $OLD_DIR for backup of any existing dotfiles in ~ ..."
-rm -rf $OLD_DIR
-mkdir -p $OLD_DIR
+green "Sym-linking dotfiles ..."
 
-yellow "\t${ITEM}Moving any existing dotfiles from ~ to $OLD_DIR ..."
-for file in $FILES; do
-	cyan "\t\t$ITEM$file moved to $OLD_DIR"
-    mv ~/.$file $OLD_DIR/
-done
+./uninstall.zsh
 
 yellow "\t${ITEM}Sym-linking files to home directory ..."
 for file in $FILES; do
