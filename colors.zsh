@@ -161,6 +161,10 @@ function greenprompt {
 	promptcolor green $@
 }
 
+function brightredprompt {
+	promptcolor brightred $@
+}
+
 function brightgreenprompt {
 	promptcolor brightgreen $@
 }

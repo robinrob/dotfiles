@@ -205,6 +205,8 @@ alias gimp="/Applications/GIMP.app/Contents/MacOS/GIMP-bin"
 alias sublime="'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl'"
 
 # Navigation
+alias cdd="cd_dir $DOTFILES_HOME"
+
 alias cddocs="cd_dir $DOCS_HOME"
 
 alias cdegr="/Users/msl/Programming/robin/sh/practice/egrep"
@@ -490,7 +492,7 @@ alias mbrew="$EDITOR $DOTFILES_HOME/homebrew.txt"
 
 alias cbrew="cat $DOTFILES_HOME/homebrew.txt"
 
-alias mprompt="$EDITOR ~/.zsh.prompts/prompt_robin_setup"
+alias mprompt="$EDITOR ~/.zsh.prompts/prompt_robin_setup.zsh"
 
 alias mpr="mprompt"
 

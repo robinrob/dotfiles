@@ -123,3 +123,5 @@ alias adventures="safari 'http://vim-adventures.com'"
 alias cocos2d2="safari 'http://my.safaribooksonline.com/book/programming/game-programming/9781783987863/firstchapter#X2ludGVybmFsX0h0bWxWaWV3P3htbGlkPTk3ODE3ODM5ODc4NjMlMkZjaDAwbHZsMXNlYzAyX2h0bWwmcXVlcnk9'"
 
 alias passwords="chrome 'https://docs.google.com/a/mrrobinsmith.com/spreadsheet/ccc?key=0Aganxin54gVEdE5zUlVvcUNCNi1WSV9MNXVFT1FqWWc&usp=drive_web#gid=0'"
+
+alias bkzsh2="book 'http://zsh.sourceforge.net/Guide/zshguide.html'"

@@ -890,6 +890,7 @@ function bashvulns {
 
 function repo_cmds {
   typeset -A abbreviations
+
   abbreviations[awk]=a
   abbreviations[coffeescript]=cs
   abbreviations[c]=c
@@ -930,7 +931,7 @@ function alias_repo_nav {
   REPO=$1
   REPO_ABBR=$2
 
-  alias "cd${REPO_ABBR}"="cd $(upper $REPO)_HOME"
+  alias "cd${REPO_ABBR}"="cd_dir $(upper $REPO)_HOME"
 }
 
 # function languages2 {
@@ -1097,3 +1098,8 @@ function ssd {
   red "Shutting DOWN!"
   sudo shutdown -h now
 }
+
+# Function definition is contained within $DOTFILES_HOME/functions/hello
+autoload hello
+
+autoload hello2

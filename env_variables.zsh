@@ -221,6 +221,8 @@ fi
 
 export PG_CONF=$PGDATA/postgresql.conf
 
+fpath=("$DOTFILES_HOME/functions" $fpath)
+
 # Path
 ######
 PATH=$PATH:$EC2_HOME/bin
