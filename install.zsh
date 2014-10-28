@@ -1,4 +1,4 @@
-#!/usr/bin/env zsh
+#!/usr/bin/env zsh -ex
 
 source dotfiles-base/zsh/colors.zsh
 
