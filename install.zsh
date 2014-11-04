@@ -11,5 +11,5 @@ green "Installing framework to .framework ..."
 sh install.sh
 ln -s ~/.yadr ~/.framework 2> /dev/null
 
-cd ../dotfiles-base/zsh
+cd dotfiles-base
 ./install.zsh
