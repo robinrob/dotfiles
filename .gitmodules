@@ -1,9 +1,9 @@
-[submodule "rake"]
-	path = rake
-	url = git@bitbucket.org:robinrob/rakefile.git
-[submodule "framework"]
-	path = framework
-	url = https://github.com/skwp/dotfiles
 [submodule "dotfiles-base"]
-	path = dotfiles-base
-	url = git@bitbucket.org:robinrob/dotfiles-base.git
+  path = dotfiles-base
+  url = git@bitbucket.org:robinrob/dotfiles-base.git
+[submodule "framework"]
+  path = framework
+  url = https://github.com/skwp/dotfiles
+[submodule "rake"]
+  path = rake
+  url = git@bitbucket.org:robinrob/rakefile.git
