@@ -10,6 +10,7 @@ git submodule update --init --recursive
 green "Installing framework to .framework ..."
 sh install.sh
 ln -s ~/.yadr ~/.framework 2> /dev/null
+cd -
 
 cd dotfiles-base
 ./install.zsh
