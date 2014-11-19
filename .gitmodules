@@ -5,5 +5,5 @@
   path = framework
   url = https://github.com/skwp/dotfiles
 [submodule "rake"]
-  path = rake
-  url = git@bitbucket.org:robinrob/rakefile.git
+	path = rake
+	url = git@bitbucket.org:robinrob/rakefile.git
