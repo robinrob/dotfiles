@@ -1,6 +1,6 @@
 [submodule "dotfiles-base"]
   path = dotfiles-base
-  url = git@bitbucket.org:robinrob/dotfiles-base.git
+  url = git@github.com:robinrob/dotfiles-base.git
 [submodule "framework"]
   path = framework
   url = https://github.com/skwp/dotfiles
