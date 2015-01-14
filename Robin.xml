@@ -3,8 +3,20 @@
   <action id="CloseAllEditorsButActive">
     <keyboard-shortcut first-keystroke="shift meta X" />
   </action>
+  <action id="CollapseAll">
+    <keyboard-shortcut first-keystroke="meta SUBTRACT" />
+  </action>
+  <action id="CollapseRegion">
+    <keyboard-shortcut first-keystroke="meta SUBTRACT" />
+  </action>
   <action id="EditSource">
     <keyboard-shortcut first-keystroke="ENTER" />
+  </action>
+  <action id="EditorDecreaseFontSize">
+    <keyboard-shortcut first-keystroke="meta MINUS" />
+  </action>
+  <action id="EditorIncreaseFontSize">
+    <keyboard-shortcut first-keystroke="meta EQUALS" />
   </action>
   <action id="EditorTextEnd">
     <keyboard-shortcut first-keystroke="meta END" />
@@ -22,7 +34,19 @@
     <keyboard-shortcut first-keystroke="shift meta HOME" />
     <keyboard-shortcut first-keystroke="shift meta UP" />
   </action>
+  <action id="ExpandAll">
+    <keyboard-shortcut first-keystroke="meta ADD" />
+  </action>
+  <action id="ExpandRegion">
+    <keyboard-shortcut first-keystroke="meta ADD" />
+  </action>
   <action id="FindInPath" />
+  <action id="Images.Editor.ZoomIn">
+    <keyboard-shortcut first-keystroke="meta ADD" />
+  </action>
+  <action id="Images.Editor.ZoomOut">
+    <keyboard-shortcut first-keystroke="meta SUBTRACT" />
+  </action>
   <action id="MoveStatementDown" />
   <action id="MoveStatementUp" />
   <action id="ReopenClosedTab">
