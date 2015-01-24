@@ -1,0 +1,181 @@
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D110000007JOB!AQ4AQPNMG.3PQpXuPNAY2DWuld.qAk9Q5.SzR7bnMoDLDoGnQvsmEyl4uZ_1DtdZgxvsoo6F4MQjNatPgr98R0c0Ud3bFDvF</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs18.my.salesforce.com
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D20000000KMfv!AQ0AQIPQwOCuX87v6TtGwSg99q_Z8fdbDBzJSQBws.tSxb_NDA4v9yu_e3VB14c7KTKMW_kAnI9ZQdIAcMjzYZsERSKfwam4</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D20000000KMfv!AQ0AQIPQwOCuX87v6TtGwSg99q_Z8fdbDBzJSQBws.tSxb_NDA4v9yu_e3VB14c7KTKMW_kAnI9ZQdIAcMjzYZsERSKfwam4</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D110000007JOB!AQ4AQFMnVy6ReOG7TsKNq75v4zj5JLCmj8sUuTjNp793vludUU_k.1tUxdhXOwE_FG7qt7hhKt8FO087AHS6rVzFywXo9tmu</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D20000000KMfv!AQ0AQHCDmGhQdKzppvnrR6hZbgodSERPHSl_4ZtP6HmkoVPb6MO4Mwr.NlSe7jGhu1W3768ykBFxi64JVWuybauE0.Ul0e0M</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D20000000KMfv!AQ0AQHCDmGhQdKzppvnrR6hZbgodSERPHSl_4ZtP6HmkoVPb6MO4Mwr.NlSe7jGhu1W3768ykBFxi64JVWuybauE0.Ul0e0M</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00DL0000005qp6Y!ARsAQOkja7p85CQPfotH2LPsuO5n0VoBvLOGLEz4lBMPAGwm3Xc3naqZ33zPBKt4OcAcgvAESY1yNZQ26u2B2oz2BdZdZJuF</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00D110000007JOB!AQ4AQEtTVy.Jse3.UAwvX.bNGLE0nauaWnNtfNXjVTYUGPFjdbfU2rT9F0yuOc6xLPwmAv3f0Ag8W2vgJlD5mxTUmdPIL_Nj</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00Dg0000003M69o!AQgAQB7fHsOzninSEPImDO_Fk8EzyXpON.JhTlhzjUgYoih9jnRXJ1WV1f8aiP6o5bCfNzMst6Av6ItrnFOkc9fnSKXfPkVz</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+<?xml version="1.0" encoding="UTF-8"?>
+<SOAP-ENV:Envelope xmlns:ns0="urn:partner.soap.sforce.com" xmlns:ns1="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="urn:partner.soap.sforce.com" xmlns:SOAP-ENV="http://schemas.xmlsoap.org/soap/envelope/">
+   <SOAP-ENV:Header>
+      <tns:SessionHeader>
+         <tns:sessionId>00Dg0000003M69o!AQgAQJkYVI2PcbtsurndiATp3n1M7BtTpC3CNQA_kYlNRSKSJDqa4.U2_bKvLxbyI6rwDBl0NG151QJg8fChzYARAGi2fqwR</tns:sessionId>
+      </tns:SessionHeader>
+   </SOAP-ENV:Header>
+   <ns1:Body>
+      <ns0:getUserInfo/>
+   </ns1:Body>
+</SOAP-ENV:Envelope>
+Starting new HTTPS connection (1): cloudreach--Sandbox.cs17.my.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
+Starting new HTTPS connection (1): cs8.salesforce.com
