@@ -4,3 +4,6 @@
 [submodule "framework"]
   path = framework
   url = https://github.com/skwp/dotfiles
+[submodule "local"]
+	path = local
+	url = git@bitbucket.org:robinrob/local.git
