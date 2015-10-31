@@ -6,4 +6,4 @@
   url = https://github.com/skwp/dotfiles
 [submodule "local"]
 	path = local
-	url = git@bitbucket.org:robinrob/local.git
+	url = git@github.com:robinrob/local.git
