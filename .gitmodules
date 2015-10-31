@@ -5,5 +5,5 @@
   path = framework
   url = https://github.com/skwp/dotfiles
 [submodule "local"]
-	path = local
-	url = git@github.com:robinrob/local.git
+  path = local
+  url = git@github.com:robinrob/local
