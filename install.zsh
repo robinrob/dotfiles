@@ -2,15 +2,8 @@
 
 source dotfiles-base/zsh/colors.zsh
 
+green "Installing YADR ..."
+./install_yadr.zsh
 
-yellow "Initialising framework ..."
-cd framework
-git submodule update --init --recursive
-
-green "Installing framework to .framework ..."
-sh install.sh
-ln -s ~/.yadr ~/.framework 2> /dev/null
-cd -
-
-cd dotfiles-base
-./install.zsh
+green "Installing Robin ..."
+./install_robin.zsh

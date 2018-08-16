@@ -1,0 +1,214 @@
+" Use Vim settings, rather than Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+" TODO: this may not be in the correct place. It is intended to allow overriding <Leader>.
+" source ~/.vimrc.before if it exists.
+if filereadable(expand("~/.vimrc.before"))
+  source ~/.vimrc.before
+endif
+
+" ================ General Config ====================
+
+set number                      "Line numbers are good
+set backspace=indent,eol,start  "Allow backspace in insert mode
+set history=1000                "Store lots of :cmdline history
+set showcmd                     "Show incomplete cmds down the bottom
+set showmode                    "Show current mode down the bottom
+set gcr=a:blinkon0              "Disable cursor blink
+set visualbell                  "No sounds
+set autoread                    "Reload files changed outside vim
+
+" This makes vim act like all other editors, buffers can
+" exist in the background without being in a window.
+" http://items.sjbach.com/319/configuring-vim-right
+set hidden
+
+"turn on syntax highlighting
+syntax on
+
+" Change leader to a comma because the backslash is too far away
+" That means all \x commands turn into ,x
+" The mapleader has to be set before vundle starts loading all 
+" the plugins.
+let mapleader=","
+
+" =============== Vundle Initialization ===============
+" This loads all the plugins specified in ~/.vim/vundles.vim
+" Use Vundle plugin to manage all other plugins
+if filereadable(expand("~/.vim/vundles.vim"))
+  source ~/.vim/vundles.vim
+endif
+
+" ================ Turn Off Swap Files ==============
+
+set noswapfile
+set nobackup
+set nowb
+
+" ================ Persistent Undo ==================
+" Keep undo history across sessions, by storing in file.
+" Only works all the time.
+if has('persistent_undo')
+  silent !mkdir ~/.vim/backups > /dev/null 2>&1
+  set undodir=~/.vim/backups
+  set undofile
+endif
+
+" ================ Indentation ======================
+
+set autoindent
+set smartindent
+set smarttab
+set shiftwidth=2
+set softtabstop=2
+set tabstop=2
+set expandtab
+
+filetype plugin on
+filetype indent on
+
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
+set nowrap       "Don't wrap lines
+set linebreak    "Wrap lines at convenient points
+
+" ================ Folds ============================
+
+set foldmethod=indent   "fold based on indent
+set foldnestmax=3       "deepest fold is 3 levels
+set nofoldenable        "dont fold by default
+
+" ================ Completion =======================
+
+set wildmode=list:longest
+set wildmenu                "enable ctrl-n and ctrl-p to scroll thru matches
+set wildignore=*.o,*.obj,*~ "stuff to ignore when tab completing
+set wildignore+=*vim/backups*
+set wildignore+=*sass-cache*
+set wildignore+=*DS_Store*
+set wildignore+=vendor/rails/**
+set wildignore+=vendor/cache/**
+set wildignore+=*.gem
+set wildignore+=log/**
+set wildignore+=tmp/**
+set wildignore+=*.png,*.jpg,*.gif
+
+" ================ Scrolling ========================
+
+set scrolloff=8         "Start scrolling when we're 8 lines away from margins
+set sidescrolloff=15
+set sidescroll=1
+
+
+" ================ Custom Settings ========================
+so ~/.framework/vim/settings.vim
+
+" if has("gui_running")
+" syntax on
+" set hlsearch
+" colorscheme macvim
+" set bs=2
+" set ai
+" set ruler
+" endif
+
+" ================ Robin's Settings ========================
+"Uses the system clipboard to allow copy/pasting between vim and other
+"applications (only works with MacVim since OS X does not implement the * 
+"register)"
+set clipboard=unnamed
+
+"Alias unnamed register to the + register (X Window clipboard)
+" set clipboard=unnamedplus
+" set clipboard=unnamedplus
+
+set wrap
+
+nmap <S-Enter> O<Esc>j
+nmap <CR> o<Esc>k
+
+filetype on
+
+"This is the way to force a filetype for a given extension
+" au BufNewFile,BufRead *.zsh set filetype=zsh
+
+
+" inoremap <expr> j ((pumvisible())?("\<C-n>"):("j"))
+" inoremap <expr> k ((pumvisible())?("\<C-p>"):("k"))
+"
+" verbose inoremap <expr> <C-j> pumvisible() ? "\<C-p>" : "\<C-j>"
+" verbose inoremap <expr> <C-k> pumvisible() ? "\<C-n>" : "\<C-k>"
+
+"This highlights with red background any text that has gone over an 80 column
+"limit
+highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+match OverLength /\%81v.\+/
+
+"Remove startup message when opening new file"
+set shortmess+=I
+
+"Ignore case when searching (but not search/replace)"
+set ignorecase
+"Disables ignorecase for uppercase characters. Lowercase still match all."
+set smartcase
+
+set guifont=Hack:h14
+
+"Reverse meaning of /g option in search-replace - i.e. it defaults to global,
+"but first-occurrence behaviour can be selected with /g."
+" set gdefault
+
+
+augroup EnableSyntaxHighlighting
+    " Filetype processing does happen, so we can detect a buffer initially
+    " loaded during :argdo / :bufdo through a set filetype, but missing
+    " b:current_syntax. Also don't do this when the user explicitly turned off
+    " syntax highlighting via :syntax off.
+    " The following autocmd is triggered twice:
+    " 1. During the :...do iteration, where it is inactive, because
+    " 'eventignore' includes "Syntax". This speeds up the iteration itself.
+    " 2. After the iteration, when the user re-enters a buffer / window that was
+    " loaded during the iteration. Here is becomes active and enables syntax
+    " highlighting. Since that is done buffer after buffer, the delay doesn't
+    " matter so much.
+    " Note: When the :...do command itself edits the window (e.g. :argdo
+    " tabedit), the BufWinEnter event won't fire and enable the syntax when the
+    " window is re-visited. We need to hook into WinEnter, too. Note that for
+    " :argdo split, each window only gets syntax highlighting as it is entered.
+    " Alternatively, we could directly activate the normally effectless :syntax
+    " enable through :set eventignore-=Syntax, but that would also cause the
+    " slowdown during the iteration Vim wants to avoid.
+    " Note: Must allow nesting of autocmds so that the :syntax enable triggers
+    " the ColorScheme event. Otherwise, some highlighting groups may not be
+    " restored properly.
+    autocmd! BufWinEnter,WinEnter * nested if exists('syntax_on') && ! exists('b:current_syntax') && ! empty(&l:filetype) && index(split(&eventignore, ','), 'Syntax') == -1 | syntax enable | endif
+
+    " The above does not handle reloading via :bufdo edit!, because the
+    " b:current_syntax variable is not cleared by that. During the :bufdo,
+    " 'eventignore' contains "Syntax", so this can be used to detect this
+    " situation when the file is re-read into the buffer. Due to the
+    " 'eventignore', an immediate :syntax enable is ignored, but by clearing
+    " b:current_syntax, the above handler will do this when the reloaded buffer
+    " is displayed in a window again.
+    autocmd! BufRead * if exists('syntax_on') && exists('b:current_syntax') && ! empty(&l:filetype) && index(split(&eventignore, ','), 'Syntax') != -1 | unlet! b:current_syntax | endif
+   
+    " Set the default filetype for files with no extension"
+    autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set filetype=zsh | endif
+    "Set the default syntax for files with no extension"
+    autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.' | set syntax=zsh | endif
+    
+    " Set the filetype for files ending in .fish"
+    "autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.fish' | set filetype=fish | endif
+    " Set the syntax for files ending in .fish"
+    "autocmd BufNewFile,BufRead * if expand('%:t') !~ '\.fish' | set syntax=fish | endif
+
+augroup END
+
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
